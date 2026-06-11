@@ -9,6 +9,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: base, priority: 1.0, changeFrequency: 'weekly' as const },
     { url: `${base}/services`, priority: 0.9, changeFrequency: 'monthly' as const },
     { url: `${base}/areas`, priority: 0.9, changeFrequency: 'monthly' as const },
+    { url: `${base}/reviews`, priority: 0.8, changeFrequency: 'monthly' as const },
+    { url: `${base}/faq`, priority: 0.8, changeFrequency: 'monthly' as const },
+    { url: `${base}/contact`, priority: 0.85, changeFrequency: 'monthly' as const },
   ];
 
   const servicePages = services.map(s => ({

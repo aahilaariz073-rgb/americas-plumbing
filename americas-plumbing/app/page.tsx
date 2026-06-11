@@ -3,12 +3,10 @@ import Hero from './components/Hero';
 import Services from './components/Services';
 import WhyUs from './components/WhyUs';
 import Areas from './components/Areas';
-import Testimonials from './components/Testimonials';
 import Gallery from './components/Gallery';
-import FAQ from './components/FAQ';
-import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Schema from './components/Schema';
+import HomepageCTAStrip from './components/HomepageCTAStrip';
 
 export default function Home() {
   return (
@@ -20,10 +18,8 @@ export default function Home() {
         <Services />
         <WhyUs />
         <Areas />
-        <Testimonials />
         <Gallery />
-        <FAQ />
-        <Contact />
+        <HomepageCTAStrip />
       </main>
       <Footer />
     </>

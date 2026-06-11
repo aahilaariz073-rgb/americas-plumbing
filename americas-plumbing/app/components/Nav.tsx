@@ -30,10 +30,10 @@ export default function Nav() {
         <div className="hide-mob" style={{ display: 'flex', alignItems: 'center', gap: '36px' }}>
           {[
             { label: 'Services', href: '/services' },
-            { label: 'Why Us', href: '/#why-us' },
             { label: 'Areas', href: '/areas' },
-            { label: 'Reviews', href: '/#testimonials' },
-            { label: 'FAQ', href: '/#faq' },
+            { label: 'Reviews', href: '/reviews' },
+            { label: 'FAQ', href: '/faq' },
+            { label: 'Contact', href: '/contact' },
           ].map(({ label, href }) => (
               <a
                 key={label}
@@ -88,10 +88,10 @@ export default function Nav() {
         }}>
           {[
             { label: 'Services', href: '/services' },
-            { label: 'Why Us', href: '/#why-us' },
             { label: 'Areas', href: '/areas' },
-            { label: 'Reviews', href: '/#testimonials' },
-            { label: 'FAQ', href: '/#faq' },
+            { label: 'Reviews', href: '/reviews' },
+            { label: 'FAQ', href: '/faq' },
+            { label: 'Contact', href: '/contact' },
           ].map(({ label, href }) => (
             <a
               key={label}
