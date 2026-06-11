@@ -72,7 +72,7 @@ export default function Hero() {
 
         {/* CTAs */}
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '14px', marginBottom: '60px' }}>
-          <a href="#contact" style={{
+          <a href="/#contact" style={{
             background: '#C8202A', color: '#fff', fontSize: '0.95rem', fontWeight: 700,
             padding: '16px 40px', borderRadius: '4px', textDecoration: 'none',
             letterSpacing: '0.05em', textTransform: 'uppercase'

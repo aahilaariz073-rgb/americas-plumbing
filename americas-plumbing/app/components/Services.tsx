@@ -57,7 +57,7 @@ export default function Services() {
               Full-Service Plumbing,<br /><em>Done Right</em>
             </h2>
           </div>
-          <a href="#contact" style={{
+          <a href="/#contact" style={{
             background: '#080f1f', color: '#fff', fontSize: '0.82rem', fontWeight: 700,
             padding: '13px 28px', borderRadius: '4px', textDecoration: 'none',
             letterSpacing: '0.08em', textTransform: 'uppercase', whiteSpace: 'nowrap'

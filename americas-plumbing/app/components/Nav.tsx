@@ -15,7 +15,7 @@ export default function Nav() {
         display: 'flex', alignItems: 'center', justifyContent: 'space-between',
         height: '68px', borderBottom: '1px solid rgba(255,255,255,0.08)'
       }}>
-        <a href="#hero" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}>
+        <a href="/" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}>
           <Image
             src="/logo.png"
             alt="America's Plumbing"
@@ -30,10 +30,10 @@ export default function Nav() {
         <div className="hide-mob" style={{ display: 'flex', alignItems: 'center', gap: '36px' }}>
           {[
             { label: 'Services', href: '/services' },
-            { label: 'Why Us', href: '#why-us' },
+            { label: 'Why Us', href: '/#why-us' },
             { label: 'Areas', href: '/areas' },
-            { label: 'Reviews', href: '#testimonials' },
-            { label: 'FAQ', href: '#faq' },
+            { label: 'Reviews', href: '/#testimonials' },
+            { label: 'FAQ', href: '/#faq' },
           ].map(({ label, href }) => (
               <a
                 key={label}
@@ -88,10 +88,10 @@ export default function Nav() {
         }}>
           {[
             { label: 'Services', href: '/services' },
-            { label: 'Why Us', href: '#why-us' },
+            { label: 'Why Us', href: '/#why-us' },
             { label: 'Areas', href: '/areas' },
-            { label: 'Reviews', href: '#testimonials' },
-            { label: 'FAQ', href: '#faq' },
+            { label: 'Reviews', href: '/#testimonials' },
+            { label: 'FAQ', href: '/#faq' },
           ].map(({ label, href }) => (
             <a
               key={label}
@@ -107,7 +107,7 @@ export default function Nav() {
             </a>
           ))}
           <a
-            href="#contact"
+            href="/#contact"
             onClick={closeNav}
             style={{
               marginTop: '20px', background: '#C8202A', color: '#fff',

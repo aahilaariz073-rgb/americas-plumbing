@@ -30,14 +30,20 @@ export default function Footer() {
               Services
             </h4>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
-              {['Emergency Repair', 'Leak Detection', 'Repiping', 'Drain Cleaning', 'Water Heaters'].map(s => (
+              {[
+                { label: 'Emergency Repair', slug: 'emergency-plumbing' },
+                { label: 'Leak Detection', slug: 'leak-detection' },
+                { label: 'Repiping', slug: 'repiping' },
+                { label: 'Drain Cleaning', slug: 'drain-cleaning' },
+                { label: 'Water Heaters', slug: 'water-heater' },
+              ].map(({ label, slug }) => (
                 <a
-                  key={s} href="#services"
+                  key={slug} href={`/services/${slug}`}
                   style={{ color: '#3a4a60', fontSize: '0.875rem', textDecoration: 'none', transition: 'color 0.2s' }}
                   onMouseEnter={e => (e.currentTarget.style.color = '#fff')}
                   onMouseLeave={e => (e.currentTarget.style.color = '#3a4a60')}
                 >
-                  {s}
+                  {label}
                 </a>
               ))}
             </div>
@@ -49,14 +55,20 @@ export default function Footer() {
               Areas
             </h4>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
-              {['Irvine', 'Newport Beach', 'Laguna Hills', 'Mission Viejo', 'All Areas'].map(a => (
+              {[
+                { label: 'Irvine', slug: 'irvine' },
+                { label: 'Newport Beach', slug: 'newport-beach' },
+                { label: 'Laguna Hills', slug: 'laguna-hills' },
+                { label: 'Mission Viejo', slug: 'mission-viejo' },
+                { label: 'All Areas', slug: '' },
+              ].map(({ label, slug }) => (
                 <a
-                  key={a} href="#areas"
+                  key={label} href={slug ? `/areas/${slug}` : '/areas'}
                   style={{ color: '#3a4a60', fontSize: '0.875rem', textDecoration: 'none', transition: 'color 0.2s' }}
                   onMouseEnter={e => (e.currentTarget.style.color = '#fff')}
                   onMouseLeave={e => (e.currentTarget.style.color = '#3a4a60')}
                 >
-                  {a}
+                  {label}
                 </a>
               ))}
             </div>
@@ -81,7 +93,7 @@ export default function Footer() {
               </a>
               <span style={{ color: '#3a4a60', fontSize: '0.875rem' }}>Orange County, CA</span>
               <a
-                href="#contact"
+                href="/#contact"
                 style={{
                   display: 'inline-block', marginTop: '6px', background: '#C8202A', color: '#fff',
                   fontSize: '0.78rem', fontWeight: 700, padding: '10px 20px', borderRadius: '4px',
@@ -103,18 +115,7 @@ export default function Footer() {
           <p style={{ color: '#253040', fontSize: '0.78rem' }}>
             © {new Date().getFullYear()} America&apos;s Plumbing · Owner: Joe · C-36 Licensed
           </p>
-          <div style={{ display: 'flex', gap: '20px' }}>
-            {['Privacy Policy', 'Terms of Service'].map(link => (
-              <a
-                key={link} href="#"
-                style={{ color: '#253040', fontSize: '0.78rem', textDecoration: 'none' }}
-                onMouseEnter={e => (e.currentTarget.style.color = '#fff')}
-                onMouseLeave={e => (e.currentTarget.style.color = '#253040')}
-              >
-                {link}
-              </a>
-            ))}
-          </div>
+          <span style={{ color: '#253040', fontSize: '0.78rem' }}>C-36 License #1086994</span>
         </div>
       </div>
 

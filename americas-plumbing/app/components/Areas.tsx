@@ -51,7 +51,7 @@ export default function Areas() {
             </span>
           </div>
 
-          <a href="#contact" style={{
+          <a href="/#contact" style={{
             display: 'inline-block', background: '#1A52BE', color: '#fff',
             fontSize: '0.82rem', fontWeight: 700, padding: '13px 28px',
             borderRadius: '4px', textDecoration: 'none',
