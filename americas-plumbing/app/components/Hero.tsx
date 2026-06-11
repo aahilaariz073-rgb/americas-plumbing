@@ -52,9 +52,9 @@ export default function Hero() {
 
         {/* Headline */}
         <h1 style={{
-          fontFamily: 'var(--font-newsreader), Georgia, serif',
+          fontFamily: 'var(--font-newsreader), Montserrat, sans-serif',
           fontSize: 'clamp(3rem, 6vw, 5.5rem)', fontWeight: 700,
-          color: '#fff', lineHeight: 1.04, letterSpacing: '-0.025em',
+          color: '#fff', lineHeight: 1.04, letterSpacing: '-0.01em',
           marginBottom: '24px', maxWidth: '700px'
         }}>
           Southern California&apos;s<br />
@@ -102,7 +102,7 @@ export default function Hero() {
             <div key={i} style={{ display: 'flex', alignItems: 'center' }}>
               {i > 0 && <div style={{ width: '1px', height: '40px', background: 'rgba(255,255,255,0.1)', margin: '0 32px' }} />}
               <div>
-                <div style={{ fontFamily: 'var(--font-newsreader), serif', fontSize: '2.4rem', fontWeight: 700, color: stat.red ? '#C8202A' : '#fff', lineHeight: 1 }}>{stat.val}</div>
+                <div style={{ fontFamily: 'var(--font-newsreader), Montserrat, sans-serif', fontSize: '2.4rem', fontWeight: 700, color: stat.red ? '#C8202A' : '#fff', lineHeight: 1 }}>{stat.val}</div>
                 <div style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.72rem', letterSpacing: '0.12em', textTransform: 'uppercase', marginTop: '5px' }}>{stat.label}</div>
               </div>
             </div>
@@ -116,7 +116,7 @@ export default function Hero() {
         background: '#C8202A', color: '#fff', padding: '16px 22px',
         borderRadius: '6px', boxShadow: '0 12px 40px rgba(200,32,42,0.5)', textAlign: 'center'
       }}>
-        <div style={{ fontFamily: 'var(--font-newsreader), Georgia, serif', fontSize: '1.9rem', fontWeight: 700, lineHeight: 1 }}>C-36</div>
+        <div style={{ fontFamily: 'var(--font-newsreader), Montserrat, sans-serif', fontSize: '1.9rem', fontWeight: 700, lineHeight: 1 }}>C-36</div>
         <div style={{ fontSize: '0.68rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', marginTop: '3px', opacity: 0.85 }}>Licensed</div>
       </div>
 

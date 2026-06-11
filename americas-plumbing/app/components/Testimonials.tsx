@@ -40,7 +40,7 @@ export default function Testimonials() {
               Real Reviews
             </div>
             <h2 style={{
-              fontFamily: 'var(--font-newsreader), Georgia, serif',
+              fontFamily: 'var(--font-newsreader), Montserrat, sans-serif',
               fontSize: 'clamp(2.2rem, 4vw, 3rem)', fontWeight: 700,
               color: '#fff', lineHeight: 1.1
             }}>
@@ -60,7 +60,7 @@ export default function Testimonials() {
           {reviews.map((r) => (
             <ScrollReveal key={r.name} style={{ background: r.bg, padding: '44px 36px' }}>
               <div style={{
-                fontFamily: 'var(--font-newsreader), serif',
+                fontFamily: 'var(--font-newsreader), Montserrat, sans-serif',
                 fontSize: '5rem', color: r.accentColor,
                 lineHeight: 0.7, marginBottom: '24px', fontWeight: 400
               }}>

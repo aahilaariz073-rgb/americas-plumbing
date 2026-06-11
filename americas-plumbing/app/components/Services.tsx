@@ -50,7 +50,7 @@ export default function Services() {
               What We Do
             </div>
             <h2 style={{
-              fontFamily: 'var(--font-newsreader), Georgia, serif',
+              fontFamily: 'var(--font-newsreader), Montserrat, sans-serif',
               fontSize: 'clamp(2.2rem, 4vw, 3.2rem)', fontWeight: 700,
               color: '#080f1f', lineHeight: 1.1, letterSpacing: '-0.02em'
             }}>
@@ -86,9 +86,9 @@ export default function Services() {
                 }}
               >
                 <div style={{
-                  fontFamily: 'var(--font-newsreader), serif',
+                  fontFamily: 'var(--font-newsreader), Montserrat, sans-serif',
                   fontSize: 'clamp(3rem, 6vw, 5rem)', fontWeight: 700,
-                  color: '#f0f1f5', lineHeight: 1, marginBottom: '8px', letterSpacing: '-0.04em'
+                  color: '#f0f1f5', lineHeight: 1, marginBottom: '8px', letterSpacing: '-0.02em'
                 }}>
                   {svc.num}
                 </div>

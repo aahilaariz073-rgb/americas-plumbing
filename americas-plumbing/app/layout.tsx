@@ -1,16 +1,15 @@
 import type { Metadata } from "next";
-import { Newsreader, Hanken_Grotesk } from "next/font/google";
+import { Montserrat, Inter } from "next/font/google";
 import "./globals.css";
 
-const newsreader = Newsreader({
+const montserrat = Montserrat({
   subsets: ["latin"],
-  weight: ["400", "600", "700"],
-  style: ["normal", "italic"],
+  weight: ["400", "500", "600", "700", "800", "900"],
   variable: "--font-newsreader",
   display: "swap",
 });
 
-const hankenGrotesk = Hanken_Grotesk({
+const inter = Inter({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700", "800"],
   variable: "--font-hanken",
@@ -29,7 +28,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${newsreader.variable} ${hankenGrotesk.variable}`}>
+    <html lang="en" className={`${montserrat.variable} ${inter.variable}`}>
       <body className="antialiased overflow-x-hidden">{children}</body>
     </html>
   );

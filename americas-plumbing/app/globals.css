@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 @theme inline {
-  --font-sans: var(--font-hanken);
-  --font-display: var(--font-newsreader);
+  --font-sans: var(--font-hanken), 'Inter', system-ui, sans-serif;
+  --font-display: var(--font-newsreader), 'Montserrat', sans-serif;
 
   --color-crimson: #C8202A;
   --color-royal-blue: #1A52BE;
@@ -29,10 +29,12 @@ html {
 }
 
 body {
-  font-family: var(--font-hanken), system-ui, sans-serif;
+  font-family: var(--font-hanken), 'Inter', system-ui, sans-serif;
   background: #fff;
   color: #0d0f1a;
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 @keyframes fadeUp {

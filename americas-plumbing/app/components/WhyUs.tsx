@@ -49,7 +49,7 @@ export default function WhyUs() {
             <div style={{ width: '28px', height: '2px', background: '#C8202A' }} />
           </div>
           <h2 style={{
-            fontFamily: 'var(--font-newsreader), Georgia, serif',
+            fontFamily: 'var(--font-newsreader), Montserrat, sans-serif',
             fontSize: 'clamp(2.2rem, 4vw, 3rem)', fontWeight: 700,
             color: '#080f1f', lineHeight: 1.1
           }}>
@@ -67,7 +67,7 @@ export default function WhyUs() {
               style={{ background: p.dark ? '#080f1f' : '#fff', padding: '44px 36px' }}
             >
               <div style={{
-                fontFamily: 'var(--font-newsreader), serif',
+                fontFamily: 'var(--font-newsreader), Montserrat, sans-serif',
                 fontSize: '3rem', fontWeight: 700, color: '#C8202A', lineHeight: 1, marginBottom: '16px'
               }}>
                 {p.num}
