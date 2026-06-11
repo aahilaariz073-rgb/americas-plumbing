@@ -6,23 +6,33 @@ export default function Hero() {
       id="hero"
       style={{ position: 'relative', background: '#080f1f', overflow: 'hidden', minHeight: '94vh', display: 'flex', alignItems: 'center' }}
     >
-      {/* Diagonal decorative bands */}
+      {/* Background photo with dark overlay */}
+      <div style={{ position: 'absolute', inset: 0 }}>
+        <Image
+          src="https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?auto=format&fit=crop&w=1920&q=80"
+          alt=""
+          fill
+          style={{ objectFit: 'cover', objectPosition: 'center' }}
+          priority
+          aria-hidden="true"
+        />
+        {/* Dark overlay so text stays readable */}
+        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(110deg, rgba(8,15,31,0.97) 45%, rgba(8,15,31,0.75) 100%)' }} />
+      </div>
+
+      {/* Decorative accents — blue greatly reduced, red slash kept */}
       <div style={{ position: 'absolute', inset: 0, pointerEvents: 'none', overflow: 'hidden' }}>
         <div style={{
           position: 'absolute', top: '-10%', right: '-5%', width: '55%', height: '130%',
           background: '#1A52BE',
           clipPath: 'polygon(18% 0%, 100% 0%, 100% 100%, 0% 100%)',
-          opacity: 0.07
+          opacity: 0.03
         }} />
         <div style={{
           position: 'absolute', top: '-10%', right: '-5%', width: '52%', height: '130%',
           background: '#C8202A',
           clipPath: 'polygon(20% 0%, 22% 0%, 4% 100%, 2% 100%)',
-          opacity: 0.5
-        }} />
-        <div style={{
-          position: 'absolute', top: '-10%', right: '30%', width: '2px', height: '130%',
-          background: 'rgba(255,255,255,0.04)', transform: 'rotate(-8deg)'
+          opacity: 0.45
         }} />
       </div>
 
