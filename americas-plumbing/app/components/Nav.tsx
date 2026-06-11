@@ -28,12 +28,16 @@ export default function Nav() {
 
         {/* Desktop nav */}
         <div className="hide-mob" style={{ display: 'flex', alignItems: 'center', gap: '36px' }}>
-          {['Services', 'Why Us', 'Areas', 'Reviews', 'FAQ'].map((label) => {
-            const href = '#' + label.toLowerCase().replace(' ', '-');
-            return (
+          {[
+            { label: 'Services', href: '/services' },
+            { label: 'Why Us', href: '#why-us' },
+            { label: 'Areas', href: '/areas' },
+            { label: 'Reviews', href: '#testimonials' },
+            { label: 'FAQ', href: '#faq' },
+          ].map(({ label, href }) => (
               <a
                 key={label}
-                href={href === '#reviews' ? '#testimonials' : href}
+                href={href}
                 style={{
                   color: 'rgba(255,255,255,0.6)', fontSize: '0.82rem', fontWeight: 600,
                   textDecoration: 'none', letterSpacing: '0.1em', textTransform: 'uppercase',
@@ -44,8 +48,7 @@ export default function Nav() {
               >
                 {label}
               </a>
-            );
-          })}
+            ))}
         </div>
 
         <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
@@ -84,9 +87,9 @@ export default function Nav() {
           padding: '16px 28px 28px', borderTop: '1px solid rgba(255,255,255,0.08)'
         }}>
           {[
-            { label: 'Services', href: '#services' },
+            { label: 'Services', href: '/services' },
             { label: 'Why Us', href: '#why-us' },
-            { label: 'Areas', href: '#areas' },
+            { label: 'Areas', href: '/areas' },
             { label: 'Reviews', href: '#testimonials' },
             { label: 'FAQ', href: '#faq' },
           ].map(({ label, href }) => (
