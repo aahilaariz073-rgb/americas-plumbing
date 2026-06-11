@@ -1,0 +1,72 @@
+/* ============================================================
+   Scollo Painting — Color Tokens
+   Deep navy base · warm amber/gold accent · crisp warm white
+   ============================================================ */
+
+:root {
+  /* --- Brand: Navy (deep, sophisticated base) --- */
+  --navy-950: #0a1626;
+  --navy-900: #0f2034;
+  --navy-800: #14263d;
+  --navy-700: #1d3553;
+  --navy-600: #2a4870;
+
+  /* --- Brand: Amber / Gold (warm premium accent) --- */
+  --amber-700: #9a6a26;
+  --amber-600: #b07f30;
+  --amber-500: #c18a3d;   /* primary accent */
+  --amber-400: #d4a25c;
+  --amber-300: #e4c08f;
+  --amber-100: #f6ecd9;
+  --amber-50:  #faf4e9;
+
+  /* --- Neutrals: warm-tinted grays + crisp whites --- */
+  --white:      #ffffff;
+  --paper:      #faf8f4;   /* warm off-white page background */
+  --cloud:      #f3efe8;   /* subtle warm panel */
+  --stone-200:  #e6e0d6;
+  --stone-300:  #d2cabb;
+  --stone-400:  #a9a193;
+  --stone-500:  #7c7468;
+  --stone-600:  #574f44;
+  --ink:        #1b1814;   /* near-black warm text */
+
+  /* --- Functional / semantic accents --- */
+  --success: #2f7d52;
+  --warning: #c98a1e;
+  --danger:  #b23b2e;
+  --info:    #2b6daf;
+}
+
+/* ----- Semantic aliases (use these in components) ----- */
+:root {
+  /* Surfaces */
+  --surface-page:        var(--paper);
+  --surface-card:        var(--white);
+  --surface-panel:       var(--cloud);
+  --surface-inverse:     var(--navy-900);
+  --surface-inverse-2:   var(--navy-800);
+  --surface-accent-soft: var(--amber-50);
+
+  /* Text */
+  --text-strong:    var(--ink);
+  --text-body:      var(--stone-600);
+  --text-muted:     var(--stone-500);
+  --text-on-dark:   #f4f1ea;
+  --text-on-dark-muted: #b9c2cf;
+  --text-accent:    var(--amber-600);
+
+  /* Lines & borders */
+  --border-subtle:  var(--stone-200);
+  --border-default: var(--stone-300);
+  --border-strong:  var(--stone-400);
+  --border-on-dark: rgba(255, 255, 255, 0.14);
+
+  /* Brand primaries */
+  --brand-navy:   var(--navy-900);
+  --brand-accent: var(--amber-500);
+  --brand-accent-hover: var(--amber-600);
+
+  /* Focus ring */
+  --ring: color-mix(in oklch, var(--amber-500) 65%, white);
+}

@@ -1,0 +1,13 @@
+/* ============================================================
+   Scollo Painting — Web Fonts
+   ------------------------------------------------------------
+   NOTE: No brand font binaries were provided. These are loaded
+   from Google Fonts as the closest premium-editorial match:
+     · Newsreader     — editorial high-contrast serif (display)
+     · Hanken Grotesk — clean grotesque (body / UI)
+   Cards & kits also include a <link> to Google Fonts for
+   reliable rendering. Replace with licensed binaries + local
+   @font-face rules when available.
+   ============================================================ */
+
+@import url("https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500&family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap");
