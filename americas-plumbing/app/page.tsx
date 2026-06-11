@@ -8,10 +8,12 @@ import Gallery from './components/Gallery';
 import FAQ from './components/FAQ';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import Schema from './components/Schema';
 
 export default function Home() {
   return (
     <>
+      <Schema page="home" />
       <Nav />
       <main>
         <Hero />
