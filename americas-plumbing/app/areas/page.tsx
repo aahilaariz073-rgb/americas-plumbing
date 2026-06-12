@@ -154,26 +154,18 @@ export default function AreasPage() {
                     }}>→</div>
                   </div>
 
-                  <p style={{ color: '#6b7280', fontSize: '0.83rem', lineHeight: 1.65, marginBottom: '18px' }}>
-                    {area.intro.slice(0, 100)}…
+                  <p style={{ color: '#374151', fontSize: '0.9rem', lineHeight: 1.7, marginBottom: '20px' }}>
+                    {area.intro.slice(0, 105)}…
                   </p>
 
-                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px', marginBottom: '20px' }}>
+                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
                     {area.zipCodes.slice(0, 4).map(z => (
                       <span key={z} style={{
-                        background: '#f0f1f5', color: '#5a5e72',
-                        padding: '3px 10px', borderRadius: '4px',
-                        fontSize: '0.7rem', fontWeight: 700, letterSpacing: '0.05em'
+                        background: '#f0f1f5', color: '#374151',
+                        padding: '4px 10px', borderRadius: '4px',
+                        fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.05em'
                       }}>{z}</span>
                     ))}
-                  </div>
-
-                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
-                    {area.keywords.slice(0, 2).map(kw => (
-                      <span key={kw} style={{
-                        fontSize: '0.68rem', color: '#9b9eb0', fontWeight: 500
-                      }}>{kw.replace(/-/g, ' ')}</span>
-                    )).reduce<React.ReactNode[]>((acc, el, idx) => idx === 0 ? [el] : [...acc, <span key={`sep-${idx}`} style={{ color: '#d1d5db', fontSize: '0.68rem' }}>·</span>, el], [])}
                   </div>
                 </a>
               ))}
@@ -244,24 +236,18 @@ export default function AreasPage() {
                     }}>→</div>
                   </div>
 
-                  <p style={{ color: '#6b7280', fontSize: '0.83rem', lineHeight: 1.65, marginBottom: '18px' }}>
-                    {area.intro.slice(0, 100)}…
+                  <p style={{ color: '#374151', fontSize: '0.9rem', lineHeight: 1.7, marginBottom: '20px' }}>
+                    {area.intro.slice(0, 105)}…
                   </p>
 
-                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px', marginBottom: '20px' }}>
+                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
                     {area.zipCodes.slice(0, 4).map(z => (
                       <span key={z} style={{
                         background: '#eef2ff', color: '#1A52BE',
-                        padding: '3px 10px', borderRadius: '4px',
-                        fontSize: '0.7rem', fontWeight: 700, letterSpacing: '0.05em'
+                        padding: '4px 10px', borderRadius: '4px',
+                        fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.05em'
                       }}>{z}</span>
                     ))}
-                  </div>
-
-                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
-                    {area.keywords.slice(0, 2).map(kw => (
-                      <span key={kw} style={{ fontSize: '0.68rem', color: '#9b9eb0', fontWeight: 500 }}>{kw.replace(/-/g, ' ')}</span>
-                    )).reduce<React.ReactNode[]>((acc, el, idx) => idx === 0 ? [el] : [...acc, <span key={`sep-${idx}`} style={{ color: '#d1d5db', fontSize: '0.68rem' }}>·</span>, el], [])}
                   </div>
                 </a>
               ))}
