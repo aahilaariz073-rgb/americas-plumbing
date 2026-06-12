@@ -14,7 +14,7 @@ const pairs = [
 
 function BaCard({ src, label, tag, tagBg }: { src: string; label: string; tag: string; tagBg: string }) {
   return (
-    <div style={{ position: 'relative', width: '100%', height: '220px', overflow: 'hidden', borderRadius: '6px', background: '#eef0f6' }}>
+    <div style={{ position: 'relative', width: '100%', height: '260px', overflow: 'hidden', borderRadius: '8px', background: '#eef0f6' }}>
       <Image
         src={src}
         alt={label}
@@ -65,22 +65,18 @@ export default function Gallery() {
           </p>
         </ScrollReveal>
 
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-          {pairs.map((pair, i) => (
-            <ScrollReveal key={i}>
-              <div className="ba-row" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px' }}>
-                <BaCard src={pair.before.src} label={pair.before.label} tag="Before" tagBg="#C8202A" />
-                <BaCard src={pair.after.src}  label={pair.after.label}  tag="After"  tagBg="#1A52BE" />
-              </div>
-            </ScrollReveal>
-          ))}
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '6px' }} className="ba-grid">
+          {pairs.flatMap(pair => [
+            <BaCard key={pair.before.src} src={pair.before.src} label={pair.before.label} tag="Before" tagBg="#C8202A" />,
+            <BaCard key={pair.after.src}  src={pair.after.src}  label={pair.after.label}  tag="After"  tagBg="#1A52BE" />,
+          ])}
         </div>
       </div>
 
       <style>{`
         @media (max-width: 600px) {
-          .ba-row { grid-template-columns: 1fr !important; }
-          .ba-row > div { height: 180px !important; }
+          .ba-grid { grid-template-columns: 1fr !important; }
+          .ba-grid > div { height: 200px !important; }
         }
       `}</style>
     </section>

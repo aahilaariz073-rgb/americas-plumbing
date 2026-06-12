@@ -16,8 +16,8 @@ export default function Hero() {
           priority
           aria-hidden="true"
         />
-        {/* Dark overlay — heavy on left for text, lighter on right to show photo */}
-        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(105deg, rgba(8,15,31,0.96) 40%, rgba(8,15,31,0.45) 100%)' }} />
+        {/* Dark overlay — readable on left, photo visible on right */}
+        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(105deg, rgba(8,15,31,0.88) 35%, rgba(8,15,31,0.25) 100%)' }} />
       </div>
 
 
