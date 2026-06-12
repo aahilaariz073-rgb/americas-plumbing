@@ -12,7 +12,7 @@ export default function Hero() {
           src="/reliable-plumbing.webp"
           alt=""
           fill
-          style={{ objectFit: 'cover', objectPosition: 'center' }}
+          style={{ objectFit: 'cover', objectPosition: 'center', transform: 'scale(0.85)', transformOrigin: 'center center' }}
           priority
           aria-hidden="true"
         />
