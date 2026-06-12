@@ -111,20 +111,6 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                 <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.875rem', lineHeight: 1.65, marginBottom: '24px' }}>Available 24/7 for emergencies. Joe answers personally.</p>
                 <a href="/#contact" style={{ display: 'block', background: '#C8202A', color: '#fff', textAlign: 'center', padding: '14px', borderRadius: '4px', textDecoration: 'none', fontWeight: 700, fontSize: '0.875rem', letterSpacing: '0.08em', textTransform: 'uppercase' }}>Get a Free Quote</a>
               </div>
-              <div style={{ background: '#f7f8fc', padding: '28px', borderRadius: '6px', border: '1px solid #e0e2ea' }}>
-                <h3 style={{ fontSize: '0.9rem', fontWeight: 700, color: '#080f1f', marginBottom: '16px' }}>Other Services</h3>
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-                  {services
-                    .filter(s => s.slug !== slug)
-                    .slice(0, 8)
-                    .map(s => (
-                      <a key={s.slug} href={`/services/${s.slug}`} style={{ color: '#1A52BE', fontSize: '0.875rem', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '6px' }}>
-                        <span style={{ color: '#C8202A', fontSize: '0.7rem' }}>›</span>
-                        {s.shortName}
-                      </a>
-                    ))}
-                </div>
-              </div>
             </div>
           </div>
         </section>
