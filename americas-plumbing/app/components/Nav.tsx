@@ -71,11 +71,11 @@ export default function Nav() {
       <div style={{
         maxWidth: '1240px', margin: '0 auto', padding: '0 28px',
         display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-        height: '68px',
+        height: '88px',
       }}>
         <a href="/" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}>
-          <Image src="/logo.png" alt="America's Plumbing" width={150} height={60}
-            style={{ height: '60px', width: 'auto' }} priority />
+          <Image src="/logo.png" alt="America's Plumbing" width={200} height={80}
+            style={{ height: '80px', width: 'auto' }} priority />
         </a>
 
         {/* Desktop nav */}
