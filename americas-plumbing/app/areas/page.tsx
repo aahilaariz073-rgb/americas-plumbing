@@ -31,7 +31,7 @@ export default function AreasPage() {
               <div style={{ width: '28px', height: '2px', background: '#C8202A' }} />
               <span style={{ color: '#C8202A', fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.22em', textTransform: 'uppercase' }}>Where We Work</span>
             </div>
-            <h1 style={{ fontFamily: 'var(--font-newsreader), Montserrat, sans-serif', fontSize: 'clamp(2.5rem, 5vw, 4rem)', fontWeight: 700, color: '#fff', lineHeight: 1.05, letterSpacing: '-0.01em', marginBottom: '20px' }}>
+            <h1 style={{ fontFamily: 'var(--font-newsreader), Outfit, sans-serif', fontSize: 'clamp(2.5rem, 5vw, 4rem)', fontWeight: 700, color: '#fff', lineHeight: 1.05, letterSpacing: '-0.01em', marginBottom: '20px' }}>
               Serving All of<br />
               <span style={{ color: '#C8202A' }}>Orange County, CA</span>
             </h1>
@@ -51,7 +51,7 @@ export default function AreasPage() {
                     <div style={{ width: '32px', height: '2px', background: '#C8202A' }} />
                     <span style={{ color: '#C8202A', fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.16em', textTransform: 'uppercase' }}>{area.county}</span>
                   </div>
-                  <h2 style={{ fontSize: '1.4rem', fontWeight: 700, color: '#080f1f', marginBottom: '10px', fontFamily: 'var(--font-newsreader), Montserrat, sans-serif' }}>
+                  <h2 style={{ fontSize: '1.4rem', fontWeight: 700, color: '#080f1f', marginBottom: '10px', fontFamily: 'var(--font-newsreader), Outfit, sans-serif' }}>
                     Plumber in {area.city}
                   </h2>
                   <p style={{ color: '#5a5e72', fontSize: '0.875rem', lineHeight: 1.65, marginBottom: '16px' }}>

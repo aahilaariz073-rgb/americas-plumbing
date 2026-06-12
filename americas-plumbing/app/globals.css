@@ -2,7 +2,7 @@
 
 @theme inline {
   --font-sans: var(--font-hanken), 'Inter', system-ui, sans-serif;
-  --font-display: var(--font-newsreader), 'Montserrat', sans-serif;
+  --font-display: var(--font-newsreader), 'Outfit', sans-serif;
 
   --color-crimson: #C8202A;
   --color-royal-blue: #1A52BE;

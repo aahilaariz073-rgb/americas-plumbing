@@ -41,7 +41,7 @@ export default function ReviewsPage() {
               <div style={{ width: '28px', height: '2px', background: '#C8202A' }} />
               <span style={{ color: '#C8202A', fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.22em', textTransform: 'uppercase' }}>5.0 on Google</span>
             </div>
-            <h1 style={{ fontFamily: 'var(--font-newsreader), Montserrat, sans-serif', fontSize: 'clamp(2.5rem, 5vw, 4rem)', fontWeight: 700, color: '#fff', lineHeight: 1.05, letterSpacing: '-0.01em', marginBottom: '20px' }}>
+            <h1 style={{ fontFamily: 'var(--font-newsreader), Outfit, sans-serif', fontSize: 'clamp(2.5rem, 5vw, 4rem)', fontWeight: 700, color: '#fff', lineHeight: 1.05, letterSpacing: '-0.01em', marginBottom: '20px' }}>
               What Our Customers<br />
               <span style={{ color: '#C8202A' }}>Are Saying</span>
             </h1>
@@ -63,7 +63,7 @@ export default function ReviewsPage() {
               {reviews.map((r, i) => (
                 <ScrollReveal key={r.name} style={{ background: '#fff', border: '1px solid #e8eaf0', borderTop: `3px solid ${i % 3 === 1 ? '#1A52BE' : '#C8202A'}`, borderRadius: '4px', padding: '36px 32px' }}>
                   <div style={{
-                    fontFamily: 'var(--font-newsreader), Montserrat, sans-serif',
+                    fontFamily: 'var(--font-newsreader), Outfit, sans-serif',
                     fontSize: '4rem', color: i % 3 === 1 ? '#1A52BE' : '#C8202A',
                     lineHeight: 0.7, marginBottom: '20px', fontWeight: 400, opacity: 0.4
                   }}>

@@ -31,7 +31,7 @@ export default function HomepageCTAStrip() {
           <div style={{ color: '#C8202A', fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.22em', textTransform: 'uppercase', marginBottom: '14px' }}>
             More from America&apos;s Plumbing
           </div>
-          <h2 style={{ fontFamily: 'var(--font-newsreader), Montserrat, sans-serif', fontSize: 'clamp(1.8rem, 3vw, 2.6rem)', fontWeight: 700, color: '#080f1f', lineHeight: 1.1 }}>
+          <h2 style={{ fontFamily: 'var(--font-newsreader), Outfit, sans-serif', fontSize: 'clamp(1.8rem, 3vw, 2.6rem)', fontWeight: 700, color: '#080f1f', lineHeight: 1.1 }}>
             Everything You Need to Know
           </h2>
         </ScrollReveal>

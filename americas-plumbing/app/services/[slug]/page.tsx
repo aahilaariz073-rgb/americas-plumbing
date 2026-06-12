@@ -54,7 +54,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
               </span>
             </div>
             <h1 style={{
-              fontFamily: 'var(--font-newsreader), Montserrat, sans-serif',
+              fontFamily: 'var(--font-newsreader), Outfit, sans-serif',
               fontSize: 'clamp(2.2rem, 4.5vw, 3.8rem)', fontWeight: 700,
               color: '#fff', lineHeight: 1.05, letterSpacing: '-0.01em',
               marginBottom: '24px', maxWidth: '860px'
@@ -86,7 +86,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
 
               {/* What's Included */}
               <h2 style={{
-                fontFamily: 'var(--font-newsreader), Montserrat, sans-serif',
+                fontFamily: 'var(--font-newsreader), Outfit, sans-serif',
                 fontSize: 'clamp(1.6rem, 3vw, 2.2rem)', fontWeight: 700,
                 color: '#080f1f', lineHeight: 1.1, marginTop: '48px', marginBottom: '32px'
               }}>
@@ -107,7 +107,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
             <div style={{ position: 'sticky', top: '88px' }}>
               <div style={{ background: '#080f1f', padding: '36px', borderRadius: '6px', marginBottom: '24px' }}>
                 <div style={{ color: '#C8202A', fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', marginBottom: '12px' }}>Call Us Now</div>
-                <a href="tel:+19493790082" style={{ display: 'block', fontFamily: 'var(--font-newsreader), Montserrat, sans-serif', fontSize: '1.7rem', fontWeight: 700, color: '#fff', textDecoration: 'none', marginBottom: '12px' }}>(949) 379-0082</a>
+                <a href="tel:+19493790082" style={{ display: 'block', fontFamily: 'var(--font-newsreader), Outfit, sans-serif', fontSize: '1.7rem', fontWeight: 700, color: '#fff', textDecoration: 'none', marginBottom: '12px' }}>(949) 379-0082</a>
                 <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.875rem', lineHeight: 1.65, marginBottom: '24px' }}>Available 24/7 for emergencies. Joe answers personally.</p>
                 <a href="/#contact" style={{ display: 'block', background: '#C8202A', color: '#fff', textAlign: 'center', padding: '14px', borderRadius: '4px', textDecoration: 'none', fontWeight: 700, fontSize: '0.875rem', letterSpacing: '0.08em', textTransform: 'uppercase' }}>Get a Free Quote</a>
               </div>
@@ -133,7 +133,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
         <section style={{ background: '#f7f8fc', padding: '80px 28px' }}>
           <div style={{ maxWidth: '760px', margin: '0 auto' }}>
             <div style={{ color: '#C8202A', fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.22em', textTransform: 'uppercase', marginBottom: '14px' }}>FAQ</div>
-            <h2 style={{ fontFamily: 'var(--font-newsreader), Montserrat, sans-serif', fontSize: 'clamp(1.8rem, 3vw, 2.4rem)', fontWeight: 700, color: '#080f1f', lineHeight: 1.1, marginBottom: '40px' }}>
+            <h2 style={{ fontFamily: 'var(--font-newsreader), Outfit, sans-serif', fontSize: 'clamp(1.8rem, 3vw, 2.4rem)', fontWeight: 700, color: '#080f1f', lineHeight: 1.1, marginBottom: '40px' }}>
               Common Questions About {service.name}
             </h2>
             {service.faqs.map((faq, i) => (

@@ -67,7 +67,7 @@ export default function Contact() {
             Get in Touch
           </div>
           <h2 style={{
-            fontFamily: 'var(--font-newsreader), Montserrat, sans-serif',
+            fontFamily: 'var(--font-newsreader), Outfit, sans-serif',
             fontSize: 'clamp(1.9rem, 3.5vw, 2.8rem)', fontWeight: 700,
             color: '#080f1f', lineHeight: 1.1, marginBottom: '20px'
           }}>
@@ -125,7 +125,7 @@ export default function Contact() {
                 ✓
               </div>
               <h3 style={{
-                fontFamily: 'var(--font-newsreader), Montserrat, sans-serif',
+                fontFamily: 'var(--font-newsreader), Outfit, sans-serif',
                 fontSize: '1.7rem', color: '#080f1f', marginBottom: '12px'
               }}>
                 Request Received

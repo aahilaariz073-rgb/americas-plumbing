@@ -48,7 +48,7 @@ export default function FAQ() {
             FAQ
           </div>
           <h2 style={{
-            fontFamily: 'var(--font-newsreader), Montserrat, sans-serif',
+            fontFamily: 'var(--font-newsreader), Outfit, sans-serif',
             fontSize: 'clamp(2rem, 3.5vw, 2.8rem)', fontWeight: 700,
             color: '#080f1f', lineHeight: 1.1
           }}>
