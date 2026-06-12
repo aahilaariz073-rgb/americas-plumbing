@@ -1,9 +1,9 @@
 import ScrollReveal from './ScrollReveal';
 
 const cities = [
-  'Irvine', 'Newport Beach', 'Laguna Hills', 'Mission Viejo',
-  'Lake Forest', 'Aliso Viejo', 'San Clemente', 'Huntington Beach',
-  'Anaheim', 'Santa Ana',
+  'San Jacinto', 'Hemet', 'Menifee', 'Beaumont',
+  'Riverside', 'Moreno Valley', 'Mission Viejo', 'Laguna Beach',
+  'Laguna Niguel', 'Ladera Ranch',
 ];
 
 export default function Areas() {
@@ -28,10 +28,10 @@ export default function Areas() {
             fontSize: 'clamp(1.9rem, 3.5vw, 2.8rem)', fontWeight: 700,
             color: '#080f1f', lineHeight: 1.1, marginBottom: '20px'
           }}>
-            Serving Orange County &amp; Beyond
+            Serving San Jacinto, Riverside County &amp; South OC
           </h2>
           <p style={{ color: '#5a5e72', fontSize: '0.975rem', lineHeight: 1.7, marginBottom: '36px' }}>
-            Based in Orange County, we serve homeowners and businesses across Southern California — fast arrival times throughout the region.
+            Based in San Jacinto, CA, we serve homeowners and businesses across the San Jacinto Valley, Inland Empire, and South Orange County — with fast arrival times throughout the region.
           </p>
 
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', marginBottom: '36px' }}>
