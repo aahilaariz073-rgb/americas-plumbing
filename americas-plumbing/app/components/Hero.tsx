@@ -9,7 +9,7 @@ export default function Hero() {
       {/* Background photo with dark overlay */}
       <div style={{ position: 'absolute', inset: 0 }}>
         <Image
-          src="https://images.unsplash.com/photo-1585771724684-38269d6639fd?auto=format&fit=crop&w=1920&q=80"
+          src="/homepage.avif"
           alt=""
           fill
           style={{ objectFit: 'cover', objectPosition: 'center' }}
