@@ -9,7 +9,7 @@ export default function Hero() {
       {/* Background photo with dark overlay */}
       <div style={{ position: 'absolute', inset: 0 }}>
         <Image
-          src="https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?auto=format&fit=crop&w=1920&q=80"
+          src="https://images.unsplash.com/photo-1585771724684-38269d6639fd?auto=format&fit=crop&w=1920&q=80"
           alt=""
           fill
           style={{ objectFit: 'cover', objectPosition: 'center' }}
@@ -20,21 +20,6 @@ export default function Hero() {
         <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(105deg, rgba(8,15,31,0.96) 40%, rgba(8,15,31,0.45) 100%)' }} />
       </div>
 
-      {/* Decorative accents — blue greatly reduced, red slash kept */}
-      <div style={{ position: 'absolute', inset: 0, pointerEvents: 'none', overflow: 'hidden' }}>
-        <div style={{
-          position: 'absolute', top: '-10%', right: '-5%', width: '55%', height: '130%',
-          background: '#1A52BE',
-          clipPath: 'polygon(18% 0%, 100% 0%, 100% 100%, 0% 100%)',
-          opacity: 0.03
-        }} />
-        <div style={{
-          position: 'absolute', top: '-10%', right: '-5%', width: '52%', height: '130%',
-          background: '#C8202A',
-          clipPath: 'polygon(20% 0%, 22% 0%, 4% 100%, 2% 100%)',
-          opacity: 0.45
-        }} />
-      </div>
 
       <div
         style={{
