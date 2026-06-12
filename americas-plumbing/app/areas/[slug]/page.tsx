@@ -131,17 +131,6 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
                 <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.875rem', lineHeight: 1.65, marginBottom: '24px' }}>24/7 emergency response. Free estimates. C-36 Licensed.</p>
                 <a href="/#contact" style={{ display: 'block', background: '#C8202A', color: '#fff', textAlign: 'center', padding: '14px', borderRadius: '4px', textDecoration: 'none', fontWeight: 700, fontSize: '0.875rem', letterSpacing: '0.08em', textTransform: 'uppercase' }}>Get a Free Quote</a>
               </div>
-              <div style={{ background: '#f7f8fc', padding: '28px', borderRadius: '6px', border: '1px solid #e0e2ea' }}>
-                <h3 style={{ fontSize: '0.9rem', fontWeight: 700, color: '#080f1f', marginBottom: '16px' }}>Other Cities We Serve</h3>
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-                  {areas.filter(a => a.slug !== slug).slice(0, 8).map(a => (
-                    <a key={a.slug} href={`/areas/${a.slug}`} style={{ color: '#1A52BE', fontSize: '0.875rem', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '6px' }}>
-                      <span style={{ color: '#C8202A', fontSize: '0.7rem' }}>›</span>
-                      Plumber in {a.city}
-                    </a>
-                  ))}
-                </div>
-              </div>
             </div>
           </div>
         </section>
