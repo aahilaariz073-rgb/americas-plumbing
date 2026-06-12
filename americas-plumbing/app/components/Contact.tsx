@@ -4,14 +4,14 @@ import { useState, FormEvent } from 'react';
 import ScrollReveal from './ScrollReveal';
 
 const inputStyle: React.CSSProperties = {
-  width: '100%', background: 'rgba(255,255,255,0.06)',
-  border: '1px solid rgba(255,255,255,0.12)', borderRadius: '4px',
-  padding: '13px 16px', color: '#fff', fontSize: '0.95rem',
+  width: '100%', background: '#fff',
+  border: '1px solid #e0e2ea', borderRadius: '4px',
+  padding: '13px 16px', color: '#080f1f', fontSize: '0.95rem',
   outline: 'none', fontFamily: 'inherit'
 };
 
 const labelStyle: React.CSSProperties = {
-  color: 'rgba(255,255,255,0.5)', fontSize: '0.75rem', fontWeight: 700,
+  color: '#5a5e72', fontSize: '0.75rem', fontWeight: 700,
   letterSpacing: '0.1em', textTransform: 'uppercase', display: 'block', marginBottom: '8px'
 };
 
@@ -45,7 +45,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" style={{ background: '#080f1f', padding: '100px 28px', position: 'relative' }}>
+    <section id="contact" style={{ background: '#f7f8fc', padding: '100px 28px', position: 'relative' }}>
       <div style={{
         position: 'absolute', top: 0, left: 0, right: 0, height: '3px',
         background: 'linear-gradient(to right, #C8202A, #1A52BE, #C8202A)'
@@ -69,11 +69,11 @@ export default function Contact() {
           <h2 style={{
             fontFamily: 'var(--font-newsreader), Montserrat, sans-serif',
             fontSize: 'clamp(1.9rem, 3.5vw, 2.8rem)', fontWeight: 700,
-            color: '#fff', lineHeight: 1.1, marginBottom: '20px'
+            color: '#080f1f', lineHeight: 1.1, marginBottom: '20px'
           }}>
             Request a Free Quote
           </h2>
-          <p style={{ color: 'rgba(255,255,255,0.45)', fontSize: '0.975rem', lineHeight: 1.7, marginBottom: '48px' }}>
+          <p style={{ color: '#5a5e72', fontSize: '0.975rem', lineHeight: 1.7, marginBottom: '48px' }}>
             Fill out the form and Joe will call you back within the hour. For emergencies, call directly.
           </p>
 
@@ -87,7 +87,7 @@ export default function Contact() {
                 href={item.href}
                 style={{
                   display: 'flex', alignItems: 'center', gap: '20px',
-                  padding: '24px 0', borderBottom: '1px solid rgba(255,255,255,0.07)',
+                  padding: '24px 0', borderBottom: '1px solid #e8eaf0',
                   textDecoration: 'none', transition: 'padding-left 0.2s'
                 }}
                 onMouseEnter={e => (e.currentTarget.style.paddingLeft = '8px')}
@@ -95,16 +95,16 @@ export default function Contact() {
               >
                 <div style={{ width: '2px', height: '40px', background: item.bar, flexShrink: 0 }} />
                 <div>
-                  <div style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', marginBottom: '4px' }}>{item.label}</div>
-                  <div style={{ color: '#fff', fontSize: item.label === 'Phone' ? '1.1rem' : '1rem', fontWeight: item.label === 'Phone' ? 700 : 600 }}>{item.value}</div>
+                  <div style={{ color: '#9b9eb0', fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', marginBottom: '4px' }}>{item.label}</div>
+                  <div style={{ color: '#080f1f', fontSize: item.label === 'Phone' ? '1.1rem' : '1rem', fontWeight: item.label === 'Phone' ? 700 : 600 }}>{item.value}</div>
                 </div>
               </a>
             ))}
             <div style={{ display: 'flex', alignItems: 'center', gap: '20px', padding: '24px 0' }}>
               <div style={{ width: '2px', height: '40px', background: '#1A52BE', flexShrink: 0 }} />
               <div>
-                <div style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', marginBottom: '4px' }}>Service Area</div>
-                <div style={{ color: '#fff', fontSize: '1rem', fontWeight: 600 }}>Orange County &amp; Southern California</div>
+                <div style={{ color: '#9b9eb0', fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', marginBottom: '4px' }}>Service Area</div>
+                <div style={{ color: '#080f1f', fontSize: '1rem', fontWeight: 600 }}>Orange County &amp; Southern California</div>
               </div>
             </div>
           </div>
@@ -114,7 +114,7 @@ export default function Contact() {
         <ScrollReveal>
           {submitted ? (
             <div style={{
-              border: '1px solid rgba(255,255,255,0.1)', borderRadius: '6px',
+              border: '1px solid #e0e2ea', borderRadius: '6px', background: '#fff',
               padding: '52px 36px', textAlign: 'center'
             }}>
               <div style={{
@@ -126,12 +126,12 @@ export default function Contact() {
               </div>
               <h3 style={{
                 fontFamily: 'var(--font-newsreader), Montserrat, sans-serif',
-                fontSize: '1.7rem', color: '#fff', marginBottom: '12px'
+                fontSize: '1.7rem', color: '#080f1f', marginBottom: '12px'
               }}>
                 Request Received
               </h3>
-              <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.975rem', lineHeight: 1.65 }}>
-                Thanks, {submittedName}. Joe will call <strong style={{ color: '#fff' }}>{submittedPhone}</strong> within the hour.<br />
+              <p style={{ color: '#5a5e72', fontSize: '0.975rem', lineHeight: 1.65 }}>
+                Thanks, {submittedName}. Joe will call <strong style={{ color: '#080f1f' }}>{submittedPhone}</strong> within the hour.<br />
                 For emergencies:{' '}
                 <a href="tel:+19493790082" style={{ color: '#C8202A', fontWeight: 700 }}>(949) 379-0082</a>
               </p>
@@ -144,7 +144,7 @@ export default function Contact() {
                   <input
                     name="firstName" required style={inputStyle} placeholder="Joe"
                     onFocus={e => (e.target.style.borderColor = '#C8202A')}
-                    onBlur={e => (e.target.style.borderColor = 'rgba(255,255,255,0.12)')}
+                    onBlur={e => (e.target.style.borderColor = '#e0e2ea')}
                   />
                 </div>
                 <div>
@@ -152,7 +152,7 @@ export default function Contact() {
                   <input
                     name="lastName" required style={inputStyle} placeholder="Smith"
                     onFocus={e => (e.target.style.borderColor = '#C8202A')}
-                    onBlur={e => (e.target.style.borderColor = 'rgba(255,255,255,0.12)')}
+                    onBlur={e => (e.target.style.borderColor = '#e0e2ea')}
                   />
                 </div>
               </div>
@@ -162,7 +162,7 @@ export default function Contact() {
                 <input
                   name="phone" required type="tel" style={inputStyle} placeholder="(949) 555-0100"
                   onFocus={e => (e.target.style.borderColor = '#C8202A')}
-                  onBlur={e => (e.target.style.borderColor = 'rgba(255,255,255,0.12)')}
+                  onBlur={e => (e.target.style.borderColor = '#e0e2ea')}
                 />
               </div>
 
@@ -171,7 +171,7 @@ export default function Contact() {
                 <input
                   name="email" type="email" style={inputStyle} placeholder="you@example.com"
                   onFocus={e => (e.target.style.borderColor = '#C8202A')}
-                  onBlur={e => (e.target.style.borderColor = 'rgba(255,255,255,0.12)')}
+                  onBlur={e => (e.target.style.borderColor = '#e0e2ea')}
                 />
               </div>
 
@@ -179,9 +179,9 @@ export default function Contact() {
                 <label style={labelStyle}>Service Needed</label>
                 <select
                   name="service"
-                  style={{ ...inputStyle, background: '#0d1626', cursor: 'pointer' }}
+                  style={{ ...inputStyle, background: '#fff', cursor: 'pointer' }}
                   onFocus={e => (e.target.style.borderColor = '#C8202A')}
-                  onBlur={e => (e.target.style.borderColor = 'rgba(255,255,255,0.12)')}
+                  onBlur={e => (e.target.style.borderColor = '#e0e2ea')}
                 >
                   <option value="">Select a service…</option>
                   <option value="emergency">Emergency Repair</option>
@@ -201,7 +201,7 @@ export default function Contact() {
                   style={{ ...inputStyle, resize: 'vertical' }}
                   placeholder="Tell us what's going on…"
                   onFocus={e => (e.target.style.borderColor = '#C8202A')}
-                  onBlur={e => (e.target.style.borderColor = 'rgba(255,255,255,0.12)')}
+                  onBlur={e => (e.target.style.borderColor = '#e0e2ea')}
                 />
               </div>
 

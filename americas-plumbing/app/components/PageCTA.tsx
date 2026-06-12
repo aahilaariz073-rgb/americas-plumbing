@@ -1,6 +1,6 @@
 export default function PageCTA({ city = 'Orange County' }: { city?: string }) {
   return (
-    <section style={{ background: '#080f1f', padding: '80px 28px', position: 'relative' }}>
+    <section style={{ background: '#1e2d4a', padding: '80px 28px', position: 'relative' }}>
       <div style={{
         position: 'absolute', top: 0, left: 0, right: 0, height: '3px',
         background: 'linear-gradient(to right, #C8202A, #1A52BE, #C8202A)'

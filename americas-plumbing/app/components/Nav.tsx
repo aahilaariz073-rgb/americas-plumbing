@@ -9,11 +9,11 @@ export default function Nav() {
   const closeNav = () => setNavOpen(false);
 
   return (
-    <nav style={{ position: 'sticky', top: 0, zIndex: 200, background: '#080f1f' }}>
+    <nav style={{ position: 'sticky', top: 0, zIndex: 200, background: '#fff', boxShadow: '0 1px 0 #e8eaf0' }}>
       <div style={{
         maxWidth: '1240px', margin: '0 auto', padding: '0 28px',
         display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-        height: '68px', borderBottom: '1px solid rgba(255,255,255,0.08)'
+        height: '68px',
       }}>
         <a href="/" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}>
           <Image
@@ -21,7 +21,7 @@ export default function Nav() {
             alt="America's Plumbing"
             width={120}
             height={48}
-            style={{ height: '48px', width: 'auto', filter: 'brightness(0) invert(1)' }}
+            style={{ height: '48px', width: 'auto', filter: 'brightness(0)' }}
             priority
           />
         </a>
@@ -35,20 +35,20 @@ export default function Nav() {
             { label: 'FAQ', href: '/faq' },
             { label: 'Contact', href: '/contact' },
           ].map(({ label, href }) => (
-              <a
-                key={label}
-                href={href}
-                style={{
-                  color: 'rgba(255,255,255,0.6)', fontSize: '0.82rem', fontWeight: 600,
-                  textDecoration: 'none', letterSpacing: '0.1em', textTransform: 'uppercase',
-                  transition: 'color 0.2s'
-                }}
-                onMouseEnter={e => (e.currentTarget.style.color = '#fff')}
-                onMouseLeave={e => (e.currentTarget.style.color = 'rgba(255,255,255,0.6)')}
-              >
-                {label}
-              </a>
-            ))}
+            <a
+              key={label}
+              href={href}
+              style={{
+                color: '#5a5e72', fontSize: '0.82rem', fontWeight: 600,
+                textDecoration: 'none', letterSpacing: '0.1em', textTransform: 'uppercase',
+                transition: 'color 0.2s'
+              }}
+              onMouseEnter={e => (e.currentTarget.style.color = '#080f1f')}
+              onMouseLeave={e => (e.currentTarget.style.color = '#5a5e72')}
+            >
+              {label}
+            </a>
+          ))}
         </div>
 
         <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
@@ -69,7 +69,7 @@ export default function Nav() {
             aria-label="Toggle menu"
             style={{
               display: 'none', background: 'none',
-              border: '2px solid rgba(255,255,255,0.2)', color: '#fff',
+              border: '2px solid #e0e2ea', color: '#080f1f',
               width: '40px', height: '40px', borderRadius: '5px',
               cursor: 'pointer', fontSize: '1.2rem',
               alignItems: 'center', justifyContent: 'center'
@@ -83,8 +83,8 @@ export default function Nav() {
       {/* Mobile nav */}
       {navOpen && (
         <div style={{
-          display: 'flex', flexDirection: 'column', background: '#080f1f',
-          padding: '16px 28px 28px', borderTop: '1px solid rgba(255,255,255,0.08)'
+          display: 'flex', flexDirection: 'column', background: '#fff',
+          padding: '16px 28px 28px', borderTop: '1px solid #e8eaf0'
         }}>
           {[
             { label: 'Services', href: '/services' },
@@ -98,16 +98,16 @@ export default function Nav() {
               href={href}
               onClick={closeNav}
               style={{
-                color: 'rgba(255,255,255,0.7)', padding: '14px 0',
+                color: '#080f1f', padding: '14px 0',
                 fontWeight: 600, textDecoration: 'none', fontSize: '0.95rem',
-                borderBottom: '1px solid rgba(255,255,255,0.06)'
+                borderBottom: '1px solid #f0f1f5'
               }}
             >
               {label}
             </a>
           ))}
           <a
-            href="/#contact"
+            href="/contact"
             onClick={closeNav}
             style={{
               marginTop: '20px', background: '#C8202A', color: '#fff',

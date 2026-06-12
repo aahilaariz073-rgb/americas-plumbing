@@ -54,28 +54,28 @@ export default function ReviewsPage() {
         </section>
 
         {/* Reviews grid */}
-        <section style={{ background: '#080f1f', padding: '80px 28px' }}>
+        <section style={{ background: '#f7f8fc', padding: '80px 28px' }}>
           <div style={{ maxWidth: '1240px', margin: '0 auto' }}>
             <div style={{
               display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
-              gap: '1px', background: 'rgba(255,255,255,0.07)'
+              gap: '16px',
             }}>
               {reviews.map((r, i) => (
-                <ScrollReveal key={r.name} style={{ background: i % 2 === 0 ? '#080f1f' : '#0d1626', padding: '44px 36px' }}>
+                <ScrollReveal key={r.name} style={{ background: '#fff', border: '1px solid #e8eaf0', borderTop: `3px solid ${i % 3 === 1 ? '#1A52BE' : '#C8202A'}`, borderRadius: '4px', padding: '36px 32px' }}>
                   <div style={{
                     fontFamily: 'var(--font-newsreader), Montserrat, sans-serif',
-                    fontSize: '5rem', color: i % 3 === 1 ? '#1A52BE' : '#C8202A',
-                    lineHeight: 0.7, marginBottom: '24px', fontWeight: 400
+                    fontSize: '4rem', color: i % 3 === 1 ? '#1A52BE' : '#C8202A',
+                    lineHeight: 0.7, marginBottom: '20px', fontWeight: 400, opacity: 0.4
                   }}>
                     &ldquo;
                   </div>
-                  <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.975rem', lineHeight: 1.75, marginBottom: '28px' }}>
+                  <p style={{ color: '#5a5e72', fontSize: '0.975rem', lineHeight: 1.75, marginBottom: '28px' }}>
                     {r.quote}
                   </p>
-                  <div style={{ borderTop: '1px solid rgba(255,255,255,0.08)', paddingTop: '20px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                  <div style={{ borderTop: '1px solid #e8eaf0', paddingTop: '20px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                     <div>
-                      <div style={{ color: '#fff', fontWeight: 700, fontSize: '0.9rem' }}>{r.name}</div>
-                      <div style={{ color: 'rgba(255,255,255,0.35)', fontSize: '0.78rem', marginTop: '3px' }}>{r.location}</div>
+                      <div style={{ color: '#080f1f', fontWeight: 700, fontSize: '0.9rem' }}>{r.name}</div>
+                      <div style={{ color: '#9b9eb0', fontSize: '0.78rem', marginTop: '3px' }}>{r.location}</div>
                     </div>
                     <span style={{ color: '#F5C518', fontSize: '0.85rem' }}>★★★★★</span>
                   </div>
@@ -85,7 +85,7 @@ export default function ReviewsPage() {
 
             {/* Google CTA */}
             <ScrollReveal style={{ textAlign: 'center', paddingTop: '64px' }}>
-              <p style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.9rem', marginBottom: '20px' }}>
+              <p style={{ color: '#9b9eb0', fontSize: '0.9rem', marginBottom: '20px' }}>
                 Happy with our work? Leave us a review on Google.
               </p>
               <a
@@ -93,7 +93,7 @@ export default function ReviewsPage() {
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{
-                  display: 'inline-block', background: '#fff', color: '#080f1f',
+                  display: 'inline-block', background: '#C8202A', color: '#fff',
                   fontSize: '0.875rem', fontWeight: 700, padding: '14px 32px',
                   borderRadius: '4px', textDecoration: 'none', letterSpacing: '0.06em', textTransform: 'uppercase'
                 }}

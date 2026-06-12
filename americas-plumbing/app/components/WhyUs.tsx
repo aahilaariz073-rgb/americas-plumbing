@@ -6,24 +6,28 @@ const pillars = [
     title: 'Same-Day Response',
     body: 'We answer calls 24/7 and dispatch the same day. Plumbing emergencies don\'t wait — and neither do we.',
     dark: false,
+    accent: false,
   },
   {
     num: '02',
     title: 'Upfront Pricing',
     body: 'No hidden fees. No surprises. You receive a clear written estimate before any work begins — and we stick to it.',
     dark: false,
+    accent: false,
   },
   {
     num: '03',
     title: 'Licensed & Insured',
     body: 'C-36 licensed, fully bonded and insured. You, your home, and your investment are protected on every job.',
     dark: false,
+    accent: false,
   },
   {
     num: '04',
     title: 'American-Owned',
     body: 'Family-run, locally owned, and proud of it. We treat your home like our own — because we\'re your neighbors.',
-    dark: true,
+    dark: false,
+    accent: true,
   },
 ];
 
@@ -64,22 +68,24 @@ export default function WhyUs() {
           {pillars.map((p) => (
             <ScrollReveal
               key={p.num}
-              style={{ background: p.dark ? '#080f1f' : '#fff', padding: '44px 36px' }}
+              style={{ background: p.accent ? '#C8202A' : '#fff', padding: '44px 36px' }}
             >
               <div style={{
                 fontFamily: 'var(--font-newsreader), Montserrat, sans-serif',
-                fontSize: '3rem', fontWeight: 700, color: '#C8202A', lineHeight: 1, marginBottom: '16px'
+                fontSize: '3rem', fontWeight: 700,
+                color: p.accent ? 'rgba(255,255,255,0.35)' : '#C8202A',
+                lineHeight: 1, marginBottom: '16px'
               }}>
                 {p.num}
               </div>
               <h3 style={{
                 fontSize: '1.1rem', fontWeight: 700,
-                color: p.dark ? '#fff' : '#080f1f', marginBottom: '10px'
+                color: p.accent ? '#fff' : '#080f1f', marginBottom: '10px'
               }}>
                 {p.title}
               </h3>
               <p style={{
-                color: p.dark ? 'rgba(255,255,255,0.5)' : '#5a5e72',
+                color: p.accent ? 'rgba(255,255,255,0.75)' : '#5a5e72',
                 fontSize: '0.875rem', lineHeight: 1.65
               }}>
                 {p.body}
