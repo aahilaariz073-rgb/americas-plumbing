@@ -28,7 +28,7 @@ export default function ThankYouPage() {
               ✓
             </div>
             <h1 style={{
-              fontFamily: 'var(--font-newsreader), Outfit, sans-serif',
+              fontFamily: 'var(--font-newsreader), serif',
               fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 700,
               color: '#fff', lineHeight: 1.1, marginBottom: '20px',
             }}>

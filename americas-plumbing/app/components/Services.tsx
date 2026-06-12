@@ -27,7 +27,7 @@ export default function Services() {
           <div style={{ color: '#C8202A', fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.22em', textTransform: 'uppercase', marginBottom: '14px' }}>
             What We Do
           </div>
-          <h2 style={{ fontFamily: 'var(--font-newsreader), Outfit, sans-serif', fontSize: 'clamp(2.2rem, 4vw, 3rem)', fontWeight: 700, color: '#080f1f', lineHeight: 1.1 }}>
+          <h2 style={{ fontFamily: 'var(--font-newsreader), serif', fontSize: 'clamp(2.2rem, 4vw, 3rem)', fontWeight: 700, color: '#080f1f', lineHeight: 1.1 }}>
             Full-Service Plumbing
           </h2>
           <p style={{ color: '#5a5e72', fontSize: '1rem', lineHeight: 1.7, maxWidth: '520px', margin: '16px auto 0' }}>

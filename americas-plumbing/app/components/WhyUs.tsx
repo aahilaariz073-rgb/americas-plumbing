@@ -53,7 +53,7 @@ export default function WhyUs() {
             <div style={{ width: '28px', height: '2px', background: '#C8202A' }} />
           </div>
           <h2 style={{
-            fontFamily: 'var(--font-newsreader), Outfit, sans-serif',
+            fontFamily: 'var(--font-newsreader), serif',
             fontSize: 'clamp(2.2rem, 4vw, 3rem)', fontWeight: 700,
             color: '#080f1f', lineHeight: 1.1
           }}>
@@ -71,7 +71,7 @@ export default function WhyUs() {
               style={{ background: p.accent ? '#C8202A' : '#fff', padding: '44px 36px' }}
             >
               <div style={{
-                fontFamily: 'var(--font-newsreader), Outfit, sans-serif',
+                fontFamily: 'var(--font-newsreader), serif',
                 fontSize: '3rem', fontWeight: 700,
                 color: p.accent ? 'rgba(255,255,255,0.35)' : '#C8202A',
                 lineHeight: 1, marginBottom: '16px'

@@ -32,7 +32,7 @@ export default function ServicesPage() {
               <div style={{ width: '28px', height: '2px', background: '#C8202A' }} />
               <span style={{ color: '#C8202A', fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.22em', textTransform: 'uppercase' }}>San Jacinto, CA &amp; Southern California</span>
             </div>
-            <h1 style={{ fontFamily: 'var(--font-newsreader), Outfit, sans-serif', fontSize: 'clamp(2.5rem, 5vw, 4rem)', fontWeight: 700, color: '#fff', lineHeight: 1.05, letterSpacing: '-0.01em', marginBottom: '20px' }}>
+            <h1 style={{ fontFamily: 'var(--font-newsreader), serif', fontSize: 'clamp(2.5rem, 5vw, 4rem)', fontWeight: 700, color: '#fff', lineHeight: 1.05, letterSpacing: '-0.01em', marginBottom: '20px' }}>
               Complete Plumbing Services<br />
               <span style={{ color: '#C8202A' }}>in San Jacinto & SoCal</span>
             </h1>

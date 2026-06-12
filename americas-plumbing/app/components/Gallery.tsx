@@ -54,7 +54,7 @@ export default function Gallery() {
             Our Work
           </div>
           <h2 style={{
-            fontFamily: 'var(--font-newsreader), Outfit, sans-serif',
+            fontFamily: 'var(--font-newsreader), serif',
             fontSize: 'clamp(2.2rem, 4vw, 3rem)', fontWeight: 700,
             color: '#080f1f', lineHeight: 1.1,
           }}>
