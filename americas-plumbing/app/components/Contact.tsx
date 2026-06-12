@@ -104,7 +104,7 @@ export default function Contact() {
               <div style={{ width: '2px', height: '40px', background: '#1A52BE', flexShrink: 0 }} />
               <div>
                 <div style={{ color: '#9b9eb0', fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', marginBottom: '4px' }}>Service Area</div>
-                <div style={{ color: '#080f1f', fontSize: '1rem', fontWeight: 600 }}>Orange County &amp; Southern California</div>
+                <div style={{ color: '#080f1f', fontSize: '1rem', fontWeight: 600 }}>San Jacinto &amp; Southern California</div>
               </div>
             </div>
           </div>

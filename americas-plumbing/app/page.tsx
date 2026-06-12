@@ -4,6 +4,7 @@ import Services from './components/Services';
 import WhyUs from './components/WhyUs';
 import Areas from './components/Areas';
 import Gallery from './components/Gallery';
+import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Schema from './components/Schema';
 import HomepageCTAStrip from './components/HomepageCTAStrip';
@@ -20,6 +21,7 @@ export default function Home() {
         <Areas />
         <Gallery />
         <HomepageCTAStrip />
+        <Contact />
       </main>
       <Footer />
     </>

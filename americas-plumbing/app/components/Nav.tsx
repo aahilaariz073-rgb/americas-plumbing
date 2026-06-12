@@ -164,6 +164,13 @@ export default function Nav() {
         </div>
 
         <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+          <a href="/#contact" className="hide-mob" style={{
+            background: '#080f1f', color: '#fff', fontSize: '0.875rem', fontWeight: 700,
+            padding: '10px 22px', borderRadius: '5px', textDecoration: 'none', letterSpacing: '0.04em',
+            border: '1px solid rgba(255,255,255,0.15)'
+          }}>
+            Get a Free Quote
+          </a>
           <a href="tel:+19493790082" className="pulse-anim" style={{
             background: '#C8202A', color: '#fff', fontSize: '0.875rem', fontWeight: 700,
             padding: '10px 22px', borderRadius: '5px', textDecoration: 'none', letterSpacing: '0.04em'
