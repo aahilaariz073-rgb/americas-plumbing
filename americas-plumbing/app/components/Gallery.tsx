@@ -14,7 +14,7 @@ const pairs = [
 
 function BaCard({ src, label, tag, tagBg }: { src: string; label: string; tag: string; tagBg: string }) {
   return (
-    <div style={{ position: 'relative', width: '100%', height: '260px', overflow: 'hidden', borderRadius: '8px', background: '#eef0f6' }}>
+    <div style={{ position: 'relative', width: '100%', height: '420px', overflow: 'hidden', borderRadius: '8px', background: '#eef0f6' }}>
       <Image
         src={src}
         alt={label}
