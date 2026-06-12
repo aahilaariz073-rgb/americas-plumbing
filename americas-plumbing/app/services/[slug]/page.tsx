@@ -138,13 +138,40 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
               </div>
             </div>
 
-            {/* Sidebar */}
-            <div style={{ position: 'sticky', top: '88px' }}>
-              <div style={{ background: '#080f1f', padding: '36px', borderRadius: '6px', marginBottom: '24px' }}>
-                <div style={{ color: '#C8202A', fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', marginBottom: '12px' }}>Call Us Now</div>
-                <a href="tel:+19493790082" style={{ display: 'block', fontFamily: 'var(--font-newsreader), Outfit, sans-serif', fontSize: '1.7rem', fontWeight: 700, color: '#fff', textDecoration: 'none', marginBottom: '12px' }}>(949) 379-0082</a>
-                <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.875rem', lineHeight: 1.65, marginBottom: '24px' }}>Available 24/7 for emergencies. Joe answers personally.</p>
-                <a href="/#contact" style={{ display: 'block', background: '#C8202A', color: '#fff', textAlign: 'center', padding: '14px', borderRadius: '4px', textDecoration: 'none', fontWeight: 700, fontSize: '0.875rem', letterSpacing: '0.08em', textTransform: 'uppercase' }}>Get a Free Quote</a>
+            {/* Sidebar — map */}
+            <div style={{ position: 'sticky', top: '104px' }}>
+              <div style={{ borderRadius: '10px', overflow: 'hidden', border: '1px solid #e8eaf0', boxShadow: '0 4px 20px rgba(0,0,0,0.07)' }}>
+                <iframe
+                  src="https://maps.google.com/maps?q=San+Jacinto%2C+CA&t=&z=12&ie=UTF8&iwloc=&output=embed"
+                  width="100%"
+                  height="300"
+                  style={{ border: 0, display: 'block' }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="America's Plumbing service area — San Jacinto, CA"
+                />
+                <div style={{ padding: '20px 22px', background: '#fff', borderTop: '1px solid #e8eaf0' }}>
+                  <p style={{ fontSize: '0.8rem', color: '#6b7280', marginBottom: '14px', display: 'flex', alignItems: 'center', gap: '6px' }}>
+                    <span>📍</span> Based in San Jacinto — serving all of Southern CA
+                  </p>
+                  <a href="tel:+19493790082" style={{
+                    display: 'block', textAlign: 'center', background: '#C8202A',
+                    color: '#fff', padding: '13px', borderRadius: '6px',
+                    fontWeight: 700, textDecoration: 'none', fontSize: '0.88rem',
+                    letterSpacing: '0.04em', marginBottom: '10px'
+                  }}>
+                    Call (949) 379-0082
+                  </a>
+                  <a href="/#contact" style={{
+                    display: 'block', textAlign: 'center', background: '#f7f8fc',
+                    color: '#080f1f', padding: '12px', borderRadius: '6px',
+                    fontWeight: 600, textDecoration: 'none', fontSize: '0.85rem',
+                    border: '1px solid #e0e2ea'
+                  }}>
+                    Get a Free Quote
+                  </a>
+                </div>
               </div>
             </div>
           </div>
