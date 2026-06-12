@@ -17,14 +17,15 @@ const serviceLinks = [
 const areaLinks = [
   { label: 'Irvine', href: '/areas/irvine' },
   { label: 'Newport Beach', href: '/areas/newport-beach' },
-  { label: 'Laguna Hills', href: '/areas/laguna-hills' },
-  { label: 'Mission Viejo', href: '/areas/mission-viejo' },
-  { label: 'Lake Forest', href: '/areas/lake-forest' },
-  { label: 'Aliso Viejo', href: '/areas/aliso-viejo' },
-  { label: 'San Clemente', href: '/areas/san-clemente' },
   { label: 'Huntington Beach', href: '/areas/huntington-beach' },
   { label: 'Anaheim', href: '/areas/anaheim' },
-  { label: 'Santa Ana', href: '/areas/santa-ana' },
+  { label: 'Costa Mesa', href: '/areas/costa-mesa' },
+  { label: 'Mission Viejo', href: '/areas/mission-viejo' },
+  { label: 'Laguna Beach', href: '/areas/laguna-beach' },
+  { label: 'Dana Point', href: '/areas/dana-point' },
+  { label: 'Yorba Linda', href: '/areas/yorba-linda' },
+  { label: 'Fullerton', href: '/areas/fullerton' },
+  { label: 'View All Cities →', href: '/areas' },
 ];
 
 export default function Nav() {
@@ -187,11 +188,14 @@ export default function Nav() {
           </div>
           <div style={{ borderBottom: '1px solid #f0f1f5', marginBottom: '4px' }}>
             <span style={{ display: 'block', color: '#9b9eb0', fontSize: '0.7rem', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', padding: '12px 0 6px' }}>Areas</span>
-            {areaLinks.map(a => (
+            {areaLinks.slice(0, -1).map(a => (
               <a key={a.href} href={a.href} onClick={closeNav} style={{ display: 'block', color: '#374151', padding: '9px 0', fontWeight: 500, textDecoration: 'none', fontSize: '0.9rem' }}>
                 {a.label}
               </a>
             ))}
+            <a href="/areas" onClick={closeNav} style={{ display: 'block', color: '#C8202A', padding: '9px 0', fontWeight: 700, textDecoration: 'none', fontSize: '0.9rem' }}>
+              View All Cities →
+            </a>
           </div>
           {[{ label: 'Reviews', href: '/reviews' }, { label: 'FAQ', href: '/faq' }, { label: 'Contact', href: '/contact' }].map(({ label, href }) => (
             <a key={label} href={href} onClick={closeNav} style={{ color: '#080f1f', padding: '14px 0', fontWeight: 600, textDecoration: 'none', fontSize: '0.95rem', borderBottom: '1px solid #f0f1f5' }}>

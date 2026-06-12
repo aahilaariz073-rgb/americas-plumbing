@@ -42,27 +42,27 @@ export default function AreasPage() {
           <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: '3px', background: 'linear-gradient(to right,#C8202A 0%,#1A52BE 50%,#C8202A 100%)' }} />
         </section>
 
-        <section style={{ background: '#fff', padding: '80px 28px' }}>
+        <section style={{ background: '#f7f8fc', padding: '80px 28px' }}>
           <div style={{ maxWidth: '1240px', margin: '0 auto' }}>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2px', background: '#e0e2ea' }}>
-              {areas.map((area) => (
-                <a key={area.slug} href={`/areas/${area.slug}`} style={{ background: '#fff', padding: '40px 36px', textDecoration: 'none', display: 'block' }}>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '16px' }}>
-                    <div style={{ width: '32px', height: '2px', background: '#C8202A' }} />
-                    <span style={{ color: '#C8202A', fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.16em', textTransform: 'uppercase' }}>{area.county}</span>
-                  </div>
-                  <h2 style={{ fontSize: '1.4rem', fontWeight: 700, color: '#080f1f', marginBottom: '10px', fontFamily: 'var(--font-newsreader), Outfit, sans-serif' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '16px' }}>
+              {areas.map((area, i) => (
+                <a key={area.slug} href={`/areas/${area.slug}`} className="area-card" style={{
+                  background: '#fff', borderRadius: '8px', border: '1px solid #e8eaf0',
+                  borderTop: `3px solid ${i % 2 === 0 ? '#C8202A' : '#1A52BE'}`,
+                  padding: '28px 24px', textDecoration: 'none', display: 'block',
+                }}>
+                  <h2 style={{ fontSize: '1.1rem', fontWeight: 700, color: '#080f1f', marginBottom: '8px', fontFamily: 'var(--font-newsreader), Outfit, sans-serif' }}>
                     Plumber in {area.city}
                   </h2>
-                  <p style={{ color: '#5a5e72', fontSize: '0.875rem', lineHeight: 1.65, marginBottom: '16px' }}>
-                    {area.intro.slice(0, 110)}…
+                  <p style={{ color: '#5a5e72', fontSize: '0.82rem', lineHeight: 1.6, marginBottom: '14px' }}>
+                    {area.intro.slice(0, 90)}…
                   </p>
-                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px', marginBottom: '16px' }}>
+                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: '5px', marginBottom: '14px' }}>
                     {area.zipCodes.slice(0, 3).map(z => (
-                      <span key={z} style={{ background: '#f7f8fc', border: '1px solid #e0e2ea', color: '#5a5e72', padding: '3px 10px', borderRadius: '3px', fontSize: '0.78rem' }}>{z}</span>
+                      <span key={z} style={{ background: '#f0f4ff', color: '#1A52BE', padding: '2px 8px', borderRadius: '3px', fontSize: '0.72rem', fontWeight: 600 }}>{z}</span>
                     ))}
                   </div>
-                  <span style={{ color: '#1A52BE', fontSize: '0.82rem', fontWeight: 700 }}>View services in {area.city} →</span>
+                  <span style={{ color: '#C8202A', fontSize: '0.8rem', fontWeight: 700 }}>View Page →</span>
                 </a>
               ))}
             </div>
@@ -72,6 +72,7 @@ export default function AreasPage() {
         <PageCTA />
       </main>
       <Footer />
+      <style>{`.area-card { transition: box-shadow 0.2s, transform 0.2s; } .area-card:hover { box-shadow: 0 6px 24px rgba(0,0,0,0.09); transform: translateY(-2px); }`}</style>
     </>
   );
 }
