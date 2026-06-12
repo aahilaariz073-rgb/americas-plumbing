@@ -62,18 +62,17 @@ export default function Areas() {
         </ScrollReveal>
 
         <ScrollReveal>
-          <div style={{
-            background: '#f7f8fc', borderRadius: '6px', aspectRatio: '1',
-            display: 'flex', flexDirection: 'column', alignItems: 'center',
-            justifyContent: 'center', gap: '10px', border: '1px dashed #c8cad4'
-          }}>
-            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#9b9eb0" strokeWidth="1.5">
-              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" />
-              <circle cx="12" cy="9" r="2.5" />
-            </svg>
-            <span style={{ color: '#9b9eb0', fontSize: '0.8rem', fontWeight: 500, textAlign: 'center' }}>
-              Embed Google Maps here
-            </span>
+          <div style={{ borderRadius: '10px', overflow: 'hidden', border: '1px solid #e8eaf0', boxShadow: '0 4px 24px rgba(0,0,0,0.08)', height: '100%', minHeight: '420px' }}>
+            <iframe
+              src="https://maps.google.com/maps?q=Riverside+County%2C+CA&t=&z=9&ie=UTF8&iwloc=&output=embed"
+              width="100%"
+              height="100%"
+              style={{ border: 0, display: 'block', minHeight: '420px' }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="America's Plumbing service area — Riverside County, CA"
+            />
           </div>
         </ScrollReveal>
       </div>
