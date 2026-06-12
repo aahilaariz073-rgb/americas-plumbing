@@ -14,7 +14,7 @@ const pairs = [
 
 function BaCard({ src, label, tag, tagBg }: { src: string; label: string; tag: string; tagBg: string }) {
   return (
-    <div style={{ position: 'relative', width: '100%', height: '320px', overflow: 'hidden', borderRadius: '6px', background: '#eef0f6' }}>
+    <div style={{ position: 'relative', width: '100%', height: '220px', overflow: 'hidden', borderRadius: '6px', background: '#eef0f6' }}>
       <Image
         src={src}
         alt={label}
@@ -80,7 +80,7 @@ export default function Gallery() {
       <style>{`
         @media (max-width: 600px) {
           .ba-row { grid-template-columns: 1fr !important; }
-          .ba-row > div { height: 240px !important; }
+          .ba-row > div { height: 180px !important; }
         }
       `}</style>
     </section>
