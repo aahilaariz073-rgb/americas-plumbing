@@ -170,7 +170,7 @@ export const areas: Area[] = [
     county: 'Orange County',
     metaTitle: "Plumber in Ladera Ranch, CA | America's Plumbing",
     metaDescription: "Licensed plumber in Ladera Ranch, CA. Same-day service, water heaters, leak detection, fixture installation. Saddleback Valley. Free estimates. Call (949) 379-0082.",
-    h1: 'Plumber in Ladera Ranch, CA — Serving the Ranch's Growing Community',
+    h1: "Plumber in Ladera Ranch, CA — Serving the Ranch's Growing Community",
     intro: "America's Plumbing provides professional plumbing service throughout Ladera Ranch — one of South Orange County's premier master-planned communities. Developed primarily between 1999 and 2010, Ladera Ranch homes are now reaching the age where plumbing systems begin requiring maintenance and upgrades. We're here with same-day service and honest, upfront pricing.",
     body: [
       "Ladera Ranch's homes range from 15 to 25 years old — a range where water heaters are commonly approaching or past the end of their service life, supply line connections under sinks and toilets begin to fail, and fixtures show the wear of heavy family use. America's Plumbing handles all of these common Ladera Ranch calls efficiently, usually resolving issues in a single visit.",
