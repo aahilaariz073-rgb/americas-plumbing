@@ -74,8 +74,8 @@ export default function Nav() {
         height: '68px',
       }}>
         <a href="/" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}>
-          <Image src="/logo.png" alt="America's Plumbing" width={120} height={48}
-            style={{ height: '48px', width: 'auto' }} priority />
+          <Image src="/logo.png" alt="America's Plumbing" width={150} height={60}
+            style={{ height: '60px', width: 'auto' }} priority />
         </a>
 
         {/* Desktop nav */}
