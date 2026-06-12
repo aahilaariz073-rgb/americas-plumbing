@@ -29,9 +29,33 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
   const area = getArea(slug);
   if (!area) notFound();
 
+  const base = 'https://americasplumbing.com';
+
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: area.faqs.map(faq => ({
+      '@type': 'Question',
+      name: faq.q,
+      acceptedAnswer: { '@type': 'Answer', text: faq.a },
+    })),
+  };
+
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: base },
+      { '@type': 'ListItem', position: 2, name: 'Service Areas', item: `${base}/areas` },
+      { '@type': 'ListItem', position: 3, name: `Plumber in ${area.city}`, item: `${base}/areas/${area.slug}` },
+    ],
+  };
+
   return (
     <>
       <Schema page="area" city={area.city} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <Nav />
       <main>
         {/* Hero */}
