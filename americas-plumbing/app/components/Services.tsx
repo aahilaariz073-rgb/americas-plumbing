@@ -40,11 +40,11 @@ export default function Services() {
         <ScrollReveal style={{
           display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between',
           flexWrap: 'wrap', gap: '24px', marginBottom: '72px',
-          paddingBottom: '32px', borderBottom: '1px solid #e8eaf0'
+          paddingBottom: '32px', borderBottom: '1px solid #e5e7eb'
         }}>
           <div>
             <div style={{
-              color: '#C8202A', fontSize: '0.75rem', fontWeight: 700,
+              color: '#1558d6', fontSize: '0.75rem', fontWeight: 700,
               letterSpacing: '0.22em', textTransform: 'uppercase', marginBottom: '14px'
             }}>
               What We Do
@@ -52,14 +52,14 @@ export default function Services() {
             <h2 style={{
               fontFamily: 'var(--font-newsreader), Montserrat, sans-serif',
               fontSize: 'clamp(2.2rem, 4vw, 3.2rem)', fontWeight: 700,
-              color: '#080f1f', lineHeight: 1.1, letterSpacing: '-0.02em'
+              color: '#111827', lineHeight: 1.1, letterSpacing: '-0.02em'
             }}>
               Full-Service Plumbing,<br /><em>Done Right</em>
             </h2>
           </div>
           <a href="/#contact" style={{
-            background: '#080f1f', color: '#fff', fontSize: '0.82rem', fontWeight: 700,
-            padding: '13px 28px', borderRadius: '4px', textDecoration: 'none',
+            background: '#1558d6', color: '#fff', fontSize: '0.82rem', fontWeight: 700,
+            padding: '13px 28px', borderRadius: '7px', textDecoration: 'none',
             letterSpacing: '0.08em', textTransform: 'uppercase', whiteSpace: 'nowrap'
           }}>
             Book a Service
@@ -92,7 +92,7 @@ export default function Services() {
                 }}>
                   {svc.num}
                 </div>
-                <h3 style={{ fontSize: '1.15rem', fontWeight: 700, color: '#080f1f', marginBottom: '10px' }}>
+                <h3 style={{ fontSize: '1.15rem', fontWeight: 700, color: '#111827', marginBottom: '10px' }}>
                   {svc.title}
                 </h3>
                 <p style={{ color: '#5a5e72', fontSize: '0.9rem', lineHeight: 1.65 }}>

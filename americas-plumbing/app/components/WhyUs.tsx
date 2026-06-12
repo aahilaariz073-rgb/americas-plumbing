@@ -29,29 +29,29 @@ const pillars = [
 
 export default function WhyUs() {
   return (
-    <section id="why-us" style={{ background: '#f7f8fc', padding: '100px 28px', position: 'relative', overflow: 'hidden' }}>
+    <section id="why-us" style={{ background: '#f0f6ff', padding: '100px 28px', position: 'relative', overflow: 'hidden' }}>
       {/* Left edge accent */}
       <div style={{
         position: 'absolute', top: 0, left: 0, bottom: 0, width: '4px',
-        background: 'linear-gradient(to bottom, #C8202A, #1A52BE)'
+        background: 'linear-gradient(to bottom, #1558d6, #C8202A)',
       }} />
 
       <div style={{ maxWidth: '1240px', margin: '0 auto' }}>
         <ScrollReveal style={{ textAlign: 'center', marginBottom: '72px' }}>
           <div style={{ display: 'inline-flex', alignItems: 'center', gap: '10px', marginBottom: '14px' }}>
-            <div style={{ width: '28px', height: '2px', background: '#C8202A' }} />
+            <div style={{ width: '28px', height: '2px', background: '#1558d6' }} />
             <span style={{
-              color: '#C8202A', fontSize: '0.75rem', fontWeight: 700,
-              letterSpacing: '0.22em', textTransform: 'uppercase'
+              color: '#1558d6', fontSize: '0.75rem', fontWeight: 700,
+              letterSpacing: '0.22em', textTransform: 'uppercase',
             }}>
               The America&apos;s Difference
             </span>
-            <div style={{ width: '28px', height: '2px', background: '#C8202A' }} />
+            <div style={{ width: '28px', height: '2px', background: '#1558d6' }} />
           </div>
           <h2 style={{
             fontFamily: 'var(--font-newsreader), Montserrat, sans-serif',
             fontSize: 'clamp(2.2rem, 4vw, 3rem)', fontWeight: 700,
-            color: '#080f1f', lineHeight: 1.1
+            color: '#111827', lineHeight: 1.1,
           }}>
             Why Homeowners Choose Us
           </h2>
@@ -59,28 +59,30 @@ export default function WhyUs() {
 
         <div style={{
           display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
-          gap: '2px', background: '#e0e2ea'
+          gap: '2px', background: '#e5e7eb',
         }}>
           {pillars.map((p) => (
             <ScrollReveal
               key={p.num}
-              style={{ background: p.dark ? '#080f1f' : '#fff', padding: '44px 36px' }}
+              style={{ background: p.dark ? '#1558d6' : '#fff', padding: '44px 36px' }}
             >
               <div style={{
                 fontFamily: 'var(--font-newsreader), Montserrat, sans-serif',
-                fontSize: '3rem', fontWeight: 700, color: '#C8202A', lineHeight: 1, marginBottom: '16px'
+                fontSize: '3rem', fontWeight: 700,
+                color: p.dark ? 'rgba(255,255,255,0.3)' : '#dbeafe',
+                lineHeight: 1, marginBottom: '16px',
               }}>
                 {p.num}
               </div>
               <h3 style={{
                 fontSize: '1.1rem', fontWeight: 700,
-                color: p.dark ? '#fff' : '#080f1f', marginBottom: '10px'
+                color: p.dark ? '#fff' : '#111827', marginBottom: '10px',
               }}>
                 {p.title}
               </h3>
               <p style={{
-                color: p.dark ? 'rgba(255,255,255,0.5)' : '#5a5e72',
-                fontSize: '0.875rem', lineHeight: 1.65
+                color: p.dark ? 'rgba(255,255,255,0.72)' : '#6b7280',
+                fontSize: '0.875rem', lineHeight: 1.65,
               }}>
                 {p.body}
               </p>
