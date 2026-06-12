@@ -21,16 +21,16 @@ const serviceLinks = [
 ];
 
 const areaLinks = [
-  { label: 'Irvine', href: '/areas/irvine' },
-  { label: 'Newport Beach', href: '/areas/newport-beach' },
-  { label: 'Huntington Beach', href: '/areas/huntington-beach' },
-  { label: 'Anaheim', href: '/areas/anaheim' },
-  { label: 'Costa Mesa', href: '/areas/costa-mesa' },
+  { label: 'San Jacinto', href: '/areas/san-jacinto' },
+  { label: 'Hemet', href: '/areas/hemet' },
+  { label: 'Menifee', href: '/areas/menifee' },
+  { label: 'Beaumont', href: '/areas/beaumont' },
+  { label: 'Riverside', href: '/areas/riverside' },
+  { label: 'Moreno Valley', href: '/areas/moreno-valley' },
   { label: 'Mission Viejo', href: '/areas/mission-viejo' },
   { label: 'Laguna Beach', href: '/areas/laguna-beach' },
-  { label: 'Dana Point', href: '/areas/dana-point' },
-  { label: 'Yorba Linda', href: '/areas/yorba-linda' },
-  { label: 'Fullerton', href: '/areas/fullerton' },
+  { label: 'Laguna Niguel', href: '/areas/laguna-niguel' },
+  { label: 'Ladera Ranch', href: '/areas/ladera-ranch' },
   { label: 'View All Cities →', href: '/areas' },
 ];
 

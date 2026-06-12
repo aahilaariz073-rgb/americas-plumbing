@@ -135,9 +135,20 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
         <section style={{ background: '#fff', padding: '40px 28px', borderTop: '1px solid #e8eaf0' }}>
           <div style={{ maxWidth: '1240px', margin: '0 auto', display: 'flex', alignItems: 'center', gap: '16px', flexWrap: 'wrap' }}>
             <span style={{ color: '#080f1f', fontWeight: 700, fontSize: '0.875rem', whiteSpace: 'nowrap' }}>We serve:</span>
-            {['Irvine', 'Newport Beach', 'Laguna Hills', 'Mission Viejo', 'Lake Forest', 'Aliso Viejo', 'San Clemente', 'Huntington Beach', 'Anaheim', 'Santa Ana'].map(city => (
-              <a key={city} href={`/areas/${city.toLowerCase().replace(' ', '-')}`} style={{ background: '#f7f8fc', border: '1px solid #e0e2ea', color: '#080f1f', padding: '6px 14px', borderRadius: '3px', fontSize: '0.82rem', fontWeight: 600, textDecoration: 'none' }}>
-                {city}
+            {[
+              { label: 'San Jacinto', slug: 'san-jacinto' },
+              { label: 'Hemet', slug: 'hemet' },
+              { label: 'Menifee', slug: 'menifee' },
+              { label: 'Beaumont', slug: 'beaumont' },
+              { label: 'Riverside', slug: 'riverside' },
+              { label: 'Moreno Valley', slug: 'moreno-valley' },
+              { label: 'Mission Viejo', slug: 'mission-viejo' },
+              { label: 'Laguna Hills', slug: 'laguna-hills' },
+              { label: 'Laguna Niguel', slug: 'laguna-niguel' },
+              { label: 'Ladera Ranch', slug: 'ladera-ranch' },
+            ].map(city => (
+              <a key={city.slug} href={`/areas/${city.slug}`} style={{ background: '#f7f8fc', border: '1px solid #e0e2ea', color: '#080f1f', padding: '6px 14px', borderRadius: '3px', fontSize: '0.82rem', fontWeight: 600, textDecoration: 'none' }}>
+                {city.label}
               </a>
             ))}
           </div>

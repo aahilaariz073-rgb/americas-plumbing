@@ -7,9 +7,9 @@ import PageCTA from '@/app/components/PageCTA';
 import Schema from '@/app/components/Schema';
 
 export const metadata: Metadata = {
-  title: "Plumbing Services Orange County CA | America's Plumbing",
-  description: "Full-service plumbing in Orange County, CA. Emergency repairs, leak detection, repiping, drain cleaning, water heaters & more. C-36 Licensed. Call (949) 379-0082.",
-  keywords: "plumbing services orange county, plumber orange county ca, drain cleaning irvine, water heater repair oc, slab leak detection orange county",
+  title: "Plumbing Services San Jacinto & Southern California | America's Plumbing",
+  description: "Full-service plumbing in San Jacinto & Southern California. Emergency repairs, leak detection, repiping, drain cleaning, water heaters & more. C-36 Licensed. Call (949) 379-0082.",
+  keywords: "plumbing services san jacinto ca, plumber riverside county, drain cleaning hemet menifee, water heater repair san jacinto, slab leak detection southern california",
 };
 
 export default function ServicesPage() {
@@ -30,14 +30,14 @@ export default function ServicesPage() {
             </div>
             <div style={{ display: 'inline-flex', alignItems: 'center', gap: '10px', marginBottom: '20px' }}>
               <div style={{ width: '28px', height: '2px', background: '#C8202A' }} />
-              <span style={{ color: '#C8202A', fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.22em', textTransform: 'uppercase' }}>Orange County, CA</span>
+              <span style={{ color: '#C8202A', fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.22em', textTransform: 'uppercase' }}>San Jacinto, CA &amp; Southern California</span>
             </div>
             <h1 style={{ fontFamily: 'var(--font-newsreader), Outfit, sans-serif', fontSize: 'clamp(2.5rem, 5vw, 4rem)', fontWeight: 700, color: '#fff', lineHeight: 1.05, letterSpacing: '-0.01em', marginBottom: '20px' }}>
               Complete Plumbing Services<br />
-              <span style={{ color: '#C8202A' }}>in Orange County</span>
+              <span style={{ color: '#C8202A' }}>in San Jacinto & SoCal</span>
             </h1>
             <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '1.1rem', lineHeight: 1.7, maxWidth: '600px' }}>
-              From routine maintenance to emergency repairs — America&apos;s Plumbing covers every residential and commercial plumbing need across Orange County with a C-36 license, upfront pricing, and same-day availability.
+              From routine maintenance to emergency repairs — America&apos;s Plumbing covers every residential and commercial plumbing need across San Jacinto, Riverside County, and South Orange County with a C-36 license, upfront pricing, and same-day availability.
             </p>
           </div>
           <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: '3px', background: 'linear-gradient(to right,#C8202A 0%,#1A52BE 50%,#C8202A 100%)' }} />

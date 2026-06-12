@@ -31,7 +31,7 @@ export default function Hero() {
         <div style={{ display: 'inline-flex', alignItems: 'center', gap: '10px', marginBottom: '28px' }}>
           <div style={{ width: '28px', height: '2px', background: '#C8202A' }} />
           <span style={{ color: '#C8202A', fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.22em', textTransform: 'uppercase' }}>
-            Licensed · Insured · Orange County
+            Licensed · Insured · San Jacinto, CA
           </span>
         </div>
 
@@ -42,9 +42,9 @@ export default function Hero() {
           color: '#fff', lineHeight: 1.04, letterSpacing: '-0.01em',
           marginBottom: '24px', maxWidth: '700px'
         }}>
-          Southern California&apos;s<br />
-          <span style={{ color: '#C8202A' }}>Trusted</span><br />
-          Plumber
+          Plumber in<br />
+          <span style={{ color: '#C8202A' }}>San Jacinto</span><br />
+          &amp; Southern CA
         </h1>
 
         {/* Subtext */}

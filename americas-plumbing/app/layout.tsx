@@ -17,9 +17,13 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "America's Plumbing | Orange County Plumber | 24/7 Service",
+  metadataBase: new URL('https://americasplumbing.com'),
+  title: {
+    default: "America's Plumbing | Plumber in San Jacinto, CA | 24/7 Service",
+    template: "%s | America's Plumbing",
+  },
   description:
-    "America's Plumbing — fast, honest plumbing serving Orange County & Southern California. C-36 Licensed. Same-day service, free estimates. Call (949) 379-0082.",
+    "America's Plumbing — licensed C-36 plumber in San Jacinto, CA serving Riverside & South Orange County. Same-day service, free estimates. Call (949) 379-0082.",
 };
 
 export default function RootLayout({

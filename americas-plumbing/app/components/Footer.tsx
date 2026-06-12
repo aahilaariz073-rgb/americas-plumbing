@@ -58,10 +58,10 @@ export default function Footer() {
             </h4>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
               {[
-                { label: 'Irvine', slug: 'irvine' },
-                { label: 'Newport Beach', slug: 'newport-beach' },
-                { label: 'Laguna Hills', slug: 'laguna-hills' },
+                { label: 'San Jacinto', slug: 'san-jacinto' },
+                { label: 'Hemet', slug: 'hemet' },
                 { label: 'Mission Viejo', slug: 'mission-viejo' },
+                { label: 'Laguna Hills', slug: 'laguna-hills' },
                 { label: 'All Areas', slug: '' },
               ].map(({ label, slug }) => (
                 <a
@@ -93,7 +93,7 @@ export default function Footer() {
               >
                 californiajoe500@gmail.com
               </a>
-              <span style={{ color: 'rgba(255,255,255,0.55)', fontSize: '0.875rem' }}>Orange County, CA</span>
+              <span style={{ color: 'rgba(255,255,255,0.55)', fontSize: '0.875rem' }}>San Jacinto, CA</span>
               <a
                 href="/contact"
                 style={{
