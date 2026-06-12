@@ -203,12 +203,12 @@ export default function AreasPage() {
                   </div>
                   <h3 style={{
                     fontFamily: 'var(--font-newsreader), serif',
-                    fontSize: '1.25rem', fontWeight: 700, color: '#080f1f',
+                    fontSize: '1.55rem', fontWeight: 700, color: '#080f1f',
                     marginBottom: '12px',
                   }}>
                     {item.title}
                   </h3>
-                  <p style={{ color: '#6b7280', fontSize: '0.92rem', lineHeight: 1.75 }}>
+                  <p style={{ color: '#6b7280', fontSize: '1.05rem', lineHeight: 1.75 }}>
                     {item.desc}
                   </p>
                 </div>
