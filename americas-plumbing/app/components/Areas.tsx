@@ -64,14 +64,14 @@ export default function Areas() {
         <ScrollReveal>
           <div style={{ borderRadius: '10px', overflow: 'hidden', border: '1px solid #e8eaf0', boxShadow: '0 4px 24px rgba(0,0,0,0.08)', height: '100%', minHeight: '420px' }}>
             <iframe
-              src="https://maps.google.com/maps?q=Riverside+County%2C+CA&t=&z=9&ie=UTF8&iwloc=&output=embed"
+              src="https://maps.google.com/maps?q=San+Jacinto%2C+CA&t=&z=12&ie=UTF8&iwloc=&output=embed"
               width="100%"
               height="100%"
               style={{ border: 0, display: 'block', minHeight: '420px' }}
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="America's Plumbing service area — Riverside County, CA"
+              title="America's Plumbing — San Jacinto, CA"
             />
           </div>
         </ScrollReveal>
