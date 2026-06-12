@@ -14,8 +14,6 @@ export const metadata: Metadata = {
 const riverCounty = areas.filter(a => a.county === 'Riverside County');
 const orangeCounty = areas.filter(a => a.county === 'Orange County');
 
-const accentAt = (i: number) => i % 3 === 0 ? '#C8202A' : i % 3 === 1 ? '#1A52BE' : '#080f1f';
-
 export default function AreasPage() {
   return (
     <>
@@ -25,13 +23,6 @@ export default function AreasPage() {
 
         {/* ── Hero ── */}
         <section style={{ background: '#080f1f', padding: '96px 28px 0', position: 'relative', overflow: 'hidden' }}>
-          {/* Geometric accents */}
-          <div style={{ position: 'absolute', inset: 0, pointerEvents: 'none', overflow: 'hidden' }}>
-            <div style={{ position: 'absolute', top: '-20%', right: '-8%', width: '520px', height: '520px', borderRadius: '50%', background: 'radial-gradient(circle, rgba(26,82,190,0.15) 0%, transparent 70%)' }} />
-            <div style={{ position: 'absolute', bottom: '10%', left: '-6%', width: '380px', height: '380px', borderRadius: '50%', background: 'radial-gradient(circle, rgba(200,32,42,0.12) 0%, transparent 70%)' }} />
-            <div style={{ position: 'absolute', top: '20%', left: '50%', width: '1px', height: '60%', background: 'linear-gradient(to bottom, transparent, rgba(255,255,255,0.04), transparent)' }} />
-          </div>
-
           <div style={{ maxWidth: '1240px', margin: '0 auto', position: 'relative', zIndex: 2 }}>
             {/* Breadcrumb */}
             <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '32px' }}>
@@ -40,40 +31,43 @@ export default function AreasPage() {
               <span style={{ color: 'rgba(255,255,255,0.55)', fontSize: '0.78rem', letterSpacing: '0.05em' }}>Service Areas</span>
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr auto', gap: '40px', alignItems: 'end', paddingBottom: '72px' }}>
-              <div>
-                <div style={{ display: 'inline-flex', alignItems: 'center', gap: '10px', marginBottom: '22px' }}>
-                  <div style={{ width: '32px', height: '2px', background: '#C8202A' }} />
-                  <span style={{ color: '#C8202A', fontSize: '0.7rem', fontWeight: 700, letterSpacing: '0.25em', textTransform: 'uppercase' }}>Service Coverage</span>
-                </div>
-                <h1 style={{
-                  fontFamily: 'var(--font-newsreader), Outfit, sans-serif',
-                  fontSize: 'clamp(2.6rem, 5vw, 4.2rem)', fontWeight: 700,
-                  color: '#fff', lineHeight: 1.0, letterSpacing: '-0.02em', marginBottom: '24px'
-                }}>
-                  Licensed Plumber<br />
-                  <span style={{ color: '#C8202A' }}>San Jacinto</span> &amp; All<br />
-                  Southern California
-                </h1>
-                <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '1.05rem', lineHeight: 1.75, maxWidth: '540px' }}>
-                  America&apos;s Plumbing operates out of San Jacinto, CA — covering the full San Jacinto Valley, Inland Empire, and South Orange County with same-day service and 24/7 emergency response.
-                </p>
+            <div style={{ paddingBottom: '48px' }}>
+              <div style={{ display: 'inline-flex', alignItems: 'center', gap: '10px', marginBottom: '22px' }}>
+                <div style={{ width: '32px', height: '2px', background: '#C8202A' }} />
+                <span style={{ color: '#C8202A', fontSize: '0.7rem', fontWeight: 700, letterSpacing: '0.25em', textTransform: 'uppercase' }}>Service Coverage</span>
               </div>
+              <h1 style={{
+                fontFamily: 'var(--font-newsreader), serif',
+                fontSize: 'clamp(2.6rem, 5vw, 4.2rem)', fontWeight: 700,
+                color: '#fff', lineHeight: 1.0, letterSpacing: '-0.02em', marginBottom: '24px'
+              }}>
+                Licensed Plumber<br />
+                <span style={{ color: '#C8202A' }}>San Jacinto</span> &amp; All<br />
+                Southern California
+              </h1>
+              <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '1.05rem', lineHeight: 1.75, maxWidth: '540px', marginBottom: '36px' }}>
+                {"America's Plumbing operates out of San Jacinto, CA — covering the full San Jacinto Valley, Inland Empire, and South Orange County with same-day service and 24/7 emergency response."}
+              </p>
 
-              {/* Stats column */}
-              <div className="hide-stats" style={{ display: 'flex', flexDirection: 'column', gap: '2px', minWidth: '200px' }}>
+              {/* Stats as horizontal badge row */}
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', paddingBottom: '48px' }}>
                 {[
-                  { num: '18', label: 'Cities Served' },
+                  { num: '18+', label: 'Cities Served' },
                   { num: '24/7', label: 'Emergency Response' },
                   { num: 'C-36', label: 'Licensed & Insured' },
-                  { num: '1 hr', label: 'Avg Response Time' },
+                  { num: '~1 hr', label: 'Avg Response Time' },
                 ].map(s => (
                   <div key={s.label} style={{
-                    padding: '18px 24px', borderLeft: '2px solid rgba(255,255,255,0.06)',
-                    display: 'flex', flexDirection: 'column', gap: '2px'
+                    background: 'rgba(255,255,255,0.06)',
+                    border: '1px solid rgba(255,255,255,0.12)',
+                    borderRadius: '100px',
+                    padding: '10px 20px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '10px',
                   }}>
-                    <div style={{ fontSize: '1.9rem', fontWeight: 800, color: '#fff', letterSpacing: '-0.02em', lineHeight: 1 }}>{s.num}</div>
-                    <div style={{ fontSize: '0.7rem', color: 'rgba(255,255,255,0.35)', fontWeight: 600, letterSpacing: '0.14em', textTransform: 'uppercase' }}>{s.label}</div>
+                    <span style={{ fontSize: '1rem', fontWeight: 800, color: '#fff', letterSpacing: '-0.01em' }}>{s.num}</span>
+                    <span style={{ fontSize: '0.72rem', color: 'rgba(255,255,255,0.45)', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase' }}>{s.label}</span>
                   </div>
                 ))}
               </div>
@@ -85,12 +79,12 @@ export default function AreasPage() {
         </section>
 
         {/* ── Keyword-rich intro strip ── */}
-        <section style={{ background: '#fff', borderBottom: '1px solid #e8eaf0', padding: '48px 28px' }}>
+        <section style={{ background: '#fff', borderBottom: '1px solid #e8eaf0', padding: '56px 28px' }}>
           <div style={{ maxWidth: '1240px', margin: '0 auto' }}>
             <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr', gap: '60px', alignItems: 'center' }} className="intro-grid">
               <div>
                 <p style={{ color: '#374151', fontSize: '1rem', lineHeight: 1.8, marginBottom: '16px' }}>
-                  Based in <strong>San Jacinto, CA</strong>, America&apos;s Plumbing is a <strong>C-36 licensed and insured plumbing contractor</strong> serving homeowners and businesses across <strong>Riverside County</strong> and <strong>South Orange County</strong>. From <strong>emergency plumbing in Hemet</strong> to <strong>water heater replacement in Laguna Niguel</strong>, we dispatch fast and arrive ready.
+                  Based in <strong>San Jacinto, CA</strong>, {"America's Plumbing"} is a <strong>C-36 licensed and insured plumbing contractor</strong> serving homeowners and businesses across <strong>Riverside County</strong> and <strong>South Orange County</strong>. From <strong>emergency plumbing in Hemet</strong> to <strong>water heater replacement in Laguna Niguel</strong>, we dispatch fast and arrive ready.
                 </p>
                 <p style={{ color: '#5a5e72', fontSize: '0.95rem', lineHeight: 1.8 }}>
                   Our service territory spans over 18 cities — including <strong>Menifee, Beaumont, Moreno Valley, Riverside, Mission Viejo, Laguna Beach, Ladera Ranch</strong>, and more. Every job comes with upfront pricing, no overtime fees, and a plumber who stands behind their work.
@@ -129,36 +123,31 @@ export default function AreasPage() {
             </div>
 
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: '20px' }}>
-              {riverCounty.map((area, i) => (
+              {riverCounty.map(area => (
                 <a key={area.slug} href={`/areas/${area.slug}`} className="area-card" style={{
                   background: '#fff', borderRadius: '10px',
                   border: '1px solid #e8eaf0',
-                  padding: '32px 28px 28px', textDecoration: 'none', display: 'block',
+                  padding: '36px 28px 28px', textDecoration: 'none', display: 'flex',
+                  flexDirection: 'column',
                   position: 'relative', overflow: 'hidden',
                 }}>
                   {/* Accent bar */}
-                  <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '3px', background: accentAt(i) }} />
+                  <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '3px', background: '#C8202A' }} />
 
-                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '14px' }}>
-                    <h2 style={{
-                      fontSize: '1.15rem', fontWeight: 700, color: '#080f1f',
-                      fontFamily: 'var(--font-newsreader), Outfit, sans-serif', lineHeight: 1.2
-                    }}>
-                      Plumber in<br />{area.city}
-                    </h2>
-                    <div style={{
-                      width: '36px', height: '36px', borderRadius: '8px',
-                      background: '#f7f8fc', border: '1px solid #e8eaf0',
-                      display: 'flex', alignItems: 'center', justifyContent: 'center',
-                      flexShrink: 0, color: accentAt(i), fontSize: '1rem', fontWeight: 700
-                    }}>→</div>
-                  </div>
+                  <h2 style={{
+                    fontSize: '1.3rem', fontWeight: 700, color: '#080f1f',
+                    fontFamily: 'var(--font-newsreader), serif', lineHeight: 1.2,
+                    marginBottom: '14px',
+                  }}>
+                    {area.city}
+                  </h2>
 
-                  <p style={{ color: '#374151', fontSize: '0.9rem', lineHeight: 1.7, marginBottom: '20px' }}>
-                    {area.intro.slice(0, 105)}…
+                  <p style={{ color: '#374151', fontSize: '0.9rem', lineHeight: 1.7, marginBottom: '20px', flex: 1,
+                    display: '-webkit-box', WebkitLineClamp: 3, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>
+                    {area.intro}
                   </p>
 
-                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
+                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px', marginBottom: '18px' }}>
                     {area.zipCodes.slice(0, 4).map(z => (
                       <span key={z} style={{
                         background: '#f0f1f5', color: '#374151',
@@ -167,7 +156,62 @@ export default function AreasPage() {
                       }}>{z}</span>
                     ))}
                   </div>
+
+                  <span style={{ fontSize: '0.82rem', fontWeight: 700, color: '#C8202A', letterSpacing: '0.04em' }}>
+                    View City →
+                  </span>
                 </a>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── How We Work ── */}
+        <section style={{ background: '#fff', padding: '72px 28px', borderTop: '1px solid #e8eaf0', borderBottom: '1px solid #e8eaf0' }}>
+          <div style={{ maxWidth: '1240px', margin: '0 auto' }}>
+            <div style={{ textAlign: 'center', marginBottom: '48px' }}>
+              <div style={{ display: 'inline-flex', alignItems: 'center', gap: '10px', marginBottom: '14px' }}>
+                <div style={{ width: '24px', height: '2px', background: '#C8202A' }} />
+                <span style={{ color: '#C8202A', fontSize: '0.7rem', fontWeight: 700, letterSpacing: '0.22em', textTransform: 'uppercase' }}>Simple Process</span>
+                <div style={{ width: '24px', height: '2px', background: '#C8202A' }} />
+              </div>
+              <h2 style={{
+                fontFamily: 'var(--font-newsreader), serif',
+                fontSize: 'clamp(1.7rem, 3vw, 2.4rem)',
+                fontWeight: 700, color: '#080f1f', lineHeight: 1.1,
+              }}>
+                How We Work
+              </h2>
+            </div>
+
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '40px' }} className="how-grid">
+              {[
+                { step: '1', title: 'Call Us', desc: 'Reach a live plumber directly — no answering service, no runaround. We pick up 24 hours a day, 7 days a week.' },
+                { step: '2', title: 'We Diagnose', desc: 'Our technician arrives, assesses the issue, and gives you a clear upfront price before any work begins.' },
+                { step: '3', title: 'Fixed Fast', desc: 'Our trucks are fully stocked so we resolve most jobs in a single visit — same day, same crew, guaranteed.' },
+              ].map(item => (
+                <div key={item.step} style={{ textAlign: 'center', padding: '32px 24px' }}>
+                  <div style={{
+                    width: '52px', height: '52px', borderRadius: '50%',
+                    background: '#f7f8fc', border: '2px solid #e8eaf0',
+                    display: 'flex', alignItems: 'center', justifyContent: 'center',
+                    margin: '0 auto 20px',
+                    fontFamily: 'var(--font-newsreader), serif',
+                    fontSize: '1.4rem', fontWeight: 700, color: '#C8202A',
+                  }}>
+                    {item.step}
+                  </div>
+                  <h3 style={{
+                    fontFamily: 'var(--font-newsreader), serif',
+                    fontSize: '1.25rem', fontWeight: 700, color: '#080f1f',
+                    marginBottom: '12px',
+                  }}>
+                    {item.title}
+                  </h3>
+                  <p style={{ color: '#6b7280', fontSize: '0.92rem', lineHeight: 1.75 }}>
+                    {item.desc}
+                  </p>
+                </div>
               ))}
             </div>
           </div>
@@ -179,8 +223,8 @@ export default function AreasPage() {
           <div style={{ maxWidth: '1240px', margin: '0 auto', position: 'relative', zIndex: 1, display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '24px' }}>
             <div>
               <p style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase', marginBottom: '8px' }}>Available Now</p>
-              <h2 style={{ fontFamily: 'var(--font-newsreader), Outfit, sans-serif', fontSize: 'clamp(1.5rem, 3vw, 2rem)', fontWeight: 700, color: '#fff', lineHeight: 1.1 }}>
-                Don&apos;t see your city? We likely cover it.
+              <h2 style={{ fontFamily: 'var(--font-newsreader), serif', fontSize: 'clamp(1.5rem, 3vw, 2rem)', fontWeight: 700, color: '#fff', lineHeight: 1.1 }}>
+                {"Don't see your city? We likely cover it."}
               </h2>
             </div>
             <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
@@ -212,35 +256,30 @@ export default function AreasPage() {
             </div>
 
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: '20px' }}>
-              {orangeCounty.map((area, i) => (
+              {orangeCounty.map(area => (
                 <a key={area.slug} href={`/areas/${area.slug}`} className="area-card" style={{
                   background: '#fff', borderRadius: '10px',
                   border: '1px solid #e8eaf0',
-                  padding: '32px 28px 28px', textDecoration: 'none', display: 'block',
+                  padding: '36px 28px 28px', textDecoration: 'none', display: 'flex',
+                  flexDirection: 'column',
                   position: 'relative', overflow: 'hidden',
                 }}>
                   <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '3px', background: '#1A52BE' }} />
 
-                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '14px' }}>
-                    <h2 style={{
-                      fontSize: '1.15rem', fontWeight: 700, color: '#080f1f',
-                      fontFamily: 'var(--font-newsreader), Outfit, sans-serif', lineHeight: 1.2
-                    }}>
-                      Plumber in<br />{area.city}
-                    </h2>
-                    <div style={{
-                      width: '36px', height: '36px', borderRadius: '8px',
-                      background: '#f7f8fc', border: '1px solid #e8eaf0',
-                      display: 'flex', alignItems: 'center', justifyContent: 'center',
-                      flexShrink: 0, color: '#1A52BE', fontSize: '1rem', fontWeight: 700
-                    }}>→</div>
-                  </div>
+                  <h2 style={{
+                    fontSize: '1.3rem', fontWeight: 700, color: '#080f1f',
+                    fontFamily: 'var(--font-newsreader), serif', lineHeight: 1.2,
+                    marginBottom: '14px',
+                  }}>
+                    {area.city}
+                  </h2>
 
-                  <p style={{ color: '#374151', fontSize: '0.9rem', lineHeight: 1.7, marginBottom: '20px' }}>
-                    {area.intro.slice(0, 105)}…
+                  <p style={{ color: '#374151', fontSize: '0.9rem', lineHeight: 1.7, marginBottom: '20px', flex: 1,
+                    display: '-webkit-box', WebkitLineClamp: 3, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>
+                    {area.intro}
                   </p>
 
-                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
+                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px', marginBottom: '18px' }}>
                     {area.zipCodes.slice(0, 4).map(z => (
                       <span key={z} style={{
                         background: '#eef2ff', color: '#1A52BE',
@@ -249,6 +288,10 @@ export default function AreasPage() {
                       }}>{z}</span>
                     ))}
                   </div>
+
+                  <span style={{ fontSize: '0.82rem', fontWeight: 700, color: '#C8202A', letterSpacing: '0.04em' }}>
+                    View City →
+                  </span>
                 </a>
               ))}
             </div>
@@ -262,12 +305,12 @@ export default function AreasPage() {
               <div style={{ width: '24px', height: '2px', background: '#C8202A' }} />
               <span style={{ color: '#C8202A', fontSize: '0.7rem', fontWeight: 700, letterSpacing: '0.22em', textTransform: 'uppercase' }}>About Our Coverage</span>
             </div>
-            <h2 style={{ fontFamily: 'var(--font-newsreader), Outfit, sans-serif', fontSize: 'clamp(1.7rem, 3vw, 2.4rem)', fontWeight: 700, color: '#080f1f', lineHeight: 1.15, marginBottom: '24px' }}>
+            <h2 style={{ fontFamily: 'var(--font-newsreader), serif', fontSize: 'clamp(1.7rem, 3vw, 2.4rem)', fontWeight: 700, color: '#080f1f', lineHeight: 1.15, marginBottom: '24px' }}>
               Your Local Plumber Across<br />San Jacinto Valley &amp; Beyond
             </h2>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
               <p style={{ color: '#374151', fontSize: '0.975rem', lineHeight: 1.8 }}>
-                America&apos;s Plumbing was founded in and operates from <strong>San Jacinto, CA</strong> — putting us at the heart of the San Jacinto Valley and within fast reach of Hemet, Menifee, Beaumont, Romoland, Riverside, and Moreno Valley. For homeowners in the <strong>Inland Empire</strong> and <strong>Riverside County</strong>, we offer the fastest response times of any licensed plumber in the region.
+                {"America's Plumbing"} was founded in and operates from <strong>San Jacinto, CA</strong> — putting us at the heart of the San Jacinto Valley and within fast reach of Hemet, Menifee, Beaumont, Romoland, Riverside, and Moreno Valley. For homeowners in the <strong>Inland Empire</strong> and <strong>Riverside County</strong>, we offer the fastest response times of any licensed plumber in the region.
               </p>
               <p style={{ color: '#5a5e72', fontSize: '0.95rem', lineHeight: 1.8 }}>
                 We also extend full-service plumbing coverage into <strong>South Orange County</strong> — serving cities including <strong>Mission Viejo, Laguna Beach, Laguna Niguel, Laguna Hills, Lake Forest, Aliso Viejo, Ladera Ranch</strong>, and surrounding communities. Whether you need a <strong>24/7 emergency plumber</strong>, a water heater replacement, whole-home repiping, or drain cleaning, we dispatch the same day.
@@ -288,8 +331,8 @@ export default function AreasPage() {
         .area-card:hover { box-shadow: 0 12px 36px rgba(0,0,0,0.10); transform: translateY(-3px); }
         .area-card:hover h2 { color: #C8202A; }
         @media (max-width: 860px) {
-          .hide-stats { display: none !important; }
           .intro-grid { grid-template-columns: 1fr !important; }
+          .how-grid { grid-template-columns: 1fr !important; }
         }
       `}</style>
     </>
