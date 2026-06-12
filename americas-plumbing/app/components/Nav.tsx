@@ -6,12 +6,18 @@ import Image from 'next/image';
 const serviceLinks = [
   { label: 'Emergency Plumbing', href: '/services/emergency-plumbing' },
   { label: 'Leak Detection', href: '/services/leak-detection' },
-  { label: 'Repiping', href: '/services/repiping' },
   { label: 'Drain Cleaning', href: '/services/drain-cleaning' },
+  { label: 'Hydro Jetting', href: '/services/hydro-jetting' },
+  { label: 'Camera Inspection', href: '/services/camera-inspection' },
   { label: 'Water Heater', href: '/services/water-heater' },
-  { label: 'Fixture Installation', href: '/services/fixture-installation' },
-  { label: 'Gas Line', href: '/services/gas-line' },
+  { label: 'Repiping', href: '/services/repiping' },
+  { label: 'Water Line Repair', href: '/services/water-line-repair' },
   { label: 'Sewer Line', href: '/services/sewer-line' },
+  { label: 'Gas Line', href: '/services/gas-line' },
+  { label: 'Garbage Disposal', href: '/services/garbage-disposal' },
+  { label: 'Bathroom Fixtures', href: '/services/bathroom-fixtures' },
+  { label: 'Fixture Installation', href: '/services/fixture-installation' },
+  { label: 'View All Services →', href: '/services' },
 ];
 
 const areaLinks = [

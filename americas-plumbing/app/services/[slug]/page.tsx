@@ -114,13 +114,13 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
               <div style={{ background: '#f7f8fc', padding: '28px', borderRadius: '6px', border: '1px solid #e0e2ea' }}>
                 <h3 style={{ fontSize: '0.9rem', fontWeight: 700, color: '#080f1f', marginBottom: '16px' }}>Other Services</h3>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-                  {['emergency-plumbing', 'leak-detection', 'repiping', 'drain-cleaning', 'water-heater', 'fixture-installation', 'gas-line', 'sewer-line']
-                    .filter(s => s !== slug)
-                    .slice(0, 6)
+                  {services
+                    .filter(s => s.slug !== slug)
+                    .slice(0, 8)
                     .map(s => (
-                      <a key={s} href={`/services/${s}`} style={{ color: '#1A52BE', fontSize: '0.875rem', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '6px' }}>
+                      <a key={s.slug} href={`/services/${s.slug}`} style={{ color: '#1A52BE', fontSize: '0.875rem', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '6px' }}>
                         <span style={{ color: '#C8202A', fontSize: '0.7rem' }}>›</span>
-                        {s.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase())}
+                        {s.shortName}
                       </a>
                     ))}
                 </div>
