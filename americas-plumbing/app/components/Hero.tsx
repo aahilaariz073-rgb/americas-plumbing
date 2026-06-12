@@ -56,7 +56,7 @@ export default function Hero() {
         <div style={{ display: 'inline-flex', gap: '0', flexWrap: 'wrap', borderTop: '1px solid rgba(255,255,255,0.1)', paddingTop: '28px' }}>
           {[
             { val: '5.0', label: 'Google Rating', red: false },
-            { val: '10+', label: 'Years Serving SoCal', red: false },
+            { val: '25+', label: 'Years in Business', red: false },
             { val: '24/7', label: 'Emergency Service', red: true },
           ].map((stat, i) => (
             <div key={i} style={{ display: 'flex', alignItems: 'center' }}>

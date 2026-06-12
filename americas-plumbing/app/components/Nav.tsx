@@ -146,6 +146,7 @@ export default function Nav() {
           </div>
 
           {[
+            { label: 'About', href: '/about' },
             { label: 'Reviews', href: '/reviews' },
             { label: 'FAQ', href: '/faq' },
             { label: 'Contact', href: '/contact' },
@@ -210,7 +211,7 @@ export default function Nav() {
               View All Cities →
             </a>
           </div>
-          {[{ label: 'Reviews', href: '/reviews' }, { label: 'FAQ', href: '/faq' }, { label: 'Contact', href: '/contact' }].map(({ label, href }) => (
+          {[{ label: 'About', href: '/about' }, { label: 'Reviews', href: '/reviews' }, { label: 'FAQ', href: '/faq' }, { label: 'Contact', href: '/contact' }].map(({ label, href }) => (
             <a key={label} href={href} onClick={closeNav} style={{ color: '#080f1f', padding: '14px 0', fontWeight: 600, textDecoration: 'none', fontSize: '0.95rem', borderBottom: '1px solid #f0f1f5' }}>
               {label}
             </a>

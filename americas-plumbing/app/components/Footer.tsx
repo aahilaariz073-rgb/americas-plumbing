@@ -8,7 +8,7 @@ export default function Footer() {
       <div style={{ maxWidth: '1240px', margin: '0 auto' }}>
         <div
           className="footer-grid"
-          style={{ display: 'grid', gridTemplateColumns: '2fr 1fr 1fr 1fr', gap: '40px', marginBottom: '48px' }}
+          style={{ display: 'grid', gridTemplateColumns: '2fr 1fr 1fr 1fr 1fr', gap: '32px', marginBottom: '48px' }}
         >
           {/* Brand */}
           <div>
@@ -22,12 +22,32 @@ export default function Footer() {
               />
             </div>
             <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '0.875rem', lineHeight: 1.7, maxWidth: '280px' }}>
-              Southern California&apos;s trusted plumber. Licensed, insured, and proud to serve our community with honest work and fair pricing.
+              Family-owned, C-36 licensed plumber based in San Jacinto, CA. Serving Southern California with honest work and fair pricing since 2000 — 25+ years strong.
             </p>
           </div>
 
           {/* Services */}
           <div>
+            <h4 style={{ color: '#fff', fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', marginBottom: '18px' }}>
+              Company
+            </h4>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', marginBottom: '28px' }}>
+              {[
+                { label: 'About Us', href: '/about' },
+                { label: 'Reviews', href: '/reviews' },
+                { label: 'FAQ', href: '/faq' },
+                { label: 'Contact', href: '/contact' },
+              ].map(({ label, href }) => (
+                <a
+                  key={href} href={href}
+                  style={{ color: 'rgba(255,255,255,0.55)', fontSize: '0.875rem', textDecoration: 'none', transition: 'color 0.2s' }}
+                  onMouseEnter={e => (e.currentTarget.style.color = '#fff')}
+                  onMouseLeave={e => (e.currentTarget.style.color = 'rgba(255,255,255,0.55)')}
+                >
+                  {label}
+                </a>
+              ))}
+            </div>
             <h4 style={{ color: '#fff', fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', marginBottom: '18px' }}>
               Services
             </h4>
@@ -122,7 +142,10 @@ export default function Footer() {
       </div>
 
       <style>{`
-        @media (max-width: 860px) {
+        @media (max-width: 1080px) {
+          .footer-grid { grid-template-columns: 2fr 1fr 1fr !important; }
+        }
+        @media (max-width: 640px) {
           .footer-grid { grid-template-columns: 1fr 1fr !important; }
         }
       `}</style>
