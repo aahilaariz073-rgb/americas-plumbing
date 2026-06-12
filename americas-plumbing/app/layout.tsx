@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
-import { Outfit, Inter } from "next/font/google";
+import { Playfair_Display, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 
-const outfit = Outfit({
+const playfair = Playfair_Display({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700", "800", "900"],
   variable: "--font-newsreader",
   display: "swap",
 });
 
-const inter = Inter({
+const jakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700", "800"],
   variable: "--font-hanken",
@@ -32,7 +32,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${outfit.variable} ${inter.variable}`}>
+    <html lang="en" className={`${playfair.variable} ${jakarta.variable}`}>
       <body className="antialiased overflow-x-hidden">{children}</body>
     </html>
   );

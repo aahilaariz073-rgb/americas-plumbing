@@ -110,20 +110,43 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
               ))}
 
               {/* Services in this area */}
-              <h2 style={{
-                fontFamily: 'var(--font-newsreader), Outfit, sans-serif',
-                fontSize: 'clamp(1.6rem, 3vw, 2.2rem)', fontWeight: 700,
-                color: '#080f1f', lineHeight: 1.1, marginTop: '48px', marginBottom: '32px'
-              }}>
-                Plumbing Services We Offer in {area.city}
-              </h2>
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '2px', background: '#e0e2ea' }}>
-                {services.map(svc => (
-                  <a key={svc.slug} href={`/services/${svc.slug}`} style={{ background: '#fff', padding: '24px', textDecoration: 'none', display: 'block' }}>
-                    <div style={{ width: '28px', height: '2px', background: '#C8202A', marginBottom: '12px' }} />
-                    <h3 style={{ fontSize: '0.975rem', fontWeight: 700, color: '#080f1f', marginBottom: '6px' }}>{svc.name}</h3>
-                    <p style={{ color: '#5a5e72', fontSize: '0.82rem', lineHeight: 1.6 }}>{svc.intro.slice(0, 80)}…</p>
-                    <span style={{ color: '#1A52BE', fontSize: '0.8rem', fontWeight: 600, marginTop: '8px', display: 'block' }}>Learn more ›</span>
+              <div style={{ marginTop: '56px', marginBottom: '8px', display: 'flex', alignItems: 'center', gap: '16px' }}>
+                <div style={{ width: '3px', height: '32px', background: '#C8202A', borderRadius: '2px', flexShrink: 0 }} />
+                <h2 style={{
+                  fontFamily: 'var(--font-newsreader), serif',
+                  fontSize: 'clamp(1.5rem, 2.8vw, 2rem)', fontWeight: 700,
+                  color: '#080f1f', lineHeight: 1.1,
+                }}>
+                  Plumbing Services We Offer in {area.city}
+                </h2>
+              </div>
+              <p style={{ color: '#6b7280', fontSize: '0.9rem', lineHeight: 1.7, marginBottom: '28px', marginLeft: '19px', borderLeft: '1px solid #e8eaf0', paddingLeft: '16px' }}>
+                All services performed by our licensed C-36 plumbers — same crew, same quality, every visit.
+              </p>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(240px, 1fr))', gap: '14px' }}>
+                {services.map((svc, i) => (
+                  <a key={svc.slug} href={`/services/${svc.slug}`} className="svc-card" style={{
+                    background: '#fff', borderRadius: '10px',
+                    border: '1px solid #e8eaf0',
+                    padding: '26px 22px 22px', textDecoration: 'none', display: 'block',
+                    position: 'relative', overflow: 'hidden',
+                  }}>
+                    <div style={{
+                      position: 'absolute', top: 0, left: 0, right: 0, height: '3px',
+                      background: i % 2 === 0 ? '#C8202A' : '#1A52BE',
+                    }} />
+                    <h3 style={{
+                      fontFamily: 'var(--font-newsreader), serif',
+                      fontSize: '1.05rem', fontWeight: 700, color: '#080f1f',
+                      marginBottom: '8px', lineHeight: 1.25,
+                    }}>{svc.name}</h3>
+                    <p style={{ color: '#6b7280', fontSize: '0.82rem', lineHeight: 1.65, marginBottom: '14px' }}>
+                      {svc.intro.slice(0, 82)}…
+                    </p>
+                    <span style={{
+                      fontSize: '0.78rem', fontWeight: 700, letterSpacing: '0.06em',
+                      color: i % 2 === 0 ? '#C8202A' : '#1A52BE',
+                    }}>Learn more →</span>
                   </a>
                 ))}
               </div>
@@ -178,6 +201,15 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
         <PageCTA city={area.city} />
       </main>
       <Footer />
+      <style>{`
+        .svc-card { transition: box-shadow 0.2s, transform 0.2s; }
+        .svc-card:hover { box-shadow: 0 10px 32px rgba(0,0,0,0.09); transform: translateY(-2px); }
+        .svc-card:hover h3 { color: #C8202A; }
+        @media (max-width: 860px) {
+          .area-two-col { grid-template-columns: 1fr !important; }
+          .area-sidebar { position: static !important; }
+        }
+      `}</style>
     </>
   );
 }
