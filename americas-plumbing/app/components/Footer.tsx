@@ -12,14 +12,16 @@ export default function Footer() {
         >
           {/* Brand */}
           <div>
-            <Image
-              src="/logo.png"
-              alt="America's Plumbing"
-              width={130}
-              height={52}
-              style={{ height: '52px', width: 'auto', filter: 'brightness(0) invert(1)', marginBottom: '20px', display: 'block' }}
-            />
-            <p style={{ color: '#3a4a60', fontSize: '0.875rem', lineHeight: 1.7, maxWidth: '280px' }}>
+            <div style={{ display: 'inline-block', background: '#fff', borderRadius: '8px', padding: '8px 12px', marginBottom: '20px' }}>
+              <Image
+                src="/logo.png"
+                alt="America's Plumbing"
+                width={130}
+                height={52}
+                style={{ height: '52px', width: 'auto', display: 'block' }}
+              />
+            </div>
+            <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '0.875rem', lineHeight: 1.7, maxWidth: '280px' }}>
               Southern California&apos;s trusted plumber. Licensed, insured, and proud to serve our community with honest work and fair pricing.
             </p>
           </div>
@@ -39,9 +41,9 @@ export default function Footer() {
               ].map(({ label, slug }) => (
                 <a
                   key={slug} href={`/services/${slug}`}
-                  style={{ color: '#3a4a60', fontSize: '0.875rem', textDecoration: 'none', transition: 'color 0.2s' }}
+                  style={{ color: 'rgba(255,255,255,0.55)', fontSize: '0.875rem', textDecoration: 'none', transition: 'color 0.2s' }}
                   onMouseEnter={e => (e.currentTarget.style.color = '#fff')}
-                  onMouseLeave={e => (e.currentTarget.style.color = '#3a4a60')}
+                  onMouseLeave={e => (e.currentTarget.style.color = 'rgba(255,255,255,0.55)')}
                 >
                   {label}
                 </a>
@@ -64,9 +66,9 @@ export default function Footer() {
               ].map(({ label, slug }) => (
                 <a
                   key={label} href={slug ? `/areas/${slug}` : '/areas'}
-                  style={{ color: '#3a4a60', fontSize: '0.875rem', textDecoration: 'none', transition: 'color 0.2s' }}
+                  style={{ color: 'rgba(255,255,255,0.55)', fontSize: '0.875rem', textDecoration: 'none', transition: 'color 0.2s' }}
                   onMouseEnter={e => (e.currentTarget.style.color = '#fff')}
-                  onMouseLeave={e => (e.currentTarget.style.color = '#3a4a60')}
+                  onMouseLeave={e => (e.currentTarget.style.color = 'rgba(255,255,255,0.55)')}
                 >
                   {label}
                 </a>
@@ -85,15 +87,15 @@ export default function Footer() {
               </a>
               <a
                 href="mailto:californiajoe500@gmail.com"
-                style={{ color: '#3a4a60', fontSize: '0.8rem', textDecoration: 'none', wordBreak: 'break-all' }}
+                style={{ color: 'rgba(255,255,255,0.55)', fontSize: '0.8rem', textDecoration: 'none', wordBreak: 'break-all' }}
                 onMouseEnter={e => (e.currentTarget.style.color = '#fff')}
-                onMouseLeave={e => (e.currentTarget.style.color = '#3a4a60')}
+                onMouseLeave={e => (e.currentTarget.style.color = 'rgba(255,255,255,0.55)')}
               >
                 californiajoe500@gmail.com
               </a>
-              <span style={{ color: '#3a4a60', fontSize: '0.875rem' }}>Orange County, CA</span>
+              <span style={{ color: 'rgba(255,255,255,0.55)', fontSize: '0.875rem' }}>Orange County, CA</span>
               <a
-                href="/#contact"
+                href="/contact"
                 style={{
                   display: 'inline-block', marginTop: '6px', background: '#C8202A', color: '#fff',
                   fontSize: '0.78rem', fontWeight: 700, padding: '10px 20px', borderRadius: '4px',
@@ -112,10 +114,10 @@ export default function Footer() {
           display: 'flex', flexWrap: 'wrap', gap: '16px',
           alignItems: 'center', justifyContent: 'space-between'
         }}>
-          <p style={{ color: '#253040', fontSize: '0.78rem' }}>
+          <p style={{ color: 'rgba(255,255,255,0.3)', fontSize: '0.78rem' }}>
             © {new Date().getFullYear()} America&apos;s Plumbing · Owner: Joe · C-36 Licensed
           </p>
-          <span style={{ color: '#253040', fontSize: '0.78rem' }}>C-36 License #1086994</span>
+          <span style={{ color: 'rgba(255,255,255,0.3)', fontSize: '0.78rem' }}>C-36 License #1086994</span>
         </div>
       </div>
 

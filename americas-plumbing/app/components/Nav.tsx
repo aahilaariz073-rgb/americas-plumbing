@@ -21,7 +21,7 @@ export default function Nav() {
             alt="America's Plumbing"
             width={120}
             height={48}
-            style={{ height: '48px', width: 'auto', filter: 'brightness(0)' }}
+            style={{ height: '48px', width: 'auto' }}
             priority
           />
         </a>
