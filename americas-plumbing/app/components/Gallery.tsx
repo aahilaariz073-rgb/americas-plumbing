@@ -3,14 +3,44 @@ import ScrollReveal from './ScrollReveal';
 
 const pairs = [
   {
-    before: { src: '/before-1.jpg', label: 'Pool Pump — Messy Hose Setup' },
-    after:  { src: '/after-1.jpg',  label: 'Pool Pump — Clean PVC Install' },
+    before: { src: '/before-1.jpg', label: 'Pool Pump — Before' },
+    after:  { src: '/after-1.jpg',  label: 'Pool Pump — After' },
   },
   {
-    before: { src: '/before-2.jpg', label: 'Shower Rough-In — Concrete Stage' },
-    after:  { src: '/after-2.jpg',  label: 'Shower — Finished Luxury Install' },
+    before: { src: '/before-2.jpg', label: 'Shower Rough-In — Before' },
+    after:  { src: '/after-2.jpg',  label: 'Luxury Shower — After' },
   },
 ];
+
+function BaCard({ src, label, tag, tagBg }: { src: string; label: string; tag: string; tagBg: string }) {
+  return (
+    <div style={{ position: 'relative', width: '100%', height: '320px', overflow: 'hidden', borderRadius: '6px', background: '#eef0f6' }}>
+      <Image
+        src={src}
+        alt={label}
+        fill
+        sizes="(max-width: 700px) 100vw, 50vw"
+        style={{ objectFit: 'cover', objectPosition: 'center' }}
+      />
+      <div style={{
+        position: 'absolute', top: '14px', left: '14px',
+        background: tagBg, color: '#fff',
+        fontSize: '0.68rem', fontWeight: 800,
+        padding: '5px 14px', letterSpacing: '0.14em',
+        textTransform: 'uppercase', borderRadius: '3px',
+      }}>
+        {tag}
+      </div>
+      <div style={{
+        position: 'absolute', bottom: 0, left: 0, right: 0,
+        padding: '32px 16px 14px',
+        background: 'linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 100%)',
+      }}>
+        <span style={{ color: '#fff', fontSize: '0.8rem', fontWeight: 600 }}>{label}</span>
+      </div>
+    </div>
+  );
+}
 
 export default function Gallery() {
   return (
@@ -35,40 +65,12 @@ export default function Gallery() {
           </p>
         </ScrollReveal>
 
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
-          {pairs.map((pair, pi) => (
-            <ScrollReveal key={pi}>
-              <div className="ba-row" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '6px' }}>
-                {[
-                  { ...pair.before, tag: 'Before', tagBg: '#C8202A' },
-                  { ...pair.after,  tag: 'After',  tagBg: '#1A52BE' },
-                ].map((img) => (
-                  <div key={img.tag} style={{ position: 'relative', aspectRatio: '4/3', overflow: 'hidden', borderRadius: '6px', background: '#eef0f6' }}>
-                    <Image
-                      src={img.src}
-                      alt={img.label}
-                      fill
-                      sizes="(max-width: 700px) 100vw, 50vw"
-                      style={{ objectFit: 'cover' }}
-                    />
-                    <div style={{
-                      position: 'absolute', top: '14px', left: '14px',
-                      background: img.tagBg, color: '#fff',
-                      fontSize: '0.68rem', fontWeight: 800,
-                      padding: '5px 14px', letterSpacing: '0.14em',
-                      textTransform: 'uppercase', borderRadius: '3px',
-                    }}>
-                      {img.tag}
-                    </div>
-                    <div style={{
-                      position: 'absolute', bottom: 0, left: 0, right: 0,
-                      padding: '28px 16px 14px',
-                      background: 'linear-gradient(to top, rgba(0,0,0,0.55) 0%, transparent 100%)',
-                    }}>
-                      <span style={{ color: '#fff', fontSize: '0.8rem', fontWeight: 600 }}>{img.label}</span>
-                    </div>
-                  </div>
-                ))}
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+          {pairs.map((pair, i) => (
+            <ScrollReveal key={i}>
+              <div className="ba-row" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px' }}>
+                <BaCard src={pair.before.src} label={pair.before.label} tag="Before" tagBg="#C8202A" />
+                <BaCard src={pair.after.src}  label={pair.after.label}  tag="After"  tagBg="#1A52BE" />
               </div>
             </ScrollReveal>
           ))}
@@ -78,6 +80,7 @@ export default function Gallery() {
       <style>{`
         @media (max-width: 600px) {
           .ba-row { grid-template-columns: 1fr !important; }
+          .ba-row > div { height: 240px !important; }
         }
       `}</style>
     </section>
