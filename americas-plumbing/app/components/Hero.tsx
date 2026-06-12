@@ -22,13 +22,12 @@ export default function Hero() {
 
   const inputStyle: React.CSSProperties = {
     width: '100%', background: '#fff', border: '1px solid #e0e2ea',
-    borderRadius: '8px', padding: '15px 16px', color: '#080f1f',
-    fontSize: '1.05rem', outline: 'none', fontFamily: 'var(--font-newsreader), serif',
+    borderRadius: '8px', padding: '14px 16px', color: '#080f1f',
+    fontSize: '1rem', outline: 'none', fontFamily: 'inherit',
   };
   const labelStyle: React.CSSProperties = {
-    color: '#080f1f', fontSize: '0.85rem', fontWeight: 700,
-    fontFamily: 'var(--font-newsreader), serif',
-    letterSpacing: '0.08em', textTransform: 'uppercase', display: 'block', marginBottom: '8px',
+    color: '#374151', fontSize: '0.75rem', fontWeight: 700,
+    letterSpacing: '0.1em', textTransform: 'uppercase', display: 'block', marginBottom: '7px',
   };
 
   return (
@@ -113,10 +112,10 @@ export default function Hero() {
             {/* Form header */}
             <div style={{ background: '#080f1f', padding: '28px 34px 26px', borderBottom: '3px solid #C8202A' }}>
               <div style={{ color: '#C8202A', fontSize: '0.68rem', fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase', marginBottom: '8px' }}>Free — No Obligation</div>
-              <h2 style={{ fontFamily: 'var(--font-newsreader), serif', fontSize: '2.1rem', fontWeight: 700, color: '#fff', lineHeight: 1.1 }}>
+              <h2 style={{ fontFamily: 'var(--font-newsreader), serif', fontSize: '1.9rem', fontWeight: 700, color: '#fff', lineHeight: 1.1 }}>
                 Request a Free Quote
               </h2>
-              <p style={{ color: 'rgba(255,255,255,0.45)', fontSize: '0.95rem', marginTop: '8px', fontFamily: 'var(--font-hanken), sans-serif' }}>Joe calls you back within the hour.</p>
+              <p style={{ color: 'rgba(255,255,255,0.45)', fontSize: '0.875rem', marginTop: '8px' }}>Joe calls you back within the hour.</p>
             </div>
 
             {/* Form body */}
