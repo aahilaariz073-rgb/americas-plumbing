@@ -22,12 +22,12 @@ export default function Hero() {
 
   const inputStyle: React.CSSProperties = {
     width: '100%', background: '#fff', border: '1px solid #e0e2ea',
-    borderRadius: '6px', padding: '11px 14px', color: '#080f1f',
-    fontSize: '0.88rem', outline: 'none', fontFamily: 'inherit',
+    borderRadius: '8px', padding: '14px 16px', color: '#080f1f',
+    fontSize: '1rem', outline: 'none', fontFamily: 'inherit',
   };
   const labelStyle: React.CSSProperties = {
-    color: '#374151', fontSize: '0.72rem', fontWeight: 700,
-    letterSpacing: '0.1em', textTransform: 'uppercase', display: 'block', marginBottom: '6px',
+    color: '#374151', fontSize: '0.75rem', fontWeight: 700,
+    letterSpacing: '0.1em', textTransform: 'uppercase', display: 'block', marginBottom: '7px',
   };
 
   return (
@@ -42,7 +42,7 @@ export default function Hero() {
       </div>
 
       <div style={{ position: 'relative', zIndex: 2, maxWidth: '1240px', margin: '0 auto', padding: '100px 28px 80px', width: '100%' }}>
-        <div className="hero-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 440px', gap: '64px', alignItems: 'center' }}>
+        <div className="hero-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 500px', gap: '64px', alignItems: 'center' }}>
 
           {/* ── LEFT: Text ── */}
           <div>
@@ -110,16 +110,16 @@ export default function Hero() {
             overflow: 'hidden',
           }}>
             {/* Form header */}
-            <div style={{ background: '#080f1f', padding: '24px 28px 22px', borderBottom: '3px solid #C8202A' }}>
-              <div style={{ color: '#C8202A', fontSize: '0.65rem', fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase', marginBottom: '6px' }}>Free — No Obligation</div>
-              <h2 style={{ fontFamily: 'var(--font-newsreader), serif', fontSize: '1.55rem', fontWeight: 700, color: '#fff', lineHeight: 1.1 }}>
+            <div style={{ background: '#080f1f', padding: '28px 34px 26px', borderBottom: '3px solid #C8202A' }}>
+              <div style={{ color: '#C8202A', fontSize: '0.68rem', fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase', marginBottom: '8px' }}>Free — No Obligation</div>
+              <h2 style={{ fontFamily: 'var(--font-newsreader), serif', fontSize: '1.9rem', fontWeight: 700, color: '#fff', lineHeight: 1.1 }}>
                 Request a Free Quote
               </h2>
-              <p style={{ color: 'rgba(255,255,255,0.45)', fontSize: '0.8rem', marginTop: '6px' }}>Joe calls you back within the hour.</p>
+              <p style={{ color: 'rgba(255,255,255,0.45)', fontSize: '0.875rem', marginTop: '8px' }}>Joe calls you back within the hour.</p>
             </div>
 
             {/* Form body */}
-            <div style={{ padding: '28px' }}>
+            <div style={{ padding: '32px 34px' }}>
               {submitted ? (
                 <div style={{ textAlign: 'center', padding: '24px 0' }}>
                   <div style={{
@@ -134,7 +134,7 @@ export default function Hero() {
                   </p>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
+                <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
                   <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px' }}>
                     <div>
                       <label style={labelStyle}>First Name *</label>
@@ -184,8 +184,8 @@ export default function Hero() {
                   {error && <p style={{ color: '#C8202A', fontSize: '0.8rem', textAlign: 'center' }}>{error}</p>}
 
                   <button type="submit" disabled={loading} style={{
-                    background: '#C8202A', color: '#fff', fontSize: '0.85rem', fontWeight: 700,
-                    padding: '15px', borderRadius: '6px', border: 'none',
+                    background: '#C8202A', color: '#fff', fontSize: '0.95rem', fontWeight: 700,
+                    padding: '17px', borderRadius: '8px', border: 'none',
                     cursor: loading ? 'wait' : 'pointer', letterSpacing: '0.08em',
                     textTransform: 'uppercase', opacity: loading ? 0.7 : 1,
                     transition: 'background 0.2s',
