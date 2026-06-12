@@ -9,7 +9,7 @@ export default function Hero() {
       {/* Background photo with dark overlay */}
       <div style={{ position: 'absolute', inset: 0 }}>
         <Image
-          src="/homepage12.jpg"
+          src="/reliable-plumbing.webp"
           alt=""
           fill
           style={{ objectFit: 'cover', objectPosition: 'center' }}
