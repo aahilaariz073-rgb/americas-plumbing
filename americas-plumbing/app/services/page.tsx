@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { services } from '@/app/data/services';
+import { ServiceIcon } from '@/app/components/ServiceIcon';
 import Nav from '@/app/components/Nav';
 import Footer from '@/app/components/Footer';
 import PageCTA from '@/app/components/PageCTA';
@@ -42,22 +43,52 @@ export default function ServicesPage() {
           <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: '3px', background: 'linear-gradient(to right,#C8202A 0%,#1A52BE 50%,#C8202A 100%)' }} />
         </section>
 
-        <section style={{ background: '#fff', padding: '80px 28px' }}>
+        <section style={{ background: '#f7f8fc', padding: '80px 28px' }}>
           <div style={{ maxWidth: '1240px', margin: '0 auto' }}>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))', gap: '2px', background: '#e0e2ea' }}>
-              {services.map((svc, i) => (
-                <a key={svc.slug} href={`/services/${svc.slug}`} style={{ background: '#fff', padding: '44px 36px', textDecoration: 'none', display: 'block', transition: 'background 0.2s' }}>
-                  <div style={{ fontFamily: 'var(--font-newsreader), Outfit, sans-serif', fontSize: '3.5rem', fontWeight: 700, color: '#f0f1f5', lineHeight: 1, marginBottom: '8px', letterSpacing: '-0.02em' }}>
-                    {String(i + 1).padStart(2, '0')}
+            <div className="svc-page-grid">
+              {services.map(svc => (
+                <a key={svc.slug} href={`/services/${svc.slug}`} className="svc-page-card">
+                  <div style={{ marginBottom: '20px' }}>
+                    <ServiceIcon slug={svc.slug} />
                   </div>
-                  <h2 style={{ fontSize: '1.15rem', fontWeight: 700, color: '#080f1f', marginBottom: '12px' }}>{svc.name}</h2>
-                  <p style={{ color: '#5a5e72', fontSize: '0.9rem', lineHeight: 1.65, marginBottom: '20px' }}>{svc.intro.slice(0, 120)}…</p>
+                  <h2 style={{ fontSize: '1.1rem', fontWeight: 700, color: '#080f1f', marginBottom: '10px' }}>{svc.name}</h2>
+                  <p style={{ color: '#5a5e72', fontSize: '0.875rem', lineHeight: 1.65, marginBottom: '20px', flexGrow: 1 }}>{svc.intro.slice(0, 110)}…</p>
                   <span style={{ color: '#C8202A', fontSize: '0.82rem', fontWeight: 700, letterSpacing: '0.06em', textTransform: 'uppercase', display: 'flex', alignItems: 'center', gap: '6px' }}>
                     Learn More <span>→</span>
                   </span>
                 </a>
               ))}
             </div>
+            <style>{`
+              .svc-page-grid {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 16px;
+              }
+              .svc-page-card {
+                background: #fff;
+                border: 1px solid #e8eaf0;
+                border-radius: 16px;
+                padding: 32px 24px;
+                text-decoration: none;
+                display: flex;
+                flex-direction: column;
+                transition: box-shadow 0.2s, transform 0.2s;
+              }
+              .svc-page-card:hover {
+                box-shadow: 0 8px 32px rgba(0,0,0,0.09);
+                transform: translateY(-3px);
+              }
+              @media (max-width: 1100px) {
+                .svc-page-grid { grid-template-columns: repeat(3, 1fr); }
+              }
+              @media (max-width: 700px) {
+                .svc-page-grid { grid-template-columns: repeat(2, 1fr); }
+              }
+              @media (max-width: 440px) {
+                .svc-page-grid { grid-template-columns: 1fr; }
+              }
+            `}</style>
           </div>
         </section>
 
