@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { DM_Serif_Display, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
+import ChatBot from "@/app/components/ChatBot";
 
 const dmSerif = DM_Serif_Display({
   subsets: ["latin"],
@@ -57,7 +58,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${dmSerif.variable} ${jakarta.variable}`}>
-      <body className="antialiased overflow-x-hidden">{children}</body>
+      <body className="antialiased overflow-x-hidden">
+        {children}
+        <ChatBot />
+      </body>
     </html>
   );
 }
