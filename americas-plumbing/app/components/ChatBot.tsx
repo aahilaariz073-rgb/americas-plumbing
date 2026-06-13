@@ -33,7 +33,7 @@ export default function ChatBot() {
     setError('');
     setLoading(true);
 
-    fetch('https://formsubmit.co/ajax/aahilaariz073@gmail.com', {
+    fetch('https://formsubmit.co/ajax/hello@skyliftgroup.com', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
       body: JSON.stringify({
