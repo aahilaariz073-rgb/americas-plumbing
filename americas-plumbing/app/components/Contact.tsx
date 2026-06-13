@@ -35,13 +35,30 @@ export default function Contact() {
     setError('');
     setLoading(true);
 
-    // Wire to GHL: replace setTimeout with fetch() POST to your webhook
-    setTimeout(() => {
-      setSubmittedName(data.firstName);
-      setSubmittedPhone(data.phone);
-      setLoading(false);
-      setSubmitted(true);
-    }, 1000);
+    fetch('/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        firstName: data.firstName,
+        lastName: data.lastName,
+        phone: data.phone,
+        email: data.email,
+        service: data.service,
+        message: data.message,
+      }),
+    })
+      .then(r => r.json())
+      .then(json => {
+        if (json.error) { setError(json.error); setLoading(false); return; }
+        setSubmittedName(data.firstName);
+        setSubmittedPhone(data.phone);
+        setLoading(false);
+        setSubmitted(true);
+      })
+      .catch(() => {
+        setError('Something went wrong. Please call us directly.');
+        setLoading(false);
+      });
   };
 
   return (

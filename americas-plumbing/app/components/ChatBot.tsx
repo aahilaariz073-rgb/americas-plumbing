@@ -32,11 +32,22 @@ export default function ChatBot() {
     }
     setError('');
     setLoading(true);
-    // Wire to GHL: replace setTimeout with fetch() POST to your webhook
-    setTimeout(() => {
-      setLoading(false);
-      setSubmitted(true);
-    }, 900);
+
+    fetch('/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name, phone, message }),
+    })
+      .then(r => r.json())
+      .then(json => {
+        if (json.error) { setError(json.error); setLoading(false); return; }
+        setLoading(false);
+        setSubmitted(true);
+      })
+      .catch(() => {
+        setError('Something went wrong. Please call us directly.');
+        setLoading(false);
+      });
   };
 
   return (
