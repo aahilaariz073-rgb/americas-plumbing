@@ -174,24 +174,25 @@ export default function ChatBot() {
       <button
         onClick={() => setOpen(o => !o)}
         style={{
-          display: 'flex', alignItems: 'center', gap: '10px',
+          display: 'flex', alignItems: 'center', gap: '12px',
           background: '#fff', borderRadius: '999px', border: 'none',
           boxShadow: '0 4px 20px rgba(8,15,31,0.15)',
-          padding: '10px 20px 10px 10px',
+          padding: '8px 8px 8px 18px',
           cursor: 'pointer', fontFamily: 'inherit',
           fontSize: '0.88rem', fontWeight: 600, color: '#080f1f',
         }}
       >
+        Have a question?
         <div style={{
-          width: '32px', height: '32px', borderRadius: '50%',
-          background: '#080f1f', flexShrink: 0,
+          width: '38px', height: '38px', borderRadius: '50%',
+          background: '#1a1a2e', flexShrink: 0,
           display: 'flex', alignItems: 'center', justifyContent: 'center',
+          boxShadow: '0 2px 8px rgba(0,0,0,0.3)',
         }}>
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
             <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" fill="#fff" />
           </svg>
         </div>
-        Have a question?
       </button>
 
       <style>{`
