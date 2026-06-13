@@ -5,11 +5,54 @@ import { services } from '@/app/data/services';
 import Nav from '@/app/components/Nav';
 import Footer from '@/app/components/Footer';
 import PageCTA from '@/app/components/PageCTA';
-import Schema from '@/app/components/Schema';
 
 export async function generateStaticParams() {
   return areas.map(a => ({ slug: a.slug }));
 }
+
+/* ── Per-city geo coordinates for schema ── */
+const cityGeo: Record<string, { lat: number; lng: number }> = {
+  'San Jacinto':          { lat: 33.7865, lng: -116.9581 },
+  'Hemet':                { lat: 33.7475, lng: -116.9719 },
+  'Menifee':              { lat: 33.6971, lng: -117.1851 },
+  'Beaumont':             { lat: 33.9294, lng: -116.9770 },
+  'Romoland':             { lat: 33.7437, lng: -117.1663 },
+  'Riverside':            { lat: 33.9806, lng: -117.3755 },
+  'Moreno Valley':        { lat: 33.9425, lng: -117.2297 },
+  'Ladera Ranch':         { lat: 33.5533, lng: -117.6278 },
+  'Laguna Woods':         { lat: 33.6094, lng: -117.7256 },
+  'Coto de Caza':         { lat: 33.5988, lng: -117.5870 },
+  'Rancho Mission Viejo': { lat: 33.5491, lng: -117.6065 },
+  'Aliso Viejo':          { lat: 33.5769, lng: -117.7262 },
+  'Lake Forest':          { lat: 33.6469, lng: -117.6892 },
+  'Laguna Beach':         { lat: 33.5422, lng: -117.7832 },
+  'Laguna Hills':         { lat: 33.5944, lng: -117.7087 },
+  'Laguna Niguel':        { lat: 33.5225, lng: -117.7078 },
+  'Mission Viejo':        { lat: 33.6000, lng: -117.6719 },
+  'Rancho Santa Margarita': { lat: 33.6411, lng: -117.6032 },
+};
+
+/* ── Nearby areas for cross-linking ── */
+const nearbyMap: Record<string, string[]> = {
+  'san-jacinto':          ['hemet', 'menifee', 'beaumont', 'romoland'],
+  'hemet':                ['san-jacinto', 'beaumont', 'menifee', 'riverside'],
+  'menifee':              ['san-jacinto', 'hemet', 'romoland', 'moreno-valley'],
+  'beaumont':             ['hemet', 'san-jacinto', 'riverside', 'moreno-valley'],
+  'romoland':             ['menifee', 'san-jacinto', 'hemet', 'beaumont'],
+  'riverside':            ['moreno-valley', 'beaumont', 'hemet', 'menifee'],
+  'moreno-valley':        ['riverside', 'beaumont', 'menifee', 'hemet'],
+  'ladera-ranch':         ['mission-viejo', 'rancho-santa-margarita', 'coto-de-caza', 'aliso-viejo'],
+  'laguna-woods':         ['laguna-hills', 'aliso-viejo', 'lake-forest', 'laguna-niguel'],
+  'coto-de-caza':         ['rancho-mission-viejo', 'ladera-ranch', 'rancho-santa-margarita', 'mission-viejo'],
+  'rancho-mission-viejo': ['coto-de-caza', 'ladera-ranch', 'mission-viejo', 'laguna-niguel'],
+  'aliso-viejo':          ['laguna-hills', 'laguna-woods', 'laguna-niguel', 'lake-forest'],
+  'lake-forest':          ['laguna-hills', 'aliso-viejo', 'mission-viejo', 'laguna-woods'],
+  'laguna-beach':         ['laguna-niguel', 'laguna-hills', 'aliso-viejo', 'laguna-woods'],
+  'laguna-hills':         ['aliso-viejo', 'lake-forest', 'laguna-woods', 'mission-viejo'],
+  'laguna-niguel':        ['laguna-hills', 'aliso-viejo', 'laguna-beach', 'rancho-mission-viejo'],
+  'mission-viejo':        ['ladera-ranch', 'lake-forest', 'laguna-hills', 'rancho-santa-margarita'],
+  'rancho-santa-margarita': ['ladera-ranch', 'coto-de-caza', 'mission-viejo', 'lake-forest'],
+};
 
 export async function generateMetadata(
   { params }: { params: Promise<{ slug: string }> }
@@ -17,10 +60,37 @@ export async function generateMetadata(
   const { slug } = await params;
   const area = getArea(slug);
   if (!area) return {};
+
+  const base = 'https://americasplumbing.com';
+  const url = `${base}/areas/${area.slug}`;
+
   return {
     title: area.metaTitle,
     description: area.metaDescription,
     keywords: area.keywords.join(', '),
+    alternates: { canonical: url },
+    openGraph: {
+      title: area.metaTitle,
+      description: area.metaDescription,
+      url,
+      type: 'website',
+      locale: 'en_US',
+      siteName: "America's Plumbing",
+      images: [
+        {
+          url: `${base}/plumb.jpg`,
+          width: 1200,
+          height: 630,
+          alt: `America's Plumbing — Licensed Plumber in ${area.city}, CA`,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: area.metaTitle,
+      description: area.metaDescription,
+      images: [`${base}/plumb.jpg`],
+    },
   };
 }
 
@@ -30,7 +100,92 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
   if (!area) notFound();
 
   const base = 'https://americasplumbing.com';
+  const geo = cityGeo[area.city] ?? { lat: 33.7865, lng: -116.9581 };
+  const nearbySlugs = nearbyMap[area.slug] ?? [];
+  const nearbyAreas = nearbySlugs
+    .map(s => areas.find(a => a.slug === s))
+    .filter(Boolean) as typeof areas;
 
+  /* ── JSON-LD Schemas ── */
+
+  // 1. City-specific LocalBusiness schema
+  const localBusinessSchema = {
+    '@context': 'https://schema.org',
+    '@type': ['Plumber', 'LocalBusiness'],
+    '@id': `${base}/areas/${area.slug}`,
+    name: "America's Plumbing",
+    description: `Licensed C-36 plumber serving ${area.city}, CA and surrounding ${area.county} communities. Same-day service, 24/7 emergency response, free estimates.`,
+    telephone: '+19493790082',
+    email: 'californiajoe500@gmail.com',
+    url: `${base}/areas/${area.slug}`,
+    logo: `${base}/logo.png`,
+    image: `${base}/plumb.jpg`,
+    priceRange: '$$',
+    openingHours: 'Mo-Su 00:00-23:59',
+    founder: { '@type': 'Person', name: 'Joseph Romero' },
+    foundingDate: '2000',
+    areaServed: [
+      { '@type': 'City', name: `${area.city}, CA` },
+      ...nearbyAreas.map(a => ({ '@type': 'City', name: `${a.city}, CA` })),
+    ],
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'San Jacinto',
+      addressRegion: 'CA',
+      postalCode: '92583',
+      addressCountry: 'US',
+    },
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: geo.lat,
+      longitude: geo.lng,
+    },
+    hasCredential: {
+      '@type': 'EducationalOccupationalCredential',
+      credentialCategory: 'License',
+      name: 'C-36 Plumbing Contractor License',
+      recognizedBy: { '@type': 'Organization', name: 'California Contractors State License Board' },
+      identifier: '1086994',
+    },
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '5.0',
+      reviewCount: '200',
+      bestRating: '5',
+      worstRating: '1',
+    },
+  };
+
+  // 2. Service schema for this city
+  const serviceSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: `Plumbing Services in ${area.city}, CA`,
+    description: `America's Plumbing provides drain cleaning, water heater installation, leak repair, pipe replacement, and emergency plumbing in ${area.city}, CA.`,
+    serviceType: 'Plumbing',
+    provider: {
+      '@type': 'Plumber',
+      name: "America's Plumbing",
+      telephone: '+19493790082',
+      url: base,
+    },
+    areaServed: { '@type': 'City', name: `${area.city}, CA` },
+    url: `${base}/areas/${area.slug}`,
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: `Plumbing Services in ${area.city}`,
+      itemListElement: [
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Emergency Plumbing', url: `${base}/services/emergency-plumbing` } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Drain Cleaning & Hydro Jetting', url: `${base}/services/drain-cleaning` } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Water Heater Repair & Installation', url: `${base}/services/water-heater` } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Leak Detection & Repair', url: `${base}/services/leak-detection` } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Whole-Home Repiping', url: `${base}/services/repiping` } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Sewer Line Repair', url: `${base}/services/sewer-line` } },
+      ],
+    },
+  };
+
+  // 3. FAQ schema
   const faqSchema = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
@@ -41,6 +196,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
     })),
   };
 
+  // 4. Breadcrumb schema
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -56,7 +212,8 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
 
   return (
     <>
-      <Schema page="area" city={area.city} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <Nav />
@@ -64,6 +221,10 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
 
         {/* ── Section 1: Dark Hero ── */}
         <section style={{ background: '#080f1f', padding: '80px 28px 72px', position: 'relative', overflow: 'hidden' }}>
+          <div style={{ position: 'absolute', inset: 0, pointerEvents: 'none' }}>
+            <div style={{ position: 'absolute', top: '-10%', right: '-5%', width: '45%', height: '130%', background: '#1A52BE', clipPath: 'polygon(18% 0%,100% 0%,100% 100%,0% 100%)', opacity: 0.07 }} />
+            <div style={{ position: 'absolute', top: '-10%', right: '-5%', width: '42%', height: '130%', background: '#C8202A', clipPath: 'polygon(20% 0%,22% 0%,4% 100%,2% 100%)', opacity: 0.5 }} />
+          </div>
           <div style={{ maxWidth: '1240px', margin: '0 auto', position: 'relative', zIndex: 2 }}>
 
             {/* Breadcrumb */}
@@ -102,7 +263,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
               {area.intro}
             </p>
 
-            {/* Buttons */}
+            {/* CTAs */}
             <div style={{ display: 'flex', gap: '14px', flexWrap: 'wrap', marginBottom: '40px' }}>
               <a href="tel:+19493790082" style={{
                 background: '#C8202A', color: '#fff', fontSize: '0.9rem', fontWeight: 700,
@@ -122,7 +283,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
 
             {/* Trust badge pills */}
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px' }}>
-              {['C-36 Licensed', 'Same-Day Service', '24/7 Emergency', 'Free Estimates'].map(badge => (
+              {['C-36 Licensed · #1086994', 'Same-Day Service', '24/7 Emergency', 'Free Estimates', '25+ Years in Business'].map(badge => (
                 <span key={badge} style={{
                   background: 'rgba(255,255,255,0.06)',
                   border: '1px solid rgba(255,255,255,0.12)',
@@ -139,7 +300,6 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
             </div>
           </div>
 
-          {/* Bottom gradient bar */}
           <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: '3px', background: 'linear-gradient(to right, #C8202A 0%, #1A52BE 50%, #C8202A 100%)' }} />
         </section>
 
@@ -151,20 +311,18 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
           >
             {/* Left: body text */}
             <div>
-              {/* Section label */}
               <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '24px' }}>
                 <div style={{ width: '2px', height: '22px', background: '#C8202A', borderRadius: '2px', flexShrink: 0 }} />
                 <span style={{ fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.22em', textTransform: 'uppercase', color: '#C8202A' }}>
                   About {area.city}
                 </span>
               </div>
-
               {area.body.map((para, i) => (
                 <p key={i} style={{ color: '#374151', fontSize: '1.05rem', lineHeight: 1.85, marginBottom: '24px' }}>{para}</p>
               ))}
             </div>
 
-            {/* Right: map */}
+            {/* Right: map + CTAs */}
             <div>
               <div style={{ borderRadius: '12px', overflow: 'hidden', border: '1px solid #e8eaf0', boxShadow: '0 4px 20px rgba(0,0,0,0.07)' }}>
                 <iframe
@@ -175,7 +333,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title={`Map of ${area.city}, CA`}
+                  title={`Map of ${area.city}, CA — America's Plumbing service area`}
                 />
               </div>
               <div style={{ marginTop: '18px', display: 'flex', flexDirection: 'column', gap: '10px' }}>
@@ -204,6 +362,11 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
         <section style={{ background: '#f7f8fc', padding: '80px 28px' }}>
           <div style={{ maxWidth: '1240px', margin: '0 auto' }}>
             <div style={{ textAlign: 'center', marginBottom: '48px' }}>
+              <div style={{ display: 'inline-flex', alignItems: 'center', gap: '10px', marginBottom: '12px' }}>
+                <div style={{ width: '24px', height: '2px', background: '#C8202A' }} />
+                <span style={{ color: '#C8202A', fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.22em', textTransform: 'uppercase' }}>What We Do</span>
+                <div style={{ width: '24px', height: '2px', background: '#C8202A' }} />
+              </div>
               <h2 style={{
                 fontFamily: 'var(--font-newsreader), serif',
                 fontSize: 'clamp(1.8rem, 3vw, 2.6rem)',
@@ -212,10 +375,10 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
                 lineHeight: 1.1,
                 marginBottom: '12px',
               }}>
-                Plumbing Services We Offer in {area.city}
+                Plumbing Services in {area.city}, CA
               </h2>
-              <p style={{ color: '#6b7280', fontSize: '0.95rem', lineHeight: 1.7 }}>
-                C-36 licensed — same crew, same quality, every visit.
+              <p style={{ color: '#6b7280', fontSize: '0.95rem', lineHeight: 1.7, maxWidth: '520px', margin: '0 auto' }}>
+                C-36 licensed — every service backed by 25+ years of experience and a written warranty.
               </p>
             </div>
 
@@ -238,7 +401,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
                     marginBottom: '10px',
                     lineHeight: 1.25,
                   }}>
-                    {svc.name}
+                    {svc.name} in {area.city}
                   </h3>
                   <p style={{ color: '#6b7280', fontSize: '0.85rem', lineHeight: 1.65, marginBottom: '14px' }}>
                     {svc.intro.slice(0, 88)}…
@@ -258,7 +421,6 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
             className="area-local-col"
             style={{ maxWidth: '1240px', margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '80px', alignItems: 'start' }}
           >
-            {/* Left */}
             <div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '20px' }}>
                 <div style={{ width: '2px', height: '22px', background: '#C8202A', borderRadius: '2px', flexShrink: 0 }} />
@@ -277,19 +439,18 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
                 We Know {area.city} Like a Neighbor
               </h2>
               <p style={{ color: '#374151', fontSize: '1rem', lineHeight: 1.8, marginBottom: '28px' }}>
-                {"Every neighborhood in " + area.city + " has its own plumbing history. Whether you're in " + lm0 + " or " + lm1 + ", our team arrives knowing what to expect — and how to fix it right."}
+                {"Every neighborhood in " + area.city + " has its own plumbing history. Whether you're in " + lm0 + " or " + lm1 + ", our team arrives knowing what to expect — and how to fix it right. We've been serving " + area.county + " for over 25 years."}
               </p>
-              <a href="tel:+19493790082" style={{
-                display: 'inline-block', background: '#C8202A', color: '#fff',
+              <a href="/#contact" style={{
+                display: 'inline-block', background: '#080f1f', color: '#fff',
                 padding: '13px 28px', borderRadius: '4px', fontWeight: 700,
                 textDecoration: 'none', fontSize: '0.88rem', letterSpacing: '0.05em',
                 textTransform: 'uppercase',
               }}>
-                Call (949) 379-0082
+                Request a Free Estimate
               </a>
             </div>
 
-            {/* Right */}
             <div>
               {area.landmarks.length > 0 && (
                 <>
@@ -315,7 +476,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
 
               {area.zipCodes.length > 0 && (
                 <div>
-                  <p style={{ fontSize: '0.78rem', fontWeight: 600, color: '#374151', marginBottom: '10px' }}>ZIP Codes:</p>
+                  <p style={{ fontSize: '0.78rem', fontWeight: 600, color: '#374151', marginBottom: '10px' }}>ZIP Codes Served:</p>
                   <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
                     {area.zipCodes.map(z => (
                       <span key={z} style={{
@@ -363,7 +524,42 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
           </div>
         </section>
 
-        {/* ── Section 6: Dark CTA ── */}
+        {/* ── Section 6: Nearby Areas (internal linking) ── */}
+        {nearbyAreas.length > 0 && (
+          <section style={{ background: '#fff', padding: '56px 28px', borderTop: '1px solid #e8eaf0' }}>
+            <div style={{ maxWidth: '1240px', margin: '0 auto' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '16px', flexWrap: 'wrap' }}>
+                <span style={{ color: '#080f1f', fontWeight: 700, fontSize: '0.875rem', whiteSpace: 'nowrap', letterSpacing: '0.04em' }}>
+                  Also serving nearby:
+                </span>
+                {nearbyAreas.map(a => (
+                  <a
+                    key={a.slug}
+                    href={`/areas/${a.slug}`}
+                    style={{
+                      background: '#f7f8fc', border: '1px solid #e0e2ea',
+                      color: '#080f1f', padding: '8px 18px', borderRadius: '4px',
+                      fontSize: '0.85rem', fontWeight: 600, textDecoration: 'none',
+                    }}
+                  >
+                    Plumber in {a.city} →
+                  </a>
+                ))}
+                <a
+                  href="/areas"
+                  style={{
+                    color: '#C8202A', fontSize: '0.85rem', fontWeight: 700,
+                    textDecoration: 'none', letterSpacing: '0.02em',
+                  }}
+                >
+                  View all service areas →
+                </a>
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* ── Section 7: Dark CTA ── */}
         <section style={{ background: '#080f1f', padding: '60px 28px' }}>
           <div style={{ maxWidth: '700px', margin: '0 auto', textAlign: 'center' }}>
             <p style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.24em', textTransform: 'uppercase', marginBottom: '14px' }}>
@@ -380,7 +576,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
               Same-Day Plumber in {area.city}, CA
             </h2>
             <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '1rem', lineHeight: 1.75, marginBottom: '32px' }}>
-              {"Licensed, insured, and ready. We serve " + area.city + " around the clock — call now or request a free estimate."}
+              {"Licensed, insured, and ready. We serve " + area.city + " around the clock — call now or request a free estimate online."}
             </p>
             <div style={{ display: 'flex', gap: '14px', justifyContent: 'center', flexWrap: 'wrap' }}>
               <a href="tel:+19493790082" style={{

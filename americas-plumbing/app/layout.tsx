@@ -25,6 +25,29 @@ export const metadata: Metadata = {
   },
   description:
     "America's Plumbing — licensed C-36 plumber in San Jacinto, CA serving Riverside & South Orange County. Same-day service, free estimates. Call (949) 379-0082.",
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    siteName: "America's Plumbing",
+    title: "America's Plumbing | Plumber in San Jacinto, CA | 24/7 Service",
+    description:
+      "Licensed C-36 plumber in San Jacinto, CA. Serving Riverside County & South Orange County. Same-day service, free estimates.",
+    images: [
+      {
+        url: '/plumb.jpg',
+        width: 1200,
+        height: 630,
+        alt: "America's Plumbing — San Jacinto, CA",
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "America's Plumbing | Plumber in San Jacinto, CA | 24/7 Service",
+    description:
+      "Licensed C-36 plumber in San Jacinto, CA. Serving Riverside County & South Orange County. Same-day service, free estimates.",
+    images: ['/plumb.jpg'],
+  },
 };
 
 export default function RootLayout({
