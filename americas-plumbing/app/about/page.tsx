@@ -51,9 +51,12 @@ const timeline = [
   { year: 'Today', event: "America's Plumbing continues under the same ownership, the same values, and the same phone number — serving our neighbors the right way." },
 ];
 
+const breadcrumb = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: 'https://americasplumbing.com' }, { '@type': 'ListItem', position: 2, name: 'About', item: 'https://americasplumbing.com/about' }] };
+
 export default function AboutPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
       <Schema page="home" />
       <Nav />
       <main>

@@ -8,9 +8,12 @@ export const metadata: Metadata = {
   description: "Request a free plumbing quote or call (949) 379-0082 for 24/7 emergency service. America's Plumbing serves all of Orange County, CA.",
 };
 
+const breadcrumb = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: 'https://americasplumbing.com' }, { '@type': 'ListItem', position: 2, name: 'Contact', item: 'https://americasplumbing.com/contact' }] };
+
 export default function ContactPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
       <Nav />
       <main>
         {/* Page header */}

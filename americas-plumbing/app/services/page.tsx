@@ -12,9 +12,12 @@ export const metadata: Metadata = {
   keywords: "plumbing services san jacinto ca, plumber riverside county, drain cleaning hemet menifee, water heater repair san jacinto, slab leak detection southern california",
 };
 
+const breadcrumb = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: 'https://americasplumbing.com' }, { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://americasplumbing.com/services' }] };
+
 export default function ServicesPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
       <Schema />
       <Nav />
       <main>

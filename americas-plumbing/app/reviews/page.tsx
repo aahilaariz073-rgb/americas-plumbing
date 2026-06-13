@@ -21,9 +21,12 @@ const reviews = [
   { name: 'Michael T.', location: 'San Clemente, CA', quote: "Whole-home repipe finished ahead of schedule and under budget. The crew was respectful of our home and patched every wall opening. Outstanding job." },
 ];
 
+const breadcrumb = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: 'https://americasplumbing.com' }, { '@type': 'ListItem', position: 2, name: 'Reviews', item: 'https://americasplumbing.com/reviews' }] };
+
 export default function ReviewsPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
       <Nav />
       <main>
         {/* Page header */}

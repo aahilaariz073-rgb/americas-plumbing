@@ -9,9 +9,12 @@ export const metadata: Metadata = {
   description: "Answers to common questions about America's Plumbing: pricing, response times, licensing, warranties, and service areas across Orange County, CA.",
 };
 
+const breadcrumb = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: 'https://americasplumbing.com' }, { '@type': 'ListItem', position: 2, name: 'FAQ', item: 'https://americasplumbing.com/faq' }] };
+
 export default function FAQPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
       <Nav />
       <main>
         {/* Page header */}

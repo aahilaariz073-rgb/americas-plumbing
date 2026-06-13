@@ -14,9 +14,12 @@ export const metadata: Metadata = {
 const riverCounty = areas.filter(a => a.county === 'Riverside County');
 const orangeCounty = areas.filter(a => a.county === 'Orange County');
 
+const breadcrumb = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: 'https://americasplumbing.com' }, { '@type': 'ListItem', position: 2, name: 'Service Areas', item: 'https://americasplumbing.com/areas' }] };
+
 export default function AreasPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
       <Schema />
       <Nav />
       <main>

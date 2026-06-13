@@ -89,6 +89,52 @@ const icons: Record<string, React.ReactNode> = {
     <rect x="46" y="36" width="10" height="8" rx="2" fill="white" />
     <path d="M34 40 Q37 33 40 40 Q43 47 46 40" stroke="white" strokeWidth="3" fill="none" strokeLinecap="round" />
   </Ring>,
+
+  'water-heater-repair': <Ring>
+    <rect x="34" y="26" width="12" height="20" rx="2" fill="white" />
+    <rect x="37" y="46" width="6" height="4" rx="1" fill="white" />
+    <path d="M44 30l5-3M44 36h5" stroke="white" strokeWidth="2" strokeLinecap="round" />
+    <circle cx="40" cy="36" r="3.5" fill="#111827" />
+    <path d="M38.5 34.5c0 0-1 1.5-1 2.5a1.5 1.5 0 003 0c0-1-1-2.5-1-2.5z" fill="white" />
+  </Ring>,
+
+  'toilet-repair': <Ring>
+    <ellipse cx="40" cy="47" rx="12" ry="7" fill="white" />
+    <rect x="33" y="31" width="14" height="18" rx="3" fill="white" />
+    <rect x="35" y="28" width="10" height="6" rx="2" fill="white" />
+    <circle cx="40" cy="34" r="1.5" fill="#111827" />
+  </Ring>,
+
+  'water-softener': <Ring>
+    <path fill="white" d="M40 27c0 0-7 9-7 14a7 7 0 0014 0c0-5-7-14-7-14z" />
+    <rect x="30" y="46" width="20" height="4" rx="1" fill="white" opacity="0.5" />
+    <path d="M35 41h10M36 44h8" stroke="#111827" strokeWidth="1.5" strokeLinecap="round" />
+  </Ring>,
+
+  'trenchless-sewer': <Ring>
+    <rect x="25" y="37" width="30" height="6" rx="3" fill="white" />
+    <path d="M33 34v-5M40 33v-4M47 34v-5" stroke="white" strokeWidth="2" strokeLinecap="round" />
+    <circle cx="33" cy="28" r="2" fill="white" />
+    <circle cx="40" cy="28" r="2" fill="white" />
+    <circle cx="47" cy="28" r="2" fill="white" />
+    <path d="M33 43v5M40 44v4M47 43v5" stroke="white" strokeWidth="2" strokeLinecap="round" opacity="0.4" />
+  </Ring>,
+
+  'bathroom-remodel': <Ring>
+    <rect x="26" y="38" width="28" height="14" rx="3" fill="white" />
+    <path d="M26 38 Q26 30 34 30 L34 38" stroke="white" strokeWidth="3" fill="none" strokeLinecap="round" />
+    <rect x="34" y="27" width="5" height="4" rx="1" fill="white" />
+    <line x1="30" y1="52" x2="30" y2="56" stroke="white" strokeWidth="2.5" strokeLinecap="round" />
+    <line x1="50" y1="52" x2="50" y2="56" stroke="white" strokeWidth="2.5" strokeLinecap="round" />
+  </Ring>,
+
+  'kitchen-plumbing': <Ring>
+    <rect x="27" y="34" width="26" height="18" rx="2" fill="white" />
+    <rect x="30" y="37" width="10" height="12" rx="1" fill="#111827" />
+    <rect x="43" y="37" width="7" height="12" rx="1" fill="#111827" />
+    <rect x="38" y="27" width="4" height="10" rx="2" fill="white" />
+    <path d="M34 27 Q40 24 46 27" stroke="white" strokeWidth="2" fill="none" strokeLinecap="round" />
+  </Ring>,
 };
 
 export function ServiceIcon({ slug, size = 72 }: { slug: string; size?: number }) {
