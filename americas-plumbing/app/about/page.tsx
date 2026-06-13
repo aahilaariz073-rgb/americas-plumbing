@@ -125,7 +125,7 @@ export default function AboutPage() {
                 Twenty-five years later, we&apos;re still independently owned, still based right here in the San Jacinto Valley, and still answering the phone ourselves. We&apos;ve grown our service area to cover Riverside County and South Orange County — but the business hasn&apos;t changed: show up when you say you will, charge what you quoted, and do the work right.
               </p>
               <p style={{ color: '#5a5e72', fontSize: '1.05rem', lineHeight: 1.8 }}>
-                We hold a C-36 Plumbing Contractor license (#1086994) issued by the California Contractors State License Board, and we carry full liability insurance and workers&apos; compensation coverage on every job.
+                We hold a C-36 Plumbing Contractor license (#0784091) issued by the California Contractors State License Board, and we carry full liability insurance and workers&apos; compensation coverage on every job.
               </p>
             </div>
 
@@ -173,7 +173,7 @@ export default function AboutPage() {
               {/* Name badge overlay */}
               <div style={{ position: 'absolute', bottom: '24px', left: '24px', right: '24px', background: '#080f1f', padding: '16px 20px', borderLeft: '3px solid #C8202A' }}>
                 <div style={{ color: '#fff', fontWeight: 700, fontSize: '1rem', lineHeight: 1.2 }}>Joseph Romero</div>
-                <div style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.75rem', marginTop: '3px' }}>Founder & Master Plumber · C-36 #1086994</div>
+                <div style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.75rem', marginTop: '3px' }}>Founder & Master Plumber · C-36 #0784091</div>
               </div>
             </div>
 
@@ -212,7 +212,7 @@ export default function AboutPage() {
 
               {/* Mini credential pills */}
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px' }}>
-                {['C-36 Licensed · #1086994', '25+ Years Experience', 'San Jacinto, CA Native', 'Same-Day Service'].map(pill => (
+                {['C-36 Licensed · #0784091', '25+ Years Experience', 'San Jacinto, CA Native', 'Same-Day Service'].map(pill => (
                   <span key={pill} style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', background: '#fff', border: '1px solid #e0e2ea', borderRadius: '4px', padding: '6px 14px', fontSize: '0.78rem', fontWeight: 600, color: '#080f1f' }}>
                     {pill}
                   </span>
@@ -278,7 +278,7 @@ export default function AboutPage() {
 
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '2px', background: '#e0e2ea', maxWidth: '880px', margin: '0 auto' }}>
               {[
-                { label: 'C-36 Plumbing License', value: '#1086994', sub: 'California CSLB' },
+                { label: 'C-36 Plumbing License', value: '#0784091', sub: 'California CSLB' },
                 { label: 'Fully Insured', value: '$2M+', sub: 'General Liability Coverage' },
                 { label: 'In Business Since', value: '2000', sub: '25+ Years Serving SoCal' },
                 { label: 'Service Rating', value: '5.0 ★', sub: 'Google Reviews' },

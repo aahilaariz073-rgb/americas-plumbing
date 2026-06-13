@@ -145,7 +145,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
       credentialCategory: 'License',
       name: 'C-36 Plumbing Contractor License',
       recognizedBy: { '@type': 'Organization', name: 'California Contractors State License Board' },
-      identifier: '1086994',
+      identifier: '0784091',
     },
     aggregateRating: {
       '@type': 'AggregateRating',
@@ -283,7 +283,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
 
             {/* Trust badge pills */}
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px' }}>
-              {['C-36 Licensed · #1086994', 'Same-Day Service', '24/7 Emergency', 'Free Estimates', '25+ Years in Business'].map(badge => (
+              {['C-36 Licensed · #0784091', 'Same-Day Service', '24/7 Emergency', 'Free Estimates', '25+ Years in Business'].map(badge => (
                 <span key={badge} style={{
                   background: 'rgba(255,255,255,0.06)',
                   border: '1px solid rgba(255,255,255,0.12)',

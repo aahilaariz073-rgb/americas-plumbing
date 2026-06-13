@@ -117,7 +117,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
       credentialCategory: 'License',
       name: 'C-36 Plumbing Contractor License',
       recognizedBy: { '@type': 'Organization', name: 'California Contractors State License Board' },
-      identifier: '1086994',
+      identifier: '0784091',
     },
     areaServed: allCities,
     aggregateRating: {
@@ -249,7 +249,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
 
             {/* Trust badges */}
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px' }}>
-              {['C-36 Licensed · #1086994', '25+ Years in Business', 'Same-Day Service', '24/7 Emergency', 'Free Estimates'].map(badge => (
+              {['C-36 Licensed · #0784091', '25+ Years in Business', 'Same-Day Service', '24/7 Emergency', 'Free Estimates'].map(badge => (
                 <span key={badge} style={{
                   background: 'rgba(255,255,255,0.06)',
                   border: '1px solid rgba(255,255,255,0.12)',
@@ -336,7 +336,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
 
                   {/* Trust in sidebar */}
                   <div style={{ marginTop: '18px', paddingTop: '18px', borderTop: '1px solid #f0f1f5', display: 'flex', flexDirection: 'column', gap: '8px' }}>
-                    {['✓  C-36 Licensed #1086994', '✓  25+ Years in Business', '✓  Same-Day Available', '✓  Written Warranty'].map(t => (
+                    {['✓  C-36 Licensed #0784091', '✓  25+ Years in Business', '✓  Same-Day Available', '✓  Written Warranty'].map(t => (
                       <span key={t} style={{ fontSize: '0.78rem', color: '#374151', fontWeight: 500 }}>{t}</span>
                     ))}
                   </div>
