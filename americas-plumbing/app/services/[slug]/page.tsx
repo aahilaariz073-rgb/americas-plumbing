@@ -16,15 +16,21 @@ const relatedMap: Record<string, string[]> = {
   'leak-detection':       ['emergency-plumbing', 'repiping', 'sewer-line', 'camera-inspection'],
   'repiping':             ['leak-detection', 'water-line-repair', 'water-heater', 'drain-cleaning'],
   'drain-cleaning':       ['hydro-jetting', 'camera-inspection', 'sewer-line', 'emergency-plumbing'],
-  'water-heater':         ['gas-line', 'fixture-installation', 'repiping', 'emergency-plumbing'],
+  'water-heater':         ['water-heater-repair', 'gas-line', 'repiping', 'emergency-plumbing'],
+  'water-heater-repair':  ['water-heater', 'gas-line', 'fixture-installation', 'emergency-plumbing'],
   'fixture-installation': ['bathroom-fixtures', 'water-heater', 'garbage-disposal', 'water-line-repair'],
   'gas-line':             ['water-heater', 'fixture-installation', 'emergency-plumbing', 'sewer-line'],
-  'sewer-line':           ['drain-cleaning', 'hydro-jetting', 'camera-inspection', 'emergency-plumbing'],
-  'garbage-disposal':     ['fixture-installation', 'drain-cleaning', 'bathroom-fixtures', 'water-line-repair'],
+  'sewer-line':           ['drain-cleaning', 'hydro-jetting', 'trenchless-sewer', 'camera-inspection'],
+  'garbage-disposal':     ['kitchen-plumbing', 'drain-cleaning', 'fixture-installation', 'water-line-repair'],
   'camera-inspection':    ['sewer-line', 'drain-cleaning', 'hydro-jetting', 'leak-detection'],
   'hydro-jetting':        ['drain-cleaning', 'camera-inspection', 'sewer-line', 'emergency-plumbing'],
-  'bathroom-fixtures':    ['fixture-installation', 'garbage-disposal', 'water-line-repair', 'repiping'],
-  'water-line-repair':    ['repiping', 'leak-detection', 'emergency-plumbing', 'sewer-line'],
+  'bathroom-fixtures':    ['bathroom-remodel', 'fixture-installation', 'water-line-repair', 'repiping'],
+  'water-line-repair':    ['repiping', 'leak-detection', 'emergency-plumbing', 'trenchless-sewer'],
+  'toilet-repair':        ['bathroom-fixtures', 'bathroom-remodel', 'fixture-installation', 'water-line-repair'],
+  'water-softener':       ['repiping', 'water-heater', 'water-line-repair', 'fixture-installation'],
+  'trenchless-sewer':     ['sewer-line', 'camera-inspection', 'hydro-jetting', 'drain-cleaning'],
+  'bathroom-remodel':     ['bathroom-fixtures', 'toilet-repair', 'water-line-repair', 'repiping'],
+  'kitchen-plumbing':     ['garbage-disposal', 'fixture-installation', 'water-line-repair', 'drain-cleaning'],
 };
 
 /* ── All service areas for schema + strip ── */
@@ -166,7 +172,22 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
     },
   };
 
-  // 3. FAQ schema
+  // 3. HowTo schema (only when steps exist)
+  const howToSchema = service.steps ? {
+    '@context': 'https://schema.org',
+    '@type': 'HowTo',
+    name: `How ${service.name} Works — America's Plumbing`,
+    description: `Step-by-step process for ${service.name} in Southern California by America's Plumbing.`,
+    supply: [{ '@type': 'HowToSupply', name: 'Licensed C-36 Plumber' }],
+    step: service.steps.map((s, i) => ({
+      '@type': 'HowToStep',
+      position: i + 1,
+      name: s.name,
+      text: s.desc,
+    })),
+  } : null;
+
+  // 4. FAQ schema
   const faqSchema = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
@@ -177,7 +198,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
     })),
   };
 
-  // 4. Breadcrumb schema
+  // 5. Breadcrumb schema
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -192,6 +213,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      {howToSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <Nav />
@@ -239,11 +261,11 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
 
             {/* CTAs */}
             <div style={{ display: 'flex', gap: '14px', flexWrap: 'wrap', marginBottom: '36px' }}>
-              <a href="tel:+19493790082" style={{ background: '#C8202A', color: '#fff', fontSize: '0.95rem', fontWeight: 700, padding: '14px 32px', borderRadius: '4px', textDecoration: 'none', letterSpacing: '0.04em', textTransform: 'uppercase' }}>
-                Call (949) 379-0082
+              <a href="/contact" style={{ background: '#C8202A', color: '#fff', fontSize: '0.95rem', fontWeight: 700, padding: '14px 32px', borderRadius: '4px', textDecoration: 'none', letterSpacing: '0.04em', textTransform: 'uppercase' }}>
+                Get a Free Estimate
               </a>
-              <a href="/#contact" style={{ background: 'transparent', color: '#fff', fontSize: '0.95rem', fontWeight: 600, padding: '13px 28px', borderRadius: '4px', textDecoration: 'none', border: '1px solid rgba(255,255,255,0.25)' }}>
-                Get Free Quote
+              <a href="/contact" style={{ background: 'transparent', color: '#fff', fontSize: '0.95rem', fontWeight: 600, padding: '13px 28px', borderRadius: '4px', textDecoration: 'none', border: '1px solid rgba(255,255,255,0.25)' }}>
+                Book Online
               </a>
             </div>
 
@@ -274,6 +296,48 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
               {service.body.map((para, i) => (
                 <p key={i} style={{ color: '#5a5e72', fontSize: '1.05rem', lineHeight: 1.8, marginBottom: '24px' }}>{para}</p>
               ))}
+
+              {/* Signs you need this service */}
+              {service.signs && service.signs.length > 0 && (
+                <div style={{ marginTop: '48px', marginBottom: '48px', background: '#f7f8fc', borderLeft: '3px solid #C8202A', padding: '28px 32px', borderRadius: '0 6px 6px 0' }}>
+                  <h2 style={{ fontFamily: 'var(--font-newsreader), serif', fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', fontWeight: 700, color: '#080f1f', marginBottom: '18px', lineHeight: 1.15 }}>
+                    Signs You Need {service.shortName} Now
+                  </h2>
+                  <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                    {service.signs.map((sign, i) => (
+                      <li key={i} style={{ display: 'flex', gap: '10px', alignItems: 'flex-start' }}>
+                        <span style={{ color: '#C8202A', fontWeight: 700, flexShrink: 0, marginTop: '2px' }}>✕</span>
+                        <span style={{ color: '#374151', fontSize: '0.95rem', lineHeight: 1.6 }}>{sign}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
+              {/* How It Works */}
+              {service.steps && service.steps.length > 0 && (
+                <div style={{ marginBottom: '48px' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '28px' }}>
+                    <div style={{ width: '2px', height: '22px', background: '#C8202A', borderRadius: '2px', flexShrink: 0 }} />
+                    <h2 style={{ fontFamily: 'var(--font-newsreader), serif', fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', fontWeight: 700, color: '#080f1f', lineHeight: 1.1 }}>
+                      How {service.shortName} Works
+                    </h2>
+                  </div>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '0' }}>
+                    {service.steps.map((step, i) => (
+                      <div key={i} style={{ display: 'flex', gap: '20px', paddingBottom: i < service.steps!.length - 1 ? '24px' : '0', borderBottom: i < service.steps!.length - 1 ? '1px solid #f0f1f5' : 'none', marginBottom: i < service.steps!.length - 1 ? '24px' : '0' }}>
+                        <div style={{ width: '36px', height: '36px', borderRadius: '50%', background: '#080f1f', color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 700, fontSize: '0.85rem', flexShrink: 0, fontFamily: 'var(--font-newsreader), serif' }}>
+                          {i + 1}
+                        </div>
+                        <div style={{ paddingTop: '6px' }}>
+                          <div style={{ fontWeight: 700, color: '#080f1f', fontSize: '0.95rem', marginBottom: '4px' }}>{step.name}</div>
+                          <p style={{ color: '#5a5e72', fontSize: '0.875rem', lineHeight: 1.65, margin: 0 }}>{step.desc}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
 
               {/* What's Included */}
               <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginTop: '48px', marginBottom: '28px' }}>
@@ -317,21 +381,21 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                   <p style={{ fontSize: '0.78rem', color: '#9ca3af', marginBottom: '16px', lineHeight: 1.5 }}>
                     Serving Riverside County &amp; South Orange County
                   </p>
-                  <a href="tel:+19493790082" style={{
+                  <a href="/contact" style={{
                     display: 'block', textAlign: 'center', background: '#C8202A',
                     color: '#fff', padding: '13px', borderRadius: '6px',
                     fontWeight: 700, textDecoration: 'none', fontSize: '0.88rem',
                     letterSpacing: '0.04em', marginBottom: '10px'
                   }}>
-                    Call (949) 379-0082
+                    Get a Free Estimate
                   </a>
-                  <a href="/#contact" style={{
+                  <a href="/contact" style={{
                     display: 'block', textAlign: 'center', background: '#f7f8fc',
                     color: '#080f1f', padding: '12px', borderRadius: '6px',
                     fontWeight: 600, textDecoration: 'none', fontSize: '0.85rem',
                     border: '1px solid #e0e2ea'
                   }}>
-                    Get a Free Quote
+                    Book Online
                   </a>
 
                   {/* Trust in sidebar */}
@@ -342,6 +406,33 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── Why Choose Us ── */}
+        <section style={{ background: '#080f1f', padding: '72px 28px' }}>
+          <div style={{ maxWidth: '1240px', margin: '0 auto' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '14px' }}>
+              <div style={{ width: '24px', height: '2px', background: '#C8202A' }} />
+              <span style={{ color: '#C8202A', fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.22em', textTransform: 'uppercase' }}>Why America&apos;s Plumbing</span>
+            </div>
+            <h2 style={{ fontFamily: 'var(--font-newsreader), serif', fontSize: 'clamp(1.8rem, 3vw, 2.4rem)', fontWeight: 700, color: '#fff', lineHeight: 1.1, marginBottom: '40px', maxWidth: '700px' }}>
+              Southern California&apos;s Trusted {service.shortName} Specialists Since 2000
+            </h2>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '2px', background: 'rgba(255,255,255,0.08)' }}>
+              {[
+                { title: 'C-36 Licensed', body: 'License #0784091 issued by the California CSLB. You can verify it at any time. We are fully licensed for all residential and commercial plumbing.' },
+                { title: '25+ Years in Business', body: 'Founded in 2000 by Joseph Romero, America\'s Plumbing has been serving Southern California homeowners for over 25 years — same owner, same values.' },
+                { title: 'Upfront Flat Pricing', body: 'You get a written price before we touch anything. No hourly billing surprises. No charges for work you didn\'t approve. What we quote is what you pay.' },
+                { title: 'Written Warranty', body: 'All workmanship is backed by a written warranty. If something we repaired fails due to our work, we come back and fix it at no charge.' },
+              ].map(item => (
+                <div key={item.title} style={{ background: '#0d1829', padding: '32px 28px' }}>
+                  <div style={{ width: '28px', height: '2px', background: '#C8202A', marginBottom: '14px' }} />
+                  <h3 style={{ color: '#fff', fontWeight: 700, fontSize: '1rem', marginBottom: '10px' }}>{item.title}</h3>
+                  <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '0.875rem', lineHeight: 1.65 }}>{item.body}</p>
+                </div>
+              ))}
             </div>
           </div>
         </section>

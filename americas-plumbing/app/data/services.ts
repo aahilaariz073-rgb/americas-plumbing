@@ -8,6 +8,8 @@ export interface Service {
   eyebrow: string;
   intro: string;
   body: string[];
+  steps?: { name: string; desc: string }[];
+  signs?: string[];
   included: { title: string; desc: string }[];
   faqs: { q: string; a: string }[];
   keywords: string[];
@@ -22,6 +24,21 @@ export const services: Service[] = [
     metaDescription: "Need an emergency plumber in San Jacinto or Southern California? America's Plumbing responds 24/7 — burst pipes, sewage backups, gas leaks. C-36 Licensed. Call (949) 379-0082.",
     h1: '24/7 Emergency Plumber in San Jacinto, CA',
     eyebrow: 'Available Around the Clock',
+    steps: [
+      { name: 'Call & Dispatch', desc: 'You speak directly to a live technician who gathers details and dispatches a plumber immediately — no answering service.' },
+      { name: 'Arrival & Assessment', desc: 'Our plumber arrives within 1–2 hours, assesses the emergency, and identifies the fastest path to stopping damage.' },
+      { name: 'Upfront Pricing', desc: 'We give you a clear, written price before touching anything — no surprises when the invoice arrives.' },
+      { name: 'Emergency Repair', desc: 'We perform the repair on the spot using parts stocked in our truck, resolving most emergencies in a single visit.' },
+      { name: 'Final Inspection', desc: 'We test the repair, walk you through what happened, and confirm everything is safe and secure before leaving.' },
+    ],
+    signs: [
+      'Burst pipe — water spraying or flooding from walls, ceilings, or under-slab',
+      'Sewage backup — raw sewage coming up from drains, toilets, or floor cleanouts',
+      'Gas odor — rotten-egg smell inside or outside the home near gas appliances',
+      'Complete loss of water — nothing comes from any faucet in the house',
+      'Major active leak — water meter spinning rapidly with all fixtures off',
+      'Water heater failure — no hot water plus pooling water or a relief valve releasing steam',
+    ],
     intro: "Plumbing emergencies don't wait for business hours — and neither do we. America's Plumbing provides 24/7 emergency plumbing service throughout San Jacinto and Southern California. Whether it's a burst pipe flooding your home at 2 AM, a sewage backup threatening your family's health, or a complete loss of hot water, our licensed plumbers are on call and ready to dispatch immediately.",
     body: [
       "When you call us for a plumbing emergency, you speak directly to a live technician — not an answering service. We give you a straight, upfront price before any work begins, and we dispatch as fast as physically possible. Our goal is to be at your door within 1–2 hours of your call throughout our service area.",
@@ -83,6 +100,21 @@ export const services: Service[] = [
     metaDescription: "Professional leak detection in San Jacinto & Southern California. Non-invasive slab leak detection, water line repair. C-36 Licensed. Free estimates. Call (949) 379-0082.",
     h1: 'Leak Detection & Repair in San Jacinto, CA',
     eyebrow: 'Non-Invasive Detection Technology',
+    steps: [
+      { name: 'Pressure Testing', desc: 'We isolate sections of your plumbing system and run pressure tests to confirm a leak is present and narrow its location.' },
+      { name: 'Electronic Detection', desc: 'Acoustic amplification equipment listens for the distinct sound signature of pressurized water escaping a pipe.' },
+      { name: 'Thermal Imaging', desc: 'Infrared camera scans floors and walls to identify temperature anomalies caused by hidden moisture.' },
+      { name: 'Pinpoint Location & Plan', desc: 'We mark the exact leak location and present your repair options — targeted access or full repiping if warranted — with upfront pricing.' },
+      { name: 'Leak Repair & Verification', desc: 'We complete the repair, re-pressure-test the system, and confirm no additional leaks remain before closing any access.' },
+    ],
+    signs: [
+      'Water bill spiked with no change in household usage or visible running water',
+      'Warm or hot spot on a concrete floor — often the first sign of a slab leak',
+      'Sound of running water when every faucet, toilet, and appliance is off',
+      'Cracks forming in your foundation, tile, or drywall without a structural explanation',
+      'Low water pressure throughout the house — not just one fixture',
+      'Mold or mildew smell inside a wall or cabinet that stays damp for no obvious reason',
+    ],
     intro: "Water leaks are silent destroyers. A hidden leak inside your walls or under your slab can cause tens of thousands of dollars in structural damage and mold growth before you ever notice it. America's Plumbing uses advanced, non-invasive leak detection technology to locate leaks precisely — without tearing apart your home.",
     body: [
       "Slab leaks are one of the most common and destructive plumbing problems in Southern California's housing stock. In San Jacinto, Hemet, Riverside, and surrounding Inland Empire communities, the combination of older pipes and hard water accelerates the development of slab leaks. Signs include warm spots on your floor, the sound of running water when everything is off, unexplained spikes in your water bill, or cracks in your foundation.",
@@ -144,6 +176,21 @@ export const services: Service[] = [
     metaDescription: "Whole-home repiping in San Jacinto & Southern California. Replace old galvanized pipes with PEX. Upfront pricing, 1-year warranty. Call (949) 379-0082 for a free estimate.",
     h1: 'Whole-Home Repiping in San Jacinto, CA',
     eyebrow: 'PEX Repiping Specialists',
+    steps: [
+      { name: 'Home Assessment & Quote', desc: 'We inspect your existing pipe material, count fixtures, assess access points, and give you a firm written quote before any work begins.' },
+      { name: 'Permit & Scheduling', desc: 'We pull the required permit and coordinate a start date — most homes are scheduled within a week of approval.' },
+      { name: 'PEX Installation', desc: 'Our crew runs new PEX-A supply lines to every fixture, appliance, and hose bib throughout your home, typically in one day.' },
+      { name: 'Connection & Testing', desc: 'Every fixture is reconnected, water is restored, and we pressure-test the full system and check every connection for leaks.' },
+      { name: 'Inspection & Drywall Patch', desc: 'Work passes city inspection, then we patch and texture any drywall openings — leaving your home clean and complete.' },
+    ],
+    signs: [
+      'Rust-colored or brown water running from faucets — especially after the water has been off',
+      'Low pressure at multiple fixtures simultaneously, not just one',
+      'Pinhole leaks appearing repeatedly in different locations around the house',
+      'Visible corrosion or greenish deposits on exposed pipe fittings under sinks',
+      'Home built before 1985 — galvanized steel or early copper pipe is likely past its service life',
+      'Metallic taste in tap water that filters alone do not fully resolve',
+    ],
     intro: "If your home was built before 1985, there's a good chance it still has galvanized steel or older copper pipes that are corroded, restricted, and quietly degrading your water quality. America's Plumbing specializes in whole-home repiping with modern PEX — the gold standard in residential plumbing that delivers better water pressure, cleaner water, and performance that lasts 50+ years.",
     body: [
       "Galvanized pipes corrode from the inside out. Over decades — and especially in areas like Riverside County with hard water — rust and mineral buildup narrow the pipe interior, reducing pressure to a trickle and leaching iron into your water. If you're seeing discolored water, low pressure throughout the house, or dealing with frequent pipe leaks, the pipes themselves are the problem — not just a fitting here and there.",
@@ -205,6 +252,20 @@ export const services: Service[] = [
     metaDescription: "Professional drain cleaning in San Jacinto & Southern California. Hydro jetting, snaking, camera inspection. Fast, same-day service. C-36 Licensed. Call (949) 379-0082.",
     h1: 'Drain Cleaning & Hydro Jetting in San Jacinto, CA',
     eyebrow: 'Clear Drains, Guaranteed',
+    steps: [
+      { name: 'Drain Assessment', desc: 'We identify which drains are affected, ask about history, and determine the most likely cause — grease, roots, scale, or a foreign object.' },
+      { name: 'Camera Inspection', desc: 'An in-line camera confirms the location and nature of the blockage so we choose the right clearing method, not just the fastest one.' },
+      { name: 'Snaking or Hydro Jetting', desc: 'Standard clogs are cleared with an electric auger; heavy grease, mineral scale, or root intrusion gets the full hydro-jet treatment.' },
+      { name: 'Post-Clear Verification', desc: 'We camera-inspect again after clearing to confirm the line is fully open and to catch any underlying damage before it becomes an emergency.' },
+    ],
+    signs: [
+      'Drain runs slow — water pools in the sink, tub, or shower for minutes before draining',
+      'Gurgling sounds coming from the toilet when you run water in a nearby sink or tub',
+      'Multiple drains slow at the same time — a sign of a main line blockage, not just one fixture',
+      'Foul sewage or rotten-egg odor rising from drain openings inside the home',
+      'Drain backs up completely and water overflows onto the floor',
+      'Same drain clogs repeatedly within weeks of being cleared — indicating buildup not fully removed',
+    ],
     intro: "Slow or clogged drains are more than a nuisance — they're a warning sign of a larger problem developing in your plumbing system. America's Plumbing provides professional drain cleaning services throughout San Jacinto and Southern California using the right tool for each situation: drain snaking for typical clogs, hydro jetting for stubborn buildup, and camera inspection to see exactly what's going on inside your pipes.",
     body: [
       "Most drain cleaning companies snake your drain and call it done — without ever finding out why it clogged in the first place. We use in-line drain cameras to inspect the line after clearing it, confirming the clog is gone and identifying any underlying issues like root intrusion, pipe corrosion, or misaligned joints before they become expensive emergencies.",
@@ -266,6 +327,21 @@ export const services: Service[] = [
     metaDescription: "Water heater repair, replacement & installation in San Jacinto & Southern California. Tank & tankless. Same-day service. C-36 Licensed. Free estimates. Call (949) 379-0082.",
     h1: 'Water Heater Repair & Installation in San Jacinto, CA',
     eyebrow: 'Tank & Tankless Specialists',
+    steps: [
+      { name: 'Diagnosis', desc: 'We test the thermostat, heating elements, pilot assembly, anode rod condition, and check for sediment buildup or leaks at the tank.' },
+      { name: 'Repair or Replacement Recommendation', desc: 'Based on unit age, condition, and repair cost, we give you an honest recommendation — repair or replace — with upfront pricing for both options.' },
+      { name: 'Same-Day Service', desc: 'We stock the most common tank sizes in our trucks and carry tankless units for many jobs — most installations are completed the same day you call.' },
+      { name: 'Code-Compliant Installation', desc: 'All work is done to California code: proper seismic strapping, pressure relief valve, expansion tank, and correct gas or electrical connections.' },
+      { name: 'Final Test & Walkthrough', desc: 'We verify proper hot water delivery, check for leaks at all connections, and walk you through the new unit\'s controls before leaving.' },
+    ],
+    signs: [
+      'No hot water — burner or heating element has failed and the unit needs diagnosis immediately',
+      'Inconsistent temperature — water runs hot then cold mid-shower, indicating a thermostat or dip tube issue',
+      'Rumbling or popping sounds during heating — sediment buildup on the tank floor is a classic warning',
+      'Rust-colored or metallic-smelling hot water — the anode rod is depleted and the tank is corroding internally',
+      'Puddle or moisture around the base of the tank — a slow tank leak that will worsen quickly',
+      'Unit is 10+ years old and efficiency has visibly declined — energy bills rising without a clear cause',
+    ],
     intro: "No hot water is one of the most disruptive plumbing problems a homeowner can face. America's Plumbing provides same-day water heater repair and installation throughout San Jacinto and Southern California — whether your tank unit has failed, you're upgrading to a tankless system, or you're dealing with inconsistent temperatures and strange noises. We service all major brands and install only top-rated units.",
     body: [
       "The average water heater lasts 8–12 years. In Riverside County and the Inland Empire, hard water accelerates sediment buildup inside tanks, often shortening that lifespan further. If your heater is approaching that age or showing signs of trouble — rust-colored water, rumbling sounds, water pooling around the base, or inconsistent hot water — it's more cost-effective to replace than repair.",
@@ -327,6 +403,21 @@ export const services: Service[] = [
     metaDescription: "Faucet, toilet, sink & fixture installation in San Jacinto & Southern California. Licensed plumber, zero-leak guarantee, upfront pricing. Call (949) 379-0082.",
     h1: 'Plumbing Fixture Installation & Repair in San Jacinto, CA',
     eyebrow: 'Installed Right. Guaranteed Leak-Free.',
+    steps: [
+      { name: 'Fixture Assessment', desc: 'We evaluate the existing fixture, shut-off valves, and supply connections to flag any issues before the new fixture goes in.' },
+      { name: 'Old Fixture Removal', desc: 'We remove and properly dispose of the old fixture, clean the mounting surface, and inspect the supply lines and drain connections.' },
+      { name: 'New Fixture Installation', desc: 'The new fixture is installed with fresh supply lines, proper thread sealant, and correct drain trap alignment per California plumbing code.' },
+      { name: 'Leak Test', desc: 'Every connection is tested under full water pressure — we check supply lines, drain connections, and the fixture body before calling the job complete.' },
+      { name: 'Cleanup & Walkthrough', desc: 'We leave the area cleaner than we found it and show you how to operate any new valves or controls installed with the fixture.' },
+    ],
+    signs: [
+      'Dripping faucet that won\'t stop — even a slow drip wastes thousands of gallons annually',
+      'Running toilet — audible hissing or gurgling in the tank when no one has flushed recently',
+      'Leak under the sink — water stains in the cabinet, warped floor, or visible drips from supply lines or P-trap',
+      'Faucet handle that\'s loose, stiff, or hard to operate — worn cartridge or O-rings nearing failure',
+      'Toilet that rocks or moves at the base — a failed wax ring seal that risks slow sewage leakage',
+      'Low flow from a single faucet while other fixtures are fine — clogged aerator or partially failed cartridge',
+    ],
     intro: "A dripping faucet, running toilet, or leaking sink may seem minor — but left unaddressed, they waste thousands of gallons of water per year and can lead to water damage, mold, and costly repairs. America's Plumbing handles all fixture installation and repair work throughout San Jacinto and Southern California with a zero-leak guarantee and upfront pricing.",
     body: [
       "Whether you've purchased new fixtures for a bathroom remodel or just need a worn-out faucet replaced, we install and repair all types of plumbing fixtures quickly and correctly. We work with all major brands — Kohler, Moen, Delta, American Standard, Grohe — and can source specific models if you need us to.",
@@ -388,6 +479,21 @@ export const services: Service[] = [
     metaDescription: "Licensed gas line repair & installation in San Jacinto & Southern California. C-36 & gas certified. Emergency gas leak response. Upfront pricing. Call (949) 379-0082.",
     h1: 'Gas Line Repair & Installation in San Jacinto, CA',
     eyebrow: 'C-36 Licensed for Gas Work',
+    steps: [
+      { name: 'Safety Verification', desc: 'Before any work begins, we confirm gas is shut off at the meter and use electronic detection equipment to verify the area is safe to work in.' },
+      { name: 'Line Inspection & Diagnosis', desc: 'We trace the affected line, check fittings, connectors, and valves, and locate the source of any leak or the routing path for new work.' },
+      { name: 'Permit Procurement', desc: 'We pull the required permit from the city or county — all gas line work in California must be permitted and inspected.' },
+      { name: 'Repair or New Line Installation', desc: 'We repair the leak with approved materials or run the new gas line to the appliance location, sized correctly for the BTU demand.' },
+      { name: 'Pressure Test & Inspection', desc: 'The completed gas line is pressure-tested to code, inspected by the city, and gas is only restored after the system passes.' },
+    ],
+    signs: [
+      'Rotten-egg or sulfur odor — the odorant added to natural gas for safety detection',
+      'Hissing sound near a gas appliance, valve, or buried pipe run in the yard',
+      'Dead vegetation in a line above a buried gas line — escaping gas kills grass and plants',
+      'Gas appliance that won\'t stay lit or pilot light that keeps going out without a draft explanation',
+      'Unexplained spike in your gas bill with no change in appliance usage or weather',
+      'Flex connector to an appliance that is old, kinked, or showing visible corrosion at the fittings',
+    ],
     intro: "Gas line work is not a DIY project — it requires a licensed California plumbing contractor and must be inspected to protect your family and property. America's Plumbing holds the proper licensing and experience to handle all gas line services throughout San Jacinto and Southern California, from adding a new BBQ line to repairing a dangerous leak.",
     body: [
       "If you smell gas — that rotten egg odor — evacuate your home immediately and call SoCalGas emergency line (1-800-427-2200), then call us. Never use light switches, phones, or any electrical devices inside a home with a suspected gas leak. Once the utility has shut off the gas and cleared the area, we'll locate and repair the leak permanently.",
@@ -449,6 +555,21 @@ export const services: Service[] = [
     metaDescription: "Sewer line repair & replacement in San Jacinto & Southern California. Trenchless options available. Camera inspection. C-36 Licensed. Free estimates. Call (949) 379-0082.",
     h1: 'Sewer Line Repair & Replacement in San Jacinto, CA',
     eyebrow: 'Trenchless Options Available',
+    steps: [
+      { name: 'Camera Inspection', desc: 'We run a high-definition camera through your sewer lateral to document the condition, identify damage type, and determine the best repair method.' },
+      { name: 'Diagnosis & Options', desc: 'Based on camera footage, we present your options — patch repair, CIPP lining, pipe bursting, or full replacement — with clear pricing for each.' },
+      { name: 'Permit & Access', desc: 'We pull the required permit and prepare access — either small entry points for trenchless work or a targeted excavation for traditional repair.' },
+      { name: 'Sewer Repair or Replacement', desc: 'The line is repaired using the agreed method, with new pipe material that meets or exceeds California plumbing code requirements.' },
+      { name: 'Post-Repair Camera Verification', desc: 'We run the camera again after completion to confirm the line is fully clear, properly aligned, and flowing correctly to the city main.' },
+    ],
+    signs: [
+      'Multiple drains backing up simultaneously — a main sewer blockage, not individual clogs',
+      'Gurgling sounds from the toilet when you run water elsewhere in the house',
+      'Sewage odor in the yard or inside the home without a specific fixture source',
+      'Wet, sunken, or unusually lush green patches in the lawn above the sewer line path',
+      'Toilet water level fluctuating on its own — rising and falling without being flushed',
+      'Drain flies or pests appearing inside — a sign of a break in the line under or near the slab',
+    ],
     intro: "A damaged or collapsed sewer line is one of the most serious — and expensive — plumbing problems a homeowner can face. America's Plumbing provides comprehensive sewer line services throughout San Jacinto and Southern California, from targeted repairs to complete replacements. We offer both traditional and trenchless methods so you can choose the approach that works best for your property.",
     body: [
       "Many homes in San Jacinto, Hemet, Riverside, and surrounding communities still have clay or cast iron sewer lines that are decades old. These materials crack, corrode, and are easily infiltrated by tree roots. Warning signs include multiple slow drains throughout your home, gurgling sounds from toilets, sewage odors in your yard, or soft wet patches in your lawn over the sewer line path.",
@@ -510,6 +631,21 @@ export const services: Service[] = [
     metaDescription: "Garbage disposal installation, repair & replacement in San Jacinto & Southern California. All brands. Same-day service. C-36 Licensed. Free estimates. Call (949) 379-0082.",
     h1: 'Garbage Disposal Installation & Repair in San Jacinto, CA',
     eyebrow: 'Installed & Repaired Same Day',
+    steps: [
+      { name: 'Diagnosis', desc: 'We test the disposal motor, check for jams, inspect the mount and flange seal, and identify whether the issue is mechanical, electrical, or a drain connection problem.' },
+      { name: 'Repair or Replacement Decision', desc: 'We tell you honestly whether a reset or jam clearing will fix it, or whether the unit has reached the end of its service life and replacement makes more sense.' },
+      { name: 'Old Unit Removal', desc: 'We disconnect and remove the existing disposal, inspect the sink flange and drain line, and clean the mounting area before installing the new unit.' },
+      { name: 'New Disposal Installation', desc: 'The new unit is mounted, wired, and all connections — including the dishwasher drain line and P-trap — are properly reconnected and sealed.' },
+      { name: 'Leak Test & Run Test', desc: 'We run water through the disposal under load, check every connection for leaks, and confirm the drain flows freely before considering the job done.' },
+    ],
+    signs: [
+      'Humming but not spinning — the motor is getting power but the grinding plate is jammed',
+      'Won\'t turn on at all — internal thermal overload tripped or the unit has failed electrically',
+      'Leaking from the bottom of the unit — the internal seal has failed and replacement is needed',
+      'Leak at the sink flange where the disposal meets the drain — the mounting seal has degraded',
+      'Loud grinding or rattling — a foreign object like a bottle cap or utensil is caught in the grind chamber',
+      'Persistent foul odor that won\'t clear — food buildup in the splash guard or the unit is failing internally',
+    ],
     intro: "A jammed, leaking, or dead garbage disposal is one of the most common kitchen plumbing issues — and one of the most annoying. America's Plumbing installs, repairs, and replaces all brands of garbage disposals throughout San Jacinto and Southern California with same-day service in most cases.",
     body: [
       "Garbage disposals are mechanical devices with a finite service life — typically 8–12 years. If yours is making grinding noises, humming without spinning, leaking from the base, or simply won't turn on, it's likely time for a replacement. We stock InSinkErator, Moen, and Waste King units in a range of horsepower ratings and can typically complete installation in under an hour.",
@@ -571,6 +707,21 @@ export const services: Service[] = [
     metaDescription: "Professional sewer & drain camera inspection in San Jacinto & Southern California. See exactly what's in your pipes. C-36 Licensed. Fast scheduling. Call (949) 379-0082.",
     h1: 'Sewer & Drain Camera Inspection in San Jacinto, CA',
     eyebrow: "See What's Really Inside Your Pipes",
+    steps: [
+      { name: 'Access Point Identification', desc: 'We locate the best cleanout access point for your sewer line or the drain cleanout closest to the problem area for individual drain inspections.' },
+      { name: 'Camera Insertion & Live Feed', desc: 'A waterproof, high-definition camera is fed through the line — you can watch the live footage alongside our technician in real time.' },
+      { name: 'Problem Documentation', desc: 'Every crack, root intrusion, grease deposit, offset joint, or collapsed section is recorded with timestamp and footage saved for your records.' },
+      { name: 'Location Marking', desc: 'Using a camera transmitter and surface locator, we mark the exact position of any problem areas in your yard without digging.' },
+      { name: 'Written Report & Recommendations', desc: 'We walk you through the footage, provide a written assessment of findings, and present repair options with honest, upfront pricing.' },
+    ],
+    signs: [
+      'Recurring clogs in the same line despite repeated snaking — a structural problem the camera will identify',
+      'Buying an older home — the only way to know the true condition of underground plumbing before closing',
+      'Slow drains throughout the house that don\'t respond to standard clearing methods',
+      'Gurgling, bubbling, or unusual sounds from floor drains or toilets after rainfall',
+      'Sewage odor in the yard or certain rooms with no obvious source at the fixture level',
+      'Previous sewer repair — verifying the repair was done correctly and the line is flowing as expected',
+    ],
     intro: "Stop guessing what's causing your drain problems. America's Plumbing uses high-definition in-line video cameras to inspect sewer lines, drain lines, and supply pipes throughout San Jacinto and Southern California — giving you a real-time view of exactly what's happening inside your plumbing system.",
     body: [
       "Plumbing diagnosis used to mean educated guesswork and unnecessary digging. Camera inspection eliminates both. We feed a flexible, waterproof camera through your drains or sewer line, and you can watch the live footage alongside our technician. Cracks, root intrusions, grease buildup, collapsed sections, and pipe offsets — we find them all without touching your yard.",
@@ -632,6 +783,20 @@ export const services: Service[] = [
     metaDescription: "Professional hydro jetting in San Jacinto & Southern California. High-pressure cleaning for stubborn clogs, grease & root intrusion. C-36 Licensed. Call (949) 379-0082.",
     h1: 'Hydro Jetting Services in San Jacinto, CA',
     eyebrow: 'The Most Thorough Drain Cleaning Available',
+    steps: [
+      { name: 'Pre-Jetting Camera Inspection', desc: 'We inspect the pipe with a camera first to confirm structural integrity — we never hydro jet a cracked or deteriorated pipe.' },
+      { name: 'Access Setup', desc: 'We connect the jetting equipment at a cleanout access point and select the correct nozzle for the blockage type: forward-cutting for roots, rotating for scale, or flat-face for grease.' },
+      { name: 'High-Pressure Jetting', desc: 'The jetting nozzle is worked through the full length of the line at up to 4,000 PSI, scouring the pipe walls completely clean from inside out.' },
+      { name: 'Post-Jetting Camera Verification', desc: 'We re-inspect the line with the camera after jetting to confirm the pipe walls are clean and the line is fully open end to end.' },
+    ],
+    signs: [
+      'Drain clogs repeatedly within a few weeks of being snaked — scale or grease on the pipe walls is the real problem',
+      'Strong grease or food odor from kitchen drain even after cleaning products have been used',
+      'Main sewer line that backs up annually during the holiday season from heavy kitchen use',
+      'Camera inspection revealed heavy root intrusion or thick scale buildup on pipe walls',
+      'Commercial kitchen with recurring slow drains despite regular snaking maintenance',
+      'Slow drains throughout the home that worsen gradually over months — systemic buildup',
+    ],
     intro: "When standard drain snaking isn't enough, hydro jetting is the solution. America's Plumbing uses professional-grade hydro jetting equipment — delivering up to 4,000 PSI of pressurized water — to completely scour your pipes clean of grease, scale, mineral deposits, and tree root tendrils throughout San Jacinto and Southern California.",
     body: [
       "Standard drain snaking physically punches through a blockage to restore flow — but it leaves the pipe walls coated with whatever caused the clog in the first place. Hydro jetting doesn't just clear the blockage; it cleans the entire interior pipe surface. This is especially critical for grease-laden kitchen drain lines and older pipes with heavy scale buildup that leads to recurring clogs.",
@@ -693,6 +858,21 @@ export const services: Service[] = [
     metaDescription: "Bathroom faucet, toilet, shower & tub fixture installation & repair in San Jacinto & Southern California. C-36 Licensed. Zero-leak guarantee. Call (949) 379-0082.",
     h1: 'Bathroom Fixture Installation & Repair in San Jacinto, CA',
     eyebrow: 'Every Bathroom Fixture, Done Right',
+    steps: [
+      { name: 'Fixture Diagnosis or Planning', desc: 'For repairs we diagnose the specific failure — cartridge, valve, seal, or flapper. For installations we review your plans and confirm supply and drain sizing.' },
+      { name: 'Shut-Off & Preparation', desc: 'We isolate the fixture\'s water supply, prep the mounting surface or rough-in opening, and inspect the supply lines and drain connections for condition.' },
+      { name: 'Fixture Installation or Repair', desc: 'The fixture is set, sealed, and connected per California code — including correct wax ring depth for toilets and pressure balancing for shower valves.' },
+      { name: 'Full Leak Test', desc: 'We test every supply connection, drain connection, and the fixture body itself at full operating pressure before considering the work complete.' },
+      { name: 'Cleanup & Zero-Leak Confirmation', desc: 'We clean up completely, confirm no drips at any connection, and back the work with a 1-year zero-leak workmanship guarantee.' },
+    ],
+    signs: [
+      'Toilet running continuously — the fill valve or flapper is worn and wasting water silently around the clock',
+      'Shower that won\'t hold a consistent temperature — a pressure-balancing cartridge failure',
+      'Toilet rocking or loose at the floor — a compromised wax ring that risks a slow sewage leak below the tile',
+      'Dripping faucet even when fully closed — worn cartridge or O-rings that are well past replacement time',
+      'Tub or shower that drains slowly while the toilet and sink drain fine — a drain stopper or trap issue',
+      'Water stain on ceiling below an upstairs bathroom — a slow leak at the toilet wax ring or supply line',
+    ],
     intro: "Your bathroom fixtures work every single day — and when they fail, drip, or stop functioning, it affects your whole household. America's Plumbing installs, repairs, and replaces all types of bathroom plumbing fixtures throughout San Jacinto and Southern California with a C-36 license and a zero-leak guarantee.",
     body: [
       "Bathroom plumbing covers a wide range of fixtures — toilets, faucets, showers, tubs, bidets, vanity sinks, and more. We handle all of them. Whether you're dealing with a running toilet wasting water, a shower valve that won't regulate temperature, a dripping faucet, or a cracked toilet base, our licensed plumbers diagnose and fix the problem correctly the first time.",
@@ -754,6 +934,21 @@ export const services: Service[] = [
     metaDescription: "Main water line repair & replacement in San Jacinto & Southern California. Trenchless options available. C-36 Licensed. Fast response. Free estimates. Call (949) 379-0082.",
     h1: 'Water Line Repair & Replacement in San Jacinto, CA',
     eyebrow: 'Main Line & Supply Line Specialists',
+    steps: [
+      { name: 'Pressure Test & Meter Check', desc: 'We confirm the leak is on your side of the meter with a pressure isolation test, then use electronic detection to narrow the leak location without digging.' },
+      { name: 'Electronic Leak Location', desc: 'Ground microphone and pressure correlation equipment pinpoints the leak within inches so we open only what\'s absolutely necessary.' },
+      { name: 'Repair or Replacement Planning', desc: 'We assess pipe age, material, and condition — if the line is near end of life, proactive full replacement often costs less than repeated spot repairs.' },
+      { name: 'Trenchless or Open-Cut Repair', desc: 'Depending on site conditions, we repair or replace the line using pipe bursting, horizontal boring, or targeted excavation with full restoration.' },
+      { name: 'Pressure Test & Site Restoration', desc: 'The completed line is pressure-tested and the work site is restored — soil compacted, concrete patched, and landscaping disturbed minimally.' },
+    ],
+    signs: [
+      'Wet or soggy spot in the yard that stays damp with no irrigation explanation and no recent rain',
+      'Unusually lush, fast-growing strip of grass running from the house to the street over the line path',
+      'Low water pressure at every fixture in the house — not just one — suggesting a main supply restriction or leak',
+      'Water meter dial moving slowly when every fixture and appliance in the home is completely off',
+      'Discolored water with a gritty or earthy taste — soil infiltration through a cracked supply line',
+      'Unexplained spike in the water bill for two or more consecutive months without a usage change',
+    ],
     intro: "The main water line connecting your home to the city supply is one of the most critical — and most overlooked — components of your plumbing system. America's Plumbing repairs and replaces main water lines and branch supply lines throughout San Jacinto and Southern California with trenchless options available to protect your yard.",
     body: [
       "Main water line problems develop gradually or suddenly. A pinhole leak in an older galvanized or copper supply line may go unnoticed for months, slowly saturating soil and eroding your foundation. A full line failure can cut off water to your entire home. Common signs include unexplained wet spots in your yard, low pressure throughout the house, discolored water, or a water meter that keeps moving even when nothing is running.",
