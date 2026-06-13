@@ -35,21 +35,22 @@ export default function Contact() {
     setError('');
     setLoading(true);
 
-    fetch('/api/contact', {
+    fetch('https://formsubmit.co/ajax/aahilaariz073@gmail.com', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
       body: JSON.stringify({
-        firstName: data.firstName,
-        lastName: data.lastName,
+        name: `${data.firstName} ${data.lastName}`.trim(),
         phone: data.phone,
-        email: data.email,
-        service: data.service,
-        message: data.message,
+        email: data.email || 'not provided',
+        service: data.service || 'not specified',
+        message: data.message || '',
+        _subject: `New Lead: ${data.firstName} — America's Plumbing`,
+        _template: 'table',
       }),
     })
       .then(r => r.json())
       .then(json => {
-        if (json.error) { setError(json.error); setLoading(false); return; }
+        if (!json.success) { setError('Something went wrong. Please call us directly.'); setLoading(false); return; }
         setSubmittedName(data.firstName);
         setSubmittedPhone(data.phone);
         setLoading(false);

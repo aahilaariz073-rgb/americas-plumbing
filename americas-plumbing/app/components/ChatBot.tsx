@@ -33,14 +33,20 @@ export default function ChatBot() {
     setError('');
     setLoading(true);
 
-    fetch('/api/contact', {
+    fetch('https://formsubmit.co/ajax/aahilaariz073@gmail.com', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ name, phone, message }),
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify({
+        name,
+        phone,
+        message: message || 'No message provided',
+        _subject: `New Chat Lead: ${name} — America's Plumbing`,
+        _template: 'table',
+      }),
     })
       .then(r => r.json())
       .then(json => {
-        if (json.error) { setError(json.error); setLoading(false); return; }
+        if (!json.success) { setError('Something went wrong. Please call us directly.'); setLoading(false); return; }
         setLoading(false);
         setSubmitted(true);
       })
