@@ -17,7 +17,6 @@ const inputStyle: React.CSSProperties = {
 
 export default function ChatBot() {
   const [open, setOpen] = useState(false);
-  const [dismissed, setDismissed] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [name, setName] = useState('');
@@ -39,8 +38,6 @@ export default function ChatBot() {
       setSubmitted(true);
     }, 900);
   };
-
-  if (dismissed) return null;
 
   return (
     <div style={{
@@ -70,10 +67,10 @@ export default function ChatBot() {
             <button
               onClick={() => setOpen(false)}
               aria-label="Close"
-              style={{ background: 'none', border: 'none', cursor: 'pointer', padding: '2px', lineHeight: 1, color: 'rgba(255,255,255,0.5)' }}
+              style={{ background: 'rgba(255,255,255,0.1)', border: 'none', cursor: 'pointer', padding: '6px', lineHeight: 1, color: '#fff', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
             >
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                <path d="M3 3l10 10M13 3L3 13" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                <path d="M2 2l10 10M12 2L2 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
               </svg>
             </button>
           </div>
@@ -174,46 +171,28 @@ export default function ChatBot() {
       )}
 
       {/* Pill trigger */}
-      <div style={{
-        display: 'flex', alignItems: 'center',
-        background: '#fff', borderRadius: '999px',
-        boxShadow: '0 4px 20px rgba(8,15,31,0.15)',
-        overflow: 'hidden',
-      }}>
-        <button
-          onClick={() => setOpen(o => !o)}
-          style={{
-            background: 'none', border: 'none', cursor: 'pointer',
-            padding: '12px 18px 12px 16px',
-            display: 'flex', alignItems: 'center', gap: '8px',
-            color: '#080f1f', fontFamily: 'inherit', fontSize: '0.88rem', fontWeight: 600,
-          }}
-        >
-          <div style={{
-            width: '30px', height: '30px', borderRadius: '50%',
-            background: '#080f1f',
-            display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0,
-          }}>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
-              <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" fill="#fff" />
-            </svg>
-          </div>
-          Have a question?
-        </button>
-        <button
-          onClick={() => setDismissed(true)}
-          aria-label="Dismiss"
-          style={{
-            background: 'none', border: 'none', borderLeft: '1px solid #e8eaf0',
-            cursor: 'pointer', padding: '12px 14px',
-            color: '#9b9eb0', display: 'flex', alignItems: 'center',
-          }}
-        >
-          <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-            <path d="M1 1l10 10M11 1L1 11" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+      <button
+        onClick={() => setOpen(o => !o)}
+        style={{
+          display: 'flex', alignItems: 'center', gap: '10px',
+          background: '#fff', borderRadius: '999px', border: 'none',
+          boxShadow: '0 4px 20px rgba(8,15,31,0.15)',
+          padding: '10px 20px 10px 10px',
+          cursor: 'pointer', fontFamily: 'inherit',
+          fontSize: '0.88rem', fontWeight: 600, color: '#080f1f',
+        }}
+      >
+        <div style={{
+          width: '32px', height: '32px', borderRadius: '50%',
+          background: '#080f1f', flexShrink: 0,
+          display: 'flex', alignItems: 'center', justifyContent: 'center',
+        }}>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none">
+            <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" fill="#fff" />
           </svg>
-        </button>
-      </div>
+        </div>
+        Have a question?
+      </button>
 
       <style>{`
         @keyframes chatUp {
