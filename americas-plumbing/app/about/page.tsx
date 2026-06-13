@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Nav from '@/app/components/Nav';
 import Footer from '@/app/components/Footer';
 import PageCTA from '@/app/components/PageCTA';
@@ -153,8 +154,76 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* Values */}
+        {/* Meet Joe */}
         <section style={{ background: '#f7f8fc', padding: '88px 28px' }}>
+          <div style={{ maxWidth: '1240px', margin: '0 auto', display: 'grid', gridTemplateColumns: '420px 1fr', gap: '80px', alignItems: 'center' }} className="about-joe-col">
+
+            {/* Photo */}
+            <div style={{ position: 'relative' }}>
+              <div style={{ position: 'relative', borderRadius: '4px', overflow: 'hidden', aspectRatio: '4/5', background: '#e8eaf0' }}>
+                <Image
+                  src="/joe-romero.webp"
+                  alt="Joseph Romero — founder of America's Plumbing, San Jacinto CA"
+                  fill
+                  style={{ objectFit: 'cover', objectPosition: 'center top' }}
+                  sizes="(max-width: 860px) 100vw, 420px"
+                  priority
+                />
+              </div>
+              {/* Name badge overlay */}
+              <div style={{ position: 'absolute', bottom: '24px', left: '24px', right: '24px', background: '#080f1f', padding: '16px 20px', borderLeft: '3px solid #C8202A' }}>
+                <div style={{ color: '#fff', fontWeight: 700, fontSize: '1rem', lineHeight: 1.2 }}>Joseph Romero</div>
+                <div style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.75rem', marginTop: '3px' }}>Founder & Master Plumber · C-36 #1086994</div>
+              </div>
+            </div>
+
+            {/* Copy */}
+            <div>
+              <div style={{ color: '#C8202A', fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.22em', textTransform: 'uppercase', marginBottom: '14px' }}>
+                Meet the Owner
+              </div>
+              <h2 style={{
+                fontFamily: 'var(--font-newsreader), serif',
+                fontSize: 'clamp(1.9rem, 3.2vw, 2.6rem)', fontWeight: 700,
+                color: '#080f1f', lineHeight: 1.1, marginBottom: '28px'
+              }}>
+                Joe Romero —<br />The Plumber Who Picks Up the Phone
+              </h2>
+
+              <p style={{ color: '#5a5e72', fontSize: '1.05rem', lineHeight: 1.8, marginBottom: '20px' }}>
+                Most plumbing companies are run by managers who&apos;ve never held a wrench. Joe isn&apos;t that guy. He founded America&apos;s Plumbing in 2000 with a California C-36 license, a single truck, and a simple promise: do the job right, or don&apos;t do it at all.
+              </p>
+              <p style={{ color: '#5a5e72', fontSize: '1.05rem', lineHeight: 1.8, marginBottom: '20px' }}>
+                Twenty-five years later, Joe still shows up on the tough jobs — the slab leaks, the main line replacements, the calls at 11 pm that nobody else wants to take. He knows every subdivision in the San Jacinto Valley, every water district quirk in Riverside County, and exactly which shortcuts look good on paper but fail behind your walls.
+              </p>
+              <p style={{ color: '#5a5e72', fontSize: '1.05rem', lineHeight: 1.8, marginBottom: '36px' }}>
+                When you call America&apos;s Plumbing, you&apos;re not getting a dispatcher and a stranger. You&apos;re getting Joe&apos;s team — trained the way he was trained, held to the same standard he&apos;s held himself to since day one.
+              </p>
+
+              {/* Pull quote */}
+              <blockquote style={{ borderLeft: '3px solid #C8202A', paddingLeft: '24px', margin: '0 0 36px' }}>
+                <p style={{ fontFamily: 'var(--font-newsreader), serif', fontSize: '1.2rem', color: '#080f1f', lineHeight: 1.55, fontStyle: 'italic', marginBottom: '10px' }}>
+                  &ldquo;I started this company because I was tired of seeing homeowners get taken advantage of. Twenty-five years in, that&apos;s still why I do it.&rdquo;
+                </p>
+                <cite style={{ color: '#C8202A', fontSize: '0.8rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', fontStyle: 'normal' }}>
+                  — Joseph Romero, Founder
+                </cite>
+              </blockquote>
+
+              {/* Mini credential pills */}
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px' }}>
+                {['C-36 Licensed · #1086994', '25+ Years Experience', 'San Jacinto, CA Native', 'Same-Day Service'].map(pill => (
+                  <span key={pill} style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', background: '#fff', border: '1px solid #e0e2ea', borderRadius: '4px', padding: '6px 14px', fontSize: '0.78rem', fontWeight: 600, color: '#080f1f' }}>
+                    {pill}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Values */}
+        <section style={{ background: '#fff', padding: '88px 28px' }}>
           <div style={{ maxWidth: '1240px', margin: '0 auto' }}>
             <div style={{ textAlign: 'center', marginBottom: '60px' }}>
               <div style={{ display: 'inline-flex', alignItems: 'center', gap: '10px', marginBottom: '14px' }}>
@@ -231,6 +300,7 @@ export default function AboutPage() {
       <style>{`
         @media (max-width: 860px) {
           .about-two-col { grid-template-columns: 1fr !important; gap: 48px !important; }
+          .about-joe-col { grid-template-columns: 1fr !important; gap: 48px !important; }
         }
       `}</style>
     </>
