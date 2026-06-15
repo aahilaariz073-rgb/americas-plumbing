@@ -106,12 +106,12 @@ export default function Footer() {
                 (949) 379-0082
               </a>
               <a
-                href="mailto:californiajoe500@gmail.com"
+                href="mailto:joe@americasplumbing.com"
                 style={{ color: 'rgba(255,255,255,0.55)', fontSize: '0.8rem', textDecoration: 'none', wordBreak: 'break-all' }}
                 onMouseEnter={e => (e.currentTarget.style.color = '#fff')}
                 onMouseLeave={e => (e.currentTarget.style.color = 'rgba(255,255,255,0.55)')}
               >
-                californiajoe500@gmail.com
+                joe@americasplumbing.com
               </a>
               <span style={{ color: 'rgba(255,255,255,0.55)', fontSize: '0.875rem' }}>San Jacinto, CA</span>
               <a

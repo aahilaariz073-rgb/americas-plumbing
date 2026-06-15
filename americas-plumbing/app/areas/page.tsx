@@ -6,7 +6,7 @@ import PageCTA from '@/app/components/PageCTA';
 import Schema from '@/app/components/Schema';
 
 export const metadata: Metadata = {
-  title: "Plumber Service Areas | San Jacinto, Hemet, Riverside & SoCal | America's Plumbing",
+  title: "Plumber Service Areas | San Jacinto, Hemet, Riverside & SoCal",
   description: "America's Plumbing serves San Jacinto, Hemet, Menifee, Riverside, Moreno Valley & South Orange County. C-36 Licensed. Same-day & 24/7 emergency plumbing. Call (949) 379-0082.",
   keywords: "plumber san jacinto ca, plumbing service area riverside county, hemet menifee beaumont plumber, south orange county plumbing, emergency plumber inland empire, licensed plumber southern california",
 };
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 const riverCounty = areas.filter(a => a.county === 'Riverside County');
 const orangeCounty = areas.filter(a => a.county === 'Orange County');
 
-const breadcrumb = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: 'https://americasplumbing.com' }, { '@type': 'ListItem', position: 2, name: 'Service Areas', item: 'https://americasplumbing.com/areas' }] };
+const breadcrumb = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.americasplumbing.com' }, { '@type': 'ListItem', position: 2, name: 'Service Areas', item: 'https://www.americasplumbing.com/areas' }] };
 
 export default function AreasPage() {
   return (

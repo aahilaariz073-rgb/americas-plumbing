@@ -7,12 +7,12 @@ import PageCTA from '@/app/components/PageCTA';
 import Schema from '@/app/components/Schema';
 
 export const metadata: Metadata = {
-  title: "Plumbing Services San Jacinto & Southern California | America's Plumbing",
+  title: "Plumbing Services in San Jacinto & Southern California",
   description: "Full-service plumbing in San Jacinto & Southern California. Emergency repairs, leak detection, repiping, drain cleaning, water heaters & more. C-36 Licensed. Call (949) 379-0082.",
   keywords: "plumbing services san jacinto ca, plumber riverside county, drain cleaning hemet menifee, water heater repair san jacinto, slab leak detection southern california",
 };
 
-const breadcrumb = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: 'https://americasplumbing.com' }, { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://americasplumbing.com/services' }] };
+const breadcrumb = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.americasplumbing.com' }, { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://www.americasplumbing.com/services' }] };
 
 export default function ServicesPage() {
   return (

@@ -61,7 +61,7 @@ export async function generateMetadata(
   const area = getArea(slug);
   if (!area) return {};
 
-  const base = 'https://americasplumbing.com';
+  const base = 'https://www.americasplumbing.com';
   const url = `${base}/areas/${area.slug}`;
 
   return {
@@ -99,7 +99,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
   const area = getArea(slug);
   if (!area) notFound();
 
-  const base = 'https://americasplumbing.com';
+  const base = 'https://www.americasplumbing.com';
   const geo = cityGeo[area.city] ?? { lat: 33.7865, lng: -116.9581 };
   const nearbySlugs = nearbyMap[area.slug] ?? [];
   const nearbyAreas = nearbySlugs
@@ -116,7 +116,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
     name: "America's Plumbing",
     description: `Licensed C-36 plumber serving ${area.city}, CA and surrounding ${area.county} communities. Same-day service, 24/7 emergency response, free estimates.`,
     telephone: '+19493790082',
-    email: 'californiajoe500@gmail.com',
+    email: 'joe@americasplumbing.com',
     url: `${base}/areas/${area.slug}`,
     logo: `${base}/logo.png`,
     image: `${base}/plumb.jpg`,

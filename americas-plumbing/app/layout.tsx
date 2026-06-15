@@ -19,7 +19,7 @@ const jakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://americasplumbing.com'),
+  metadataBase: new URL('https://www.americasplumbing.com'),
   title: {
     default: "America's Plumbing | Plumber in San Jacinto, CA | 24/7 Service",
     template: "%s | America's Plumbing",

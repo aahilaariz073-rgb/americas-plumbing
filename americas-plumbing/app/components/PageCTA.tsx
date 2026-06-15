@@ -1,4 +1,4 @@
-export default function PageCTA({ city = 'Orange County' }: { city?: string }) {
+export default function PageCTA({ city = 'San Jacinto & Southern California' }: { city?: string }) {
   return (
     <section style={{ background: '#1e2d4a', padding: '80px 28px', position: 'relative' }}>
       <div style={{

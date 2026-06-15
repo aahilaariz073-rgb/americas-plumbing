@@ -3,7 +3,7 @@ import { services } from './data/services';
 import { areas } from './data/areas';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = 'https://americasplumbing.com';
+  const base = 'https://www.americasplumbing.com';
 
   const staticPages = [
     { url: base, priority: 1.0, changeFrequency: 'weekly' as const },

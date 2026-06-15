@@ -43,7 +43,7 @@ export async function generateMetadata(
   const service = getService(slug);
   if (!service) return {};
 
-  const base = 'https://americasplumbing.com';
+  const base = 'https://www.americasplumbing.com';
   const url = `${base}/services/${service.slug}`;
 
   return {
@@ -81,7 +81,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
   const service = getService(slug);
   if (!service) notFound();
 
-  const base = 'https://americasplumbing.com';
+  const base = 'https://www.americasplumbing.com';
 
   const relatedSlugs = relatedMap[service.slug] ?? [];
   const relatedServices = relatedSlugs
@@ -98,7 +98,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
     name: "America's Plumbing",
     description: `Licensed C-36 plumbing contractor based in San Jacinto, CA. ${service.name} and full-service plumbing throughout Southern California.`,
     telephone: '+19493790082',
-    email: 'californiajoe500@gmail.com',
+    email: 'joe@americasplumbing.com',
     url: base,
     logo: `${base}/logo.png`,
     image: `${base}/plumb.jpg`,

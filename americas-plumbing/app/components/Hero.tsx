@@ -7,7 +7,7 @@ export default function Hero() {
       style={{ position: 'relative', background: '#080f1f', overflow: 'hidden', minHeight: '94vh', display: 'flex', alignItems: 'center' }}
     >
       <div style={{ position: 'absolute', inset: 0 }}>
-        <Image src="/plumb.jpg" alt="" fill style={{ objectFit: 'cover', objectPosition: 'center' }} priority aria-hidden="true" />
+        <Image src="/plumb.jpg" alt="America's Plumbing — Licensed Plumber in San Jacinto, CA" fill priority quality={80} sizes="100vw" style={{ objectFit: 'cover', objectPosition: 'center' }} />
         <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(105deg, rgba(8,15,31,0.88) 35%, rgba(8,15,31,0.25) 100%)' }} />
       </div>
 

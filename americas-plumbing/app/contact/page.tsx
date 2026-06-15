@@ -4,11 +4,11 @@ import Footer from '@/app/components/Footer';
 import Contact from '@/app/components/Contact';
 
 export const metadata: Metadata = {
-  title: "Contact Us | America's Plumbing – Orange County Plumber",
-  description: "Request a free plumbing quote or call (949) 379-0082 for 24/7 emergency service. America's Plumbing serves all of Orange County, CA.",
+  title: "Contact Us | Free Plumbing Estimates in San Jacinto, CA",
+  description: "Request a free plumbing quote or call (949) 379-0082 for 24/7 emergency service. America's Plumbing serves San Jacinto, Riverside County & South Orange County.",
 };
 
-const breadcrumb = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: 'https://americasplumbing.com' }, { '@type': 'ListItem', position: 2, name: 'Contact', item: 'https://americasplumbing.com/contact' }] };
+const breadcrumb = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.americasplumbing.com' }, { '@type': 'ListItem', position: 2, name: 'Contact', item: 'https://www.americasplumbing.com/contact' }] };
 
 export default function ContactPage() {
   return (

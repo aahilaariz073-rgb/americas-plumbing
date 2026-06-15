@@ -6,7 +6,7 @@ import PageCTA from '@/app/components/PageCTA';
 import Schema from '@/app/components/Schema';
 
 export const metadata: Metadata = {
-  title: "About America's Plumbing | 25+ Years Serving Southern California",
+  title: "About Us | 25+ Years Serving Southern California",
   description:
     "Family-owned, C-36 licensed plumbing company based in San Jacinto, CA. Over 25 years serving Riverside County and South Orange County with honest work and fair pricing.",
   keywords: "about americas plumbing, san jacinto plumber history, licensed plumber riverside county, family owned plumber southern california, c-36 licensed plumber san jacinto",
@@ -51,7 +51,7 @@ const timeline = [
   { year: 'Today', event: "America's Plumbing continues under the same ownership, the same values, and the same phone number — serving our neighbors the right way." },
 ];
 
-const breadcrumb = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: 'https://americasplumbing.com' }, { '@type': 'ListItem', position: 2, name: 'About', item: 'https://americasplumbing.com/about' }] };
+const breadcrumb = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.americasplumbing.com' }, { '@type': 'ListItem', position: 2, name: 'About', item: 'https://www.americasplumbing.com/about' }] };
 
 export default function AboutPage() {
   return (

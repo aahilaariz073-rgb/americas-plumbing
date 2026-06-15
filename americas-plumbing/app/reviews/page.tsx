@@ -5,8 +5,8 @@ import PageCTA from '@/app/components/PageCTA';
 import ScrollReveal from '@/app/components/ScrollReveal';
 
 export const metadata: Metadata = {
-  title: "Customer Reviews | America's Plumbing – Orange County Plumber",
-  description: "Read 5-star reviews from real customers across Orange County. America's Plumbing — honest work, fair pricing, trusted by homeowners in Irvine, Newport Beach, Mission Viejo & more.",
+  title: "5-Star Plumber Reviews | San Jacinto & Southern CA",
+  description: "Read 5-star reviews from homeowners across San Jacinto, Hemet, Riverside County & South Orange County. C-36 licensed. Honest work, fair pricing.",
 };
 
 const reviews = [
@@ -21,7 +21,7 @@ const reviews = [
   { name: 'Michael T.', location: 'San Clemente, CA', quote: "Whole-home repipe finished ahead of schedule and under budget. The crew was respectful of our home and patched every wall opening. Outstanding job." },
 ];
 
-const breadcrumb = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: 'https://americasplumbing.com' }, { '@type': 'ListItem', position: 2, name: 'Reviews', item: 'https://americasplumbing.com/reviews' }] };
+const breadcrumb = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.americasplumbing.com' }, { '@type': 'ListItem', position: 2, name: 'Reviews', item: 'https://www.americasplumbing.com/reviews' }] };
 
 export default function ReviewsPage() {
   return (

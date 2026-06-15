@@ -14,7 +14,7 @@ const faqs = [
   },
   {
     q: 'Are you licensed and insured?',
-    a: 'Absolutely. America\'s Plumbing holds a C-36 Plumbing Contractor license and carries full general liability and workers\' compensation insurance to protect you and your home.',
+    a: 'Absolutely. America\'s Plumbing holds a C-36 Plumbing Contractor license (#0784091) and carries full general liability and workers\' compensation insurance to protect you and your home.',
   },
   {
     q: 'Do you give free estimates?',
@@ -22,7 +22,7 @@ const faqs = [
   },
   {
     q: 'What areas do you serve?',
-    a: 'We serve all of Orange County including Irvine, Newport Beach, Laguna Hills, Mission Viejo, Lake Forest, Aliso Viejo, San Clemente, Huntington Beach, Anaheim, and Santa Ana.',
+    a: 'We serve San Jacinto, Hemet, Menifee, Beaumont, Riverside, Moreno Valley, Mission Viejo, Laguna Niguel, Laguna Beach, Ladera Ranch, Aliso Viejo, Dana Point, and surrounding areas across Riverside County and South Orange County.',
   },
   {
     q: 'Do you warranty your work?',
