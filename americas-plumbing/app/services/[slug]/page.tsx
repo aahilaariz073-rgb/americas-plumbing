@@ -98,7 +98,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
     name: "America's Plumbing",
     description: `Licensed C-36 plumbing contractor based in San Jacinto, CA. ${service.name} and full-service plumbing throughout Southern California.`,
     telephone: '+19493790082',
-    email: 'joe@americasplumbing.com',
+    email: 'californiajoe500@gmail.com',
     url: base,
     logo: `${base}/logo.png`,
     image: `${base}/plumb.jpg`,

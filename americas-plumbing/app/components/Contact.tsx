@@ -98,7 +98,7 @@ export default function Contact() {
           <div style={{ display: 'flex', flexDirection: 'column', gap: 0 }}>
             {[
               { label: 'Phone', value: '(949) 379-0082', bar: '#C8202A', href: 'tel:+19493790082' },
-              { label: 'Email', value: 'joe@americasplumbing.com', bar: '#1A52BE', href: 'mailto:joe@americasplumbing.com' },
+              { label: 'Email', value: 'californiajoe500@gmail.com', bar: '#1A52BE', href: 'mailto:californiajoe500@gmail.com' },
             ].map(item => (
               <a
                 key={item.label}

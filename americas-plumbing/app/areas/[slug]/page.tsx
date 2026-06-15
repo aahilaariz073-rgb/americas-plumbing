@@ -116,7 +116,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
     name: "America's Plumbing",
     description: `Licensed C-36 plumber serving ${area.city}, CA and surrounding ${area.county} communities. Same-day service, 24/7 emergency response, free estimates.`,
     telephone: '+19493790082',
-    email: 'joe@americasplumbing.com',
+    email: 'californiajoe500@gmail.com',
     url: `${base}/areas/${area.slug}`,
     logo: `${base}/logo.png`,
     image: `${base}/plumb.jpg`,

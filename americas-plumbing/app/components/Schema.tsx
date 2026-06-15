@@ -10,7 +10,7 @@ export default function Schema({ page = 'home', city = 'San Jacinto', service = 
     name: "America's Plumbing",
     description: "Licensed C-36 plumbing contractor based in San Jacinto, CA serving Southern California including Riverside County and South Orange County. Same-day service, 24/7 emergency response, upfront pricing.",
     telephone: '+19493790082',
-    email: 'joe@americasplumbing.com',
+    email: 'californiajoe500@gmail.com',
     url: 'https://www.americasplumbing.com',
     logo: 'https://www.americasplumbing.com/logo.png',
     image: 'https://www.americasplumbing.com/logo.png',
