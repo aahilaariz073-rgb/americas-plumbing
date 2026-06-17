@@ -5,6 +5,7 @@ import PageCTA from '@/app/components/PageCTA';
 import ScrollReveal from '@/app/components/ScrollReveal';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/reviews' },
   title: "5-Star Plumber Reviews | San Jacinto & Southern CA",
   description: "Read 5-star reviews from homeowners across San Jacinto, Hemet, Riverside County & South Orange County. C-36 licensed. Honest work, fair pricing.",
 };

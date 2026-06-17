@@ -5,6 +5,7 @@ import PageCTA from '@/app/components/PageCTA';
 import FAQ from '@/app/components/FAQ';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/faq' },
   title: "Plumbing FAQ | San Jacinto & Southern CA",
   description: "Common questions about America's Plumbing — pricing, response times, licensing, and service areas across Riverside County & South Orange County.",
 };

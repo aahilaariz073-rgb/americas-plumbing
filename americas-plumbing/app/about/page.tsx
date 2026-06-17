@@ -6,6 +6,7 @@ import PageCTA from '@/app/components/PageCTA';
 import Schema from '@/app/components/Schema';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/about' },
   title: "About Us | 25+ Years Serving Southern California",
   description:
     "Family-owned, C-36 licensed plumbing company based in San Jacinto, CA. Over 25 years serving Riverside County and South Orange County with honest work and fair pricing.",

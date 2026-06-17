@@ -3,6 +3,7 @@ import Nav from '@/app/components/Nav';
 import Footer from '@/app/components/Footer';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/thank-you' },
   title: "Thank You",
   description: "Thank you for contacting America's Plumbing. We'll be in touch shortly.",
   robots: { index: false, follow: false },

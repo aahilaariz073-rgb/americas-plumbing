@@ -14,6 +14,12 @@ const nextConfig: NextConfig = {
   // Force www: redirect non-www apex host to www
   async redirects() {
     return [
+      // Consolidate legacy /home route onto the canonical root
+      {
+        source: '/home',
+        destination: '/',
+        permanent: true,
+      },
       {
         source: '/:path*',
         has: [{ type: 'host', value: 'americasplumbing.com' }],

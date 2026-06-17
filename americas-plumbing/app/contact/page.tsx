@@ -4,6 +4,7 @@ import Footer from '@/app/components/Footer';
 import Contact from '@/app/components/Contact';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/contact' },
   title: "Contact Us | Free Plumbing Estimates in San Jacinto, CA",
   description: "Request a free plumbing quote or call (949) 379-0082 for 24/7 emergency service. America's Plumbing serves San Jacinto, Riverside County & South Orange County.",
 };
