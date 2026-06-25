@@ -3,6 +3,7 @@ import Nav from '@/app/components/Nav';
 import Footer from '@/app/components/Footer';
 import PageCTA from '@/app/components/PageCTA';
 import FAQ from '@/app/components/FAQ';
+import { faqs } from '@/app/data/faqs';
 
 export const metadata: Metadata = {
   alternates: { canonical: '/faq' },
@@ -12,18 +13,16 @@ export const metadata: Metadata = {
 
 const breadcrumb = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.americasplumbing.com' }, { '@type': 'ListItem', position: 2, name: 'FAQ', item: 'https://www.americasplumbing.com/faq' }] };
 
+// Built from the same `faqs` array the visible FAQ renders — guarantees the
+// structured data matches the on-page text exactly (no drift).
 const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
-  mainEntity: [
-    { '@type': 'Question', name: 'Do you offer 24/7 emergency plumbing?', acceptedAnswer: { '@type': 'Answer', text: "Yes — we respond to plumbing emergencies around the clock. Call (949) 379-0082 any time and we'll dispatch a technician as quickly as possible." } },
-    { '@type': 'Question', name: 'How soon can you come out?', acceptedAnswer: { '@type': 'Answer', text: 'For most non-emergency jobs we can schedule same-day or next-day service. For emergencies we aim to arrive within 1–2 hours of your call.' } },
-    { '@type': 'Question', name: 'Are you licensed and insured?', acceptedAnswer: { '@type': 'Answer', text: "Absolutely. America's Plumbing holds a C-36 Plumbing Contractor license (#0784091) and carries full general liability and workers' compensation insurance." } },
-    { '@type': 'Question', name: 'Do you give free estimates?', acceptedAnswer: { '@type': 'Answer', text: "Yes — we provide free, upfront written estimates with no obligation. We won't start any work until you've approved the quote." } },
-    { '@type': 'Question', name: 'What areas do you serve?', acceptedAnswer: { '@type': 'Answer', text: 'We serve San Jacinto, Hemet, Menifee, Beaumont, Riverside, Moreno Valley, Mission Viejo, Laguna Niguel, Laguna Beach, Ladera Ranch, Aliso Viejo, Dana Point, and surrounding areas across Riverside County and South Orange County.' } },
-    { '@type': 'Question', name: 'Do you warranty your work?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. All labor comes with a 1-year workmanship warranty and we honor all manufacturer warranties on parts and equipment we install.' } },
-    { '@type': 'Question', name: 'How much does a typical repair cost?', acceptedAnswer: { '@type': 'Answer', text: 'Minor repairs start around $150–$300; larger jobs like repiping are quoted per project. We always provide a firm written price before starting.' } },
-  ],
+  mainEntity: faqs.map(f => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: { '@type': 'Answer', text: f.a },
+  })),
 };
 
 export default function FAQPage() {

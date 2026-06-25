@@ -146,13 +146,6 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
       recognizedBy: { '@type': 'Organization', name: 'California Contractors State License Board' },
       identifier: '0784091',
     },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '5.0',
-      reviewCount: '200',
-      bestRating: '5',
-      worstRating: '1',
-    },
   };
 
   // 2. Service schema for this city

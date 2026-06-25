@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import { services, getService } from '@/app/data/services';
 import { areas } from '@/app/data/areas';
+import { BUSINESS } from '@/app/data/business';
 import Nav from '@/app/components/Nav';
 import Footer from '@/app/components/Footer';
 import PageCTA from '@/app/components/PageCTA';
@@ -125,13 +126,6 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
       identifier: '0784091',
     },
     areaServed: allCities,
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '5.0',
-      reviewCount: '200',
-      bestRating: '5',
-      worstRating: '1',
-    },
   };
 
   // 2. Service schema (rich — includes included items as offer catalog)
@@ -143,19 +137,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
     description: service.intro,
     serviceType: service.shortName,
     url: `${base}/services/${service.slug}`,
-    provider: {
-      '@type': ['Plumber', 'LocalBusiness'],
-      name: "America's Plumbing",
-      telephone: '+19493790082',
-      url: base,
-      address: {
-        '@type': 'PostalAddress',
-        addressLocality: 'San Jacinto',
-        addressRegion: 'CA',
-        postalCode: '92583',
-        addressCountry: 'US',
-      },
-    },
+    provider: { '@type': ['Plumber', 'LocalBusiness'], '@id': base, name: BUSINESS.name },
     areaServed: allCities,
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
