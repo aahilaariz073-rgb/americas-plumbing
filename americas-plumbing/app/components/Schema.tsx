@@ -12,7 +12,6 @@ const SERVICE_OFFERS = [
   { name: 'Garbage Disposal Services', slug: 'garbage-disposal' },
   { name: 'Camera Inspection & Video Diagnostics', slug: 'camera-inspection' },
   { name: 'Hydro Jetting Services', slug: 'hydro-jetting' },
-  { name: 'Bathroom Fixture Services', slug: 'bathroom-fixtures' },
   { name: 'Water Line Repair & Replacement', slug: 'water-line-repair' },
 ];
 

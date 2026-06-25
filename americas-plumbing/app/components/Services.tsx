@@ -10,7 +10,6 @@ const svcs = [
   { slug: 'camera-inspection',   label: 'Camera Inspection' },
   { slug: 'hydro-jetting',       label: 'Hydro Jetting' },
   { slug: 'sewer-line',          label: 'Sewer Repair' },
-  { slug: 'bathroom-fixtures',   label: 'Bathroom Fixtures' },
   { slug: 'water-line-repair',   label: 'Water Line Repair' },
   { slug: 'leak-detection',      label: 'Leak Detection' },
   { slug: 'gas-line',            label: 'Gas Line Services' },

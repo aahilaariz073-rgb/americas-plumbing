@@ -20,6 +20,12 @@ const nextConfig: NextConfig = {
         destination: '/',
         permanent: true,
       },
+      // Merge bathroom-fixtures (cannibalized fixture-installation) → hub
+      {
+        source: '/services/bathroom-fixtures',
+        destination: '/services/fixture-installation',
+        permanent: true,
+      },
       {
         source: '/:path*',
         has: [{ type: 'host', value: 'americasplumbing.com' }],

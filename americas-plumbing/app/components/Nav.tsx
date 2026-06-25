@@ -15,7 +15,6 @@ const serviceLinks = [
   { label: 'Sewer Line', href: '/services/sewer-line' },
   { label: 'Gas Line', href: '/services/gas-line' },
   { label: 'Garbage Disposal', href: '/services/garbage-disposal' },
-  { label: 'Bathroom Fixtures', href: '/services/bathroom-fixtures' },
   { label: 'Fixture Installation', href: '/services/fixture-installation' },
   { label: 'View All Services →', href: '/services' },
 ];

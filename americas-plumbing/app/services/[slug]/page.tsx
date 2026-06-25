@@ -19,18 +19,17 @@ const relatedMap: Record<string, string[]> = {
   'drain-cleaning':       ['hydro-jetting', 'camera-inspection', 'sewer-line', 'emergency-plumbing'],
   'water-heater':         ['water-heater-repair', 'gas-line', 'repiping', 'emergency-plumbing'],
   'water-heater-repair':  ['water-heater', 'gas-line', 'fixture-installation', 'emergency-plumbing'],
-  'fixture-installation': ['bathroom-fixtures', 'water-heater', 'garbage-disposal', 'water-line-repair'],
+  'fixture-installation': ['bathroom-remodel', 'kitchen-plumbing', 'garbage-disposal', 'water-line-repair'],
   'gas-line':             ['water-heater', 'fixture-installation', 'emergency-plumbing', 'sewer-line'],
   'sewer-line':           ['drain-cleaning', 'hydro-jetting', 'trenchless-sewer', 'camera-inspection'],
   'garbage-disposal':     ['kitchen-plumbing', 'drain-cleaning', 'fixture-installation', 'water-line-repair'],
   'camera-inspection':    ['sewer-line', 'drain-cleaning', 'hydro-jetting', 'leak-detection'],
   'hydro-jetting':        ['drain-cleaning', 'camera-inspection', 'sewer-line', 'emergency-plumbing'],
-  'bathroom-fixtures':    ['bathroom-remodel', 'fixture-installation', 'water-line-repair', 'repiping'],
   'water-line-repair':    ['repiping', 'leak-detection', 'emergency-plumbing', 'trenchless-sewer'],
-  'toilet-repair':        ['bathroom-fixtures', 'bathroom-remodel', 'fixture-installation', 'water-line-repair'],
+  'toilet-repair':        ['drain-cleaning', 'bathroom-remodel', 'fixture-installation', 'water-line-repair'],
   'water-softener':       ['repiping', 'water-heater', 'water-line-repair', 'fixture-installation'],
   'trenchless-sewer':     ['sewer-line', 'camera-inspection', 'hydro-jetting', 'drain-cleaning'],
-  'bathroom-remodel':     ['bathroom-fixtures', 'toilet-repair', 'water-line-repair', 'repiping'],
+  'bathroom-remodel':     ['fixture-installation', 'toilet-repair', 'water-line-repair', 'repiping'],
   'kitchen-plumbing':     ['garbage-disposal', 'fixture-installation', 'water-line-repair', 'drain-cleaning'],
 };
 
@@ -274,6 +273,18 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
 
             {/* Main content */}
             <div>
+              {/* Hub/spoke cross-links */}
+              {service.crossLinks && service.crossLinks.length > 0 && (
+                <div style={{ marginBottom: '36px', display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                  {service.crossLinks.map(link => (
+                    <a key={link.href} href={link.href} style={{ display: 'block', background: '#f7f8fc', border: '1px solid #e0e2ea', borderLeft: '3px solid #1A52BE', padding: '16px 20px', borderRadius: '0 6px 6px 0', textDecoration: 'none' }}>
+                      <span style={{ color: '#5a5e72', fontSize: '0.95rem', lineHeight: 1.5 }}>{link.desc} </span>
+                      <span style={{ color: '#1A52BE', fontWeight: 700, fontSize: '0.95rem', whiteSpace: 'nowrap' }}>{link.label} →</span>
+                    </a>
+                  ))}
+                </div>
+              )}
+
               {service.body.map((para, i) => (
                 <p key={i} style={{ color: '#5a5e72', fontSize: '1.05rem', lineHeight: 1.8, marginBottom: '24px' }}>{para}</p>
               ))}
