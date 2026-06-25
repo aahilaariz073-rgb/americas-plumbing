@@ -135,7 +135,7 @@ export default function Footer() {
           alignItems: 'center', justifyContent: 'space-between'
         }}>
           <p style={{ color: 'rgba(255,255,255,0.3)', fontSize: '0.78rem' }}>
-            © {new Date().getFullYear()} America&apos;s Plumbing · Owner: Joe · C-36 Licensed
+            © {new Date().getFullYear()} America&apos;s Plumbing · Owner: Joseph Romero · C-36 License #0784091
           </p>
           <span style={{ color: 'rgba(255,255,255,0.3)', fontSize: '0.78rem' }}>C-36 License #0784091</span>
         </div>
