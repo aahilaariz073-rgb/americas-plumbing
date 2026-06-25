@@ -49,7 +49,6 @@ export async function generateMetadata(
   return {
     title: service.metaTitle,
     description: service.metaDescription,
-    keywords: service.keywords.join(', '),
     alternates: { canonical: url },
     openGraph: {
       title: service.metaTitle,

@@ -67,7 +67,6 @@ export async function generateMetadata(
   return {
     title: area.metaTitle,
     description: area.metaDescription,
-    keywords: area.keywords.join(', '),
     alternates: { canonical: url },
     openGraph: {
       title: area.metaTitle,

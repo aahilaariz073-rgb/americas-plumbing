@@ -10,7 +10,6 @@ export const metadata: Metadata = {
   title: "About Us | 25+ Years Serving Southern California",
   description:
     "Family-owned, C-36 licensed plumbing company based in San Jacinto, CA. Over 25 years serving Riverside County and South Orange County with honest work and fair pricing.",
-  keywords: "about americas plumbing, san jacinto plumber history, licensed plumber riverside county, family owned plumber southern california, c-36 licensed plumber san jacinto",
 };
 
 const stats = [
