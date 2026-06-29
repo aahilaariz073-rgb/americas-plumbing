@@ -618,6 +618,288 @@ export const posts: BlogPost[] = [
       text: 'We dispatch 24/7 for burst pipes and flooding across San Jacinto and Riverside County. Shut off your water, then call us — we’ll get there fast.',
     },
   },
+
+  {
+    slug: 'why-your-drains-keep-clogging-san-jacinto',
+    title: 'Why Your Drains Keep Clogging (and How to Stop It for Good)',
+    metaTitle: 'Why Do My Drains Keep Clogging? Causes & Fixes | San Jacinto',
+    metaDescription:
+      'Same drain clogging over and over? Here are the real reasons drains keep backing up in San Jacinto homes — and how to fix the cause, not just the symptom.',
+    excerpt:
+      'If you’re plunging the same drain every few weeks, the clog isn’t the problem — it’s a symptom. Here’s what’s really going on, and how to fix it for good.',
+    date: '2026-07-10',
+    author: 'Joseph Romero',
+    category: 'Drains',
+    readMins: 6,
+    heroImage: '/blog-liquid-drain.jpg',
+    heroAlt: 'Recurring drain clog being cleared by a licensed plumber in San Jacinto, CA',
+    intent: 'Informational',
+    primaryKeyword: 'why do my drains keep clogging',
+    keywords: [
+      'why do my drains keep clogging san jacinto',
+      'drain keeps clogging in same spot',
+      'recurring drain clog causes',
+      'how to stop drains from clogging',
+      'main line clog signs',
+    ],
+    sections: [
+      {
+        paras: [
+          'A one-time clog is annoying. A drain that clogs again every few weeks is telling you something: whatever caused it was never actually removed. Clearing the surface blockage gets the water moving again, but if the underlying buildup or obstruction is still there, the clog always comes back.',
+          'Here are the most common reasons drains keep clogging in San Jacinto homes — and what it takes to actually stop it.',
+        ],
+      },
+      {
+        h2: '1. Buildup on the pipe walls (not a single plug)',
+        paras: [
+          'Most stubborn clogs aren’t a tidy ball of hair you can pull out. They’re layers of grease, soap scum, and mineral scale coating the inside of the pipe, narrowing it over time. Snaking punches a hole through the middle, but the coating stays — so it re-closes quickly. Clearing the pipe walls completely is what breaks the cycle.',
+        ],
+      },
+      {
+        h2: '2. Hard-water mineral scale',
+        paras: [
+          'San Jacinto’s hard water leaves mineral scale inside pipes just like it does on your faucets. That scale gives grease and debris something to cling to, which is why drains in hard-water areas tend to clog faster and more often than the national norm.',
+        ],
+      },
+      {
+        h2: '3. Grease down the kitchen sink',
+        paras: [
+          'Grease goes down as a hot liquid and cools into a solid that coats the pipe. Even with hot water and soap, it builds up over time. It’s the number-one cause of repeat kitchen-drain clogs.',
+        ],
+      },
+      {
+        h2: '4. A problem in the main line',
+        paras: [
+          'If more than one fixture is slow at the same time — or you hear gurgling and smell sewage — the issue likely isn’t that one drain at all. It’s the main line everything empties into, and the usual culprits are deep grease/scale buildup or tree-root intrusion.',
+        ],
+        link: { text: 'See our drain cleaning service', href: '/services/drain-cleaning' },
+      },
+      {
+        h2: '5. Tree roots',
+        paras: [
+          'Roots are drawn to the water and nutrients in sewer lines and work their way in through tiny joints and cracks. Once inside, they catch everything flowing past and rebuild into a clog within weeks of being cleared — until the roots themselves are removed.',
+        ],
+      },
+      {
+        h2: 'How to actually stop the cycle',
+        list: [
+          'Get a camera inspection — it shows exactly what and where the real cause is, so it’s fixed once',
+          'Hydro jetting scours the pipe walls clean (grease, scale, and roots), not just a hole through the middle',
+          'Keep grease out of the kitchen drain and use strainers to catch hair and food',
+          'In hard-water homes, a water softener slows the scale that feeds repeat clogs',
+        ],
+        link: { text: 'Learn about hydro jetting', href: '/services/hydro-jetting' },
+      },
+    ],
+    faqs: [
+      {
+        q: 'Why does my drain keep clogging in the same spot?',
+        a: 'Because the real cause — buildup coating the pipe walls, scale, or a partial obstruction further down — was never fully removed. Snaking clears a path through the middle; the surrounding buildup re-closes it. A camera inspection finds the true cause so it can be cleared for good.',
+      },
+      {
+        q: 'Will hydro jetting stop recurring clogs?',
+        a: 'Usually, yes. Unlike snaking, hydro jetting scours the entire inside of the pipe — removing grease, scale, and roots — so there’s nothing left for the next clog to build on.',
+      },
+      {
+        q: 'How do I know if it’s a main-line clog?',
+        a: 'If several fixtures are slow or backing up at once, you hear gurgling, or you smell sewage, the problem is likely the main line, not a single drain. That’s worth a professional camera inspection.',
+      },
+    ],
+    relatedServices: [
+      { label: 'Drain Cleaning & Clog Removal', slug: 'drain-cleaning' },
+      { label: 'Hydro Jetting', slug: 'hydro-jetting' },
+      { label: 'Camera Inspection', slug: 'camera-inspection' },
+    ],
+    cta: {
+      heading: 'Tired of clearing the same drain again and again?',
+      text: 'We find the real cause with a camera inspection and clear it at the source — so it stays clear. Same-day drain service across San Jacinto and Riverside County.',
+    },
+  },
+
+  {
+    slug: 'signs-you-need-sewer-line-camera-inspection',
+    title: 'Signs You Need a Sewer Line Camera Inspection',
+    metaTitle: 'Signs You Need a Sewer Camera Inspection | San Jacinto',
+    metaDescription:
+      'Recurring backups, gurgling, or buying an older home? Here are the signs you need a sewer line camera inspection in San Jacinto — and what it finds.',
+    excerpt:
+      'A sewer camera inspection takes the guesswork out of what’s happening underground. Here’s when it’s worth doing — and what it can save you from.',
+    date: '2026-07-13',
+    author: 'Joseph Romero',
+    category: 'Sewer',
+    readMins: 6,
+    heroImage: '/after-1.jpg',
+    heroAlt: 'Sewer line camera inspection by a licensed plumber in San Jacinto, CA',
+    intent: 'Commercial',
+    primaryKeyword: 'sewer line camera inspection',
+    keywords: [
+      'sewer line camera inspection san jacinto',
+      'do i need a sewer camera inspection',
+      'sewer scope before buying a house',
+      'recurring sewer backup causes',
+      'sewer inspection riverside county',
+    ],
+    sections: [
+      {
+        paras: [
+          'Your sewer line is the one pipe you can’t see — and the most expensive one to get wrong. A camera inspection runs a waterproof video camera down the line so we can see exactly what’s happening inside: the blockage, the cause, and the condition of the pipe. No digging, no guessing.',
+          'Here are the situations where it’s genuinely worth doing.',
+        ],
+      },
+      {
+        h2: '1. The same backup keeps coming back',
+        paras: [
+          'If your main line backs up repeatedly no matter how many times it’s snaked, something deeper is wrong — roots, a collapsed section, or a belly in the line where waste collects. A camera shows which, so it’s fixed properly instead of patched again and again.',
+        ],
+      },
+      {
+        h2: '2. Multiple drains are slow or gurgling at once',
+        paras: [
+          'When several fixtures back up together, or toilets gurgle when you run a sink, the problem is usually the shared main line. A camera pinpoints the exact spot and cause.',
+        ],
+        link: { text: 'See our camera inspection service', href: '/services/camera-inspection' },
+      },
+      {
+        h2: '3. You’re buying an older home',
+        paras: [
+          'This is one of the smartest inspections a buyer can get and one of the most overlooked. Many homes across San Jacinto and Riverside County were built decades ago with clay or cast-iron sewer lines that are now near the end of their life. A sewer scope before you buy can reveal a five-figure problem the standard home inspection won’t — giving you real negotiating power or a reason to walk away.',
+        ],
+      },
+      {
+        h2: '4. You have large trees in the yard',
+        paras: [
+          'Tree roots seek out sewer lines and invade through joints and cracks. If you have mature trees near the line’s path and any history of slow drains, a camera inspection confirms whether roots are the cause before they collapse the pipe.',
+        ],
+      },
+      {
+        h2: '5. Persistent sewage smell or soggy spots in the yard',
+        paras: [
+          'A sewage odor inside or out, or an unexplained wet, extra-green patch in the yard, can point to a cracked or leaking sewer line underground. A camera inspection locates the break precisely.',
+        ],
+      },
+      {
+        h2: 'What an inspection saves you',
+        paras: [
+          'The whole point is precision. Instead of digging exploratory holes or replacing more pipe than necessary, we see the exact location and nature of the problem and fix only what needs fixing. In many cases that means a targeted repair — or a trenchless fix that doesn’t tear up your yard at all.',
+        ],
+        link: { text: 'Explore trenchless sewer repair', href: '/services/trenchless-sewer' },
+      },
+    ],
+    faqs: [
+      {
+        q: 'How does a sewer camera inspection work?',
+        a: 'We feed a flexible, waterproof video camera into your sewer line and watch a live feed of the inside of the pipe. It shows the exact location and cause of any blockage or damage — roots, grease, cracks, bellies, or collapse — without any digging.',
+      },
+      {
+        q: 'Should I get a sewer scope before buying a house?',
+        a: 'For older homes, absolutely. Standard home inspections don’t look inside the sewer line, and a failing clay or cast-iron line can be a very expensive surprise. A sewer scope gives you the facts before you commit.',
+      },
+      {
+        q: 'Does a camera inspection fix the problem?',
+        a: 'No — it diagnoses it precisely so the repair is targeted and cost-effective. Depending on what it finds, the fix might be drain cleaning, hydro jetting, a spot repair, or trenchless replacement.',
+      },
+    ],
+    relatedServices: [
+      { label: 'Camera Inspection', slug: 'camera-inspection' },
+      { label: 'Sewer Line Repair & Replacement', slug: 'sewer-line' },
+      { label: 'Trenchless Sewer Repair', slug: 'trenchless-sewer' },
+    ],
+    cta: {
+      heading: 'Not sure what’s happening in your sewer line?',
+      text: 'A camera inspection gives you a clear answer — no digging, no guessing. Buying an older home or fighting recurring backups? Book one today across San Jacinto and Riverside County.',
+    },
+  },
+
+  {
+    slug: 'is-a-water-softener-worth-it-san-jacinto',
+    title: 'Is a Water Softener Worth It in Hard-Water San Jacinto?',
+    metaTitle: 'Is a Water Softener Worth It? San Jacinto Hard-Water Guide',
+    metaDescription:
+      'San Jacinto has hard water — but is a water softener actually worth it? Here’s what it protects, what it costs to run, and how to decide for your home.',
+    excerpt:
+      'Hard water is a fact of life here — but is a softener worth the investment? Here’s an honest look at what it protects and whether it pays off for your home.',
+    date: '2026-07-16',
+    author: 'Joseph Romero',
+    category: 'Water Quality',
+    readMins: 6,
+    heroImage: '/plumb.jpg',
+    heroAlt: 'Water softener installation by a licensed plumber in San Jacinto, CA',
+    intent: 'Commercial',
+    primaryKeyword: 'is a water softener worth it',
+    keywords: [
+      'is a water softener worth it san jacinto',
+      'water softener benefits hard water',
+      'water softener cost to run',
+      'hard water riverside county',
+      'water softener installation san jacinto',
+    ],
+    sections: [
+      {
+        paras: [
+          'If you live in San Jacinto, you already live with hard water — the white scale on faucets and showerheads is the proof. The question isn’t whether your water is hard; it’s whether a water softener is worth installing to deal with it. Here’s an honest breakdown.',
+        ],
+      },
+      {
+        h2: 'What hard water is actually doing',
+        paras: [
+          'Hard water is high in dissolved calcium and magnesium. Those minerals don’t just spot your glassware — they build up as scale inside your pipes, water heater, dishwasher, and washing machine, and they react with soap so you use more of it and rinse less of it away.',
+        ],
+      },
+      {
+        h2: 'What a water softener protects',
+        list: [
+          'Your water heater — far less sediment and scale, which means better efficiency and a longer life',
+          'Your pipes and fixtures — less scale buildup that narrows lines and feeds clogs',
+          'Appliances — dishwashers and washing machines last longer and run better on softened water',
+          'Skin, hair, and laundry — softened water rinses cleaner, so soap and detergent go further',
+          'Cleaning time — far less scale and soap scum on glass, tile, and chrome',
+        ],
+        link: { text: 'See our water softener installation', href: '/services/water-softener' },
+      },
+      {
+        h2: 'The honest costs',
+        paras: [
+          'A softener is an upfront equipment-and-installation cost, plus modest ongoing costs: salt (for traditional ion-exchange systems) and the water used during regeneration. Most homeowners find those running costs are more than offset by lower energy bills, fewer plumbing repairs, longer-lasting appliances, and less money spent on soap and cleaning products.',
+        ],
+      },
+      {
+        h2: 'Salt-based vs. salt-free',
+        paras: [
+          'Traditional salt-based softeners actually remove the hardness minerals through ion exchange — the most effective option for protecting plumbing and appliances. “Salt-free” conditioners don’t remove minerals; they alter them to reduce scale-sticking, with no salt and no regeneration. Which makes sense depends on your priorities, water hardness, and whether you want truly “soft” water or just less scale. We’ll help you choose rather than push one.',
+        ],
+        link: { text: 'Pairing it with a new water heater?', href: '/services/water-heater' },
+      },
+      {
+        h2: 'So — is it worth it here?',
+        paras: [
+          'For most San Jacinto and Riverside County homes, yes. Because our water is genuinely hard, a softener does more here than it would in a soft-water region — it directly extends the life of your most expensive plumbing (your water heater and pipes) and cuts down the maintenance hard water demands. If you’re already replacing a water heater or dealing with recurring scale problems, it’s an especially smart time to add one.',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'Is a water softener worth it in San Jacinto?',
+        a: 'For most homes here, yes. Our water is genuinely hard, so a softener meaningfully extends the life of your water heater, pipes, and appliances, reduces scale and clogs, and saves on soap and cleaning. The running costs are usually offset by those savings.',
+      },
+      {
+        q: 'What does it cost to run a water softener?',
+        a: 'Ongoing costs are modest — salt for traditional systems and the water used during regeneration. Most homeowners more than make that back through lower energy bills, fewer repairs, and longer-lasting appliances.',
+      },
+      {
+        q: 'Salt-based or salt-free — which is better?',
+        a: 'Salt-based systems actually remove hardness minerals and protect plumbing best. Salt-free conditioners reduce scale without removing minerals and need no salt. The right choice depends on your water and priorities, which we’ll walk you through.',
+      },
+    ],
+    relatedServices: [
+      { label: 'Water Softener & Filtration', slug: 'water-softener' },
+      { label: 'Water Heater Installation & Replacement', slug: 'water-heater' },
+      { label: 'Whole-Home Repiping', slug: 'repiping' },
+    ],
+    cta: {
+      heading: 'Thinking about a water softener?',
+      text: 'We’ll test your situation and recommend the right system — salt-based or salt-free — honestly. Free estimates on water softener installation across San Jacinto and Riverside County.',
+    },
+  },
 ];
 
 export function getPost(slug: string): BlogPost | undefined {

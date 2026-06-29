@@ -38,18 +38,15 @@
 | 4 | Tankless vs. Tank Water Heater: Which Is Right for a San Jacinto Home? | tankless vs tank water heater | Commercial | **2026-07-01** |
 | 5 | How Much Does Whole-Home Repiping Cost in Riverside County? | whole home repipe cost riverside county | BOFU | **2026-07-04** |
 | 6 | Burst Pipe? Here’s Exactly What to Do in the First 5 Minutes | what to do burst pipe | BOFU | **2026-07-07** |
+| 7 | Why Your Drains Keep Clogging (and How to Stop It for Good) | why do my drains keep clogging | Informational | **2026-07-10** |
+| 8 | Signs You Need a Sewer Line Camera Inspection | sewer line camera inspection | Commercial | **2026-07-13** |
+| 9 | Is a Water Softener Worth It in Hard-Water San Jacinto? | is a water softener worth it | Commercial | **2026-07-16** |
 
 > **How the schedule works:** each post has a future `date`. It stays hidden (and 404s) until that date, then publishes itself automatically — no redeploy needed. Pages use ISR (`revalidate` every 6h), so the date is re-checked on a rolling basis. The index, sitemap, and RSS feed all respect the gate, so social automation won’t fire early either.
 
 ### 🔜 Recommended next batch (write in this priority order)
 | # | Title | Primary keyword | Intent | Target service |
 |---|---|---|---|---|
-| 4 | Tankless vs. Tank Water Heater: Which Is Right for a San Jacinto Home? | tankless vs tank water heater | Commercial | water-heater |
-| 5 | How Much Does Whole-Home Repiping Cost in Riverside County? | repiping cost riverside county | BOFU | repiping |
-| 6 | Burst Pipe? Here's Exactly What to Do in the First 5 Minutes | what to do burst pipe | BOFU | emergency-plumbing |
-| 7 | Why Your Drains Keep Clogging (and How to Stop It for Good) | why do my drains keep clogging | Informational | drain-cleaning, hydro-jetting |
-| 8 | Signs You Need a Sewer Line Camera Inspection | sewer line camera inspection | Commercial | camera-inspection, sewer-line |
-| 9 | Is a Water Softener Worth It in Hard-Water San Jacinto? | is a water softener worth it | Commercial | water-softener |
 | 10 | How Long Do Water Heaters Last — and When to Replace Yours | how long do water heaters last | Informational | water-heater, water-heater-repair |
 | 11 | Trenchless Sewer Repair: How We Fix Your Line Without Digging Up Your Yard | trenchless sewer repair | Commercial | trenchless-sewer |
 | 12 | Running Toilet Wasting Water? Causes and Fixes | running toilet fix | Informational | toilet-repair |
@@ -218,6 +215,54 @@ Generated from the live blog RSS feed (`/blog/rss.xml`). 1–2 variations per pl
 > Do one thing today: find your shut-off valve and make sure it turns.
 > Full guide 👉 https://www.americasplumbing.com/blog/burst-pipe-what-to-do-first-5-minutes
 > Plumbing emergency? We dispatch 24/7 📞 (949) 379-0082
+
+### POST 7 — Why Drains Keep Clogging (publishes Jul 10)
+**URL:** https://www.americasplumbing.com/blog/why-your-drains-keep-clogging-san-jacinto
+
+**Instagram:**
+> Plunging the same drain AGAIN? 😤 Here’s the hard truth: the clog isn’t the problem — it’s a symptom. Snaking punches a hole through the middle, but the grease + scale coating the pipe walls re-closes it in weeks. Here’s how to fix the cause for good 👉 link in bio. #DrainCleaning #SanJacinto #PlumbingTips #RiversideCounty #HardWater
+
+**Facebook:**
+> If you’re clearing the same drain every few weeks, the clog was never really removed. 🔁
+> The usual culprits: grease and soap scum coating the pipe walls, hard-water mineral scale, or — if multiple drains are slow at once — a main-line issue or tree roots.
+> The fix isn’t another bottle of cleaner. It’s a camera inspection to find the real cause and hydro jetting to scour the pipe walls clean so nothing’s left to build on.
+> Full breakdown 👉 https://www.americasplumbing.com/blog/why-your-drains-keep-clogging-san-jacinto
+> Done fighting the same drain? 📞 (949) 379-0082
+
+### POST 8 — Sewer Camera Inspection (publishes Jul 13)
+**URL:** https://www.americasplumbing.com/blog/signs-you-need-sewer-line-camera-inspection
+
+**Instagram:**
+> Buying an older home in San Jacinto? 🏡 Get a sewer scope FIRST. Standard inspections don’t look inside the sewer line — and a failing clay or cast-iron pipe can be a five-figure surprise. Here’s when a camera inspection is worth it 👉 link in bio. #HomeBuying #SewerInspection #SanJacinto #RiversideCounty #RealEstateTips
+
+**Facebook:**
+> Your sewer line is the one pipe you can’t see — and the priciest to get wrong. 📹
+> A camera inspection is worth it when:
+> 🔹 The same backup keeps returning after snaking
+> 🔹 Multiple drains gurgle or back up at once
+> 🔹 You’re buying an older home (standard inspections skip the sewer line!)
+> 🔹 You have big trees near the line
+> 🔹 There’s a sewage smell or a soggy patch in the yard
+> It shows the exact problem and location — so the fix is targeted, not a guess.
+> Full guide 👉 https://www.americasplumbing.com/blog/signs-you-need-sewer-line-camera-inspection
+> 📞 (949) 379-0082
+
+### POST 9 — Water Softener Worth It? (publishes Jul 16)
+**URL:** https://www.americasplumbing.com/blog/is-a-water-softener-worth-it-san-jacinto
+
+**Instagram:**
+> See that white crust on your faucets? 💧 That’s San Jacinto’s hard water — and it’s building up inside your pipes and water heater too. Is a softener actually worth it? Here’s the honest math 👉 link in bio. #WaterSoftener #HardWater #SanJacinto #RiversideCounty #HomeMaintenance
+
+**Facebook:**
+> Hard water is a fact of life in San Jacinto — but is a water softener worth installing? 🤔
+> Here’s what it protects:
+> 🔹 Your water heater (less sediment = longer life)
+> 🔹 Pipes & fixtures (less scale, fewer clogs)
+> 🔹 Dishwasher & washing machine
+> 🔹 Skin, hair, and laundry (soap actually rinses clean)
+> The running costs (salt + regeneration water) are usually more than offset by lower energy bills, fewer repairs, and longer-lasting appliances. For genuinely hard-water homes like ours, it often pays off.
+> Honest breakdown 👉 https://www.americasplumbing.com/blog/is-a-water-softener-worth-it-san-jacinto
+> 📞 (949) 379-0082
 
 ---
 
