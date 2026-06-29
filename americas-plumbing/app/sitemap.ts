@@ -1,6 +1,7 @@
 import { MetadataRoute } from 'next';
 import { services } from './data/services';
 import { areas } from './data/areas';
+import { posts } from './data/blog';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = 'https://www.americasplumbing.com';
@@ -13,7 +14,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/reviews`, priority: 0.8, changeFrequency: 'monthly' as const },
     { url: `${base}/faq`, priority: 0.8, changeFrequency: 'monthly' as const },
     { url: `${base}/contact`, priority: 0.85, changeFrequency: 'monthly' as const },
+    { url: `${base}/blog`, priority: 0.8, changeFrequency: 'weekly' as const },
   ];
+
+  const blogPages = posts.map(p => ({
+    url: `${base}/blog/${p.slug}`,
+    priority: 0.7,
+    changeFrequency: 'monthly' as const,
+  }));
 
   const servicePages = services.map(s => ({
     url: `${base}/services/${s.slug}`,
@@ -27,5 +35,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: 'monthly' as const,
   }));
 
-  return [...staticPages, ...servicePages, ...areaPages];
+  return [...staticPages, ...servicePages, ...areaPages, ...blogPages];
 }
