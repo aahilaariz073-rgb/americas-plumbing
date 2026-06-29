@@ -1,7 +1,10 @@
 import { MetadataRoute } from 'next';
 import { services } from './data/services';
 import { areas } from './data/areas';
-import { posts } from './data/blog';
+import { publishedPostsByDate } from './data/blog';
+
+// Re-generate periodically so scheduled blog posts enter the sitemap on time.
+export const revalidate = 21600;
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = 'https://www.americasplumbing.com';
@@ -17,7 +20,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/blog`, priority: 0.8, changeFrequency: 'weekly' as const },
   ];
 
-  const blogPages = posts.map(p => ({
+  const blogPages = publishedPostsByDate().map(p => ({
     url: `${base}/blog/${p.slug}`,
     priority: 0.7,
     changeFrequency: 'monthly' as const,

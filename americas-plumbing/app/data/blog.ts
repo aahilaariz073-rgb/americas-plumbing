@@ -329,11 +329,311 @@ export const posts: BlogPost[] = [
       text: 'Our non-invasive leak detection pinpoints the problem fast — no guesswork, no tearing up your floor. Free estimates and same-day service across San Jacinto and Riverside County.',
     },
   },
+
+  {
+    slug: 'tankless-vs-tank-water-heater-san-jacinto',
+    title: 'Tankless vs. Tank Water Heater: Which Is Right for a San Jacinto Home?',
+    metaTitle: 'Tankless vs. Tank Water Heater | San Jacinto Buyer’s Guide',
+    metaDescription:
+      'Tankless or traditional tank? Compare cost, lifespan, hot-water capacity, and how San Jacinto’s hard water affects each — so you choose the right water heater.',
+    excerpt:
+      'Replacing your water heater and torn between tankless and a traditional tank? Here’s an honest, local comparison — including how our hard water affects both.',
+    date: '2026-07-01',
+    author: 'Joseph Romero',
+    category: 'Water Heaters',
+    readMins: 7,
+    heroImage: '/blog-water-heater.jpg',
+    heroAlt: 'Tankless and tank water heater comparison for San Jacinto, CA homes',
+    intent: 'Commercial',
+    primaryKeyword: 'tankless vs tank water heater',
+    keywords: [
+      'tankless vs tank water heater san jacinto',
+      'is a tankless water heater worth it',
+      'tankless water heater hard water',
+      'water heater replacement san jacinto',
+      'tankless water heater pros and cons',
+    ],
+    sections: [
+      {
+        paras: [
+          'When it’s time to replace a water heater, the first decision is the big one: stick with a traditional tank, or switch to tankless? Both are good choices in the right home — the “best” one depends on your household, your budget, and, here in San Jacinto, your water.',
+          'Here’s a straight comparison of how they differ, what each costs you over time, and the local hard-water factor most online guides leave out.',
+        ],
+      },
+      {
+        h2: 'How they actually work',
+        paras: [
+          'A traditional tank heater keeps 40–50+ gallons of water hot around the clock so it’s ready when you need it. A tankless (or “on-demand”) unit heats water only as it flows through, so it never runs out — but it can only heat so many gallons per minute at once.',
+        ],
+      },
+      {
+        h2: 'Upfront cost vs. long-term cost',
+        paras: [
+          'Tank heaters cost less to buy and install, which is why they’re still the most common choice. Tankless units cost more upfront — both the equipment and the installation, which sometimes needs gas-line or venting upgrades — but they’re more energy-efficient month to month and typically last longer.',
+          'The rule of thumb: a tank is the lower-upfront-cost option; tankless is the lower-lifetime-cost option if you stay in the home long enough to earn back the difference.',
+        ],
+        link: { text: 'See water heater installation options', href: '/services/water-heater' },
+      },
+      {
+        h2: 'Lifespan',
+        paras: [
+          'A well-maintained tank heater generally lasts about 8–12 years. A tankless unit often lasts 20 years or more. That longer lifespan is a big part of the long-term value argument for tankless — provided it’s maintained.',
+        ],
+      },
+      {
+        h2: 'Hot-water capacity',
+        list: [
+          'Tank: delivers a large volume at once (great for back-to-back showers + laundry), but once the tank is drained you wait for it to reheat',
+          'Tankless: never “runs out,” but has a flow-rate limit — very high simultaneous demand can outpace a single unit',
+          'Big household with heavy overlapping use? Sizing matters more than the tank-vs-tankless label',
+        ],
+      },
+      {
+        h2: 'The San Jacinto hard-water factor (important)',
+        paras: [
+          'This is where local advice beats generic advice. Our inland water is hard, and minerals are tough on both types — but in different ways. Tank heaters collect sediment at the bottom and need regular flushing. Tankless units develop scale on the heat exchanger and need periodic descaling to keep working efficiently and stay under warranty.',
+          'Bottom line: whichever you choose, hard water means maintenance isn’t optional here. Many local homeowners pair a new heater with a water softener to protect the investment and cut down on descaling and sediment.',
+        ],
+        link: { text: 'Learn about water softeners', href: '/services/water-softener' },
+      },
+      {
+        h2: 'So which should you pick?',
+        paras: [
+          'Choose a tank if you want the lowest upfront cost, have very high simultaneous hot-water demand, or aren’t planning to stay in the home long. Choose tankless if you want endless hot water, long lifespan, lower energy bills, and to reclaim the floor space — and you’re comfortable with the higher install cost.',
+          'There’s no universally “right” answer, which is exactly why we walk every customer through it based on their actual home and usage before quoting. We install and service both.',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'Is a tankless water heater worth it in San Jacinto?',
+        a: 'For many homeowners, yes — endless hot water, a 20+ year lifespan, and lower energy bills. The trade-offs are a higher upfront cost and the need for periodic descaling because of our hard water. We’ll help you weigh it against a tank based on your household.',
+      },
+      {
+        q: 'Does hard water ruin tankless water heaters?',
+        a: 'It won’t ruin one that’s maintained. Hard water causes scale on the heat exchanger, so tankless units need periodic descaling. Many local homeowners add a water softener to reduce buildup and protect the unit.',
+      },
+      {
+        q: 'Can you replace a tank water heater with a tankless one?',
+        a: 'Yes. It sometimes requires gas-line, electrical, or venting adjustments depending on the unit and your home. We assess that during the free estimate so there are no surprises.',
+      },
+    ],
+    relatedServices: [
+      { label: 'Water Heater Installation & Replacement', slug: 'water-heater' },
+      { label: 'Water Heater Repair', slug: 'water-heater-repair' },
+      { label: 'Water Softener & Filtration', slug: 'water-softener' },
+    ],
+    cta: {
+      heading: 'Not sure which water heater fits your home?',
+      text: 'We’ll look at your household’s hot-water demand and your budget, then recommend honestly — tank or tankless. Free estimates, same-day service across San Jacinto and Riverside County.',
+    },
+  },
+
+  {
+    slug: 'whole-home-repipe-cost-riverside-county',
+    title: 'How Much Does Whole-Home Repiping Cost in Riverside County?',
+    metaTitle: 'Whole-Home Repipe Cost in Riverside County | What to Expect',
+    metaDescription:
+      'What drives the cost of repiping a home in Riverside County — pipe material, home size, access — plus the signs you actually need it. Honest, no-pressure guide.',
+    excerpt:
+      'Repiping is a big-ticket job, so the first question is always “what will it cost?” Here’s an honest breakdown of what drives the price — and how to know if you even need it.',
+    date: '2026-07-04',
+    author: 'Joseph Romero',
+    category: 'Repiping',
+    readMins: 7,
+    heroImage: '/before-1.jpg',
+    heroAlt: 'Whole-home repiping project by a licensed plumber in Riverside County, CA',
+    intent: 'BOFU',
+    primaryKeyword: 'whole home repipe cost riverside county',
+    keywords: [
+      'whole home repipe cost riverside county',
+      'how much does repiping cost san jacinto',
+      'repipe cost pex vs copper',
+      'signs you need to repipe your house',
+      'whole house repiping cost',
+    ],
+    sections: [
+      {
+        paras: [
+          'Whole-home repiping — replacing all the water supply lines in your house — is one of the larger plumbing investments a homeowner makes. So it’s fair to want a sense of the cost before you call anyone.',
+          'The honest answer is that it varies widely, because the price depends on your specific home. Below is what actually drives the number, so you can understand any quote you get — and why a real on-site estimate is the only way to get a firm price.',
+        ],
+      },
+      {
+        h2: 'What determines the cost',
+        list: [
+          'Home size & number of bathrooms — more fixtures and longer pipe runs mean more labor and material',
+          'Pipe material — PEX is generally more affordable to install; copper costs more but some homeowners prefer it',
+          'Slab vs. crawlspace vs. two-story — how accessible your pipes are has a big impact on labor',
+          'Wall access & finishes — opening and patching drywall, tile, or stucco adds to the job',
+          'Permits & inspection — proper repipes are permitted and inspected, which is a feature, not a corner to cut',
+        ],
+        link: { text: 'See our whole-home repiping service', href: '/services/repiping' },
+      },
+      {
+        h2: 'Why we don’t quote a flat price online',
+        paras: [
+          'You’ll see national “average” repipe numbers online, but they’re close to meaningless for your house. A compact single-story home on a slab and a two-story home with multiple bathrooms can differ enormously. Anyone giving you a firm price without seeing the home is guessing — and that guess usually gets “revised” once work starts.',
+          'Our approach is a free, in-person assessment and a written, upfront quote. You’ll know the real number before any work begins, and we won’t start until you’ve approved it.',
+        ],
+      },
+      {
+        h2: 'PEX vs. copper: how it affects price',
+        paras: [
+          'PEX is flexible, resists scale and corrosion well (a real advantage in our hard water), and is typically faster and less expensive to install. Copper is rigid, long-proven, and generally costs more in both material and labor. Both are excellent when installed correctly; we’ll walk you through the trade-offs for your home rather than pushing one.',
+        ],
+      },
+      {
+        h2: 'Signs you may actually need a repipe',
+        list: [
+          'Recurring pinhole leaks or slab leaks — fixing them one at a time starts costing more than replacing the system',
+          'Galvanized steel pipes — common in older homes and prone to internal corrosion and pressure loss',
+          'Discolored or rusty water, especially on first draw in the morning',
+          'Chronically low water pressure throughout the house',
+          'Water that takes forever to run clear or has a metallic taste',
+        ],
+        link: { text: 'Have leaks first? Start with leak detection', href: '/services/leak-detection' },
+      },
+      {
+        h2: 'Is it worth it?',
+        paras: [
+          'If you’re chasing repeated leaks in aging or galvanized plumbing, a repipe usually pays for itself in stopped damage, restored pressure, cleaner water, and peace of mind — and it’s a strong selling point if you ever list the home. If you’ve only had one isolated issue, a targeted repair may be all you need. We’ll tell you honestly which camp you’re in.',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'How much does it cost to repipe a house in Riverside County?',
+        a: 'It varies widely based on home size, number of bathrooms, pipe material (PEX vs. copper), and how accessible the pipes are. That’s why we give a free on-site assessment and a firm written quote rather than a vague online figure — so the price you’re told is the price you pay.',
+      },
+      {
+        q: 'How long does a whole-home repipe take?',
+        a: 'Many homes are completed in a day or two, depending on size and access. We patch the wall openings and keep disruption to a minimum.',
+      },
+      {
+        q: 'PEX or copper — which is better?',
+        a: 'Both are excellent when installed properly. PEX is flexible, resists scale well in hard water, and usually costs less to install; copper is rigid and long-proven but costs more. We’ll explain the trade-offs for your specific home.',
+      },
+    ],
+    relatedServices: [
+      { label: 'Whole-Home Repiping', slug: 'repiping' },
+      { label: 'Leak Detection & Repair', slug: 'leak-detection' },
+      { label: 'Water Line Repair & Replacement', slug: 'water-line-repair' },
+    ],
+    cta: {
+      heading: 'Want a real repipe price for your home?',
+      text: 'Skip the online guesswork — we’ll assess your home in person and give you a firm, written, no-obligation quote. Free estimates across San Jacinto and Riverside County.',
+    },
+  },
+
+  {
+    slug: 'burst-pipe-what-to-do-first-5-minutes',
+    title: 'Burst Pipe? Here’s Exactly What to Do in the First 5 Minutes',
+    metaTitle: 'Burst Pipe? What to Do First | Emergency Steps | San Jacinto',
+    metaDescription:
+      'A burst pipe floods fast. Follow these step-by-step actions in the first 5 minutes to stop the water and limit damage — then call for emergency plumbing.',
+    excerpt:
+      'A burst pipe can dump gallons a minute. What you do in the first five minutes makes the difference between a cleanup and a catastrophe. Save these steps now.',
+    date: '2026-07-07',
+    author: 'Joseph Romero',
+    category: 'Emergencies',
+    readMins: 5,
+    heroImage: '/after-1.jpg',
+    heroAlt: 'Emergency burst pipe repair by a 24/7 plumber in San Jacinto, CA',
+    intent: 'BOFU',
+    primaryKeyword: 'what to do burst pipe',
+    keywords: [
+      'what to do burst pipe',
+      'how to stop a burst pipe',
+      'burst pipe emergency san jacinto',
+      'where is my water shut off valve',
+      '24/7 emergency plumber san jacinto',
+    ],
+    sections: [
+      {
+        paras: [
+          'A burst pipe is one of the few plumbing problems where minutes genuinely matter — water can pour out faster than you’d believe and reach floors, walls, and belongings in no time. If it’s happening right now, here’s exactly what to do, in order.',
+        ],
+      },
+      {
+        h2: '1. Shut off your main water valve',
+        paras: [
+          'This is the single most important step. Find your main shut-off valve and turn it clockwise until it stops. It’s usually where the water line enters the house — near the front hose bib, in the garage, or at the meter near the street. Turning it off stops water to the entire house and stops the flood at its source.',
+        ],
+      },
+      {
+        h2: '2. Turn off the water heater',
+        paras: [
+          'Once the main is off, switch off your water heater to keep it from running dry and being damaged. For a gas unit, set it to “pilot”; for electric, switch off its breaker.',
+        ],
+      },
+      {
+        h2: '3. Cut the power if water is near electrical',
+        paras: [
+          'If water is near outlets, appliances, or your electrical panel, shut off electricity to those areas at the breaker — but only if you can reach the panel without standing in water. If you can’t do it safely, stay clear and tell the plumber and, if needed, an electrician.',
+        ],
+      },
+      {
+        h2: '4. Open faucets to drain the system',
+        paras: [
+          'With the main off, open a few cold taps (and flush a toilet) to drain the remaining water out of the pipes. This relieves pressure and reduces how much water keeps escaping from the burst.',
+        ],
+      },
+      {
+        h2: '5. Document everything, then call',
+        paras: [
+          'Quickly photograph the burst and any water damage before you start cleaning up — it helps with insurance. Then call a 24/7 emergency plumber. Move valuables and soak up standing water while you wait.',
+        ],
+        link: { text: 'Call our 24/7 emergency plumbing', href: '/services/emergency-plumbing' },
+      },
+      {
+        h2: 'Find your shut-off valve BEFORE you need it',
+        paras: [
+          'The worst time to go hunting for your main shut-off is while water is spraying. Take two minutes today to locate yours and make sure it turns. In our area, older valves can seize up — if yours won’t budge, that’s worth having serviced before an emergency, not during one.',
+        ],
+        link: { text: 'Aging or failing pipes? See repiping', href: '/services/repiping' },
+      },
+    ],
+    faqs: [
+      {
+        q: 'What’s the first thing to do when a pipe bursts?',
+        a: 'Shut off your main water valve immediately — turn it clockwise until it stops. It’s usually near where the water line enters the house, in the garage, or at the meter by the street. That stops water to the whole house and ends the flood at its source.',
+      },
+      {
+        q: 'Should I turn off electricity during a burst pipe?',
+        a: 'If water is near outlets, appliances, or the electrical panel, shut off power to those areas at the breaker — but only if you can reach the panel without standing in water. If you can’t do it safely, stay clear and call a professional.',
+      },
+      {
+        q: 'Do you offer 24/7 emergency plumbing in San Jacinto?',
+        a: 'Yes. We respond to burst pipes and other plumbing emergencies around the clock. Call (949) 379-0082 any time and we’ll dispatch as quickly as possible.',
+      },
+    ],
+    relatedServices: [
+      { label: 'Emergency Plumbing', slug: 'emergency-plumbing' },
+      { label: 'Leak Detection & Repair', slug: 'leak-detection' },
+      { label: 'Whole-Home Repiping', slug: 'repiping' },
+    ],
+    cta: {
+      heading: 'Plumbing emergency right now? Don’t wait.',
+      text: 'We dispatch 24/7 for burst pipes and flooding across San Jacinto and Riverside County. Shut off your water, then call us — we’ll get there fast.',
+    },
+  },
 ];
 
 export function getPost(slug: string): BlogPost | undefined {
   return posts.find(p => p.slug === slug);
 }
 
-// Newest first
-export const postsByDate = [...posts].sort((a, b) => (a.date < b.date ? 1 : -1));
+// ── Scheduled publishing ──
+// A post is "live" only on or after its `date`. Future-dated posts stay hidden
+// from the index, sitemap, and RSS, and 404 directly — then publish themselves
+// automatically once their date passes (pages use ISR `revalidate`, so the date
+// is re-checked periodically without a manual redeploy).
+export function isPublished(post: BlogPost, now: Date = new Date()): boolean {
+  return new Date(post.date + 'T00:00:00') <= now;
+}
+
+// Published posts, newest first.
+export function publishedPostsByDate(): BlogPost[] {
+  return posts.filter(p => isPublished(p)).sort((a, b) => (a.date < b.date ? 1 : -1));
+}

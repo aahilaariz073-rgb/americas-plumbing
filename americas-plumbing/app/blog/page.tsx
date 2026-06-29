@@ -3,7 +3,11 @@ import Image from 'next/image';
 import Nav from '@/app/components/Nav';
 import Footer from '@/app/components/Footer';
 import PageCTA from '@/app/components/PageCTA';
-import { postsByDate } from '@/app/data/blog';
+import { publishedPostsByDate } from '@/app/data/blog';
+
+// Re-check scheduled posts roughly every 6 hours so newly-due posts go live
+// without a manual redeploy.
+export const revalidate = 21600;
 
 export const metadata: Metadata = {
   alternates: { canonical: '/blog' },
@@ -59,7 +63,7 @@ export default function BlogIndex() {
         {/* Post grid */}
         <section style={{ background: '#f7f8fc', padding: '80px 28px' }}>
           <div style={{ maxWidth: '1240px', margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(340px, 1fr))', gap: '28px' }}>
-            {postsByDate.map(post => (
+            {publishedPostsByDate().map(post => (
               <a key={post.slug} href={`/blog/${post.slug}`} style={{ display: 'flex', flexDirection: 'column', background: '#fff', border: '1px solid #e8eaf0', borderRadius: '8px', overflow: 'hidden', textDecoration: 'none', boxShadow: '0 2px 10px rgba(0,0,0,0.04)' }}>
                 <div style={{ position: 'relative', width: '100%', aspectRatio: '16 / 9', background: '#080f1f' }}>
                   <Image src={post.heroImage} alt={post.heroAlt} fill sizes="(max-width: 768px) 100vw, 400px" style={{ objectFit: 'cover' }} />

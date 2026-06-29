@@ -3,11 +3,16 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import Nav from '@/app/components/Nav';
 import Footer from '@/app/components/Footer';
-import { posts, getPost } from '@/app/data/blog';
+import { posts, getPost, isPublished } from '@/app/data/blog';
 import { BUSINESS } from '@/app/data/business';
 
+// Re-check scheduled posts roughly every 6 hours. Future-dated posts are not
+// pre-rendered; they generate on-demand once their date passes (dynamicParams
+// defaults to true) and 404 until then.
+export const revalidate = 21600;
+
 export async function generateStaticParams() {
-  return posts.map(p => ({ slug: p.slug }));
+  return posts.filter(p => isPublished(p)).map(p => ({ slug: p.slug }));
 }
 
 const base = 'https://www.americasplumbing.com';
@@ -19,7 +24,7 @@ function formatDate(iso: string) {
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const post = getPost(slug);
-  if (!post) return {};
+  if (!post || !isPublished(post)) return {};
   const url = `${base}/blog/${post.slug}`;
   return {
     title: post.metaTitle,
@@ -41,7 +46,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const post = getPost(slug);
-  if (!post) notFound();
+  // Unknown slug OR a scheduled post whose publish date hasn't arrived → 404.
+  if (!post || !isPublished(post)) notFound();
 
   const url = `${base}/blog/${post.slug}`;
 

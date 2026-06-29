@@ -32,6 +32,15 @@
 | 2 | Why Plumbers Tell You to Never Use Liquid Drain Cleaner | should you use liquid drain cleaner | Informational | drain-cleaning, hydro-jetting, camera-inspection |
 | 3 | 7 Warning Signs of a Slab Leak Every San Jacinto Homeowner Should Know | slab leak warning signs | BOFU | leak-detection, repiping, emergency-plumbing |
 
+### 🗓️ Scheduled (written + drip-publishing every 3rd day)
+| # | Title | Primary keyword | Intent | Publish date |
+|---|---|---|---|---|
+| 4 | Tankless vs. Tank Water Heater: Which Is Right for a San Jacinto Home? | tankless vs tank water heater | Commercial | **2026-07-01** |
+| 5 | How Much Does Whole-Home Repiping Cost in Riverside County? | whole home repipe cost riverside county | BOFU | **2026-07-04** |
+| 6 | Burst Pipe? Here’s Exactly What to Do in the First 5 Minutes | what to do burst pipe | BOFU | **2026-07-07** |
+
+> **How the schedule works:** each post has a future `date`. It stays hidden (and 404s) until that date, then publishes itself automatically — no redeploy needed. Pages use ISR (`revalidate` every 6h), so the date is re-checked on a rolling basis. The index, sitemap, and RSS feed all respect the gate, so social automation won’t fire early either.
+
 ### 🔜 Recommended next batch (write in this priority order)
 | # | Title | Primary keyword | Intent | Target service |
 |---|---|---|---|---|
@@ -156,6 +165,59 @@ Generated from the live blog RSS feed (`/blog/rss.xml`). 1–2 variations per pl
 > Read all 7 signs 👉 https://www.americasplumbing.com/blog/slab-leak-warning-signs-san-jacinto-homeowners
 >
 > Suspect a slab leak? Free estimate, same-day service. 📞 (949) 379-0082
+
+---
+
+### POST 4 — Tankless vs. Tank (publishes Jul 1)
+**URL:** https://www.americasplumbing.com/blog/tankless-vs-tank-water-heater-san-jacinto
+
+**Instagram:**
+> Tankless or traditional tank? 🤔 Replacing a water heater comes down to: upfront cost vs. lifetime cost, how much hot water you use at once, and — here in San Jacinto — how you’ll handle hard water. We broke it down honestly (no sales pitch) 👉 link in bio. #SanJacinto #WaterHeater #TanklessWaterHeater #RiversideCounty #HomeUpgrade
+
+**Facebook:**
+> Tankless vs. tank — which is right for YOUR home? 🚿
+> Quick honest version: a tank costs less upfront and handles big simultaneous demand; tankless costs more to install but gives endless hot water, lasts 20+ years, and lowers energy bills. The local catch? Our hard water means BOTH need maintenance — tanks get flushed, tankless gets descaled.
+> Full comparison 👉 https://www.americasplumbing.com/blog/tankless-vs-tank-water-heater-san-jacinto
+> Replacing yours soon? Free estimate 📞 (949) 379-0082
+
+### POST 5 — Repipe Cost (publishes Jul 4)
+**URL:** https://www.americasplumbing.com/blog/whole-home-repipe-cost-riverside-county
+
+**Instagram:**
+> “What does it cost to repipe a house?” 🏠🔧 Honest answer: it depends — home size, PEX vs. copper, slab vs. crawlspace, how many baths. Anyone quoting a flat price without seeing your home is guessing. Here’s what actually drives the number 👉 link in bio. #Repipe #RiversideCounty #SanJacinto #Homeowner #PlumbingTips
+
+**Facebook:**
+> Thinking about repiping your home? Here’s what actually drives the cost 👇
+> 🔹 Home size & number of bathrooms
+> 🔹 Pipe material (PEX vs. copper)
+> 🔹 Slab vs. crawlspace vs. two-story access
+> 🔹 Wall access & patching
+> That’s why we don’t quote flat prices online — we give a free in-person assessment and a firm written quote. Signs you may need it: recurring leaks, galvanized pipes, rusty water, low pressure.
+> Full guide 👉 https://www.americasplumbing.com/blog/whole-home-repipe-cost-riverside-county
+> 📞 (949) 379-0082
+
+### POST 6 — Burst Pipe (publishes Jul 7)
+**URL:** https://www.americasplumbing.com/blog/burst-pipe-what-to-do-first-5-minutes
+
+**Instagram:**
+> 🚨 SAVE THIS. A pipe just burst — do this in the first 5 minutes:
+> 1️⃣ Shut off the main water valve
+> 2️⃣ Turn off the water heater
+> 3️⃣ Cut power if water’s near electrical (only if safe)
+> 4️⃣ Open faucets to drain the lines
+> 5️⃣ Photograph the damage, then call
+> Know where your shut-off valve is BEFORE you need it 👉 link in bio. #BurstPipe #PlumbingEmergency #SanJacinto #RiversideCounty
+
+**Facebook:**
+> 🚨 A burst pipe floods fast — what you do in the first 5 minutes decides whether it’s a cleanup or a catastrophe. Save these steps:
+> 1️⃣ Shut off your main water valve (turn clockwise — it’s usually at the garage, front hose bib, or meter)
+> 2️⃣ Turn off the water heater
+> 3️⃣ Cut power to affected areas if water’s near electrical — only if you can do it safely
+> 4️⃣ Open faucets to drain remaining water
+> 5️⃣ Photograph everything for insurance, then call a 24/7 plumber
+> Do one thing today: find your shut-off valve and make sure it turns.
+> Full guide 👉 https://www.americasplumbing.com/blog/burst-pipe-what-to-do-first-5-minutes
+> Plumbing emergency? We dispatch 24/7 📞 (949) 379-0082
 
 ---
 

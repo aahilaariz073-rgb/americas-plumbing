@@ -1,6 +1,9 @@
-import { postsByDate } from '@/app/data/blog';
+import { publishedPostsByDate } from '@/app/data/blog';
 
 const base = 'https://www.americasplumbing.com';
+
+// Keep the feed fresh so scheduled posts appear once they publish.
+export const revalidate = 21600;
 
 function esc(s: string) {
   return s
@@ -12,7 +15,7 @@ function esc(s: string) {
 }
 
 export async function GET() {
-  const items = postsByDate
+  const items = publishedPostsByDate()
     .map(
       p => `    <item>
       <title>${esc(p.title)}</title>
