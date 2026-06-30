@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { DM_Serif_Display, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import ChatBot from "@/app/components/ChatBot";
+import LeadPopup from "@/app/components/LeadPopup";
 
 const dmSerif = DM_Serif_Display({
   subsets: ["latin"],
@@ -62,6 +63,7 @@ export default function RootLayout({
       <body className="antialiased overflow-x-hidden">
         {children}
         <ChatBot />
+        <LeadPopup />
       </body>
     </html>
   );
