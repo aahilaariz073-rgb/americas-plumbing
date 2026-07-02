@@ -2,6 +2,7 @@
 
 import { useState, FormEvent } from 'react';
 import ScrollReveal from './ScrollReveal';
+import { reportContactConversion } from '@/app/lib/gtag';
 
 const inputStyle: React.CSSProperties = {
   width: '100%', background: '#fff',
@@ -51,6 +52,7 @@ export default function Contact() {
       .then(r => r.json())
       .then(json => {
         if (!json.success) { setError('Something went wrong. Please call us directly.'); setLoading(false); return; }
+        reportContactConversion();
         setSubmittedName(data.firstName);
         setSubmittedPhone(data.phone);
         setLoading(false);

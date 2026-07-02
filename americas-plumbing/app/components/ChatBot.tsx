@@ -1,5 +1,6 @@
 'use client';
 import { useState, FormEvent } from 'react';
+import { reportContactConversion } from '@/app/lib/gtag';
 
 const PHONE_HREF = 'tel:+19493790082';
 
@@ -47,6 +48,7 @@ export default function ChatBot() {
       .then(r => r.json())
       .then(json => {
         if (!json.success) { setError('Something went wrong. Please call us directly.'); setLoading(false); return; }
+        reportContactConversion();
         setLoading(false);
         setSubmitted(true);
       })

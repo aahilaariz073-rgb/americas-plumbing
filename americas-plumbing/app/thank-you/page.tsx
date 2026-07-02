@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Script from 'next/script';
 import Nav from '@/app/components/Nav';
 import Footer from '@/app/components/Footer';
 
@@ -12,6 +13,14 @@ export const metadata: Metadata = {
 export default function ThankYouPage() {
   return (
     <>
+      {/* Event snippet for Contact conversion page — in case this page is
+          ever reached directly (e.g. an ad linking straight here). The
+          primary conversion trigger is the JS event fired from each lead
+          form's success handler, since forms submit via AJAX and don't
+          navigate here. */}
+      <Script id="gtag-event-conversion" strategy="afterInteractive">
+        {`gtag('event', 'conversion', {'send_to': 'AW-633466141/jwioCMKO7dEBEJ3ah64C'});`}
+      </Script>
       <Nav />
       <main>
         <section style={{

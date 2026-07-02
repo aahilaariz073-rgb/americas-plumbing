@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { DM_Serif_Display, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import ChatBot from "@/app/components/ChatBot";
 import LeadPopup from "@/app/components/LeadPopup";
+import { GOOGLE_ADS_ID } from "@/app/lib/gtag";
 
 const dmSerif = DM_Serif_Display({
   subsets: ["latin"],
@@ -60,6 +62,21 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${dmSerif.variable} ${jakarta.variable}`}>
+      <head>
+        {/* Google tag (gtag.js) — Google Ads conversion tracking */}
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ADS_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="gtag-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GOOGLE_ADS_ID}');
+          `}
+        </Script>
+      </head>
       <body className="antialiased overflow-x-hidden">
         {children}
         <ChatBot />
