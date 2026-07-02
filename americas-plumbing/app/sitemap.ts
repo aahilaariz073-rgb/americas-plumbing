@@ -2,6 +2,7 @@ import { MetadataRoute } from 'next';
 import { services } from './data/services';
 import { areas } from './data/areas';
 import { publishedPostsByDate } from './data/blog';
+import { gitLastModified } from './lib/lastModified';
 
 // Re-generate periodically so scheduled blog posts enter the sitemap on time.
 export const revalidate = 21600;
@@ -10,32 +11,36 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const base = 'https://www.americasplumbing.com';
 
   const staticPages = [
-    { url: base, priority: 1.0, changeFrequency: 'weekly' as const },
-    { url: `${base}/about`, priority: 0.8, changeFrequency: 'yearly' as const },
-    { url: `${base}/services`, priority: 0.9, changeFrequency: 'monthly' as const },
-    { url: `${base}/areas`, priority: 0.9, changeFrequency: 'monthly' as const },
-    { url: `${base}/reviews`, priority: 0.8, changeFrequency: 'monthly' as const },
-    { url: `${base}/faq`, priority: 0.8, changeFrequency: 'monthly' as const },
-    { url: `${base}/contact`, priority: 0.85, changeFrequency: 'monthly' as const },
-    { url: `${base}/blog`, priority: 0.8, changeFrequency: 'weekly' as const },
+    { url: base, lastModified: gitLastModified('app/page.tsx') },
+    { url: `${base}/about`, lastModified: gitLastModified('app/about/page.tsx') },
+    { url: `${base}/services`, lastModified: gitLastModified('app/services/page.tsx') },
+    { url: `${base}/areas`, lastModified: gitLastModified('app/areas/page.tsx') },
+    { url: `${base}/reviews`, lastModified: gitLastModified('app/reviews/page.tsx') },
+    { url: `${base}/faq`, lastModified: gitLastModified('app/faq/page.tsx') },
+    { url: `${base}/contact`, lastModified: gitLastModified('app/contact/page.tsx') },
+    { url: `${base}/blog`, lastModified: gitLastModified('app/data/blog.ts') },
   ];
 
+  // Individual posts already carry a real, explicit publish date — the most
+  // accurate lastmod available, no git lookup needed.
   const blogPages = publishedPostsByDate().map(p => ({
     url: `${base}/blog/${p.slug}`,
-    priority: 0.7,
-    changeFrequency: 'monthly' as const,
+    lastModified: new Date(p.date),
   }));
+
+  // Content for these lives in shared data files, so that file's real git
+  // history is the accurate lastmod for every entry within it.
+  const servicesLastModified = gitLastModified('app/data/services.ts');
+  const areasLastModified = gitLastModified('app/data/areas.ts');
 
   const servicePages = services.map(s => ({
     url: `${base}/services/${s.slug}`,
-    priority: 0.85,
-    changeFrequency: 'monthly' as const,
+    lastModified: servicesLastModified,
   }));
 
   const areaPages = areas.map(a => ({
     url: `${base}/areas/${a.slug}`,
-    priority: 0.85,
-    changeFrequency: 'monthly' as const,
+    lastModified: areasLastModified,
   }));
 
   return [...staticPages, ...servicePages, ...areaPages, ...blogPages];

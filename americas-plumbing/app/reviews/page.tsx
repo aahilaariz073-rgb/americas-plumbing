@@ -3,6 +3,7 @@ import Nav from '@/app/components/Nav';
 import Footer from '@/app/components/Footer';
 import PageCTA from '@/app/components/PageCTA';
 import ScrollReveal from '@/app/components/ScrollReveal';
+import { BUSINESS } from '@/app/data/business';
 
 export const metadata: Metadata = {
   alternates: { canonical: '/reviews' },
@@ -24,10 +25,34 @@ const reviews = [
 
 const breadcrumb = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.americasplumbing.com' }, { '@type': 'ListItem', position: 2, name: 'Reviews', item: 'https://www.americasplumbing.com/reviews' }] };
 
+// Built directly from the `reviews` array above (the same data the page
+// visibly renders) so the schema can never drift from what's on screen —
+// reviewCount always equals the real number of testimonials shown.
+const reviewSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'LocalBusiness',
+  '@id': BUSINESS.id,
+  name: BUSINESS.name,
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '5.0',
+    reviewCount: String(reviews.length),
+    bestRating: '5',
+    worstRating: '1',
+  },
+  review: reviews.map(r => ({
+    '@type': 'Review',
+    reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+    author: { '@type': 'Person', name: r.name },
+    reviewBody: r.quote,
+  })),
+};
+
 export default function ReviewsPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }} />
       <Nav />
       <main>
         {/* Page header */}
@@ -92,8 +117,9 @@ export default function ReviewsPage() {
               <p style={{ color: '#9b9eb0', fontSize: '0.9rem', marginBottom: '20px' }}>
                 Happy with our work? Leave us a review on Google.
               </p>
+              {/* TODO: Replace with real GBP review link from Google Business Profile dashboard → "Get more reviews" → copy link */}
               <a
-                href="https://g.page/r/review"
+                href="https://g.page/r/REPLACE_WITH_REAL_GBP_PLACE_ID/review"
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{

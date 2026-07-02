@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import { areas, getArea } from '@/app/data/areas';
 import { services } from '@/app/data/services';
+import { BUSINESS } from '@/app/data/business';
 import Nav from '@/app/components/Nav';
 import Footer from '@/app/components/Footer';
 import PageCTA from '@/app/components/PageCTA';
@@ -9,28 +10,6 @@ import PageCTA from '@/app/components/PageCTA';
 export async function generateStaticParams() {
   return areas.map(a => ({ slug: a.slug }));
 }
-
-/* ── Per-city geo coordinates for schema ── */
-const cityGeo: Record<string, { lat: number; lng: number }> = {
-  'San Jacinto':          { lat: 33.7865, lng: -116.9581 },
-  'Hemet':                { lat: 33.7475, lng: -116.9719 },
-  'Menifee':              { lat: 33.6971, lng: -117.1851 },
-  'Beaumont':             { lat: 33.9294, lng: -116.9770 },
-  'Romoland':             { lat: 33.7437, lng: -117.1663 },
-  'Riverside':            { lat: 33.9806, lng: -117.3755 },
-  'Moreno Valley':        { lat: 33.9425, lng: -117.2297 },
-  'Ladera Ranch':         { lat: 33.5533, lng: -117.6278 },
-  'Laguna Woods':         { lat: 33.6094, lng: -117.7256 },
-  'Coto de Caza':         { lat: 33.5988, lng: -117.5870 },
-  'Rancho Mission Viejo': { lat: 33.5491, lng: -117.6065 },
-  'Aliso Viejo':          { lat: 33.5769, lng: -117.7262 },
-  'Lake Forest':          { lat: 33.6469, lng: -117.6892 },
-  'Laguna Beach':         { lat: 33.5422, lng: -117.7832 },
-  'Laguna Hills':         { lat: 33.5944, lng: -117.7087 },
-  'Laguna Niguel':        { lat: 33.5225, lng: -117.7078 },
-  'Mission Viejo':        { lat: 33.6000, lng: -117.6719 },
-  'Rancho Santa Margarita': { lat: 33.6411, lng: -117.6032 },
-};
 
 /* ── Nearby areas for cross-linking ── */
 const nearbyMap: Record<string, string[]> = {
@@ -99,7 +78,6 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
   if (!area) notFound();
 
   const base = 'https://www.americasplumbing.com';
-  const geo = cityGeo[area.city] ?? { lat: 33.7865, lng: -116.9581 };
   const nearbySlugs = nearbyMap[area.slug] ?? [];
   const nearbyAreas = nearbySlugs
     .map(s => areas.find(a => a.slug === s))
@@ -107,45 +85,32 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
 
   /* ── JSON-LD Schemas ── */
 
-  // 1. City-specific LocalBusiness schema
+  // 1. City-specific LocalBusiness schema. Note: @id, address, and geo are
+  // always the real San Jacinto business identity/location — only areaServed
+  // changes per city. Using per-city geo here would fabricate a physical
+  // presence in cities we don't operate out of.
   const localBusinessSchema = {
     '@context': 'https://schema.org',
     '@type': ['Plumber', 'LocalBusiness'],
-    '@id': `${base}/areas/${area.slug}`,
-    name: "America's Plumbing",
+    '@id': BUSINESS.id,
+    name: BUSINESS.name,
     description: `Licensed C-36 plumber serving ${area.city}, CA and surrounding ${area.county} communities. Same-day service, 24/7 emergency response, free estimates.`,
-    telephone: '+19493790082',
-    email: 'californiajoe500@gmail.com',
+    telephone: BUSINESS.telephone,
+    email: BUSINESS.email,
     url: `${base}/areas/${area.slug}`,
-    logo: `${base}/logo.png`,
-    image: `${base}/plumb.jpg`,
-    priceRange: '$$',
-    openingHours: 'Mo-Su 00:00-23:59',
-    founder: { '@type': 'Person', name: 'Joseph Romero' },
-    foundingDate: '2000',
+    logo: BUSINESS.logo,
+    image: BUSINESS.image,
+    priceRange: BUSINESS.priceRange,
+    openingHoursSpecification: BUSINESS.openingHoursSpecification,
+    founder: { '@type': 'Person', name: BUSINESS.founderName },
+    foundingDate: BUSINESS.foundingDate,
     areaServed: [
       { '@type': 'City', name: `${area.city}, CA` },
       ...nearbyAreas.map(a => ({ '@type': 'City', name: `${a.city}, CA` })),
     ],
-    address: {
-      '@type': 'PostalAddress',
-      addressLocality: 'San Jacinto',
-      addressRegion: 'CA',
-      postalCode: '92583',
-      addressCountry: 'US',
-    },
-    geo: {
-      '@type': 'GeoCoordinates',
-      latitude: geo.lat,
-      longitude: geo.lng,
-    },
-    hasCredential: {
-      '@type': 'EducationalOccupationalCredential',
-      credentialCategory: 'License',
-      name: 'C-36 Plumbing Contractor License',
-      recognizedBy: { '@type': 'Organization', name: 'California Contractors State License Board' },
-      identifier: '0784091',
-    },
+    address: BUSINESS.address,
+    geo: BUSINESS.geo,
+    hasCredential: BUSINESS.license,
   };
 
   // 2. Service schema for this city
@@ -157,8 +122,9 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
     serviceType: 'Plumbing',
     provider: {
       '@type': 'Plumber',
-      name: "America's Plumbing",
-      telephone: '+19493790082',
+      '@id': BUSINESS.id,
+      name: BUSINESS.name,
+      telephone: BUSINESS.telephone,
       url: base,
     },
     areaServed: { '@type': 'City', name: `${area.city}, CA` },

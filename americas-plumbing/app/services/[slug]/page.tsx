@@ -102,7 +102,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
     logo: `${base}/logo.png`,
     image: `${base}/plumb.jpg`,
     priceRange: '$$',
-    openingHours: 'Mo-Su 00:00-23:59',
+    openingHoursSpecification: BUSINESS.openingHoursSpecification,
     founder: { '@type': 'Person', name: 'Joseph Romero' },
     foundingDate: '2000',
     address: {
