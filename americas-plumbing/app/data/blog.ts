@@ -900,6 +900,504 @@ export const posts: BlogPost[] = [
       text: 'We’ll test your situation and recommend the right system — salt-based or salt-free — honestly. Free estimates on water softener installation across San Jacinto and Riverside County.',
     },
   },
+
+  {
+    slug: 'low-water-pressure-whole-house-san-jacinto',
+    title: 'Low Water Pressure Throughout Your House? Here’s What’s Actually Wrong',
+    metaTitle: 'Low Water Pressure Throughout the House | San Jacinto Causes & Fixes',
+    metaDescription:
+      'Water pressure low in every faucet and shower? Here are the real causes — from a failing pressure regulator to hidden leaks — and how to fix it in San Jacinto homes.',
+    excerpt:
+      'When every faucet in the house runs weak, it’s not your imagination — and it’s rarely something a store-bought showerhead fixes. Here’s what’s actually going on.',
+    date: '2026-07-19',
+    author: 'Joseph Romero',
+    category: 'Water Pressure',
+    readMins: 6,
+    heroImage: '/blog-water-pressure.jpg',
+    heroAlt: 'Modern shower fixture plumbing installation by a licensed plumber in San Jacinto, CA',
+    intent: 'Informational',
+    primaryKeyword: 'low water pressure whole house',
+    keywords: [
+      'low water pressure whole house san jacinto',
+      'why is my water pressure low',
+      'water pressure regulator failing',
+      'low water pressure every faucet',
+      'water pressure san jacinto ca',
+    ],
+    sections: [
+      {
+        paras: [
+          'One weak showerhead is usually a clogged nozzle. But when every faucet, every shower, and every hose bib in the house runs low at the same time, the cause is bigger than any one fixture — and no amount of cleaning a showerhead is going to fix it.',
+          'Here are the real causes of whole-house low pressure, roughly in order of how often we find them.',
+        ],
+      },
+      {
+        h2: 'A partially closed valve',
+        paras: [
+          'The simplest cause, and worth ruling out first: your main shutoff valve or the valve at the water meter isn’t fully open. This can happen after any plumbing work — including work by someone other than the original installer — if a valve was closed and not fully reopened. Check both before assuming something is broken.',
+        ],
+      },
+      {
+        h2: 'A failing pressure regulator',
+        paras: [
+          'Most homes have a pressure-reducing valve (PRV) where the main line enters the house, keeping city water pressure at a safe level for your plumbing. PRVs typically last 10 to 15 years. When one starts to fail, you’ll often see either consistently low pressure throughout the house, or pressure that swings unpredictably between fixtures and times of day. A failing PRV is a common, fixable cause of a whole-house pressure drop.',
+        ],
+      },
+      {
+        h2: 'Corroded or scale-clogged pipes',
+        paras: [
+          'Older galvanized steel pipes corrode from the inside over time, narrowing the passage water flows through. In San Jacinto’s hard water, mineral scale adds to the problem, gradually restricting pipes that were once wide open. This kind of pressure loss tends to develop slowly, over years, rather than appearing overnight.',
+        ],
+        link: { text: 'Learn about whole-home repiping', href: '/services/repiping' },
+      },
+      {
+        h2: 'A hidden leak',
+        paras: [
+          'A leak — especially a slab leak — diverts water before it ever reaches your fixtures, which can show up as a sudden, unexplained drop in pressure throughout the house. If low pressure appeared suddenly rather than gradually, and especially if it’s paired with a higher water bill or damp flooring, a hidden leak is worth ruling out.',
+        ],
+        link: { text: 'See our leak detection service', href: '/services/leak-detection' },
+      },
+      {
+        h2: 'High demand on the municipal supply',
+        paras: [
+          'Occasionally the cause isn’t your plumbing at all — heavy simultaneous usage in your neighborhood, or municipal system maintenance, can temporarily reduce supply pressure. This is usually short-lived and affects more than one household at a time.',
+        ],
+      },
+      {
+        h2: 'What normal pressure looks like',
+        paras: [
+          'Residential water pressure below 40 PSI is considered low; most homes run comfortably between 45 and 60 PSI. A plumber can check your actual pressure at the hose bib in a few minutes — a useful first step before diagnosing further, since it tells us whether we’re dealing with a true system-wide problem or something more isolated.',
+        ],
+      },
+      {
+        h2: 'How we diagnose it',
+        paras: [
+          'We start by testing pressure at the source and checking the regulator, then work through the possibilities above in order — valves, regulator, pipe condition, and leak detection if needed. Because a sudden pressure drop can point to something as serious as a hidden leak, it’s worth having a professional diagnosis rather than guessing.',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'Why is my water pressure low in every faucet at once?',
+        a: 'Whole-house low pressure usually points to a partially closed main valve, a failing pressure regulator, corroded or scale-clogged pipes, or a hidden leak diverting water before it reaches your fixtures. A single weak fixture is usually a local clog; all of them at once is a system-wide cause.',
+      },
+      {
+        q: 'What is a normal water pressure for a house?',
+        a: 'Most homes run comfortably between 45 and 60 PSI. Below 40 PSI is generally considered low. A plumber can measure your actual pressure at a hose bib in a few minutes.',
+      },
+      {
+        q: 'Can a hidden leak cause low water pressure?',
+        a: 'Yes. A leak — including a slab leak — diverts water before it reaches your fixtures, which can cause a sudden, unexplained drop in pressure throughout the house, often along with a higher water bill.',
+      },
+    ],
+    relatedServices: [
+      { label: 'Leak Detection & Repair', slug: 'leak-detection' },
+      { label: 'Whole-Home Repiping', slug: 'repiping' },
+      { label: 'Water Line Repair & Replacement', slug: 'water-line-repair' },
+    ],
+    cta: {
+      heading: 'Water pressure low throughout your home?',
+      text: 'We’ll test your pressure, check the regulator, and rule out hidden leaks so you get a real diagnosis, not a guess. Free estimates across San Jacinto and Riverside County.',
+    },
+  },
+
+  {
+    slug: 'garbage-disposal-humming-not-working-san-jacinto',
+    title: 'Garbage Disposal Humming But Not Working? Here’s the Fix',
+    metaTitle: 'Garbage Disposal Humming But Not Spinning | San Jacinto Fix Guide',
+    metaDescription:
+      'Disposal humming but the blades won’t spin? Here’s what’s actually wrong — jam, overheating, or a seized motor — and how to safely fix it or know when to replace it.',
+    excerpt:
+      'A humming disposal isn’t dead — it’s trying to tell you something. Here’s what that sound means, what you can safely try, and when it’s time for a new unit.',
+    date: '2026-07-22',
+    author: 'Joseph Romero',
+    category: 'Kitchen Plumbing',
+    readMins: 5,
+    heroImage: '/plumb.jpg',
+    heroAlt: 'Licensed plumber repairing kitchen and drain plumbing in San Jacinto, CA',
+    intent: 'Informational',
+    primaryKeyword: 'garbage disposal humming not working',
+    keywords: [
+      'garbage disposal humming not spinning',
+      'garbage disposal humming but not working',
+      'garbage disposal reset button',
+      'garbage disposal jammed fix',
+      'garbage disposal repair san jacinto',
+    ],
+    sections: [
+      {
+        paras: [
+          'A garbage disposal that hums when you flip the switch but doesn’t spin is one of the most common kitchen calls we get — and the good news is it’s often a quick, safe fix. That hum means the motor is getting power; something is just stopping the blades from turning.',
+        ],
+      },
+      {
+        h2: 'What the hum actually means',
+        paras: [
+          'A humming disposal almost always points to one of two things: the flywheel (the spinning plate the blades are mounted to) is physically stuck, or the motor has overheated and shut itself down as a safety measure. Either way, the motor itself is usually fine — which is why this is often fixable without a replacement.',
+        ],
+      },
+      {
+        h2: 'If it’s overheated',
+        list: [
+          'Turn off the power to the disposal at the switch and at the breaker',
+          'Let it cool for 10–15 minutes',
+          'Look for the small red reset button on the bottom of the unit',
+          'Press it firmly — you should feel or hear a click',
+          'Restore power and try it again',
+        ],
+      },
+      {
+        h2: 'If it’s jammed',
+        paras: [
+          'A jam is usually caused by something that shouldn’t have gone down the drain — a utensil, a fruit pit, fibrous food scraps, or a buildup of grease and debris on the shredding plate.',
+        ],
+        list: [
+          'Turn off power at the switch AND the breaker — this step is not optional',
+          'Most disposals have a hex-shaped hole at the bottom center for a manual crank wrench (often included with the unit)',
+          'Insert the wrench and turn it firmly in both directions to free the flywheel',
+          'Once it turns freely, restore power and test it',
+        ],
+      },
+      {
+        h2: 'Never do this',
+        paras: [
+          'Never put your hand into the disposal, even with the power off. If you don’t have the manual crank wrench, or the flywheel won’t budge, stop and call a plumber rather than reaching inside with a tool.',
+        ],
+      },
+      {
+        h2: 'When it’s not a jam or overheating',
+        paras: [
+          'If the reset button and manual crank don’t solve it, the issue may be electrical — a tripped breaker, a loose connection, or a failing switch — or the motor bearing may have seized for good. A seized motor bearing generally means the unit needs to be replaced rather than repaired.',
+        ],
+        link: { text: 'See our garbage disposal services', href: '/services/garbage-disposal' },
+      },
+      {
+        h2: 'Preventing the next jam',
+        list: [
+          'Run cold water before, during, and after each use',
+          'Avoid fibrous foods like celery, corn husks, and onion skins',
+          'Never pour grease down the disposal — it hardens and coats the blades',
+          'Grind ice occasionally to help clean the blades',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'Why does my garbage disposal hum but not spin?',
+        a: 'A hum with no spinning almost always means the flywheel is jammed or the motor has overheated and tripped its internal safety switch. Both are usually fixable — try the reset button after letting it cool, or free the flywheel with a manual crank wrench.',
+      },
+      {
+        q: 'Where is the reset button on a garbage disposal?',
+        a: 'It’s a small red button on the bottom of the unit, underneath the sink. Press it firmly after the disposal has cooled for 10–15 minutes; you should feel or hear a click.',
+      },
+      {
+        q: 'Is it safe to fix a jammed disposal myself?',
+        a: 'Yes, as long as you fully cut power at the switch and the breaker first, and use the manual crank wrench rather than your hand. If it won’t free up or you don’t have the wrench, call a plumber rather than reaching inside.',
+      },
+    ],
+    relatedServices: [
+      { label: 'Garbage Disposal Services', slug: 'garbage-disposal' },
+      { label: 'Kitchen Plumbing Services', slug: 'kitchen-plumbing' },
+      { label: 'Drain Cleaning & Clog Removal', slug: 'drain-cleaning' },
+    ],
+    cta: {
+      heading: 'Disposal still humming after trying the reset?',
+      text: 'We’ll diagnose it fast — repair it if we can, replace it only if we can’t. Same-day service across San Jacinto and Riverside County.',
+    },
+  },
+
+  {
+    slug: 'gas-line-safety-warning-signs-san-jacinto',
+    title: 'Gas Line Safety: Warning Signs You Should Never Ignore',
+    metaTitle: 'Gas Line Safety Warning Signs | San Jacinto Homeowner Guide',
+    metaDescription:
+      'Rotten-egg smell, hissing, dead plants near your gas line? Here are the warning signs of a gas leak every San Jacinto homeowner should know — and what to do immediately.',
+    excerpt:
+      'A gas leak gives you warning signs before it becomes an emergency. Here’s what to watch for, what to do the moment you notice something, and how safe installation prevents it.',
+    date: '2026-07-25',
+    author: 'Joseph Romero',
+    category: 'Gas Lines',
+    readMins: 6,
+    heroImage: '/blog-gas-line-safety.webp',
+    heroAlt: 'Licensed plumber Joseph Romero next to a home gas and water system in San Jacinto, CA',
+    intent: 'BOFU',
+    primaryKeyword: 'gas line warning signs',
+    keywords: [
+      'gas line warning signs san jacinto',
+      'gas leak smell rotten eggs',
+      'signs of a gas leak in house',
+      'gas line installation permit california',
+      'gas line repair san jacinto',
+    ],
+    sections: [
+      {
+        paras: [
+          'Natural gas and propane are odorless in their raw form — utilities and suppliers add a distinct rotten-egg smell specifically so a leak is impossible to miss. That smell, along with a few other warning signs, is your early warning system. Knowing them, and acting on them immediately, is the single most important piece of gas line safety.',
+        ],
+      },
+      {
+        h2: 'The warning signs',
+        list: [
+          'A rotten-egg, sulfur, or skunk-like smell, indoors or in the yard',
+          'A hissing or whistling sound near a gas line, meter, or appliance',
+          'Dead or discolored vegetation in an otherwise healthy area of the yard, with no other explanation',
+          'Bubbles in standing water or wet soil near the gas line',
+          'A higher-than-usual gas bill with no change in usage',
+          'Dust or dirt blowing from a spot in the yard, or a small dirt cloud near a gas line',
+        ],
+      },
+      {
+        h2: 'What to do the moment you notice any of these',
+        list: [
+          'Do not light a match, flip a light switch, use a phone, or create any spark',
+          'Do not try to locate the leak yourself',
+          'Get everyone out of the house immediately',
+          'Once safely outside and away from the building, call your gas utility’s emergency line and 911',
+          'Do not go back inside until the utility or a professional confirms it’s safe',
+        ],
+      },
+      {
+        h2: 'Why professional installation matters',
+        paras: [
+          'In California, gas line work requires a permit and inspection from the local building department — this isn’t bureaucracy for its own sake. Inspectors verify the pipe material, fittings, and pressure test before the line is buried or connected, catching problems before they become invisible leaks behind a wall or under a yard.',
+          'A properly installed and permitted gas line is pressure-tested before it’s ever put into service, which is the real safeguard against future leaks — not just careful workmanship, but a verified, documented test.',
+        ],
+        link: { text: 'See our gas line installation & repair service', href: '/services/gas-line' },
+      },
+      {
+        h2: 'A common local example: outdoor BBQ gas lines',
+        paras: [
+          'Running a gas line for an outdoor kitchen or BBQ island is one of the most common gas line requests we get — and one of the most commonly done without a permit. California fire code regulates how these lines and connections must be installed, and an unpermitted line skips the pressure test and inspection that catch a bad joint before it becomes a leak in your backyard.',
+        ],
+      },
+      {
+        h2: 'If you smell gas only occasionally',
+        paras: [
+          'A faint smell that comes and goes is still worth reporting and having checked — it doesn’t need to be constant or strong to indicate a real problem. Treat any recurring gas odor as a leak until a professional confirms otherwise.',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'What does a gas leak smell like?',
+        a: 'Natural gas and propane are odorless on their own; suppliers add a chemical (mercaptan) that smells like rotten eggs, sulfur, or a skunk specifically so a leak is easy to notice. Any version of that smell should be treated as a possible leak.',
+      },
+      {
+        q: 'What should I do if I smell gas in my house?',
+        a: 'Don’t light anything, flip a switch, or use a phone inside. Get everyone out immediately, then call your gas utility’s emergency line and 911 from a safe distance. Don’t go back inside until a professional confirms it’s safe.',
+      },
+      {
+        q: 'Do I need a permit to install a gas line for an outdoor BBQ?',
+        a: 'In most California jurisdictions, yes — any gas line work requires a permit and inspection from the local building department. This ensures the line is pressure-tested before use, which is what actually prevents a future leak.',
+      },
+    ],
+    relatedServices: [
+      { label: 'Gas Line Repair & Installation', slug: 'gas-line' },
+      { label: 'Emergency Plumbing', slug: 'emergency-plumbing' },
+      { label: 'Water Heater Installation & Replacement', slug: 'water-heater' },
+    ],
+    cta: {
+      heading: 'Need a gas line installed, repaired, or inspected?',
+      text: 'Every gas line we run is permitted, pressure-tested, and inspected — no shortcuts. Free estimates across San Jacinto and Riverside County.',
+    },
+  },
+
+  {
+    slug: 'running-toilet-wasting-water-san-jacinto',
+    title: 'Running Toilet Wasting Water? Here’s Why (and How to Fix It)',
+    metaTitle: 'Running Toilet Causes & Fixes | San Jacinto Plumber Guide',
+    metaDescription:
+      'A running toilet can waste hundreds of gallons a day. Here’s what actually causes it — flapper, fill valve, or float — and how to fix it or know when to call a plumber.',
+    excerpt:
+      'That faint hiss from the toilet tank isn’t nothing — it can waste hundreds of gallons a day. Here’s what’s really causing it and how to make it stop.',
+    date: '2026-07-28',
+    author: 'Joseph Romero',
+    category: 'Toilet Repair',
+    readMins: 5,
+    heroImage: '/blog-running-toilet.jpg',
+    heroAlt: 'Licensed plumber installing a toilet in a San Jacinto, CA bathroom',
+    intent: 'Informational',
+    primaryKeyword: 'running toilet fix',
+    keywords: [
+      'running toilet fix san jacinto',
+      'why does my toilet keep running',
+      'toilet flapper vs fill valve',
+      'toilet running water bill',
+      'toilet repair san jacinto',
+    ],
+    sections: [
+      {
+        paras: [
+          'A toilet that runs on and off, or hisses quietly after every flush, is one of the most common — and most ignored — plumbing problems in a home. It’s easy to tune out, but a running toilet can waste anywhere from tens to hundreds of gallons of water a day, and it usually comes down to one of three inexpensive parts.',
+        ],
+      },
+      {
+        h2: '1. A worn-out flapper',
+        paras: [
+          'The flapper is the rubber (or rubber-like) valve at the bottom of the tank that lifts when you flush and reseals afterward. Over time it warps, cracks, or stops sealing tightly — most commonly if it was never replaced with the exact right size and shape for your toilet model. A flapper that doesn’t seal lets water continuously trickle from the tank into the bowl, and the fill valve keeps refilling to compensate.',
+        ],
+      },
+      {
+        h2: '2. A fill valve that won’t shut off',
+        paras: [
+          'The fill valve controls how the tank refills after a flush. If it fails, it can keep running continuously or cycle on and off periodically even when no one has flushed. This is a different sound than a flapper leak — usually a more constant running noise rather than an intermittent hiss.',
+        ],
+      },
+      {
+        h2: '3. A misadjusted float',
+        paras: [
+          'The float tells the fill valve when to stop, based on water level. If it’s set too high, water continuously trickles into the overflow tube and down the drain — a slow, easy-to-miss leak that still adds up over weeks and months.',
+        ],
+      },
+      {
+        h2: 'The dye test — check which one you have',
+        list: [
+          'Remove the tank lid and add a few drops of food coloring to the tank water',
+          'Don’t flush — wait about 15–20 minutes',
+          'Check the bowl: if color has appeared without flushing, water is leaking past the flapper',
+          'If the water level in the tank is at or above the overflow tube, the float or fill valve needs adjustment',
+        ],
+      },
+      {
+        h2: 'What it’s actually costing you',
+        paras: [
+          'A toilet that runs continuously can waste hundreds of gallons in a single day — enough to noticeably move your water bill within one billing cycle. Even a slow, intermittent leak adds up meaningfully over a month.',
+        ],
+      },
+      {
+        h2: 'When it’s a quick fix vs. a bigger issue',
+        paras: [
+          'Flappers and fill valves are inexpensive, commonly available parts, and replacing either is usually a straightforward repair. But if the toilet is older, the tank hardware is corroded, or you’ve replaced parts before without the running stopping, it may be time for a full toilet replacement rather than another patch.',
+        ],
+        link: { text: 'See our toilet repair & installation service', href: '/services/toilet-repair' },
+      },
+    ],
+    faqs: [
+      {
+        q: 'How much water does a running toilet waste?',
+        a: 'A continuously running toilet can waste hundreds of gallons in a single day. Even a slow, intermittent leak adds up to a meaningful amount over a month and often shows up as a noticeable jump in your water bill.',
+      },
+      {
+        q: 'How do I know if it’s the flapper or the fill valve?',
+        a: 'Add food coloring to the tank and wait 15–20 minutes without flushing. If color shows up in the bowl, the flapper isn’t sealing. If the tank water sits at or above the overflow tube, the float or fill valve needs adjustment.',
+      },
+      {
+        q: 'Can I fix a running toilet myself?',
+        a: 'Often, yes — flappers and fill valves are inexpensive and straightforward to replace. But if you’ve already replaced parts and it’s still running, or the toilet is old and its hardware is corroded, a full replacement may be the better fix.',
+      },
+    ],
+    relatedServices: [
+      { label: 'Toilet Repair & Installation', slug: 'toilet-repair' },
+      { label: 'Bathroom Fixture Services', slug: 'fixture-installation' },
+      { label: 'Bathroom Plumbing Remodel', slug: 'bathroom-remodel' },
+    ],
+    cta: {
+      heading: 'Toilet won’t stop running?',
+      text: 'We’ll diagnose the flapper, fill valve, or float and fix it right the first time — or recommend a replacement if that’s the smarter call. Free estimates across San Jacinto and Riverside County.',
+    },
+  },
+
+  {
+    slug: 'kitchen-bathroom-remodel-plumbing-checklist-san-jacinto',
+    title: 'Planning a Kitchen or Bathroom Remodel? Talk to a Plumber First',
+    metaTitle: 'Kitchen & Bathroom Remodel Plumbing Checklist | San Jacinto',
+    metaDescription:
+      'Before demo day, here’s what a plumber needs to know for a kitchen or bathroom remodel — layout changes, rough-in, permits, and what drives the cost.',
+    excerpt:
+      'The plumbing behind the walls decides whether your remodel goes smoothly or turns into a mid-project surprise. Here’s what to sort out before demo day.',
+    date: '2026-07-31',
+    author: 'Joseph Romero',
+    category: 'Remodeling',
+    readMins: 7,
+    heroImage: '/blog-kitchen-remodel.jpg',
+    heroAlt: 'Plumbing rough-in during a bathroom remodel in San Jacinto, CA',
+    intent: 'Commercial',
+    primaryKeyword: 'kitchen bathroom remodel plumbing',
+    keywords: [
+      'kitchen remodel plumbing san jacinto',
+      'bathroom remodel plumbing checklist',
+      'plumbing rough-in remodel',
+      'moving plumbing fixtures remodel cost',
+      'remodel plumbing permit california',
+    ],
+    sections: [
+      {
+        paras: [
+          'Kitchen and bathroom remodels are consistently the most popular home improvement projects in Southern California — and in both, the plumbing behind the walls is the part that decides whether the project stays on schedule or stalls halfway through. Cabinets and tile are the part everyone sees; the rough-in is the part that has to be right before any of that goes in.',
+          'Here’s what a plumber needs to know before demo day, and where remodel plumbing costs actually come from.',
+        ],
+      },
+      {
+        h2: 'Are you keeping the layout, or moving fixtures?',
+        paras: [
+          'This is the single biggest cost driver in a remodel. Keeping your sink, toilet, and tub in their existing locations means reconnecting to plumbing that’s already there. Moving a fixture — sliding an island sink to a new wall, relocating a toilet, adding a second sink — means running new supply and drain lines, which is a meaningfully bigger job than a like-for-like swap.',
+        ],
+      },
+      {
+        h2: 'What a kitchen remodel needs from a plumber',
+        list: [
+          'Sink and faucet rough-in for the new layout, including supply lines and shutoff valves',
+          'Dishwasher supply and drain connection',
+          'Garbage disposal wiring and drain tie-in',
+          'Gas or water line for a pot filler, if you’re adding one',
+          'Ice maker line for a new refrigerator location',
+        ],
+        link: { text: 'See our kitchen plumbing services', href: '/services/kitchen-plumbing' },
+      },
+      {
+        h2: 'What a bathroom remodel needs from a plumber',
+        list: [
+          'Supply and drain rough-in for the tub, shower, toilet, and vanity',
+          'Shower pan and drain installation before tile goes down',
+          'Moving or adding a toilet flange if the layout changes',
+          'Rough-in for any new fixtures — a second vanity sink, a freestanding tub, a bidet',
+        ],
+        link: { text: 'See our bathroom plumbing remodel service', href: '/services/bathroom-remodel' },
+      },
+      {
+        h2: 'Old pipes behind the wall — deal with them now, not later',
+        paras: [
+          'A remodel is the one time your walls are already open, which makes it the cheapest opportunity you’ll have to address aging galvanized pipe, corroded fittings, or a water heater that’s near the end of its life. Discovering a plumbing problem after the tile is set means paying to open the wall again.',
+        ],
+        link: { text: 'Check whether your home needs a repipe', href: '/services/repiping' },
+      },
+      {
+        h2: 'Permits — not optional, and not just paperwork',
+        paras: [
+          'Any plumbing rough-in change requires a permit and inspection from the local building department. This protects you: an inspector verifies the rough-in before it’s sealed behind drywall and tile, catching a bad connection while it’s still cheap and easy to fix. Skipping the permit to save time can turn into a real problem when you go to sell the house.',
+        ],
+      },
+      {
+        h2: 'A simple rule for sequencing',
+        paras: [
+          'Plumbing rough-in happens before drywall, before tile, and before cabinets. Bringing your plumber in during the planning phase — not after demo has already started — avoids the most common and most expensive remodel mistake: finding out a layout change isn’t straightforward after the walls are already open.',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'Does moving a sink or toilet during a remodel cost a lot more?',
+        a: 'Yes, generally. Keeping fixtures in their existing locations means reconnecting to plumbing that’s already there. Moving a fixture requires running new supply and drain lines, which is a meaningfully bigger job than a like-for-like replacement.',
+      },
+      {
+        q: 'Should I replace old pipes during a remodel even if they aren’t leaking yet?',
+        a: 'It’s worth strongly considering. A remodel is the cheapest opportunity you’ll have to address aging or corroded pipe, since the walls are already open. Waiting until they fail means paying to open the wall again later.',
+      },
+      {
+        q: 'Do I need a permit for remodel plumbing work?',
+        a: 'Yes, in most California jurisdictions any plumbing rough-in change requires a permit and inspection. This ensures the work is verified before it’s sealed behind drywall and tile, and matters if you ever sell the home.',
+      },
+    ],
+    relatedServices: [
+      { label: 'Bathroom Plumbing Remodel', slug: 'bathroom-remodel' },
+      { label: 'Kitchen Plumbing Services', slug: 'kitchen-plumbing' },
+      { label: 'Fixture Installation & Repair', slug: 'fixture-installation' },
+    ],
+    cta: {
+      heading: 'Planning a kitchen or bathroom remodel?',
+      text: 'Bring us in during planning, not after demo day. We’ll handle the rough-in, permits, and inspections so the rest of your remodel goes smoothly. Free estimates across San Jacinto and Riverside County.',
+    },
+  },
 ];
 
 export function getPost(slug: string): BlogPost | undefined {
