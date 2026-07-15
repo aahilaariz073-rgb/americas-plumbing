@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { Suspense } from 'react';
 import Nav from '@/app/components/Nav';
 import Footer from '@/app/components/Footer';
 import Contact from '@/app/components/Contact';
@@ -43,7 +44,9 @@ export default function ContactPage() {
           <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: '3px', background: 'linear-gradient(to right,#C8202A 0%,#1A52BE 50%,#C8202A 100%)' }} />
         </section>
 
-        <Contact />
+        <Suspense fallback={null}>
+          <Contact />
+        </Suspense>
       </main>
       <Footer />
     </>

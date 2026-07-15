@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, FormEvent } from 'react';
-import { usePathname } from 'next/navigation';
+import { useSearchParams } from 'next/navigation';
 import ScrollReveal from './ScrollReveal';
 import { reportContactConversion } from '@/app/lib/gtag';
 import { reportLead } from '@/app/lib/fbpixel';
@@ -19,7 +19,11 @@ const labelStyle: React.CSSProperties = {
 };
 
 export default function Contact() {
-  const pathname = usePathname();
+  const searchParams = useSearchParams();
+  // Service pages link here as /contact?src=<service-slug> since the lead
+  // form itself only lives on / and /contact, never on the service pages.
+  const src = searchParams.get('src');
+  const contentName = src === 'water-heater' ? 'water_heater' : undefined;
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
@@ -56,7 +60,7 @@ export default function Contact() {
       .then(json => {
         if (!json.success) { setError('Something went wrong. Please call us directly.'); setLoading(false); return; }
         reportContactConversion();
-        reportLead('contact_page', pathname === '/services/water-heater' ? 'water_heater' : undefined);
+        reportLead('contact_page', contentName);
         setSubmittedName(data.firstName);
         setSubmittedPhone(data.phone);
         setLoading(false);

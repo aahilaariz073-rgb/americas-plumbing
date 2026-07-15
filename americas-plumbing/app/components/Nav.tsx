@@ -69,7 +69,7 @@ export default function Nav() {
     <nav style={{ position: 'sticky', top: 0, zIndex: 200, background: '#fff', boxShadow: '0 1px 0 #e8eaf0' }}>
       <div style={{
         maxWidth: '1240px', margin: '0 auto', padding: '0 28px',
-        display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+        display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '20px',
         height: '88px',
       }}>
         <a href="/" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}>
@@ -78,7 +78,7 @@ export default function Nav() {
         </a>
 
         {/* Desktop nav */}
-        <div className="hide-mob" style={{ display: 'flex', alignItems: 'center', gap: '32px' }}>
+        <div className="hide-mob" style={{ display: 'flex', alignItems: 'center', gap: '22px' }}>
 
           {/* Services dropdown */}
           <div style={{ position: 'relative' }}
@@ -166,23 +166,25 @@ export default function Nav() {
 
         <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
           <a href="/#contact" className="hide-mob" style={{
-            background: '#080f1f', color: '#fff', fontSize: '0.875rem', fontWeight: 700,
-            padding: '10px 22px', borderRadius: '5px', textDecoration: 'none', letterSpacing: '0.04em',
-            border: '1px solid rgba(255,255,255,0.15)'
+            background: '#080f1f', color: '#fff', fontSize: '0.82rem', fontWeight: 700,
+            padding: '9px 16px', borderRadius: '5px', textDecoration: 'none', letterSpacing: '0.03em',
+            border: '1px solid rgba(255,255,255,0.15)', whiteSpace: 'nowrap'
           }}>
             Get a Free Quote
           </a>
           <a href="tel:+19493790082" className="pulse-anim" style={{
-            background: '#C8202A', color: '#fff', fontSize: '0.875rem', fontWeight: 700,
-            padding: '10px 22px', borderRadius: '5px', textDecoration: 'none', letterSpacing: '0.04em'
+            background: '#C8202A', color: '#fff', fontSize: '0.82rem', fontWeight: 700,
+            padding: '9px 16px', borderRadius: '5px', textDecoration: 'none', letterSpacing: '0.03em',
+            whiteSpace: 'nowrap'
           }}>
             (949) 379-0082
           </a>
           <a href="tel:+19516045073" style={{
-            background: '#C8202A', color: '#fff', fontSize: '0.875rem', fontWeight: 700,
-            padding: '10px 22px', borderRadius: '5px', textDecoration: 'none', letterSpacing: '0.04em'
+            background: '#C8202A', color: '#fff', fontSize: '0.82rem', fontWeight: 700,
+            padding: '9px 16px', borderRadius: '5px', textDecoration: 'none', letterSpacing: '0.03em',
+            whiteSpace: 'nowrap'
           }}>
-            Riverside County: (951) 604-5073
+            Riverside: (951) 604-5073
           </a>
           <button onClick={() => setNavOpen(v => !v)} className="show-mob" aria-label="Toggle menu"
             style={{

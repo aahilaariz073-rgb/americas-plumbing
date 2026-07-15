@@ -1,3 +1,4 @@
+import { Suspense } from 'react';
 import Nav from './components/Nav';
 import Hero from './components/Hero';
 import Services from './components/Services';
@@ -21,7 +22,9 @@ export default function Home() {
         <Areas />
         <Gallery />
         <HomepageCTAStrip />
-        <Contact />
+        <Suspense fallback={null}>
+          <Contact />
+        </Suspense>
       </main>
       <Footer />
     </>

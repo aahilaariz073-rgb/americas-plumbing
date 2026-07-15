@@ -241,10 +241,10 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
 
             {/* CTAs */}
             <div style={{ display: 'flex', gap: '14px', flexWrap: 'wrap', marginBottom: '36px' }}>
-              <a href="/contact" style={{ background: '#C8202A', color: '#fff', fontSize: '0.95rem', fontWeight: 700, padding: '14px 32px', borderRadius: '4px', textDecoration: 'none', letterSpacing: '0.04em', textTransform: 'uppercase' }}>
+              <a href={`/contact?src=${service.slug}`} style={{ background: '#C8202A', color: '#fff', fontSize: '0.95rem', fontWeight: 700, padding: '14px 32px', borderRadius: '4px', textDecoration: 'none', letterSpacing: '0.04em', textTransform: 'uppercase' }}>
                 Get a Free Estimate
               </a>
-              <a href="/contact" style={{ background: 'transparent', color: '#fff', fontSize: '0.95rem', fontWeight: 600, padding: '13px 28px', borderRadius: '4px', textDecoration: 'none', border: '1px solid rgba(255,255,255,0.25)' }}>
+              <a href={`/contact?src=${service.slug}`} style={{ background: 'transparent', color: '#fff', fontSize: '0.95rem', fontWeight: 600, padding: '13px 28px', borderRadius: '4px', textDecoration: 'none', border: '1px solid rgba(255,255,255,0.25)' }}>
                 Book Online
               </a>
             </div>
@@ -373,7 +373,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                   <p style={{ fontSize: '0.78rem', color: '#9ca3af', marginBottom: '16px', lineHeight: 1.5 }}>
                     Serving Riverside County &amp; South Orange County
                   </p>
-                  <a href="/contact" style={{
+                  <a href={`/contact?src=${service.slug}`} style={{
                     display: 'block', textAlign: 'center', background: '#C8202A',
                     color: '#fff', padding: '13px', borderRadius: '6px',
                     fontWeight: 700, textDecoration: 'none', fontSize: '0.88rem',
@@ -381,7 +381,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                   }}>
                     Get a Free Estimate
                   </a>
-                  <a href="/contact" style={{
+                  <a href={`/contact?src=${service.slug}`} style={{
                     display: 'block', textAlign: 'center', background: '#f7f8fc',
                     color: '#080f1f', padding: '12px', borderRadius: '6px',
                     fontWeight: 600, textDecoration: 'none', fontSize: '0.85rem',
