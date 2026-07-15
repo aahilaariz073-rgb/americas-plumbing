@@ -100,6 +100,7 @@ export default function Contact() {
           <div style={{ display: 'flex', flexDirection: 'column', gap: 0 }}>
             {[
               { label: 'Phone', value: '(949) 379-0082', bar: '#C8202A', href: 'tel:+19493790082' },
+              { label: 'Phone (Riverside County)', value: '(951) 604-5073', bar: '#C8202A', href: 'tel:+19516045073' },
               { label: 'Email', value: 'californiajoe500@gmail.com', bar: '#1A52BE', href: 'mailto:californiajoe500@gmail.com' },
             ].map(item => (
               <a
@@ -116,7 +117,7 @@ export default function Contact() {
                 <div style={{ width: '2px', height: '40px', background: item.bar, flexShrink: 0 }} />
                 <div>
                   <div style={{ color: '#9b9eb0', fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', marginBottom: '4px' }}>{item.label}</div>
-                  <div style={{ color: '#080f1f', fontSize: item.label === 'Phone' ? '1.1rem' : '1rem', fontWeight: item.label === 'Phone' ? 700 : 600 }}>{item.value}</div>
+                  <div style={{ color: '#080f1f', fontSize: item.label.startsWith('Phone') ? '1.1rem' : '1rem', fontWeight: item.label.startsWith('Phone') ? 700 : 600 }}>{item.value}</div>
                 </div>
               </a>
             ))}

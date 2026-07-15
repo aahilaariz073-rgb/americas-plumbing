@@ -105,6 +105,10 @@ export default function Footer() {
               <a href="tel:+19493790082" style={{ color: '#fff', fontSize: '1rem', fontWeight: 700, textDecoration: 'none' }}>
                 (949) 379-0082
               </a>
+              <span style={{ color: 'rgba(255,255,255,0.55)', fontSize: '0.72rem', marginTop: '-6px' }}>Riverside County</span>
+              <a href="tel:+19516045073" style={{ color: '#fff', fontSize: '1rem', fontWeight: 700, textDecoration: 'none' }}>
+                (951) 604-5073
+              </a>
               <a
                 href="mailto:californiajoe500@gmail.com"
                 style={{ color: 'rgba(255,255,255,0.55)', fontSize: '0.8rem', textDecoration: 'none', wordBreak: 'break-all' }}

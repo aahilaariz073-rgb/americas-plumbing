@@ -178,6 +178,12 @@ export default function Nav() {
           }}>
             (949) 379-0082
           </a>
+          <a href="tel:+19516045073" style={{
+            background: '#C8202A', color: '#fff', fontSize: '0.875rem', fontWeight: 700,
+            padding: '10px 22px', borderRadius: '5px', textDecoration: 'none', letterSpacing: '0.04em'
+          }}>
+            Riverside County: (951) 604-5073
+          </a>
           <button onClick={() => setNavOpen(v => !v)} className="show-mob" aria-label="Toggle menu"
             style={{
               display: 'none', background: 'none', border: '2px solid #e0e2ea', color: '#080f1f',
