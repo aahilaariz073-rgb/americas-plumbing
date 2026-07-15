@@ -1,8 +1,10 @@
 'use client';
 
 import { useState, FormEvent } from 'react';
+import { usePathname } from 'next/navigation';
 import ScrollReveal from './ScrollReveal';
 import { reportContactConversion } from '@/app/lib/gtag';
+import { reportLead } from '@/app/lib/fbpixel';
 
 const inputStyle: React.CSSProperties = {
   width: '100%', background: '#fff',
@@ -17,6 +19,7 @@ const labelStyle: React.CSSProperties = {
 };
 
 export default function Contact() {
+  const pathname = usePathname();
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
@@ -53,6 +56,7 @@ export default function Contact() {
       .then(json => {
         if (!json.success) { setError('Something went wrong. Please call us directly.'); setLoading(false); return; }
         reportContactConversion();
+        reportLead('contact_page', pathname === '/services/water-heater' ? 'water_heater' : undefined);
         setSubmittedName(data.firstName);
         setSubmittedPhone(data.phone);
         setLoading(false);

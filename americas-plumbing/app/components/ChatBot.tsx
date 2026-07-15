@@ -1,6 +1,7 @@
 'use client';
 import { useState, FormEvent } from 'react';
 import { reportContactConversion } from '@/app/lib/gtag';
+import { reportLead } from '@/app/lib/fbpixel';
 
 const PHONE_HREF = 'tel:+19493790082';
 
@@ -49,6 +50,7 @@ export default function ChatBot() {
       .then(json => {
         if (!json.success) { setError('Something went wrong. Please call us directly.'); setLoading(false); return; }
         reportContactConversion();
+        reportLead('chatbot');
         setLoading(false);
         setSubmitted(true);
       })

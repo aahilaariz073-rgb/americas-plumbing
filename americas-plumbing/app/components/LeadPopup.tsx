@@ -1,6 +1,7 @@
 'use client';
 import { useState, useEffect, FormEvent } from 'react';
 import { reportContactConversion } from '@/app/lib/gtag';
+import { reportLead } from '@/app/lib/fbpixel';
 
 const PHONE_HREF = 'tel:+19493790082';
 const STORAGE_KEY = 'ap_lead_popup_dismissed';
@@ -75,6 +76,7 @@ export default function LeadPopup() {
       .then(json => {
         if (!json.success) { setError('Something went wrong. Please call us directly.'); setLoading(false); return; }
         reportContactConversion();
+        reportLead('popup');
         setLoading(false);
         setSubmitted(true);
         try { localStorage.setItem(STORAGE_KEY, '1'); } catch {}

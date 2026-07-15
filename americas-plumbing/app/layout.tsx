@@ -4,6 +4,7 @@ import { DM_Serif_Display, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import ChatBot from "@/app/components/ChatBot";
 import LeadPopup from "@/app/components/LeadPopup";
+import MetaPixel from "@/app/components/MetaPixel";
 import { GOOGLE_ADS_ID } from "@/app/lib/gtag";
 
 const dmSerif = DM_Serif_Display({
@@ -79,6 +80,7 @@ export default function RootLayout({
       </head>
       <body className="antialiased overflow-x-hidden">
         {children}
+        <MetaPixel />
         <ChatBot />
         <LeadPopup />
       </body>
