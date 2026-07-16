@@ -21,6 +21,10 @@ function formatDate(iso: string) {
   return new Date(iso + 'T12:00:00').toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
 }
 
+function slugifyHeading(text: string) {
+  return text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+}
+
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const post = getPost(slug);
@@ -118,9 +122,23 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         {/* Body */}
         <article style={{ background: '#fff', padding: '56px 28px 72px' }}>
           <div style={{ maxWidth: '720px', margin: '0 auto' }}>
+            {/* Table of contents (long posts only) */}
+            {post.showToc && (
+              <nav aria-label="Table of contents" style={{ background: '#f7f8fc', border: '1px solid #e8eaf0', borderRadius: '8px', padding: '24px 28px', marginBottom: '40px' }}>
+                <div style={{ color: '#C8202A', fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', marginBottom: '14px' }}>On This Page</div>
+                <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                  {post.sections.filter(s => s.h2).map((s, i) => (
+                    <li key={i}>
+                      <a href={`#${slugifyHeading(s.h2!)}`} style={{ color: '#1A52BE', fontSize: '0.95rem', fontWeight: 600, textDecoration: 'none' }}>{s.h2}</a>
+                    </li>
+                  ))}
+                </ul>
+              </nav>
+            )}
+
             {post.sections.map((sec, i) => (
               <div key={i} style={{ marginBottom: '32px' }}>
-                {sec.h2 && <h2 style={{ fontFamily: 'var(--font-newsreader), serif', fontSize: 'clamp(1.5rem, 2.6vw, 2rem)', fontWeight: 700, color: '#080f1f', lineHeight: 1.2, marginBottom: '16px' }}>{sec.h2}</h2>}
+                {sec.h2 && <h2 id={slugifyHeading(sec.h2)} style={{ fontFamily: 'var(--font-newsreader), serif', fontSize: 'clamp(1.5rem, 2.6vw, 2rem)', fontWeight: 700, color: '#080f1f', lineHeight: 1.2, marginBottom: '16px', scrollMarginTop: '100px' }}>{sec.h2}</h2>}
                 {sec.h3 && <h3 style={{ fontSize: '1.15rem', fontWeight: 700, color: '#080f1f', marginBottom: '12px' }}>{sec.h3}</h3>}
                 {sec.paras?.map((p, j) => (
                   <p key={j} style={{ color: '#374151', fontSize: '1.05rem', lineHeight: 1.8, marginBottom: '18px' }}>{p}</p>
@@ -134,6 +152,28 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                       </li>
                     ))}
                   </ul>
+                )}
+                {sec.table && (
+                  <div style={{ overflowX: 'auto', marginBottom: '18px', border: '1px solid #e8eaf0', borderRadius: '8px' }}>
+                    <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.92rem' }}>
+                      <thead>
+                        <tr style={{ background: '#080f1f' }}>
+                          {sec.table.headers.map((h, hi) => (
+                            <th key={hi} style={{ color: '#fff', fontWeight: 700, textAlign: 'left', padding: '14px 16px', whiteSpace: 'nowrap' }}>{h}</th>
+                          ))}
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {sec.table.rows.map((row, ri) => (
+                          <tr key={ri} style={{ borderTop: '1px solid #e8eaf0', background: ri % 2 ? '#f7f8fc' : '#fff' }}>
+                            {row.map((cell, ci) => (
+                              <td key={ci} style={{ padding: '14px 16px', color: ci === 0 ? '#080f1f' : '#374151', fontWeight: ci === 0 ? 700 : 400 }}>{cell}</td>
+                            ))}
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
                 )}
                 {sec.link && (
                   <a href={sec.link.href} style={{ display: 'inline-block', background: '#f7f8fc', border: '1px solid #e0e2ea', borderLeft: '3px solid #1A52BE', padding: '12px 18px', borderRadius: '0 6px 6px 0', textDecoration: 'none', color: '#1A52BE', fontWeight: 700, fontSize: '0.95rem' }}>
@@ -149,7 +189,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
               <h2 style={{ fontFamily: 'var(--font-newsreader), serif', fontSize: '1.5rem', fontWeight: 700, color: '#fff', marginBottom: '12px', lineHeight: 1.2 }}>{post.cta.heading}</h2>
               <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.98rem', lineHeight: 1.7, marginBottom: '24px' }}>{post.cta.text}</p>
               <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
-                <a href="/contact" style={{ background: '#C8202A', color: '#fff', fontSize: '0.9rem', fontWeight: 700, padding: '13px 28px', borderRadius: '4px', textDecoration: 'none', letterSpacing: '0.04em', textTransform: 'uppercase' }}>Get a Free Estimate</a>
+                <a href={post.ctaHref ?? '/contact'} style={{ background: '#C8202A', color: '#fff', fontSize: '0.9rem', fontWeight: 700, padding: '13px 28px', borderRadius: '4px', textDecoration: 'none', letterSpacing: '0.04em', textTransform: 'uppercase' }}>{post.ctaHref ? 'Book Online' : 'Get a Free Estimate'}</a>
                 <a href={`tel:${BUSINESS.telephone}`} style={{ background: 'transparent', color: '#fff', fontSize: '0.9rem', fontWeight: 700, padding: '12px 24px', borderRadius: '4px', textDecoration: 'none', border: '1px solid rgba(255,255,255,0.25)' }}>{BUSINESS.telephoneDisplay}</a>
               </div>
             </div>

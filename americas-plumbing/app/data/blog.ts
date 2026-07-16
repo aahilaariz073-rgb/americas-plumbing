@@ -11,6 +11,9 @@ export interface BlogSection {
   list?: string[];
   // Optional in-content link to a service page (internal linking for SEO)
   link?: { text: string; href: string };
+  // Comparison/cost table — all cell values are plain strings so a section
+  // can hold a literal "[COST_TABLE]" placeholder until real figures exist.
+  table?: { headers: string[]; rows: string[][] };
 }
 
 export interface BlogPost {
@@ -32,6 +35,10 @@ export interface BlogPost {
   faqs: { q: string; a: string }[];
   relatedServices: { label: string; slug: string }[];
   cta: { heading: string; text: string };
+  // Overrides the CTA card's primary button target (defaults to /contact)
+  ctaHref?: string;
+  // Show an auto-generated, anchor-linked table of contents (long posts only)
+  showToc?: boolean;
 }
 
 export const posts: BlogPost[] = [
@@ -1396,6 +1403,241 @@ export const posts: BlogPost[] = [
     cta: {
       heading: 'Planning a kitchen or bathroom remodel?',
       text: 'Bring us in during planning, not after demo day. We’ll handle the rough-in, permits, and inspections so the rest of your remodel goes smoothly. Free estimates across San Jacinto and Riverside County.',
+    },
+  },
+
+  {
+    slug: 'water-heater-replacement-cost-california',
+    title: 'Water Heater Replacement Cost in California (2026 Guide)',
+    metaTitle: 'Water Heater Replacement Cost in California | 2026',
+    metaDescription:
+      'How much does water heater replacement cost in California? See typical price ranges by unit type, what drives cost in Riverside County, and more.',
+    excerpt:
+      'A straight answer on what water heater replacement costs in California — by unit type, what actually drives the price in Riverside County, and how to decide between repair and replacement.',
+    date: '2026-07-16',
+    author: 'Joseph Romero',
+    category: 'Water Heaters',
+    readMins: 8,
+    heroImage: '/blog-water-heater.jpg',
+    heroAlt: 'Water heater replacement cost guide for California homeowners in San Jacinto, CA',
+    intent: 'Commercial',
+    primaryKeyword: 'water heater replacement cost',
+    keywords: [
+      'water heater replacement cost',
+      'how much does water heater replacement cost in california',
+      'water heater installation cost california',
+      'tankless water heater cost california',
+      '50 gallon water heater cost installed',
+      'water heater replacement cost riverside county',
+      'water heater permit cost california',
+      'same day water heater replacement san jacinto',
+    ],
+    showToc: true,
+    sections: [
+      {
+        paras: [
+          "If you're replacing a water heater in California, most homeowners pay somewhere between $600 and $5,600 installed depending on the unit type, plus a required permit fee that typically runs $50 to $300 in most California jurisdictions. Below, we break down typical costs by unit type, what actually drives the price up or down here in Riverside County specifically, and how to tell whether you need a repair or a full replacement.",
+        ],
+        link: { text: 'Get a Same-Day Replacement Quote', href: '/services/water-heater' },
+      },
+      {
+        h2: 'Water Heater Replacement Cost by Type',
+        paras: [
+          "Here's how the three most common water heater replacement options generally compare, based on published national and California cost data. These are general reference ranges, not a quote for your home — exact pricing depends on your specific setup, including existing venting, gas line condition, and any code upgrades needed. We provide a free, written, in-person estimate before any work begins.",
+        ],
+        table: {
+          headers: ['Unit Type', 'Typical Installed Cost (Unit + Labor)', 'Typical Permit Fee'],
+          rows: [
+            ['40-Gallon Tank', '$600 – $3,000', '$50 – $300'],
+            ['50-Gallon Tank', '$700 – $3,100', '$50 – $300'],
+            ['Tankless', '$1,400 – $5,600', '$50 – $300 (higher if electrical work is required)'],
+          ],
+        },
+      },
+      {
+        paras: [
+          'Ranges above reflect published 2026 national and California cost data (Angi, HomeGuide, Fixr, HomeAdvisor) and typical California plumbing permit fee schedules, not a confirmed America\'s Plumbing price list. Your actual price depends on your home\'s specific setup — get a free written estimate for the real number.',
+        ],
+      },
+      {
+        h2: 'What Drives Cost in Riverside County',
+        paras: [
+          "Permits: California Plumbing Code requires a permit for every water heater replacement — even a direct swap of the same size and fuel type. There's no emergency exception, regardless of what you might hear elsewhere. The permit covers the inspection that confirms your new unit is installed to code, which protects you as the homeowner, including at resale.",
+          "Seismic strapping: California code also requires earthquake strapping on every water heater — two metal straps, one in the upper third of the tank and one in the lower third, with the lower strap positioned at least four inches above the unit's controls. If your existing water heater doesn't already have code-compliant strapping, that gets added as part of the replacement.",
+          "Hard water: Riverside County's water carries more dissolved minerals than many other parts of the state. That accelerates sediment buildup inside a tank, which is one of the most common reasons water heaters here fail earlier than their rated lifespan — and it's worth discussing with your plumber when choosing a replacement unit.",
+          "Unit size and code upgrades: A larger household needs more hot water capacity, and sizing up (or down) affects both the unit cost and sometimes the labor involved. Older homes may also need a few code-required additions during replacement — for example, an expansion tank on a closed-loop system, or updated venting — that weren't required when the original unit was installed decades ago.",
+        ],
+      },
+      {
+        h2: 'Tank vs. Tankless — Which Costs More Over Time',
+        paras: [
+          'Tankless units generally cost more upfront but use less energy and last longer than a traditional tank, so the real comparison depends on how long you plan to stay in your home. Tank units are usually the lower-upfront-cost choice and are still the right call for many households, especially if a fast, straightforward swap matters more than long-term savings. We cover this comparison in full detail — including how Riverside County\'s hard water affects each type differently — in our tankless vs. tank comparison guide.',
+        ],
+        link: { text: 'See Our Full Tankless vs. Tank Comparison', href: '/blog/tankless-vs-tank-water-heater-san-jacinto' },
+      },
+      {
+        h2: 'What a Professional Installation Actually Includes',
+        paras: [
+          "A proper water heater replacement is more than swapping the tank. It includes disconnecting and safely disposing of the old unit, verifying the gas or electrical connection meets current code, installing code-compliant seismic strapping, adding a pressure relief valve and expansion tank where required, and testing the new unit for leaks and proper hot water delivery before the job is called done.",
+          "Pulling the permit and scheduling the inspection is part of this process too — not an optional add-on. A contractor who skips the permit to save you money upfront is passing the risk of an uninspected installation on to you, which can become a real problem if it's ever discovered during a home sale or insurance claim.",
+        ],
+      },
+      {
+        h2: 'Signs You Need a Replacement, Not a Repair',
+        paras: [
+          "If your water heater is showing rust-colored water, pooling at the base, or is simply past the 8–12 year mark most tank units are designed for, replacement is usually the more sensible path rather than repeatedly repairing an aging unit. We cover the full symptom checklist — and what each sign actually means — in a dedicated guide.",
+        ],
+        link: { text: 'See 9 Signs Your Water Heater Is Failing', href: '/blog/signs-your-water-heater-is-failing' },
+      },
+      {
+        h2: 'Repair or Replace? How to Decide',
+        paras: [
+          "Not every water heater problem means you need a full replacement. If your unit is relatively young and the issue is a single failed part — a thermostat, heating element, or pilot assembly — a repair is often the more cost-effective choice. Replacement typically makes more sense once a unit is past the 8–12 year mark, especially if you're already seeing multiple issues at once, like rust-colored water alongside inconsistent temperatures.",
+          "A good plumber will walk you through both options honestly, including telling you when a cheap repair now is likely just delaying a replacement you'll need again soon. Ask for that comparison in writing before you decide.",
+        ],
+        link: { text: 'See Our Water Heater Repair Service', href: '/services/water-heater-repair' },
+      },
+      {
+        h2: 'Converting to Tankless vs. a Like-for-Like Tank Swap',
+        paras: [
+          "Replacing a tank with the same type of tank is usually the most straightforward job — the existing venting, gas line, and water connections are already sized correctly, so the work is mostly disconnect-and-reconnect plus the required code updates. Converting from a tank to tankless is a bigger scope of work by comparison: tankless units often need a larger gas line to deliver enough BTUs on demand, different venting, and sometimes an upgraded electrical connection for the unit's controls.",
+          "None of that makes tankless a bad choice — it just means the upfront job is more involved than a straight swap, which is exactly why an in-person assessment matters more for a conversion than for a like-for-like replacement. A plumber needs to see your existing gas line and venting before quoting a conversion accurately.",
+        ],
+      },
+      {
+        h2: 'How to Get an Accurate Quote',
+        paras: [
+          "Because so much of the final cost depends on your home's specific setup, the only way to get a truly accurate number is an in-person assessment. During that visit, a plumber should check your existing venting, gas or electrical connections, water pressure, and available space, then give you a written estimate before any work begins — not a verbal ballpark that changes once the job starts.",
+          'A trustworthy estimate should also spell out what happens if something unexpected turns up once the old unit is disconnected — for example, discovering the existing gas line or venting does not meet current code. Ask how that scenario is handled before you agree to the job, not after.',
+        ],
+      },
+      {
+        h2: 'Why Same-Day Replacement Matters',
+        paras: [
+          "A failed water heater doesn't wait for a convenient time, and going days without hot water is more than an inconvenience for most households. We stock the most common tank sizes on our trucks specifically so a straightforward replacement can be completed the same day you call, rather than waiting on a special order. Tankless installations that require a gas line upgrade may take a bit longer, but we'll tell you that upfront during the estimate — not after we've started.",
+        ],
+      },
+      {
+        paras: ['We provide same-day water heater replacement throughout San Jacinto.'],
+        link: { text: 'See San Jacinto Plumbing Services', href: '/areas/san-jacinto' },
+      },
+      {
+        paras: ['We also serve Hemet and the surrounding Riverside County communities with the same same-day standard.'],
+        link: { text: 'See Hemet Plumbing Services', href: '/areas/hemet' },
+      },
+    ],
+    faqs: [
+      { q: 'Is a permit required to replace a water heater in California?', a: 'Yes. California Plumbing Code requires a permit for every water heater replacement, even a direct swap of the same size and fuel type. There is no exception for doing it quickly or as an emergency.' },
+      { q: 'How much does a 50-gallon water heater cost installed?', a: 'Published national and California cost data puts a typical 50-gallon installed cost around $700 to $3,100, plus a permit fee of roughly $50 to $300. That is a general reference range, not a quote — we provide a free, written, in-person estimate before any work begins so you have a real number for your home.' },
+      { q: 'Do I need a permit for a same-day emergency replacement?', a: 'Yes — even same-day emergency replacements require a permit under California code. We handle the permit process as part of the job so it does not slow down your installation.' },
+      { q: 'What is seismic strapping and why does my water heater need it?', a: "California code requires two metal straps holding the tank to the wall — one in the upper third, one in the lower third, positioned at least four inches above the controls — to keep the unit secure during an earthquake. It's required on every installation, not just in older homes." },
+      { q: 'How long does a water heater replacement take?', a: 'Most tank replacements are completed in a few hours the same day, since we stock common sizes on our trucks. Tankless installations can take longer if a gas line upgrade is needed.' },
+      { q: 'Should I repair or replace my water heater?', a: 'If your unit is under about 8 years old and the issue is a single part, repair is often the better value. Past 10 years, or with multiple issues at once, replacement is usually the smarter long-term choice.' },
+      { q: 'Does a bigger household need a bigger water heater?', a: 'Usually, yes. A tank that is undersized for your household will run out of hot water faster and work harder to keep up, which shortens its lifespan. We factor your household size into the sizing recommendation during your estimate.' },
+      { q: 'What happens to my old water heater after replacement?', a: 'We disconnect it and haul it away as part of the job, so you do not need to arrange separate disposal.' },
+    ],
+    relatedServices: [
+      { label: 'Water Heater Installation & Replacement', slug: 'water-heater' },
+      { label: 'Water Heater Repair', slug: 'water-heater-repair' },
+      { label: 'Water Softener & Filtration', slug: 'water-softener' },
+    ],
+    cta: {
+      heading: 'Ready for a same-day water heater replacement?',
+      text: 'Get a free, honest quote — tank or tankless. We stock common sizes so most replacements are completed the same day you call.',
+    },
+    ctaHref: '/services/water-heater',
+  },
+
+  {
+    slug: 'signs-your-water-heater-is-failing',
+    title: '9 Signs Your Water Heater Is Failing (and What Each One Means)',
+    metaTitle: 'Signs Your Water Heater Is Failing | Checklist Guide',
+    metaDescription:
+      'Rust-colored water, rumbling, or leaks? Here are 9 signs your water heater is failing and what each one means for repair vs. replacement.',
+    excerpt:
+      'A failing water heater usually warns you first. Here are 9 signs to watch for and what each one actually means for your next step.',
+    date: '2026-07-17',
+    author: 'Joseph Romero',
+    category: 'Water Heaters',
+    readMins: 5,
+    heroImage: '/blog-water-heater.jpg',
+    heroAlt: 'Homeowner checking a water heater for signs of failure in San Jacinto, CA',
+    intent: 'Informational',
+    primaryKeyword: 'signs water heater is failing',
+    keywords: [
+      'signs water heater is failing',
+      'signs you need a new water heater',
+      'water heater going bad symptoms',
+      'rust colored water heater',
+      'water heater rumbling noise',
+      'water heater leaking base',
+      'how to tell if water heater is dying',
+    ],
+    sections: [
+      {
+        paras: [
+          "A failing water heater usually gives you warning signs before it fails completely — you just need to know what to look for. Here are nine signs that mean it's time to call a plumber, what each one typically indicates, and how to tell whether you're looking at a quick repair or a full replacement.",
+        ],
+        link: { text: 'Get a Free Diagnosis', href: '/services/water-heater-repair' },
+      },
+      {
+        h2: '9 Signs Your Water Heater Is Failing',
+        list: [
+          "Age over 8–12 years — most tank water heaters are designed to last 8 to 12 years. If yours is in or past that range, any new symptom is more likely to mean it's time to replace rather than repair.",
+          "Rust-colored water — this usually means the tank itself is corroding from the inside, which isn't something a repair can fix.",
+          "Rumbling or popping sounds — hardened sediment at the bottom of the tank, common in Riverside County's hard water, traps water that boils and escapes as noise.",
+          'Water pooling around the base — a sign of a tank leak, which typically means replacement rather than repair.',
+          'Inconsistent water temperature — often a failing thermostat or a dip tube issue, sometimes repairable depending on the cause.',
+          "Not enough hot water for the household anymore — the tank may be undersized for your current usage, or sediment buildup may be reducing its effective capacity.",
+          "A pilot light that won't stay lit (gas units) — often a thermocouple issue, which is usually repairable if caught early.",
+          'A rotten-egg smell near the water heater — this can indicate bacteria in the tank or, in rare cases, a gas leak. Treat any gas smell as an emergency and call immediately.',
+          'Rising energy bills with no other explanation — an aging or sediment-clogged unit loses efficiency over time, so the same tank costs more to run each year.',
+        ],
+      },
+      {
+        h2: 'Why These Signs Show Up Earlier in Riverside County',
+        paras: [
+          "Several of these signs — especially rumbling noises and reduced hot water capacity — tend to appear earlier here than in areas with softer water. Riverside County's water carries more dissolved minerals, and every time your tank heats water, a small amount of that mineral content settles at the bottom as sediment. Over months and years that layer thickens, insulating the water from the heating element and forcing the unit to work harder just to keep up.",
+          'That extra strain is also why energy bills tend to creep up before a tank fully fails — the unit is quietly working overtime long before it stops working altogether.',
+        ],
+      },
+      {
+        h2: 'What to Do When You Notice a Sign',
+        paras: [
+          "If you're seeing a leak, smelling gas, or the water is coming out visibly rusty, stop using the unit and call for service right away rather than waiting to see if it gets worse. For less urgent signs — a bit more noise than usual, or hot water that runs out a little faster — it's still worth having it looked at soon, since catching a repairable issue early is what keeps it repairable instead of becoming a full replacement.",
+          "Try to note when the sign started and whether anything changed around the same time — a recent change in how many people are showering back-to-back, for example, can point to a capacity issue rather than a failing unit. That detail helps a plumber diagnose the actual cause faster once they arrive.",
+        ],
+      },
+      {
+        h2: 'Repair or Replace?',
+        paras: [
+          "One or two of these signs on their own — especially on a newer unit — often point to a straightforward repair. Several signs at once, or a unit already past the 8–12 year mark, usually means replacement is the more cost-effective path. A same-day assessment is the fastest way to know for sure, and a plumber who's being straight with you will tell you plainly which category you're in rather than defaulting to the bigger job. We break down the full cost picture, by unit type, in our water heater replacement cost guide.",
+        ],
+        link: { text: 'See Our Full Cost Guide', href: '/blog/water-heater-replacement-cost-california' },
+      },
+      {
+        paras: [
+          'Not sure which category your water heater falls into? A same-day diagnosis will tell you for certain.',
+        ],
+        link: { text: 'See Our Water Heater Repair Service', href: '/services/water-heater-repair' },
+      },
+    ],
+    faqs: [
+      { q: 'How do I know if my water heater needs to be replaced instead of repaired?', a: 'Age is the biggest factor — past 8 to 12 years, a repair often just delays a replacement you will need soon anyway. Multiple symptoms at once (like rust-colored water plus inconsistent temperature) also point toward replacement.' },
+      { q: 'Is rust-colored water always a sign of a failing water heater?', a: 'It is one of the most common causes, especially if it only happens with hot water. It usually means the tank is corroding internally, which is not repairable.' },
+      { q: 'Why does my water heater make rumbling noises?', a: "Rumbling is almost always sediment buildup at the bottom of the tank, common in Riverside County's hard water. It does not always mean replacement — flushing the tank can sometimes resolve it if caught early." },
+      { q: 'What should I do if I smell gas near my water heater?', a: 'Treat it as an emergency. Do not light anything or flip a switch — leave the area and call for emergency service immediately.' },
+      { q: 'Can I prevent these signs from happening in the first place?', a: 'Annual flushing helps significantly in hard-water areas like ours, since it clears sediment before it builds up enough to cause noise or efficiency loss. It will not make a unit last forever, but it does help it reach its full expected lifespan.' },
+      { q: 'How fast can you get someone out to look at my water heater?', a: 'We offer same-day scheduling for water heater diagnosis throughout San Jacinto, Hemet, and the surrounding Riverside County area. Call to check availability for today.' },
+    ],
+    relatedServices: [
+      { label: 'Water Heater Repair', slug: 'water-heater-repair' },
+      { label: 'Water Heater Installation & Replacement', slug: 'water-heater' },
+      { label: 'Water Softener & Filtration', slug: 'water-softener' },
+    ],
+    cta: {
+      heading: 'Seeing one of these signs?',
+      text: "Don't wait for a full failure. We'll diagnose the issue and give you an honest repair-or-replace recommendation, same day.",
     },
   },
 ];
