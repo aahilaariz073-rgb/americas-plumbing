@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://www.americasplumbing.com'),
   alternates: { canonical: '/' },
   title: {
-    default: "America's Plumbing | Plumber in San Jacinto, CA | 24/7 Service",
+    default: "Plumber in San Jacinto, CA | Same-Day Service | America's Plumbing",
     template: "%s | America's Plumbing",
   },
   description:
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     siteName: "America's Plumbing",
-    title: "America's Plumbing | Plumber in San Jacinto, CA | 24/7 Service",
+    title: "Plumber in San Jacinto, CA | Same-Day Service | America's Plumbing",
     description:
       "Licensed C-36 plumber in San Jacinto, CA. Serving Riverside County & South Orange County. Same-day service, free estimates.",
     images: [
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: "America's Plumbing | Plumber in San Jacinto, CA | 24/7 Service",
+    title: "Plumber in San Jacinto, CA | Same-Day Service | America's Plumbing",
     description:
       "Licensed C-36 plumber in San Jacinto, CA. Serving Riverside County & South Orange County. Same-day service, free estimates.",
     images: ['/plumb.jpg'],

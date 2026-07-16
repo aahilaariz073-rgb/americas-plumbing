@@ -1,10 +1,7 @@
-import ScrollReveal from './ScrollReveal';
+'use client';
 
-const cities = [
-  'San Jacinto', 'Hemet', 'Menifee', 'Beaumont',
-  'Riverside', 'Moreno Valley', 'Mission Viejo', 'Laguna Beach',
-  'Laguna Niguel', 'Ladera Ranch',
-];
+import ScrollReveal from './ScrollReveal';
+import { areas } from '@/app/data/areas';
 
 export default function Areas() {
   return (
@@ -35,29 +32,27 @@ export default function Areas() {
           </p>
 
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', marginBottom: '36px' }}>
-            {cities.map(city => (
-              <span key={city} style={{
+            {areas.map(area => (
+              <a key={area.slug} href={`/areas/${area.slug}`} style={{
                 background: '#f7f8fc', border: '1px solid #e0e2ea', color: '#080f1f',
-                padding: '8px 16px', borderRadius: '3px', fontSize: '0.82rem', fontWeight: 600
-              }}>
-                {city}
-              </span>
+                padding: '8px 16px', borderRadius: '3px', fontSize: '0.82rem', fontWeight: 600,
+                textDecoration: 'none', transition: 'background 0.15s, color 0.15s, border-color 0.15s'
+              }}
+                onMouseEnter={e => { e.currentTarget.style.background = '#C8202A'; e.currentTarget.style.borderColor = '#C8202A'; e.currentTarget.style.color = '#fff'; }}
+                onMouseLeave={e => { e.currentTarget.style.background = '#f7f8fc'; e.currentTarget.style.borderColor = '#e0e2ea'; e.currentTarget.style.color = '#080f1f'; }}
+              >
+                {area.city}
+              </a>
             ))}
-            <span style={{
-              background: '#C8202A', border: '1px solid #C8202A', color: '#fff',
-              padding: '8px 16px', borderRadius: '3px', fontSize: '0.82rem', fontWeight: 700
-            }}>
-              + More Areas
-            </span>
           </div>
 
-          <a href="/#contact" style={{
+          <a href="/areas" style={{
             display: 'inline-block', background: '#1A52BE', color: '#fff',
             fontSize: '0.82rem', fontWeight: 700, padding: '13px 28px',
             borderRadius: '4px', textDecoration: 'none',
             letterSpacing: '0.08em', textTransform: 'uppercase'
           }}>
-            Check Your Area
+            View All Service Areas
           </a>
         </ScrollReveal>
 

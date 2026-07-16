@@ -15,6 +15,8 @@ export interface Service {
   keywords: string[];
   // Prominent in-body hub/spoke cross-links to differentiated sibling pages
   crossLinks?: { href: string; label: string; desc: string }[];
+  // Process-based pricing transparency section (no invented dollar figures)
+  pricingNote?: { heading: string; points: string[] };
 }
 
 export const services: Service[] = [
@@ -98,10 +100,13 @@ export const services: Service[] = [
     slug: 'leak-detection',
     name: 'Leak Detection & Repair',
     shortName: 'Leak Detection',
-    metaTitle: "Leak Detection San Jacinto CA | Slab Leak Repair & Non-Invasive",
-    metaDescription: "Professional leak detection in San Jacinto & Southern California. Non-invasive slab leak detection, water line repair. C-36 Licensed. Free estimates. Call (949) 379-0082.",
+    metaTitle: "Leak Detection San Jacinto CA | Non-Invasive Water Line & Sewer Leaks",
+    metaDescription: "Professional leak detection in San Jacinto & Southern California. Non-invasive detection for water lines, sewer, and pool/irrigation leaks. C-36 Licensed. Call (949) 379-0082.",
     h1: 'Leak Detection & Repair in San Jacinto, CA',
     eyebrow: 'Non-Invasive Detection Technology',
+    crossLinks: [
+      { href: '/services/slab-leak-repair', label: 'See Slab Leak Repair', desc: 'Warm spot on the floor or a leak specifically under your foundation? Our dedicated slab leak page covers detection and repair options for older Hemet & San Jacinto homes —' },
+    ],
     steps: [
       { name: 'Pressure Testing', desc: 'We isolate sections of your plumbing system and run pressure tests to confirm a leak is present and narrow its location.' },
       { name: 'Electronic Detection', desc: 'Acoustic amplification equipment listens for the distinct sound signature of pressurized water escaping a pipe.' },
@@ -168,6 +173,76 @@ export const services: Service[] = [
       'who finds slab leaks in san jacinto ca',
       'how do you know if you have a slab leak san jacinto',
       'slab leak repair cost riverside county',
+    ],
+  },
+  {
+    slug: 'slab-leak-repair',
+    name: 'Slab Leak Repair',
+    shortName: 'Slab Leak Repair',
+    metaTitle: "Slab Leak Repair San Jacinto & Hemet, CA",
+    metaDescription: "Slab leak detection & repair in San Jacinto & Hemet, CA. Non-invasive detection for older homes' aging pipes. C-36 Licensed. Call (949) 379-0082.",
+    h1: 'Slab Leak Repair in San Jacinto & Hemet, CA',
+    eyebrow: 'Built for Older Inland Empire Housing Stock',
+    crossLinks: [
+      { href: '/services/leak-detection', label: 'See All Leak Detection', desc: 'Not sure if your leak is under the slab, in a wall, or outdoors? Our general leak detection page covers every leak type we handle —' },
+    ],
+    steps: [
+      { name: 'Confirm the Leak', desc: 'We pressure-test the plumbing system to confirm a leak is present under the slab before any further diagnosis begins.' },
+      { name: 'Locate It Precisely', desc: 'Acoustic listening equipment and thermal imaging pinpoint the leak\'s location under the foundation to within inches — no exploratory jackhammering.' },
+      { name: 'Explain Your Repair Options', desc: 'Depending on the pipe\'s age, material, and the leak\'s location, we walk you through the realistic options: a spot repair, a re-route above the slab, or — for older homes with multiple aging lines — whole-home repiping.' },
+      { name: 'Repair the Leak', desc: 'We complete the agreed-upon repair with minimal concrete or flooring removal, then pressure-test the system again to confirm the fix holds.' },
+      { name: 'Restore & Verify', desc: 'We patch the access point and do a final walkthrough so you know exactly what was done and what to watch for going forward.' },
+    ],
+    signs: [
+      'A warm or hot spot on your concrete floor, often the very first sign homeowners notice',
+      'The sound of running water when every faucet, toilet, and appliance in the house is off',
+      'An unexplained spike in your water bill with no visible leak or change in usage',
+      'Low water pressure throughout the house rather than at just one fixture',
+      'Cracks appearing in flooring, tile, or drywall with no other structural explanation',
+      'A persistent musty or mildew smell near the floor with no obvious source',
+    ],
+    intro: "Slab leaks are one of the most common — and most expensive — plumbing problems in older San Jacinto and Hemet neighborhoods. America's Plumbing uses non-invasive detection technology to find exactly where a leak is under your foundation, then walks you honestly through your real repair options before any concrete comes up.",
+    body: [
+      "Many homes across San Jacinto, Hemet, and the surrounding Inland Empire were built between the 1960s and 1990s, often with copper supply lines running directly beneath the concrete slab. Decades of shifting soil, ground movement, and ordinary water-pressure cycling put steady stress on those aging lines, and copper pipe from that era is now well past the point where a pinhole leak under the slab is a realistic, common failure — not a rare event.",
+      "Once we've confirmed and precisely located a slab leak using acoustic and thermal detection equipment, the right fix depends on the specifics of your situation. A single, isolated leak in an accessible spot may only need a targeted spot repair. A leak in a hard-to-reach location, or a pipe run showing early signs of failing elsewhere too, is often better solved by re-routing that line through the attic or walls rather than repeatedly opening the slab. If your home's copper or galvanized lines are broadly reaching the end of their service life, whole-home repiping can end up being both the more honest and more cost-effective path — and we'll tell you plainly if we think that's the case, rather than defaulting to the smallest possible repair every time.",
+      "Every slab leak repair starts with a written estimate for the specific option you choose, and we only open the minimum amount of flooring necessary to complete the work. No exploratory demolition, and no guessing.",
+    ],
+    included: [
+      { title: 'Slab Leak Detection', desc: 'Acoustic and thermal imaging equipment to pinpoint the leak\'s exact location under your foundation.' },
+      { title: 'Pressure Testing', desc: 'System-wide pressure tests to confirm a slab leak is present and to verify the repair afterward.' },
+      { title: 'Spot Repair', desc: 'Targeted, minimally invasive repair for an isolated leak in an accessible location.' },
+      { title: 'Pipe Re-Routing', desc: 'Re-routing the affected line through walls or the attic instead of repeatedly opening the slab.' },
+      { title: 'Whole-Home Repiping Assessment', desc: 'An honest evaluation of whether your home\'s aging pipe network warrants full repiping instead of repeated spot repairs.' },
+      { title: 'Concrete & Flooring Patch', desc: 'Restoring the access area once the repair is complete and verified.' },
+    ],
+    faqs: [
+      { q: 'How do I know if I have a slab leak?', a: "The most common signs are a warm spot on your floor, the sound of running water when everything is off, an unexplained jump in your water bill, or low pressure throughout the house. If you notice any of these, call us for a free assessment." },
+      { q: 'Will you have to jackhammer my entire floor to find the leak?', a: "No. We use non-invasive acoustic and thermal detection equipment to locate the leak within inches first. We only open the minimum amount of concrete or flooring necessary to make the repair." },
+      { q: 'Why are slab leaks so common in San Jacinto and Hemet?', a: "Many homes in this area were built between the 1960s and 1990s with copper supply lines running under the slab. Decades of soil movement and pressure cycling put real stress on pipe from that era, which is why slab leaks show up so often in this housing stock specifically." },
+      { q: 'Should I repair the leak or repipe the whole house?', a: "It depends on the pipe's age and condition and whether this is an isolated issue or a sign of broader failure. We'll walk you through both options honestly — including telling you if a repair now likely just delays a repipe you'll need soon anyway." },
+      { q: 'How much does slab leak repair cost?', a: "It depends on the repair method — spot repair, re-routing, or repiping — and where the leak is located. We provide a free, written, in-person estimate before any work begins so you know the real number for your home." },
+    ],
+    keywords: [
+      'slab leak repair san jacinto ca',
+      'slab leak repair hemet ca',
+      'slab leak detection san jacinto',
+      'slab leak detection hemet ca',
+      'signs of a slab leak',
+      'how do i know if i have a slab leak',
+      'slab leak under foundation repair',
+      'non invasive slab leak detection',
+      'copper pipe slab leak repair',
+      'slab leak repair cost san jacinto',
+      'slab leak repair cost riverside county',
+      'emergency slab leak repair san jacinto',
+      'slab leak repiping san jacinto ca',
+      'water bill spike slab leak',
+      'warm spot on floor plumbing leak',
+      'licensed plumber slab leak san jacinto',
+      'best slab leak repair san jacinto ca',
+      'slab leak repair inland empire',
+      'foundation leak repair san jacinto',
+      'pipe under slab leaking repair',
     ],
   },
   {
@@ -364,11 +439,22 @@ export const services: Service[] = [
       { title: 'Expansion Tank Installation', desc: 'Code-required expansion tanks for closed-loop systems.' },
       { title: 'Earthquake Strapping', desc: 'CA-code-compliant seismic strapping for all tank water heater installations.' },
     ],
+    pricingNote: {
+      heading: 'Pricing Transparency',
+      points: [
+        'Every water heater estimate is free and given to you in writing before any work begins.',
+        "For repairs, we quote the actual fix — parts and labor — after diagnosis. No mystery diagnostic fees that disappear into a bigger bill.",
+        'For replacements, price depends on unit type (tank vs. tankless), tank size or tankless capacity, and any code-required upgrades your home may need — seismic strapping, an expansion tank, or venting changes. We walk through all of it with you before you decide.',
+        "If repair and replacement are both reasonable options, we'll show you the honest tradeoff — including that a repair now may mean planning for replacement sooner — rather than pushing the bigger job.",
+        'No hidden fees and no charges added once work has started that weren\'t part of the original written estimate.',
+      ],
+    },
     faqs: [
       { q: 'Should I repair or replace my water heater?', a: "If it's under 8 years old and the issue is a single component (thermostat, element), repair often makes sense. Over 10 years or with multiple issues, replacement is usually the better investment." },
       { q: 'How long does a water heater installation take?', a: "Tank replacements typically take 2–3 hours. Tankless installations take 4–6 hours depending on whether gas line upgrades are needed." },
       { q: 'What size water heater do I need?', a: "For most families: 30–40 gallons for 1–2 people, 40–50 gallons for 3–4, 50–75 gallons for 5+. We'll recommend the right size for your usage patterns." },
       { q: 'Is a tankless water heater worth it in Southern California?', a: "Absolutely. SoCal's high energy rates and Riverside County's hard water make tankless ROI strong — most homeowners recoup the cost within 5–7 years through energy savings alone." },
+      { q: 'Do you charge extra fees I won\'t see coming?', a: "No. Every estimate is written and covers the full job before we start — repair or replacement. If something changes once we're inside the wall or tank, we stop and talk to you before doing anything not on the original quote." },
     ],
     keywords: [
       'water heater repair san jacinto ca',

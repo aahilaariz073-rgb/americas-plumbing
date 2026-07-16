@@ -14,7 +14,8 @@ export async function generateStaticParams() {
 /* ── Related services cross-links ── */
 const relatedMap: Record<string, string[]> = {
   'emergency-plumbing':   ['leak-detection', 'drain-cleaning', 'sewer-line', 'water-heater'],
-  'leak-detection':       ['emergency-plumbing', 'repiping', 'sewer-line', 'camera-inspection'],
+  'leak-detection':       ['slab-leak-repair', 'emergency-plumbing', 'repiping', 'sewer-line'],
+  'slab-leak-repair':     ['leak-detection', 'repiping', 'emergency-plumbing', 'water-line-repair'],
   'repiping':             ['leak-detection', 'water-line-repair', 'water-heater', 'drain-cleaning'],
   'drain-cleaning':       ['hydro-jetting', 'camera-inspection', 'sewer-line', 'emergency-plumbing'],
   'water-heater':         ['water-heater-repair', 'gas-line', 'repiping', 'emergency-plumbing'],
@@ -351,6 +352,30 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                   </div>
                 ))}
               </div>
+
+              {/* Pricing transparency (only when a service defines one) */}
+              {service.pricingNote && (
+                <div style={{ marginTop: '48px' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '28px' }}>
+                    <div style={{ width: '2px', height: '22px', background: '#1A52BE', borderRadius: '2px', flexShrink: 0 }} />
+                    <h2 style={{
+                      fontFamily: 'var(--font-newsreader), serif',
+                      fontSize: 'clamp(1.6rem, 3vw, 2.2rem)', fontWeight: 700,
+                      color: '#080f1f', lineHeight: 1.1,
+                    }}>
+                      {service.pricingNote.heading}
+                    </h2>
+                  </div>
+                  <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '14px' }}>
+                    {service.pricingNote.points.map((point, i) => (
+                      <li key={i} style={{ display: 'flex', gap: '12px', alignItems: 'flex-start' }}>
+                        <span style={{ color: '#1A52BE', fontWeight: 700, flexShrink: 0, marginTop: '2px' }}>✓</span>
+                        <span style={{ color: '#374151', fontSize: '0.95rem', lineHeight: 1.65 }}>{point}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
             </div>
 
             {/* Sidebar */}

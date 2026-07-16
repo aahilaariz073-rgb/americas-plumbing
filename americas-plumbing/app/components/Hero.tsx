@@ -26,9 +26,8 @@ export default function Hero() {
           color: '#fff', lineHeight: 1.04, letterSpacing: '-0.01em',
           marginBottom: '24px', maxWidth: '700px'
         }}>
-          Plumber in<br />
-          <span style={{ color: '#C8202A' }}>San Jacinto</span><br />
-          &amp; Southern CA
+          <span style={{ color: '#C8202A' }}>San Jacinto&apos;s</span><br />
+          Trusted Local Plumber
         </h1>
 
         <p style={{ fontSize: '1.15rem', color: 'rgba(255,255,255,0.6)', lineHeight: 1.7, marginBottom: '44px', maxWidth: '500px' }}>
