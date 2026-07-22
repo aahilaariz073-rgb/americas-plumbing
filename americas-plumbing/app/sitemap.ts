@@ -19,6 +19,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/faq`, lastModified: gitLastModified('app/faq/page.tsx') },
     { url: `${base}/contact`, lastModified: gitLastModified('app/contact/page.tsx') },
     { url: `${base}/blog`, lastModified: gitLastModified('app/data/blog.ts') },
+    { url: `${base}/privacy`, lastModified: gitLastModified('app/privacy/page.tsx') },
   ];
 
   // Individual posts already carry a real, explicit publish date — the most

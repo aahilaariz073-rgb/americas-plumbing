@@ -141,7 +141,15 @@ export default function Footer() {
           <p style={{ color: 'rgba(255,255,255,0.3)', fontSize: '0.78rem' }}>
             © {new Date().getFullYear()} America&apos;s Plumbing · Owner: Joseph Romero · C-36 License #0784091
           </p>
-          <span style={{ color: 'rgba(255,255,255,0.3)', fontSize: '0.78rem' }}>C-36 License #0784091</span>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
+            <a href="/privacy" style={{ color: 'rgba(255,255,255,0.3)', fontSize: '0.78rem', textDecoration: 'none' }}
+              onMouseEnter={e => (e.currentTarget.style.color = 'rgba(255,255,255,0.6)')}
+              onMouseLeave={e => (e.currentTarget.style.color = 'rgba(255,255,255,0.3)')}
+            >
+              Privacy Policy
+            </a>
+            <span style={{ color: 'rgba(255,255,255,0.3)', fontSize: '0.78rem' }}>C-36 License #0784091</span>
+          </div>
         </div>
       </div>
 
