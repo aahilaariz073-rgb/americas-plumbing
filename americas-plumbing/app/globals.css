@@ -6,16 +6,16 @@
 
   --color-crimson: #C8202A;
   --color-royal-blue: #1A52BE;
-  --color-charcoal: #080f1f;
-  --color-deep-dark: #040a14;
-  --color-dark-mid: #0d1626;
+  --color-charcoal: #102a6b;
+  --color-deep-dark: #0a1c52;
+  --color-dark-mid: #17357f;
   --color-off-white: #f7f8fc;
   --color-body-text: #5a5e72;
   --color-heading: #080f1f;
   --color-border: #e0e2ea;
   --color-gold-star: #F5C518;
-  --color-footer-link: #3a4a60;
-  --color-footer-bottom: #253040;
+  --color-footer-link: #3f57a0;
+  --color-footer-bottom: #0a1c52;
 }
 
 *, *::before, *::after {
