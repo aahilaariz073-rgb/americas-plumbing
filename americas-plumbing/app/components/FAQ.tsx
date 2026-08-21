@@ -20,7 +20,7 @@ export default function FAQ() {
           <h2 style={{
             fontFamily: 'var(--font-newsreader), serif',
             fontSize: 'clamp(2rem, 3.5vw, 2.8rem)', fontWeight: 700,
-            color: '#080f1f', lineHeight: 1.1
+            color: '#102a6b', lineHeight: 1.1
           }}>
             Common Questions
           </h2>
@@ -40,7 +40,7 @@ export default function FAQ() {
                   }}
                   aria-expanded={isOpen}
                 >
-                  <span style={{ fontSize: '1rem', fontWeight: 600, color: '#080f1f', lineHeight: 1.45 }}>
+                  <span style={{ fontSize: '1rem', fontWeight: 600, color: '#102a6b', lineHeight: 1.45 }}>
                     {item.q}
                   </span>
                   <span style={{

@@ -95,7 +95,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       <Nav />
       <main>
         {/* Header */}
-        <section style={{ background: '#080f1f', padding: '64px 28px 56px', position: 'relative', overflow: 'hidden' }}>
+        <section style={{ background: '#102a6b', padding: '64px 28px 56px', position: 'relative', overflow: 'hidden' }}>
           <div style={{ maxWidth: '820px', margin: '0 auto', position: 'relative', zIndex: 2 }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '20px', flexWrap: 'wrap' }}>
               <a href="/" style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.8rem', textDecoration: 'none' }}>Home</a>
@@ -115,7 +115,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         </section>
 
         {/* Hero image */}
-        <div style={{ position: 'relative', width: '100%', maxWidth: '980px', margin: '0 auto', aspectRatio: '16 / 8', background: '#080f1f' }}>
+        <div style={{ position: 'relative', width: '100%', maxWidth: '980px', margin: '0 auto', aspectRatio: '16 / 8', background: '#102a6b' }}>
           <Image src={post.heroImage} alt={post.heroAlt} fill priority sizes="(max-width: 980px) 100vw, 980px" style={{ objectFit: 'cover' }} />
         </div>
 
@@ -138,8 +138,8 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
             {post.sections.map((sec, i) => (
               <div key={i} style={{ marginBottom: '32px' }}>
-                {sec.h2 && <h2 id={slugifyHeading(sec.h2)} style={{ fontFamily: 'var(--font-newsreader), serif', fontSize: 'clamp(1.5rem, 2.6vw, 2rem)', fontWeight: 700, color: '#080f1f', lineHeight: 1.2, marginBottom: '16px', scrollMarginTop: '100px' }}>{sec.h2}</h2>}
-                {sec.h3 && <h3 style={{ fontSize: '1.15rem', fontWeight: 700, color: '#080f1f', marginBottom: '12px' }}>{sec.h3}</h3>}
+                {sec.h2 && <h2 id={slugifyHeading(sec.h2)} style={{ fontFamily: 'var(--font-newsreader), serif', fontSize: 'clamp(1.5rem, 2.6vw, 2rem)', fontWeight: 700, color: '#102a6b', lineHeight: 1.2, marginBottom: '16px', scrollMarginTop: '100px' }}>{sec.h2}</h2>}
+                {sec.h3 && <h3 style={{ fontSize: '1.15rem', fontWeight: 700, color: '#102a6b', marginBottom: '12px' }}>{sec.h3}</h3>}
                 {sec.paras?.map((p, j) => (
                   <p key={j} style={{ color: '#374151', fontSize: '1.05rem', lineHeight: 1.8, marginBottom: '18px' }}>{p}</p>
                 ))}
@@ -157,7 +157,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                   <div style={{ overflowX: 'auto', marginBottom: '18px', border: '1px solid #e8eaf0', borderRadius: '8px' }}>
                     <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.92rem' }}>
                       <thead>
-                        <tr style={{ background: '#080f1f' }}>
+                        <tr style={{ background: '#102a6b' }}>
                           {sec.table.headers.map((h, hi) => (
                             <th key={hi} style={{ color: '#fff', fontWeight: 700, textAlign: 'left', padding: '14px 16px', whiteSpace: 'nowrap' }}>{h}</th>
                           ))}
@@ -167,7 +167,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                         {sec.table.rows.map((row, ri) => (
                           <tr key={ri} style={{ borderTop: '1px solid #e8eaf0', background: ri % 2 ? '#f7f8fc' : '#fff' }}>
                             {row.map((cell, ci) => (
-                              <td key={ci} style={{ padding: '14px 16px', color: ci === 0 ? '#080f1f' : '#374151', fontWeight: ci === 0 ? 700 : 400 }}>{cell}</td>
+                              <td key={ci} style={{ padding: '14px 16px', color: ci === 0 ? '#102a6b' : '#374151', fontWeight: ci === 0 ? 700 : 400 }}>{cell}</td>
                             ))}
                           </tr>
                         ))}
@@ -184,7 +184,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             ))}
 
             {/* Inline CTA */}
-            <div style={{ background: '#080f1f', borderRadius: '10px', padding: '36px 32px', margin: '48px 0', position: 'relative', overflow: 'hidden' }}>
+            <div style={{ background: '#102a6b', borderRadius: '10px', padding: '36px 32px', margin: '48px 0', position: 'relative', overflow: 'hidden' }}>
               <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '3px', background: 'linear-gradient(to right,#C8202A,#1A52BE,#C8202A)' }} />
               <h2 style={{ fontFamily: 'var(--font-newsreader), serif', fontSize: '1.5rem', fontWeight: 700, color: '#fff', marginBottom: '12px', lineHeight: 1.2 }}>{post.cta.heading}</h2>
               <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.98rem', lineHeight: 1.7, marginBottom: '24px' }}>{post.cta.text}</p>
@@ -197,10 +197,10 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             {/* FAQs */}
             {post.faqs.length > 0 && (
               <div style={{ marginTop: '48px' }}>
-                <h2 style={{ fontFamily: 'var(--font-newsreader), serif', fontSize: 'clamp(1.5rem, 2.6vw, 2rem)', fontWeight: 700, color: '#080f1f', marginBottom: '20px' }}>Frequently Asked Questions</h2>
+                <h2 style={{ fontFamily: 'var(--font-newsreader), serif', fontSize: 'clamp(1.5rem, 2.6vw, 2rem)', fontWeight: 700, color: '#102a6b', marginBottom: '20px' }}>Frequently Asked Questions</h2>
                 {post.faqs.map((f, i) => (
                   <div key={i} style={{ borderTop: '1px solid #e8eaf0', padding: '20px 0' }}>
-                    <h3 style={{ fontSize: '1.02rem', fontWeight: 700, color: '#080f1f', marginBottom: '8px' }}>{f.q}</h3>
+                    <h3 style={{ fontSize: '1.02rem', fontWeight: 700, color: '#102a6b', marginBottom: '8px' }}>{f.q}</h3>
                     <p style={{ color: '#5a5e72', fontSize: '0.97rem', lineHeight: 1.7 }}>{f.a}</p>
                   </div>
                 ))}
@@ -212,7 +212,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
               <div style={{ color: '#C8202A', fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', marginBottom: '16px' }}>Related Services</div>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px' }}>
                 {post.relatedServices.map(s => (
-                  <a key={s.slug} href={`/services/${s.slug}`} style={{ background: '#f7f8fc', border: '1px solid #e0e2ea', color: '#080f1f', fontWeight: 600, fontSize: '0.88rem', padding: '10px 18px', borderRadius: '100px', textDecoration: 'none' }}>{s.label} →</a>
+                  <a key={s.slug} href={`/services/${s.slug}`} style={{ background: '#f7f8fc', border: '1px solid #e0e2ea', color: '#102a6b', fontWeight: 600, fontSize: '0.88rem', padding: '10px 18px', borderRadius: '100px', textDecoration: 'none' }}>{s.label} →</a>
                 ))}
               </div>
             </div>

@@ -23,7 +23,7 @@ export default function Areas() {
           <h2 style={{
             fontFamily: 'var(--font-newsreader), serif',
             fontSize: 'clamp(1.9rem, 3.5vw, 2.8rem)', fontWeight: 700,
-            color: '#080f1f', lineHeight: 1.1, marginBottom: '20px'
+            color: '#102a6b', lineHeight: 1.1, marginBottom: '20px'
           }}>
             Serving San Jacinto, Riverside County &amp; South OC
           </h2>
@@ -34,12 +34,12 @@ export default function Areas() {
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', marginBottom: '36px' }}>
             {areas.map(area => (
               <a key={area.slug} href={`/areas/${area.slug}`} style={{
-                background: '#f7f8fc', border: '1px solid #e0e2ea', color: '#080f1f',
+                background: '#f7f8fc', border: '1px solid #e0e2ea', color: '#102a6b',
                 padding: '8px 16px', borderRadius: '3px', fontSize: '0.82rem', fontWeight: 600,
                 textDecoration: 'none', transition: 'background 0.15s, color 0.15s, border-color 0.15s'
               }}
                 onMouseEnter={e => { e.currentTarget.style.background = '#C8202A'; e.currentTarget.style.borderColor = '#C8202A'; e.currentTarget.style.color = '#fff'; }}
-                onMouseLeave={e => { e.currentTarget.style.background = '#f7f8fc'; e.currentTarget.style.borderColor = '#e0e2ea'; e.currentTarget.style.color = '#080f1f'; }}
+                onMouseLeave={e => { e.currentTarget.style.background = '#f7f8fc'; e.currentTarget.style.borderColor = '#e0e2ea'; e.currentTarget.style.color = '#102a6b'; }}
               >
                 {area.city}
               </a>

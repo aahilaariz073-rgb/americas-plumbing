@@ -26,7 +26,7 @@ export default function Services() {
           <div style={{ color: '#C8202A', fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.22em', textTransform: 'uppercase', marginBottom: '14px' }}>
             What We Do
           </div>
-          <h2 style={{ fontFamily: 'var(--font-newsreader), serif', fontSize: 'clamp(2.2rem, 4vw, 3rem)', fontWeight: 700, color: '#080f1f', lineHeight: 1.1 }}>
+          <h2 style={{ fontFamily: 'var(--font-newsreader), serif', fontSize: 'clamp(2.2rem, 4vw, 3rem)', fontWeight: 700, color: '#102a6b', lineHeight: 1.1 }}>
             Full-Service Plumbing
           </h2>
           <p style={{ color: '#5a5e72', fontSize: '1rem', lineHeight: 1.7, maxWidth: '520px', margin: '16px auto 0' }}>
@@ -47,7 +47,7 @@ export default function Services() {
 
         <ScrollReveal style={{ textAlign: 'center', marginTop: '52px' }}>
           <a href="/services" style={{
-            display: 'inline-block', background: '#080f1f', color: '#fff',
+            display: 'inline-block', background: '#102a6b', color: '#fff',
             fontSize: '0.85rem', fontWeight: 700, padding: '14px 36px',
             borderRadius: '6px', textDecoration: 'none', letterSpacing: '0.08em', textTransform: 'uppercase',
           }}>
@@ -81,7 +81,7 @@ export default function Services() {
         .svc-icon-label {
           font-size: 0.875rem;
           font-weight: 700;
-          color: #080f1f;
+          color: #102a6b;
           text-align: center;
           line-height: 1.3;
         }

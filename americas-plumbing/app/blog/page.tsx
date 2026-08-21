@@ -36,7 +36,7 @@ export default function BlogIndex() {
       <Nav />
       <main>
         {/* Header */}
-        <section style={{ background: '#080f1f', padding: '80px 28px 72px', position: 'relative', overflow: 'hidden' }}>
+        <section style={{ background: '#102a6b', padding: '80px 28px 72px', position: 'relative', overflow: 'hidden' }}>
           <div style={{ position: 'absolute', inset: 0, pointerEvents: 'none' }}>
             <div style={{ position: 'absolute', top: '-10%', right: '-5%', width: '45%', height: '130%', background: '#1A52BE', clipPath: 'polygon(18% 0%,100% 0%,100% 100%,0% 100%)', opacity: 0.07 }} />
           </div>
@@ -65,13 +65,13 @@ export default function BlogIndex() {
           <div style={{ maxWidth: '1240px', margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(340px, 1fr))', gap: '28px' }}>
             {publishedPostsByDate().map(post => (
               <a key={post.slug} href={`/blog/${post.slug}`} style={{ display: 'flex', flexDirection: 'column', background: '#fff', border: '1px solid #e8eaf0', borderRadius: '8px', overflow: 'hidden', textDecoration: 'none', boxShadow: '0 2px 10px rgba(0,0,0,0.04)' }}>
-                <div style={{ position: 'relative', width: '100%', aspectRatio: '16 / 9', background: '#080f1f' }}>
+                <div style={{ position: 'relative', width: '100%', aspectRatio: '16 / 9', background: '#102a6b' }}>
                   <Image src={post.heroImage} alt={post.heroAlt} fill sizes="(max-width: 768px) 100vw, 400px" style={{ objectFit: 'cover' }} />
                   <span style={{ position: 'absolute', top: '14px', left: '14px', background: '#C8202A', color: '#fff', fontSize: '0.68rem', fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', padding: '5px 12px', borderRadius: '100px' }}>{post.category}</span>
                 </div>
                 <div style={{ padding: '24px 24px 28px', display: 'flex', flexDirection: 'column', flex: 1 }}>
                   <div style={{ color: '#9b9eb0', fontSize: '0.75rem', fontWeight: 600, marginBottom: '10px' }}>{formatDate(post.date)} · {post.readMins} min read</div>
-                  <h2 style={{ fontFamily: 'var(--font-newsreader), serif', fontSize: '1.3rem', fontWeight: 700, color: '#080f1f', lineHeight: 1.25, marginBottom: '12px' }}>{post.title}</h2>
+                  <h2 style={{ fontFamily: 'var(--font-newsreader), serif', fontSize: '1.3rem', fontWeight: 700, color: '#102a6b', lineHeight: 1.25, marginBottom: '12px' }}>{post.title}</h2>
                   <p style={{ color: '#5a5e72', fontSize: '0.92rem', lineHeight: 1.6, marginBottom: '18px', flex: 1 }}>{post.excerpt}</p>
                   <span style={{ color: '#C8202A', fontWeight: 700, fontSize: '0.85rem' }}>Read article →</span>
                 </div>

@@ -31,7 +31,7 @@ export default function HomepageCTAStrip() {
           <div style={{ color: '#C8202A', fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.22em', textTransform: 'uppercase', marginBottom: '14px' }}>
             More from America&apos;s Plumbing
           </div>
-          <h2 style={{ fontFamily: 'var(--font-newsreader), serif', fontSize: 'clamp(1.8rem, 3vw, 2.6rem)', fontWeight: 700, color: '#080f1f', lineHeight: 1.1 }}>
+          <h2 style={{ fontFamily: 'var(--font-newsreader), serif', fontSize: 'clamp(1.8rem, 3vw, 2.6rem)', fontWeight: 700, color: '#102a6b', lineHeight: 1.1 }}>
             Everything You Need to Know
           </h2>
         </ScrollReveal>
@@ -47,7 +47,7 @@ export default function HomepageCTAStrip() {
                 onMouseEnter={e => { (e.currentTarget as HTMLElement).style.boxShadow = '0 8px 32px rgba(0,0,0,0.09)'; (e.currentTarget as HTMLElement).style.transform = 'translateY(-2px)'; }}
                 onMouseLeave={e => { (e.currentTarget as HTMLElement).style.boxShadow = 'none'; (e.currentTarget as HTMLElement).style.transform = 'none'; }}
               >
-                <h3 style={{ fontSize: '1.1rem', fontWeight: 700, color: '#080f1f', marginBottom: '10px' }}>{label}</h3>
+                <h3 style={{ fontSize: '1.1rem', fontWeight: 700, color: '#102a6b', marginBottom: '10px' }}>{label}</h3>
                 <p style={{ color: '#5a5e72', fontSize: '0.88rem', lineHeight: 1.65, marginBottom: '20px' }}>{desc}</p>
                 <span style={{ color: accent, fontSize: '0.82rem', fontWeight: 700, letterSpacing: '0.06em', textTransform: 'uppercase' }}>
                   View Page →

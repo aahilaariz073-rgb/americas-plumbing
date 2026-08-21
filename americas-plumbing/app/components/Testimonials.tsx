@@ -6,21 +6,21 @@ const reviews = [
     name: 'Maria T.',
     location: 'Irvine, CA',
     accentColor: '#C8202A',
-    bg: '#080f1f',
+    bg: '#102a6b',
   },
   {
     quote: 'Burst pipe at midnight — called America\'s Plumbing and they were at my door within the hour. Honest pricing and no drama. This is our plumber for life.',
     name: 'Robert K.',
     location: 'Newport Beach, CA',
     accentColor: '#1A52BE',
-    bg: '#0d1626',
+    bg: '#17357f',
   },
   {
     quote: 'Three quotes for my repiping job. America\'s Plumbing was the most transparent and saved me $800. Beautiful work, done in a single day.',
     name: 'David L.',
     location: 'Mission Viejo, CA',
     accentColor: '#C8202A',
-    bg: '#080f1f',
+    bg: '#102a6b',
   },
 ];
 
@@ -42,7 +42,7 @@ export default function Testimonials() {
             <h2 style={{
               fontFamily: 'var(--font-newsreader), serif',
               fontSize: 'clamp(2.2rem, 4vw, 3rem)', fontWeight: 700,
-              color: '#080f1f', lineHeight: 1.1
+              color: '#102a6b', lineHeight: 1.1
             }}>
               What Customers Say
             </h2>
@@ -77,7 +77,7 @@ export default function Testimonials() {
                 display: 'flex', alignItems: 'center', justifyContent: 'space-between'
               }}>
                 <div>
-                  <div style={{ color: '#080f1f', fontWeight: 700, fontSize: '0.9rem' }}>{r.name}</div>
+                  <div style={{ color: '#102a6b', fontWeight: 700, fontSize: '0.9rem' }}>{r.name}</div>
                   <div style={{ color: '#9b9eb0', fontSize: '0.78rem', marginTop: '3px' }}>{r.location}</div>
                 </div>
                 <span style={{ color: '#F5C518', fontSize: '0.85rem' }}>★★★★★</span>

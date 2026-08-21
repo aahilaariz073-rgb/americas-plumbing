@@ -201,7 +201,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
       <main>
 
         {/* ── Hero ── */}
-        <section style={{ background: '#080f1f', padding: '80px 28px 72px', position: 'relative', overflow: 'hidden' }}>
+        <section style={{ background: '#102a6b', padding: '80px 28px 72px', position: 'relative', overflow: 'hidden' }}>
           <div style={{ position: 'absolute', inset: 0, pointerEvents: 'none' }}>
             <div style={{ position: 'absolute', top: '-10%', right: '-5%', width: '45%', height: '130%', background: '#1A52BE', clipPath: 'polygon(18% 0%,100% 0%,100% 100%,0% 100%)', opacity: 0.07 }} />
             <div style={{ position: 'absolute', top: '-10%', right: '-5%', width: '42%', height: '130%', background: '#C8202A', clipPath: 'polygon(20% 0%,22% 0%,4% 100%,2% 100%)', opacity: 0.5 }} />
@@ -293,7 +293,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
               {/* Signs you need this service */}
               {service.signs && service.signs.length > 0 && (
                 <div style={{ marginTop: '48px', marginBottom: '48px', background: '#f7f8fc', borderLeft: '3px solid #C8202A', padding: '28px 32px', borderRadius: '0 6px 6px 0' }}>
-                  <h2 style={{ fontFamily: 'var(--font-newsreader), serif', fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', fontWeight: 700, color: '#080f1f', marginBottom: '18px', lineHeight: 1.15 }}>
+                  <h2 style={{ fontFamily: 'var(--font-newsreader), serif', fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', fontWeight: 700, color: '#102a6b', marginBottom: '18px', lineHeight: 1.15 }}>
                     Signs You Need {service.shortName} Now
                   </h2>
                   <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '10px' }}>
@@ -312,18 +312,18 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                 <div style={{ marginBottom: '48px' }}>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '28px' }}>
                     <div style={{ width: '2px', height: '22px', background: '#C8202A', borderRadius: '2px', flexShrink: 0 }} />
-                    <h2 style={{ fontFamily: 'var(--font-newsreader), serif', fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', fontWeight: 700, color: '#080f1f', lineHeight: 1.1 }}>
+                    <h2 style={{ fontFamily: 'var(--font-newsreader), serif', fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', fontWeight: 700, color: '#102a6b', lineHeight: 1.1 }}>
                       How {service.shortName} Works
                     </h2>
                   </div>
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '0' }}>
                     {service.steps.map((step, i) => (
                       <div key={i} style={{ display: 'flex', gap: '20px', paddingBottom: i < service.steps!.length - 1 ? '24px' : '0', borderBottom: i < service.steps!.length - 1 ? '1px solid #f0f1f5' : 'none', marginBottom: i < service.steps!.length - 1 ? '24px' : '0' }}>
-                        <div style={{ width: '36px', height: '36px', borderRadius: '50%', background: '#080f1f', color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 700, fontSize: '0.85rem', flexShrink: 0, fontFamily: 'var(--font-newsreader), serif' }}>
+                        <div style={{ width: '36px', height: '36px', borderRadius: '50%', background: '#102a6b', color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 700, fontSize: '0.85rem', flexShrink: 0, fontFamily: 'var(--font-newsreader), serif' }}>
                           {i + 1}
                         </div>
                         <div style={{ paddingTop: '6px' }}>
-                          <div style={{ fontWeight: 700, color: '#080f1f', fontSize: '0.95rem', marginBottom: '4px' }}>{step.name}</div>
+                          <div style={{ fontWeight: 700, color: '#102a6b', fontSize: '0.95rem', marginBottom: '4px' }}>{step.name}</div>
                           <p style={{ color: '#5a5e72', fontSize: '0.875rem', lineHeight: 1.65, margin: 0 }}>{step.desc}</p>
                         </div>
                       </div>
@@ -338,7 +338,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                 <h2 style={{
                   fontFamily: 'var(--font-newsreader), serif',
                   fontSize: 'clamp(1.6rem, 3vw, 2.2rem)', fontWeight: 700,
-                  color: '#080f1f', lineHeight: 1.1,
+                  color: '#102a6b', lineHeight: 1.1,
                 }}>
                   What&apos;s Included with {service.shortName}
                 </h2>
@@ -347,7 +347,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                 {service.included.map(item => (
                   <div key={item.title} style={{ background: '#fff', padding: '28px 24px' }}>
                     <div style={{ width: '32px', height: '2px', background: '#C8202A', marginBottom: '14px' }} />
-                    <h3 style={{ fontSize: '1rem', fontWeight: 700, color: '#080f1f', marginBottom: '8px' }}>{item.title}</h3>
+                    <h3 style={{ fontSize: '1rem', fontWeight: 700, color: '#102a6b', marginBottom: '8px' }}>{item.title}</h3>
                     <p style={{ color: '#5a5e72', fontSize: '0.875rem', lineHeight: 1.65 }}>{item.desc}</p>
                   </div>
                 ))}
@@ -361,7 +361,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                     <h2 style={{
                       fontFamily: 'var(--font-newsreader), serif',
                       fontSize: 'clamp(1.6rem, 3vw, 2.2rem)', fontWeight: 700,
-                      color: '#080f1f', lineHeight: 1.1,
+                      color: '#102a6b', lineHeight: 1.1,
                     }}>
                       {service.pricingNote.heading}
                     </h2>
@@ -408,7 +408,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                   </a>
                   <a href={`/contact?src=${service.slug}`} style={{
                     display: 'block', textAlign: 'center', background: '#f7f8fc',
-                    color: '#080f1f', padding: '12px', borderRadius: '6px',
+                    color: '#102a6b', padding: '12px', borderRadius: '6px',
                     fontWeight: 600, textDecoration: 'none', fontSize: '0.85rem',
                     border: '1px solid #e0e2ea'
                   }}>
@@ -428,7 +428,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
         </section>
 
         {/* ── Why Choose Us ── */}
-        <section style={{ background: '#080f1f', padding: '72px 28px' }}>
+        <section style={{ background: '#102a6b', padding: '72px 28px' }}>
           <div style={{ maxWidth: '1240px', margin: '0 auto' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '14px' }}>
               <div style={{ width: '24px', height: '2px', background: '#C8202A' }} />
@@ -444,7 +444,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                 { title: 'Upfront Flat Pricing', body: 'You get a written price before we touch anything. No hourly billing surprises. No charges for work you didn\'t approve. What we quote is what you pay.' },
                 { title: 'Written Warranty', body: 'All workmanship is backed by a written warranty. If something we repaired fails due to our work, we come back and fix it at no charge.' },
               ].map(item => (
-                <div key={item.title} style={{ background: '#0d1829', padding: '32px 28px' }}>
+                <div key={item.title} style={{ background: '#17357f', padding: '32px 28px' }}>
                   <div style={{ width: '28px', height: '2px', background: '#C8202A', marginBottom: '14px' }} />
                   <h3 style={{ color: '#fff', fontWeight: 700, fontSize: '1rem', marginBottom: '10px' }}>{item.title}</h3>
                   <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '0.875rem', lineHeight: 1.65 }}>{item.body}</p>
@@ -461,12 +461,12 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
               <div style={{ width: '24px', height: '2px', background: '#C8202A' }} />
               <span style={{ color: '#C8202A', fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.22em', textTransform: 'uppercase' }}>FAQ</span>
             </div>
-            <h2 style={{ fontFamily: 'var(--font-newsreader), serif', fontSize: 'clamp(1.8rem, 3vw, 2.4rem)', fontWeight: 700, color: '#080f1f', lineHeight: 1.1, marginBottom: '40px' }}>
+            <h2 style={{ fontFamily: 'var(--font-newsreader), serif', fontSize: 'clamp(1.8rem, 3vw, 2.4rem)', fontWeight: 700, color: '#102a6b', lineHeight: 1.1, marginBottom: '40px' }}>
               Common Questions About {service.name}
             </h2>
             {service.faqs.map((faq, i) => (
               <div key={i} style={{ borderBottom: '1px solid #e0e2ea', padding: '24px 0' }}>
-                <h3 style={{ fontSize: '1rem', fontWeight: 700, color: '#080f1f', marginBottom: '10px' }}>{faq.q}</h3>
+                <h3 style={{ fontSize: '1rem', fontWeight: 700, color: '#102a6b', marginBottom: '10px' }}>{faq.q}</h3>
                 <p style={{ color: '#5a5e72', fontSize: '0.95rem', lineHeight: 1.7 }}>{faq.a}</p>
               </div>
             ))}
@@ -493,7 +493,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                     <div style={{ width: '32px', height: '2px', background: '#C8202A', marginBottom: '12px' }} />
                     <h3 style={{
                       fontFamily: 'var(--font-newsreader), serif',
-                      fontSize: '1rem', fontWeight: 700, color: '#080f1f',
+                      fontSize: '1rem', fontWeight: 700, color: '#102a6b',
                       marginBottom: '8px', lineHeight: 1.25,
                     }}>
                       {svc.name}
@@ -513,7 +513,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
         <section style={{ background: '#f7f8fc', padding: '44px 28px', borderTop: '1px solid #e8eaf0' }}>
           <div style={{ maxWidth: '1240px', margin: '0 auto' }}>
             <div style={{ display: 'flex', alignItems: 'baseline', gap: '16px', flexWrap: 'wrap' }}>
-              <span style={{ color: '#080f1f', fontWeight: 700, fontSize: '0.875rem', whiteSpace: 'nowrap', flexShrink: 0 }}>
+              <span style={{ color: '#102a6b', fontWeight: 700, fontSize: '0.875rem', whiteSpace: 'nowrap', flexShrink: 0 }}>
                 {service.shortName} near:
               </span>
               {areas.map(a => (

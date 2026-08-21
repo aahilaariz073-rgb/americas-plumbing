@@ -56,7 +56,7 @@ export default function Gallery() {
           <h2 style={{
             fontFamily: 'var(--font-newsreader), serif',
             fontSize: 'clamp(2.2rem, 4vw, 3rem)', fontWeight: 700,
-            color: '#080f1f', lineHeight: 1.1,
+            color: '#102a6b', lineHeight: 1.1,
           }}>
             Before &amp; After
           </h2>

@@ -181,7 +181,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
       <main>
 
         {/* ── Section 1: Dark Hero ── */}
-        <section style={{ background: '#080f1f', padding: '80px 28px 72px', position: 'relative', overflow: 'hidden' }}>
+        <section style={{ background: '#102a6b', padding: '80px 28px 72px', position: 'relative', overflow: 'hidden' }}>
           <div style={{ position: 'absolute', inset: 0, pointerEvents: 'none' }}>
             <div style={{ position: 'absolute', top: '-10%', right: '-5%', width: '45%', height: '130%', background: '#1A52BE', clipPath: 'polygon(18% 0%,100% 0%,100% 100%,0% 100%)', opacity: 0.07 }} />
             <div style={{ position: 'absolute', top: '-10%', right: '-5%', width: '42%', height: '130%', background: '#C8202A', clipPath: 'polygon(20% 0%,22% 0%,4% 100%,2% 100%)', opacity: 0.5 }} />
@@ -308,7 +308,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
                 </a>
                 <a href="/#contact" style={{
                   display: 'block', textAlign: 'center', background: '#fff',
-                  color: '#080f1f', padding: '12px', borderRadius: '6px',
+                  color: '#102a6b', padding: '12px', borderRadius: '6px',
                   fontWeight: 600, textDecoration: 'none', fontSize: '0.85rem',
                   border: '1px solid #e0e2ea',
                 }}>
@@ -332,7 +332,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
                 fontFamily: 'var(--font-newsreader), serif',
                 fontSize: 'clamp(1.8rem, 3vw, 2.6rem)',
                 fontWeight: 700,
-                color: '#080f1f',
+                color: '#102a6b',
                 lineHeight: 1.1,
                 marginBottom: '12px',
               }}>
@@ -358,7 +358,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
                     fontFamily: 'var(--font-newsreader), serif',
                     fontSize: '1.1rem',
                     fontWeight: 700,
-                    color: '#080f1f',
+                    color: '#102a6b',
                     marginBottom: '10px',
                     lineHeight: 1.25,
                   }}>
@@ -393,7 +393,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
                 fontFamily: 'var(--font-newsreader), serif',
                 fontSize: 'clamp(1.6rem, 2.8vw, 2.2rem)',
                 fontWeight: 700,
-                color: '#080f1f',
+                color: '#102a6b',
                 lineHeight: 1.1,
                 marginBottom: '20px',
               }}>
@@ -403,7 +403,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
                 {"Every neighborhood in " + area.city + " has its own plumbing history. Whether you're in " + lm0 + " or " + lm1 + ", our team arrives knowing what to expect — and how to fix it right. We've been serving " + area.county + " for over 25 years."}
               </p>
               <a href="/#contact" style={{
-                display: 'inline-block', background: '#080f1f', color: '#fff',
+                display: 'inline-block', background: '#102a6b', color: '#fff',
                 padding: '13px 28px', borderRadius: '4px', fontWeight: 700,
                 textDecoration: 'none', fontSize: '0.88rem', letterSpacing: '0.05em',
                 textTransform: 'uppercase',
@@ -415,14 +415,14 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
             <div>
               {area.landmarks.length > 0 && (
                 <>
-                  <p style={{ fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.22em', textTransform: 'uppercase', color: '#080f1f', marginBottom: '16px' }}>
+                  <p style={{ fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.22em', textTransform: 'uppercase', color: '#102a6b', marginBottom: '16px' }}>
                     Areas We Cover in {area.city}
                   </p>
                   <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', marginBottom: '32px' }}>
                     {area.landmarks.map(l => (
                       <span key={l} style={{
                         background: '#f0f1f5',
-                        color: '#080f1f',
+                        color: '#102a6b',
                         padding: '8px 16px',
                         borderRadius: '100px',
                         fontSize: '0.82rem',
@@ -470,7 +470,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
               fontFamily: 'var(--font-newsreader), serif',
               fontSize: 'clamp(1.8rem, 3vw, 2.4rem)',
               fontWeight: 700,
-              color: '#080f1f',
+              color: '#102a6b',
               lineHeight: 1.1,
               marginBottom: '40px',
             }}>
@@ -478,7 +478,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
             </h2>
             {area.faqs.map((faq, i) => (
               <div key={i} style={{ borderBottom: '1px solid #e0e2ea', padding: '24px 0' }}>
-                <h3 style={{ fontSize: '1rem', fontWeight: 700, color: '#080f1f', marginBottom: '10px', lineHeight: 1.4 }}>{faq.q}</h3>
+                <h3 style={{ fontSize: '1rem', fontWeight: 700, color: '#102a6b', marginBottom: '10px', lineHeight: 1.4 }}>{faq.q}</h3>
                 <p style={{ color: '#5a5e72', fontSize: '0.95rem', lineHeight: 1.7 }}>{faq.a}</p>
               </div>
             ))}
@@ -490,7 +490,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
           <section style={{ background: '#fff', padding: '56px 28px', borderTop: '1px solid #e8eaf0' }}>
             <div style={{ maxWidth: '1240px', margin: '0 auto' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '16px', flexWrap: 'wrap' }}>
-                <span style={{ color: '#080f1f', fontWeight: 700, fontSize: '0.875rem', whiteSpace: 'nowrap', letterSpacing: '0.04em' }}>
+                <span style={{ color: '#102a6b', fontWeight: 700, fontSize: '0.875rem', whiteSpace: 'nowrap', letterSpacing: '0.04em' }}>
                   Also serving nearby:
                 </span>
                 {nearbyAreas.map(a => (
@@ -499,7 +499,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
                     href={`/areas/${a.slug}`}
                     style={{
                       background: '#f7f8fc', border: '1px solid #e0e2ea',
-                      color: '#080f1f', padding: '8px 18px', borderRadius: '4px',
+                      color: '#102a6b', padding: '8px 18px', borderRadius: '4px',
                       fontSize: '0.85rem', fontWeight: 600, textDecoration: 'none',
                     }}
                   >
@@ -521,7 +521,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
         )}
 
         {/* ── Section 7: Dark CTA ── */}
-        <section style={{ background: '#080f1f', padding: '60px 28px' }}>
+        <section style={{ background: '#102a6b', padding: '60px 28px' }}>
           <div style={{ maxWidth: '700px', margin: '0 auto', textAlign: 'center' }}>
             <p style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.24em', textTransform: 'uppercase', marginBottom: '14px' }}>
               Ready to Help

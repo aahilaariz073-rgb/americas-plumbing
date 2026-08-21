@@ -89,14 +89,14 @@ export default function Nav() {
               textDecoration: 'none', letterSpacing: '0.1em', textTransform: 'uppercase',
               display: 'flex', alignItems: 'center', gap: '4px', transition: 'color 0.2s'
             }}
-              onMouseEnter={e => (e.currentTarget.style.color = '#080f1f')}
+              onMouseEnter={e => (e.currentTarget.style.color = '#102a6b')}
               onMouseLeave={e => (e.currentTarget.style.color = '#5a5e72')}
             >
               Services <span style={{ fontSize: '0.65rem', opacity: 0.6 }}>▾</span>
             </a>
             {openDropdown === 'services' && (
               <div style={dropdownStyle}>
-                <a href="/services" style={{ ...dropItemStyle, borderBottom: '1px solid #f0f1f5', marginBottom: '4px', fontWeight: 700, color: '#080f1f' }}
+                <a href="/services" style={{ ...dropItemStyle, borderBottom: '1px solid #f0f1f5', marginBottom: '4px', fontWeight: 700, color: '#102a6b' }}
                   onMouseEnter={e => { e.currentTarget.style.background = '#f7f8fc'; }}
                   onMouseLeave={e => { e.currentTarget.style.background = 'transparent'; }}>
                   All Services
@@ -121,14 +121,14 @@ export default function Nav() {
               textDecoration: 'none', letterSpacing: '0.1em', textTransform: 'uppercase',
               display: 'flex', alignItems: 'center', gap: '4px', transition: 'color 0.2s'
             }}
-              onMouseEnter={e => (e.currentTarget.style.color = '#080f1f')}
+              onMouseEnter={e => (e.currentTarget.style.color = '#102a6b')}
               onMouseLeave={e => (e.currentTarget.style.color = '#5a5e72')}
             >
               Areas <span style={{ fontSize: '0.65rem', opacity: 0.6 }}>▾</span>
             </a>
             {openDropdown === 'areas' && (
               <div style={dropdownStyle}>
-                <a href="/areas" style={{ ...dropItemStyle, borderBottom: '1px solid #f0f1f5', marginBottom: '4px', fontWeight: 700, color: '#080f1f' }}
+                <a href="/areas" style={{ ...dropItemStyle, borderBottom: '1px solid #f0f1f5', marginBottom: '4px', fontWeight: 700, color: '#102a6b' }}
                   onMouseEnter={e => { e.currentTarget.style.background = '#f7f8fc'; }}
                   onMouseLeave={e => { e.currentTarget.style.background = 'transparent'; }}>
                   All Areas
@@ -156,7 +156,7 @@ export default function Nav() {
               textDecoration: 'none', letterSpacing: '0.1em', textTransform: 'uppercase',
               transition: 'color 0.2s'
             }}
-              onMouseEnter={e => (e.currentTarget.style.color = '#080f1f')}
+              onMouseEnter={e => (e.currentTarget.style.color = '#102a6b')}
               onMouseLeave={e => (e.currentTarget.style.color = '#5a5e72')}
             >
               {label}
@@ -166,7 +166,7 @@ export default function Nav() {
 
         <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
           <a href="/#contact" className="hide-mob" style={{
-            background: '#080f1f', color: '#fff', fontSize: '0.82rem', fontWeight: 700,
+            background: '#102a6b', color: '#fff', fontSize: '0.82rem', fontWeight: 700,
             padding: '9px 16px', borderRadius: '5px', textDecoration: 'none', letterSpacing: '0.03em',
             border: '1px solid rgba(255,255,255,0.15)', whiteSpace: 'nowrap'
           }}>
@@ -188,7 +188,7 @@ export default function Nav() {
           </a>
           <button onClick={() => setNavOpen(v => !v)} className="show-mob" aria-label="Toggle menu"
             style={{
-              display: 'none', background: 'none', border: '2px solid #e0e2ea', color: '#080f1f',
+              display: 'none', background: 'none', border: '2px solid #e0e2ea', color: '#102a6b',
               width: '40px', height: '40px', borderRadius: '5px', cursor: 'pointer', fontSize: '1.2rem',
               alignItems: 'center', justifyContent: 'center'
             }}>
@@ -220,7 +220,7 @@ export default function Nav() {
             </a>
           </div>
           {[{ label: 'About', href: '/about' }, { label: 'Blog', href: '/blog' }, { label: 'Reviews', href: '/reviews' }, { label: 'FAQ', href: '/faq' }, { label: 'Contact', href: '/contact' }].map(({ label, href }) => (
-            <a key={label} href={href} onClick={closeNav} style={{ color: '#080f1f', padding: '14px 0', fontWeight: 600, textDecoration: 'none', fontSize: '0.95rem', borderBottom: '1px solid #f0f1f5' }}>
+            <a key={label} href={href} onClick={closeNav} style={{ color: '#102a6b', padding: '14px 0', fontWeight: 600, textDecoration: 'none', fontSize: '0.95rem', borderBottom: '1px solid #f0f1f5' }}>
               {label}
             </a>
           ))}

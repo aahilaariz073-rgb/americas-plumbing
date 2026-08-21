@@ -25,7 +25,7 @@ export default function AreasPage() {
       <main>
 
         {/* ── Hero ── */}
-        <section style={{ background: '#080f1f', padding: '96px 28px 0', position: 'relative', overflow: 'hidden' }}>
+        <section style={{ background: '#102a6b', padding: '96px 28px 0', position: 'relative', overflow: 'hidden' }}>
           <div style={{ maxWidth: '1240px', margin: '0 auto', position: 'relative', zIndex: 2 }}>
             {/* Breadcrumb */}
             <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '32px' }}>
@@ -120,7 +120,7 @@ export default function AreasPage() {
               <div style={{ flex: 1, height: '1px', background: '#e0e2ea' }} />
               <div style={{ display: 'flex', alignItems: 'center', gap: '14px', flexShrink: 0 }}>
                 <div style={{ width: '10px', height: '10px', background: '#C8202A', borderRadius: '2px', transform: 'rotate(45deg)' }} />
-                <span style={{ fontSize: '0.7rem', fontWeight: 800, letterSpacing: '0.22em', textTransform: 'uppercase', color: '#080f1f' }}>Riverside County</span>
+                <span style={{ fontSize: '0.7rem', fontWeight: 800, letterSpacing: '0.22em', textTransform: 'uppercase', color: '#102a6b' }}>Riverside County</span>
               </div>
               <div style={{ flex: 1, height: '1px', background: '#e0e2ea' }} />
             </div>
@@ -138,7 +138,7 @@ export default function AreasPage() {
                   <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '3px', background: '#C8202A' }} />
 
                   <h2 style={{
-                    fontSize: '1.3rem', fontWeight: 700, color: '#080f1f',
+                    fontSize: '1.3rem', fontWeight: 700, color: '#102a6b',
                     fontFamily: 'var(--font-newsreader), serif', lineHeight: 1.2,
                     marginBottom: '14px',
                   }}>
@@ -181,7 +181,7 @@ export default function AreasPage() {
               <h2 style={{
                 fontFamily: 'var(--font-newsreader), serif',
                 fontSize: 'clamp(1.7rem, 3vw, 2.4rem)',
-                fontWeight: 700, color: '#080f1f', lineHeight: 1.1,
+                fontWeight: 700, color: '#102a6b', lineHeight: 1.1,
               }}>
                 How We Work
               </h2>
@@ -206,7 +206,7 @@ export default function AreasPage() {
                   </div>
                   <h3 style={{
                     fontFamily: 'var(--font-newsreader), serif',
-                    fontSize: '1.55rem', fontWeight: 700, color: '#080f1f',
+                    fontSize: '1.55rem', fontWeight: 700, color: '#102a6b',
                     marginBottom: '12px',
                   }}>
                     {item.title}
@@ -221,7 +221,7 @@ export default function AreasPage() {
         </section>
 
         {/* ── Divider CTA ── */}
-        <section style={{ background: '#080f1f', padding: '56px 28px', position: 'relative', overflow: 'hidden' }}>
+        <section style={{ background: '#102a6b', padding: '56px 28px', position: 'relative', overflow: 'hidden' }}>
           <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, rgba(200,32,42,0.08) 0%, transparent 60%)' }} />
           <div style={{ maxWidth: '1240px', margin: '0 auto', position: 'relative', zIndex: 1, display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '24px' }}>
             <div>
@@ -253,7 +253,7 @@ export default function AreasPage() {
               <div style={{ flex: 1, height: '1px', background: '#e0e2ea' }} />
               <div style={{ display: 'flex', alignItems: 'center', gap: '14px', flexShrink: 0 }}>
                 <div style={{ width: '10px', height: '10px', background: '#1A52BE', borderRadius: '2px', transform: 'rotate(45deg)' }} />
-                <span style={{ fontSize: '0.7rem', fontWeight: 800, letterSpacing: '0.22em', textTransform: 'uppercase', color: '#080f1f' }}>South Orange County</span>
+                <span style={{ fontSize: '0.7rem', fontWeight: 800, letterSpacing: '0.22em', textTransform: 'uppercase', color: '#102a6b' }}>South Orange County</span>
               </div>
               <div style={{ flex: 1, height: '1px', background: '#e0e2ea' }} />
             </div>
@@ -270,7 +270,7 @@ export default function AreasPage() {
                   <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '3px', background: '#1A52BE' }} />
 
                   <h2 style={{
-                    fontSize: '1.3rem', fontWeight: 700, color: '#080f1f',
+                    fontSize: '1.3rem', fontWeight: 700, color: '#102a6b',
                     fontFamily: 'var(--font-newsreader), serif', lineHeight: 1.2,
                     marginBottom: '14px',
                   }}>
@@ -308,7 +308,7 @@ export default function AreasPage() {
               <div style={{ width: '24px', height: '2px', background: '#C8202A' }} />
               <span style={{ color: '#C8202A', fontSize: '0.7rem', fontWeight: 700, letterSpacing: '0.22em', textTransform: 'uppercase' }}>About Our Coverage</span>
             </div>
-            <h2 style={{ fontFamily: 'var(--font-newsreader), serif', fontSize: 'clamp(1.7rem, 3vw, 2.4rem)', fontWeight: 700, color: '#080f1f', lineHeight: 1.15, marginBottom: '24px' }}>
+            <h2 style={{ fontFamily: 'var(--font-newsreader), serif', fontSize: 'clamp(1.7rem, 3vw, 2.4rem)', fontWeight: 700, color: '#102a6b', lineHeight: 1.15, marginBottom: '24px' }}>
               Your Local Plumber Across<br />San Jacinto Valley &amp; Beyond
             </h2>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>

@@ -18,7 +18,7 @@ export default function NotFound() {
       <Nav />
       <main>
         <section style={{
-          background: '#080f1f', minHeight: '60vh',
+          background: '#102a6b', minHeight: '60vh',
           display: 'flex', alignItems: 'center', justifyContent: 'center',
           padding: '80px 28px', textAlign: 'center', position: 'relative',
         }}>

@@ -9,7 +9,7 @@ import { reportLead } from '@/app/lib/fbpixel';
 const inputStyle: React.CSSProperties = {
   width: '100%', background: '#fff',
   border: '1px solid #e0e2ea', borderRadius: '4px',
-  padding: '13px 16px', color: '#080f1f', fontSize: '0.95rem',
+  padding: '13px 16px', color: '#102a6b', fontSize: '0.95rem',
   outline: 'none', fontFamily: 'inherit'
 };
 
@@ -97,7 +97,7 @@ export default function Contact() {
           <h2 style={{
             fontFamily: 'var(--font-newsreader), serif',
             fontSize: 'clamp(1.9rem, 3.5vw, 2.8rem)', fontWeight: 700,
-            color: '#080f1f', lineHeight: 1.1, marginBottom: '20px'
+            color: '#102a6b', lineHeight: 1.1, marginBottom: '20px'
           }}>
             Request a Free Quote
           </h2>
@@ -125,7 +125,7 @@ export default function Contact() {
                 <div style={{ width: '2px', height: '40px', background: item.bar, flexShrink: 0 }} />
                 <div>
                   <div style={{ color: '#9b9eb0', fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', marginBottom: '4px' }}>{item.label}</div>
-                  <div style={{ color: '#080f1f', fontSize: item.label.startsWith('Phone') ? '1.1rem' : '1rem', fontWeight: item.label.startsWith('Phone') ? 700 : 600 }}>{item.value}</div>
+                  <div style={{ color: '#102a6b', fontSize: item.label.startsWith('Phone') ? '1.1rem' : '1rem', fontWeight: item.label.startsWith('Phone') ? 700 : 600 }}>{item.value}</div>
                 </div>
               </a>
             ))}
@@ -133,7 +133,7 @@ export default function Contact() {
               <div style={{ width: '2px', height: '40px', background: '#1A52BE', flexShrink: 0 }} />
               <div>
                 <div style={{ color: '#9b9eb0', fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', marginBottom: '4px' }}>Service Area</div>
-                <div style={{ color: '#080f1f', fontSize: '1rem', fontWeight: 600 }}>San Jacinto &amp; Southern California</div>
+                <div style={{ color: '#102a6b', fontSize: '1rem', fontWeight: 600 }}>San Jacinto &amp; Southern California</div>
               </div>
             </div>
           </div>
@@ -155,12 +155,12 @@ export default function Contact() {
               </div>
               <h3 style={{
                 fontFamily: 'var(--font-newsreader), serif',
-                fontSize: '1.7rem', color: '#080f1f', marginBottom: '12px'
+                fontSize: '1.7rem', color: '#102a6b', marginBottom: '12px'
               }}>
                 Request Received
               </h3>
               <p style={{ color: '#5a5e72', fontSize: '0.975rem', lineHeight: 1.65 }}>
-                Thanks, {submittedName}. Joe will call <strong style={{ color: '#080f1f' }}>{submittedPhone}</strong> within the hour.<br />
+                Thanks, {submittedName}. Joe will call <strong style={{ color: '#102a6b' }}>{submittedPhone}</strong> within the hour.<br />
                 For emergencies:{' '}
                 <a href="tel:+19493790082" style={{ color: '#C8202A', fontWeight: 700 }}>(949) 379-0082</a>
               </p>

@@ -12,7 +12,7 @@ const inputStyle: React.CSSProperties = {
   borderRadius: '6px',
   padding: '13px 16px',
   fontSize: '0.92rem',
-  color: '#080f1f',
+  color: '#102a6b',
   background: '#fff',
   outline: 'none',
   fontFamily: 'inherit',
@@ -96,7 +96,7 @@ export default function LeadPopup() {
       onClick={dismiss}
       style={{
         position: 'fixed', inset: 0, zIndex: 10000,
-        background: 'rgba(8,15,31,0.6)',
+        background: 'rgba(16,42,107,0.6)',
         display: 'flex', alignItems: 'center', justifyContent: 'center',
         padding: '20px',
         animation: 'apPopupFade 0.2s ease',
@@ -108,7 +108,7 @@ export default function LeadPopup() {
           width: '420px', maxWidth: '100%',
           background: '#fff', borderRadius: '12px',
           overflow: 'hidden',
-          boxShadow: '0 20px 60px rgba(8,15,31,0.35)',
+          boxShadow: '0 20px 60px rgba(16,42,107,0.35)',
           fontFamily: 'var(--font-hanken), sans-serif',
           animation: 'apPopupUp 0.25s ease',
           position: 'relative',
@@ -144,7 +144,7 @@ export default function LeadPopup() {
                   <path d="M4 10l5 5 7-8" stroke="#fff" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
               </div>
-              <p style={{ fontWeight: 700, fontSize: '1.1rem', color: '#080f1f', marginBottom: '8px' }}>Thanks, we&apos;ll be in touch!</p>
+              <p style={{ fontWeight: 700, fontSize: '1.1rem', color: '#102a6b', marginBottom: '8px' }}>Thanks, we&apos;ll be in touch!</p>
               <p style={{ color: '#5a5e72', fontSize: '0.9rem', lineHeight: 1.6 }}>
                 Joe will call you back shortly. For emergencies call{' '}
                 <a href={PHONE_HREF} style={{ color: '#C8202A', fontWeight: 700, textDecoration: 'none' }}>(949)&nbsp;379-0082</a>.
@@ -156,7 +156,7 @@ export default function LeadPopup() {
                 <div style={{ width: '24px', height: '2px', background: '#C8202A' }} />
                 <span style={{ color: '#C8202A', fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase' }}>Free Estimate</span>
               </div>
-              <h2 style={{ fontFamily: 'var(--font-newsreader), serif', fontSize: '1.6rem', fontWeight: 700, color: '#080f1f', lineHeight: 1.15, marginBottom: '8px' }}>
+              <h2 style={{ fontFamily: 'var(--font-newsreader), serif', fontSize: '1.6rem', fontWeight: 700, color: '#102a6b', lineHeight: 1.15, marginBottom: '8px' }}>
                 Get a Fast, Free Plumbing Quote
               </h2>
               <p style={{ color: '#5a5e72', fontSize: '0.88rem', lineHeight: 1.6, marginBottom: '24px' }}>

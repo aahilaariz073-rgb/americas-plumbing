@@ -11,7 +11,7 @@ const inputStyle: React.CSSProperties = {
   borderBottom: '1px solid #e0e2ea',
   padding: '14px 0',
   fontSize: '0.9rem',
-  color: '#080f1f',
+  color: '#102a6b',
   background: 'transparent',
   outline: 'none',
   fontFamily: 'inherit',
@@ -72,13 +72,13 @@ export default function ChatBot() {
         <div style={{
           width: '320px', maxWidth: 'calc(100vw - 48px)',
           background: '#fff', borderRadius: '10px',
-          boxShadow: '0 8px 40px rgba(8,15,31,0.18)',
+          boxShadow: '0 8px 40px rgba(16,42,107,0.18)',
           overflow: 'hidden',
           animation: 'chatUp 0.22s ease',
         }}>
           {/* Header */}
           <div style={{
-            background: '#080f1f', padding: '16px 20px',
+            background: '#102a6b', padding: '16px 20px',
             display: 'flex', alignItems: 'center', justifyContent: 'space-between',
           }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
@@ -109,7 +109,7 @@ export default function ChatBot() {
                     <path d="M4 10l5 5 7-8" stroke="#fff" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 </div>
-                <p style={{ fontWeight: 700, fontSize: '1rem', color: '#080f1f', marginBottom: '6px' }}>We&apos;ll be in touch!</p>
+                <p style={{ fontWeight: 700, fontSize: '1rem', color: '#102a6b', marginBottom: '6px' }}>We&apos;ll be in touch!</p>
                 <p style={{ color: '#5a5e72', fontSize: '0.83rem', lineHeight: 1.6 }}>
                   Joe will call you back shortly. For emergencies call{' '}
                   <a href={PHONE_HREF} style={{ color: '#C8202A', fontWeight: 700, textDecoration: 'none' }}>(949)&nbsp;379-0082</a>.
@@ -197,10 +197,10 @@ export default function ChatBot() {
         style={{
           display: 'flex', alignItems: 'center', gap: '12px',
           background: '#fff', borderRadius: '999px', border: 'none',
-          boxShadow: '0 4px 20px rgba(8,15,31,0.15)',
+          boxShadow: '0 4px 20px rgba(16,42,107,0.15)',
           padding: '8px 8px 8px 18px',
           cursor: 'pointer', fontFamily: 'inherit',
-          fontSize: '0.88rem', fontWeight: 600, color: '#080f1f',
+          fontSize: '0.88rem', fontWeight: 600, color: '#102a6b',
         }}
       >
         Have a question?

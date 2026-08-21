@@ -55,7 +55,7 @@ export default function WhyUs() {
           <h2 style={{
             fontFamily: 'var(--font-newsreader), serif',
             fontSize: 'clamp(2.2rem, 4vw, 3rem)', fontWeight: 700,
-            color: '#080f1f', lineHeight: 1.1
+            color: '#102a6b', lineHeight: 1.1
           }}>
             Why Homeowners Choose Us
           </h2>
@@ -80,7 +80,7 @@ export default function WhyUs() {
               </div>
               <h3 style={{
                 fontSize: '1.1rem', fontWeight: 700,
-                color: p.accent ? '#fff' : '#080f1f', marginBottom: '10px'
+                color: p.accent ? '#fff' : '#102a6b', marginBottom: '10px'
               }}>
                 {p.title}
               </h3>

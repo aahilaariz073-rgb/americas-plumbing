@@ -56,7 +56,7 @@ export default function ReviewsPage() {
       <Nav />
       <main>
         {/* Page header */}
-        <section style={{ background: '#080f1f', padding: '80px 28px 72px', position: 'relative', overflow: 'hidden' }}>
+        <section style={{ background: '#102a6b', padding: '80px 28px 72px', position: 'relative', overflow: 'hidden' }}>
           <div style={{ position: 'absolute', inset: 0, pointerEvents: 'none' }}>
             <div style={{ position: 'absolute', top: '-10%', right: '-5%', width: '45%', height: '130%', background: '#1A52BE', clipPath: 'polygon(18% 0%,100% 0%,100% 100%,0% 100%)', opacity: 0.07 }} />
           </div>
@@ -103,7 +103,7 @@ export default function ReviewsPage() {
                   </p>
                   <div style={{ borderTop: '1px solid #e8eaf0', paddingTop: '20px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                     <div>
-                      <div style={{ color: '#080f1f', fontWeight: 700, fontSize: '0.9rem' }}>{r.name}</div>
+                      <div style={{ color: '#102a6b', fontWeight: 700, fontSize: '0.9rem' }}>{r.name}</div>
                       <div style={{ color: '#9b9eb0', fontSize: '0.78rem', marginTop: '3px' }}>{r.location}</div>
                     </div>
                     <span style={{ color: '#F5C518', fontSize: '0.85rem' }}>★★★★★</span>

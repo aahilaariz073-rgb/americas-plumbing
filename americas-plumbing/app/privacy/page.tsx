@@ -24,7 +24,7 @@ const EFFECTIVE_DATE = 'July 16, 2026';
 const h2Style: React.CSSProperties = {
   fontFamily: 'var(--font-newsreader), serif',
   fontSize: 'clamp(1.4rem, 2.4vw, 1.8rem)', fontWeight: 700,
-  color: '#080f1f', lineHeight: 1.2, marginTop: '44px', marginBottom: '16px',
+  color: '#102a6b', lineHeight: 1.2, marginTop: '44px', marginBottom: '16px',
 };
 const pStyle: React.CSSProperties = { color: '#374151', fontSize: '1rem', lineHeight: 1.8, marginBottom: '16px' };
 const liStyle: React.CSSProperties = { color: '#374151', fontSize: '1rem', lineHeight: 1.75, marginBottom: '8px' };
@@ -36,7 +36,7 @@ export default function PrivacyPolicyPage() {
       <Nav />
       <main>
         {/* Header */}
-        <section style={{ background: '#080f1f', padding: '72px 28px 56px', position: 'relative', overflow: 'hidden' }}>
+        <section style={{ background: '#102a6b', padding: '72px 28px 56px', position: 'relative', overflow: 'hidden' }}>
           <div style={{ maxWidth: '820px', margin: '0 auto', position: 'relative', zIndex: 2 }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '20px' }}>
               <a href="/" style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.8rem', textDecoration: 'none' }}>Home</a>

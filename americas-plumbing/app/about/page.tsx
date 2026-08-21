@@ -62,7 +62,7 @@ export default function AboutPage() {
       <main>
 
         {/* Hero */}
-        <section style={{ background: '#080f1f', padding: '80px 28px 72px', position: 'relative', overflow: 'hidden' }}>
+        <section style={{ background: '#102a6b', padding: '80px 28px 72px', position: 'relative', overflow: 'hidden' }}>
           <div style={{ position: 'absolute', inset: 0, pointerEvents: 'none' }}>
             <div style={{ position: 'absolute', top: '-10%', right: '-5%', width: '45%', height: '130%', background: '#1A52BE', clipPath: 'polygon(18% 0%,100% 0%,100% 100%,0% 100%)', opacity: 0.07 }} />
             <div style={{ position: 'absolute', top: '-10%', right: '-5%', width: '42%', height: '130%', background: '#C8202A', clipPath: 'polygon(20% 0%,22% 0%,4% 100%,2% 100%)', opacity: 0.5 }} />
@@ -117,7 +117,7 @@ export default function AboutPage() {
               <h2 style={{
                 fontFamily: 'var(--font-newsreader), serif',
                 fontSize: 'clamp(1.9rem, 3.2vw, 2.6rem)', fontWeight: 700,
-                color: '#080f1f', lineHeight: 1.1, marginBottom: '28px'
+                color: '#102a6b', lineHeight: 1.1, marginBottom: '28px'
               }}>
                 Built in San Jacinto.<br />Still Here After 25 Years.
               </h2>
@@ -141,13 +141,13 @@ export default function AboutPage() {
                 {timeline.map((item, i) => (
                   <div key={item.year} style={{ display: 'flex', gap: '20px', paddingBottom: i < timeline.length - 1 ? '28px' : '0' }}>
                     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', flexShrink: 0 }}>
-                      <div style={{ width: '40px', height: '40px', borderRadius: '50%', background: item.year === 'Today' ? '#C8202A' : '#080f1f', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                      <div style={{ width: '40px', height: '40px', borderRadius: '50%', background: item.year === 'Today' ? '#C8202A' : '#102a6b', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
                         <div style={{ width: '10px', height: '10px', borderRadius: '50%', background: '#fff' }} />
                       </div>
                       {i < timeline.length - 1 && <div style={{ width: '2px', flex: 1, background: '#e0e2ea', marginTop: '4px' }} />}
                     </div>
                     <div style={{ paddingTop: '8px', paddingBottom: i < timeline.length - 1 ? '4px' : '0' }}>
-                      <div style={{ fontFamily: 'var(--font-newsreader), serif', fontSize: '1.1rem', fontWeight: 700, color: item.year === 'Today' ? '#C8202A' : '#080f1f', marginBottom: '4px' }}>{item.year}</div>
+                      <div style={{ fontFamily: 'var(--font-newsreader), serif', fontSize: '1.1rem', fontWeight: 700, color: item.year === 'Today' ? '#C8202A' : '#102a6b', marginBottom: '4px' }}>{item.year}</div>
                       <p style={{ color: '#5a5e72', fontSize: '0.9rem', lineHeight: 1.65 }}>{item.event}</p>
                     </div>
                   </div>
@@ -174,7 +174,7 @@ export default function AboutPage() {
                 />
               </div>
               {/* Name badge overlay */}
-              <div style={{ position: 'absolute', bottom: '24px', left: '24px', right: '24px', background: '#080f1f', padding: '16px 20px', borderLeft: '3px solid #C8202A' }}>
+              <div style={{ position: 'absolute', bottom: '24px', left: '24px', right: '24px', background: '#102a6b', padding: '16px 20px', borderLeft: '3px solid #C8202A' }}>
                 <div style={{ color: '#fff', fontWeight: 700, fontSize: '1rem', lineHeight: 1.2 }}>Joseph Romero</div>
                 <div style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.75rem', marginTop: '3px' }}>Founder & Master Plumber · C-36 #0784091</div>
               </div>
@@ -188,7 +188,7 @@ export default function AboutPage() {
               <h2 style={{
                 fontFamily: 'var(--font-newsreader), serif',
                 fontSize: 'clamp(1.9rem, 3.2vw, 2.6rem)', fontWeight: 700,
-                color: '#080f1f', lineHeight: 1.1, marginBottom: '28px'
+                color: '#102a6b', lineHeight: 1.1, marginBottom: '28px'
               }}>
                 Joe Romero —<br />The Plumber Who Picks Up the Phone
               </h2>
@@ -205,7 +205,7 @@ export default function AboutPage() {
 
               {/* Pull quote */}
               <blockquote style={{ borderLeft: '3px solid #C8202A', paddingLeft: '24px', margin: '0 0 36px' }}>
-                <p style={{ fontFamily: 'var(--font-newsreader), serif', fontSize: '1.2rem', color: '#080f1f', lineHeight: 1.55, fontStyle: 'italic', marginBottom: '10px' }}>
+                <p style={{ fontFamily: 'var(--font-newsreader), serif', fontSize: '1.2rem', color: '#102a6b', lineHeight: 1.55, fontStyle: 'italic', marginBottom: '10px' }}>
                   &ldquo;I started this company because I was tired of seeing homeowners get taken advantage of. Twenty-five years in, that&apos;s still why I do it.&rdquo;
                 </p>
                 <cite style={{ color: '#C8202A', fontSize: '0.8rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', fontStyle: 'normal' }}>
@@ -216,7 +216,7 @@ export default function AboutPage() {
               {/* Mini credential pills */}
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px' }}>
                 {['C-36 Licensed · #0784091', '25+ Years Experience', 'San Jacinto, CA Native', 'Same-Day Service'].map(pill => (
-                  <span key={pill} style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', background: '#fff', border: '1px solid #e0e2ea', borderRadius: '4px', padding: '6px 14px', fontSize: '0.78rem', fontWeight: 600, color: '#080f1f' }}>
+                  <span key={pill} style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', background: '#fff', border: '1px solid #e0e2ea', borderRadius: '4px', padding: '6px 14px', fontSize: '0.78rem', fontWeight: 600, color: '#102a6b' }}>
                     {pill}
                   </span>
                 ))}
@@ -239,7 +239,7 @@ export default function AboutPage() {
               <h2 style={{
                 fontFamily: 'var(--font-newsreader), serif',
                 fontSize: 'clamp(2rem, 3.5vw, 2.8rem)', fontWeight: 700,
-                color: '#080f1f', lineHeight: 1.1
+                color: '#102a6b', lineHeight: 1.1
               }}>
                 Our Values
               </h2>
@@ -251,7 +251,7 @@ export default function AboutPage() {
                   <div style={{ fontFamily: 'var(--font-newsreader), serif', fontSize: '3rem', fontWeight: 700, color: i === 3 ? 'rgba(255,255,255,0.3)' : '#C8202A', lineHeight: 1, marginBottom: '16px' }}>
                     {v.num}
                   </div>
-                  <h3 style={{ fontSize: '1.1rem', fontWeight: 700, color: i === 3 ? '#fff' : '#080f1f', marginBottom: '10px' }}>
+                  <h3 style={{ fontSize: '1.1rem', fontWeight: 700, color: i === 3 ? '#fff' : '#102a6b', marginBottom: '10px' }}>
                     {v.title}
                   </h3>
                   <p style={{ color: i === 3 ? 'rgba(255,255,255,0.75)' : '#5a5e72', fontSize: '0.875rem', lineHeight: 1.65 }}>
@@ -270,7 +270,7 @@ export default function AboutPage() {
               <h2 style={{
                 fontFamily: 'var(--font-newsreader), serif',
                 fontSize: 'clamp(1.7rem, 3vw, 2.4rem)', fontWeight: 700,
-                color: '#080f1f', lineHeight: 1.1, marginBottom: '12px'
+                color: '#102a6b', lineHeight: 1.1, marginBottom: '12px'
               }}>
                 Licensed, Insured &amp; Accountable
               </h2>
@@ -287,8 +287,8 @@ export default function AboutPage() {
                 { label: 'Service Rating', value: '5.0 ★', sub: 'Google Reviews' },
               ].map(item => (
                 <div key={item.label} style={{ background: '#fff', padding: '32px 28px', textAlign: 'center' }}>
-                  <div style={{ fontFamily: 'var(--font-newsreader), serif', fontSize: '2rem', fontWeight: 700, color: '#080f1f', lineHeight: 1, marginBottom: '6px' }}>{item.value}</div>
-                  <div style={{ fontSize: '0.82rem', fontWeight: 700, color: '#080f1f', marginBottom: '4px' }}>{item.label}</div>
+                  <div style={{ fontFamily: 'var(--font-newsreader), serif', fontSize: '2rem', fontWeight: 700, color: '#102a6b', lineHeight: 1, marginBottom: '6px' }}>{item.value}</div>
+                  <div style={{ fontSize: '0.82rem', fontWeight: 700, color: '#102a6b', marginBottom: '4px' }}>{item.label}</div>
                   <div style={{ fontSize: '0.75rem', color: '#5a5e72' }}>{item.sub}</div>
                 </div>
               ))}

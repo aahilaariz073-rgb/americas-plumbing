@@ -4,11 +4,11 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      style={{ position: 'relative', background: '#080f1f', overflow: 'hidden', minHeight: '94vh', display: 'flex', alignItems: 'center' }}
+      style={{ position: 'relative', background: '#102a6b', overflow: 'hidden', minHeight: '94vh', display: 'flex', alignItems: 'center' }}
     >
       <div style={{ position: 'absolute', inset: 0 }}>
         <Image src="/plumb.jpg" alt="America's Plumbing — Licensed Plumber in San Jacinto, CA" fill priority quality={80} sizes="100vw" style={{ objectFit: 'cover', objectPosition: 'center' }} />
-        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(105deg, rgba(8,15,31,0.88) 35%, rgba(8,15,31,0.25) 100%)' }} />
+        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(105deg, rgba(16,42,107,0.88) 35%, rgba(16,42,107,0.25) 100%)' }} />
       </div>
 
       <div style={{ position: 'relative', zIndex: 2, maxWidth: '1240px', margin: '0 auto', padding: '100px 28px 90px', width: '100%' }}>
