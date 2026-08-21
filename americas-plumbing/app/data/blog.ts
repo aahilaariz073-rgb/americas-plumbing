@@ -1640,6 +1640,287 @@ export const posts: BlogPost[] = [
       text: "Don't wait for a full failure. We'll diagnose the issue and give you an honest repair-or-replace recommendation, same day.",
     },
   },
+  {
+    slug: 'how-often-should-you-clean-drains-san-jacinto',
+    title: 'How Often Should You Have Your Drains Cleaned? A San Jacinto Guide',
+    metaTitle: 'How Often to Clean Drains | San Jacinto Plumbing Guide',
+    metaDescription:
+      'Wondering how often drains need professional cleaning in San Jacinto? Here is a realistic schedule by household type, plus the warning signs you should not wait.',
+    excerpt:
+      'There is no single answer for every home — but there is a sensible schedule. Here is how often San Jacinto homes actually need professional drain cleaning.',
+    date: '2026-08-04',
+    author: 'Joseph Romero',
+    category: 'Drains',
+    readMins: 5,
+    heroImage: '/blog-liquid-drain.jpg',
+    heroAlt: 'Plumber preparing to clean a household drain line in San Jacinto, CA',
+    intent: 'Informational',
+    primaryKeyword: 'how often should you clean drains',
+    keywords: [
+      'how often should you clean drains',
+      'how often to snake a drain',
+      'professional drain cleaning schedule',
+      'when to call a plumber for drains',
+      'preventive drain cleaning san jacinto',
+      'hard water drain buildup',
+    ],
+    sections: [
+      {
+        paras: [
+          "Most homeowners never think about drain cleaning until a sink is already backing up. But a little preventive maintenance is far cheaper than an emergency call — and in a hard-water area like San Jacinto, buildup happens faster than most people expect. Here is a realistic schedule for how often your drains actually need attention, based on the kind of household you run.",
+        ],
+        link: { text: 'See Our Drain Cleaning Service', href: '/services/drain-cleaning' },
+      },
+      {
+        h2: 'A Realistic Schedule by Household',
+        table: {
+          headers: ['Household type', 'Suggested cleaning interval', 'Why'],
+          rows: [
+            ['Small household, low usage', 'Every 18–24 months', 'Less waste going down the lines means slower buildup.'],
+            ['Family of 4+ with kids', 'Every 12 months', 'Higher volume of hair, food, and soap accelerates clogs.'],
+            ['Home with a garbage disposal used daily', 'Every 9–12 months', 'Food solids and grease coat pipe walls over time.'],
+            ['Older home (pre-1980 plumbing)', 'Every 6–12 months', 'Narrower or corroded pipes clog and catch debris more easily.'],
+            ['History of recurring clogs', 'Every 6 months', 'A pattern of clogs usually points to a deeper line issue.'],
+          ],
+        },
+      },
+      {
+        h2: 'Why San Jacinto Homes Clog Faster',
+        paras: [
+          "Riverside County's hard water leaves mineral scale on the inside of your pipes. That rough surface gives grease, hair, and soap scum something to cling to, so a line that would stay clear for years in a soft-water city can narrow noticeably here in a fraction of the time. It is the same reason water heaters and fixtures wear faster in our area — the minerals are always working against you.",
+          "That is why a fixed calendar reminder beats waiting for a problem. By the time water is visibly draining slowly, the buildup has usually been forming for months.",
+        ],
+      },
+      {
+        h2: "Signs You Should Not Wait for the Schedule",
+        list: [
+          'Multiple drains slow at the same time — often a main-line issue, not a single fixture.',
+          'Gurgling sounds from a drain or toilet when another fixture runs.',
+          'A recurring clog in the same spot that keeps coming back after you clear it.',
+          'Sewage or foul odor coming up through a drain.',
+          'Water backing up into a tub or shower when the washing machine or toilet drains.',
+        ],
+        link: { text: 'When Drains Keep Clogging, Read This', href: '/blog/why-your-drains-keep-clogging-san-jacinto' },
+      },
+      {
+        h2: 'Snaking vs. Hydro Jetting',
+        paras: [
+          "A standard cable snake clears the immediate clog, which is often all a single slow sink needs. But if buildup is coating the full length of the pipe — common in older homes and grease-heavy kitchens — hydro jetting scours the pipe walls back to their full diameter with high-pressure water. For a home with recurring clogs, jetting once often resets the clock far longer than repeated snaking.",
+        ],
+        link: { text: 'Learn About Hydro Jetting', href: '/services/hydro-jetting' },
+      },
+      {
+        paras: [
+          "Not sure where your home falls on the schedule? A quick assessment will tell you whether you are due — and a camera inspection can confirm whether a recurring clog is buildup or something deeper in the line.",
+        ],
+        link: { text: 'Book a Drain Assessment', href: '/contact' },
+      },
+    ],
+    faqs: [
+      { q: 'How often should drains be professionally cleaned?', a: 'For most families, once a year is a sensible baseline. Smaller households can stretch to 18–24 months, while homes with heavy disposal use, older pipes, or a history of clogs benefit from every 6–12 months.' },
+      { q: 'Is preventive drain cleaning really necessary?', a: 'It is not strictly required, but it is far cheaper than an emergency backup. In hard-water areas like San Jacinto, mineral scale speeds up buildup, so periodic cleaning helps you avoid the surprise clogs entirely.' },
+      { q: 'Can I just use store-bought drain cleaner instead?', a: 'We advise against it. Liquid drain chemicals can corrode pipes and rarely clear the full buildup. A professional cleaning addresses the actual cause without damaging your plumbing.' },
+      { q: 'What is the difference between snaking and hydro jetting?', a: 'Snaking punches through a single clog; hydro jetting uses high-pressure water to scour the entire pipe wall clean. Jetting lasts longer for homes with widespread buildup or recurring clogs.' },
+      { q: 'Do you offer drain cleaning in Hemet and the surrounding area?', a: 'Yes. We serve San Jacinto, Hemet, and the surrounding Riverside County communities, usually with same-day availability.' },
+    ],
+    relatedServices: [
+      { label: 'Drain Cleaning & Clog Removal', slug: 'drain-cleaning' },
+      { label: 'Hydro Jetting', slug: 'hydro-jetting' },
+      { label: 'Camera Inspection', slug: 'camera-inspection' },
+    ],
+    cta: {
+      heading: 'Due for a drain cleaning?',
+      text: "We'll clear the buildup before it becomes a backup — and tell you honestly whether you need it yet or not.",
+    },
+  },
+  {
+    slug: 'why-is-my-water-bill-so-high-hidden-leaks-san-jacinto',
+    title: 'Why Is My Water Bill So High? Hidden Leaks in San Jacinto Homes',
+    metaTitle: 'Why Is My Water Bill So High? Hidden Leak Guide | San Jacinto',
+    metaDescription:
+      'A water bill that jumped for no reason usually means a hidden leak. Here is how to find it, what it is likely costing you, and when to call a plumber.',
+    excerpt:
+      'A sudden jump in your water bill with no change in habits almost always means a hidden leak. Here is how to track it down before it costs you more.',
+    date: '2026-08-11',
+    author: 'Joseph Romero',
+    category: 'Leaks',
+    readMins: 6,
+    heroImage: '/blog-water-pressure.jpg',
+    heroAlt: 'Homeowner reviewing a high water bill caused by a hidden leak in San Jacinto, CA',
+    intent: 'Informational',
+    primaryKeyword: 'why is my water bill so high',
+    keywords: [
+      'why is my water bill so high',
+      'hidden water leak signs',
+      'how to find a water leak',
+      'high water bill no reason',
+      'water meter leak test',
+      'slab leak high water bill',
+    ],
+    sections: [
+      {
+        paras: [
+          "If your water bill spiked and nothing about your household changed, the water is going somewhere you can't see. A hidden leak can waste hundreds of gallons a day silently — often before a single wet spot ever shows up. Here is how to confirm it, narrow down where it is, and know when it is time to bring in leak detection.",
+        ],
+        link: { text: 'See Our Leak Detection Service', href: '/services/leak-detection' },
+      },
+      {
+        h2: 'The Meter Test: Confirm a Leak in 15 Minutes',
+        list: [
+          'Turn off every water fixture and appliance in the home.',
+          'Find your water meter (usually near the street in a covered box) and note the reading, including the small leak-indicator dial or triangle if it has one.',
+          'Wait 15–20 minutes without using any water.',
+          'Check the meter again. If the numbers moved or the leak indicator is spinning, water is flowing somewhere — you have a leak.',
+        ],
+        paras: [
+          "This one test separates a genuine leak from a simple billing surprise. If the meter holds steady, the cause may be a rate change or a one-time usage spike instead.",
+        ],
+      },
+      {
+        h2: 'The Most Common Hidden Culprits',
+        table: {
+          headers: ['Leak source', 'Typical daily waste', 'How obvious is it?'],
+          rows: [
+            ['Running toilet flapper', 'Up to 200 gallons', 'Often silent; may hear faint hissing.'],
+            ['Slab leak (under the foundation)', '50–250+ gallons', 'Hidden; warm floor spots, low pressure.'],
+            ['Irrigation / outdoor line', 'Highly variable', 'Hidden underground; greener patch of lawn.'],
+            ['Dripping fixtures & supply lines', '5–20 gallons', 'Sometimes visible under sinks.'],
+            ['Water heater relief valve', '5–30 gallons', 'Drip near the unit or drain pan.'],
+          ],
+        },
+      },
+      {
+        h2: 'Signs the Leak Is Inside Your Walls or Slab',
+        paras: [
+          "A running toilet is easy to catch and fix. The expensive ones hide. In San Jacinto's older and slab-foundation homes, a pinhole leak in a pipe beneath the concrete can run for weeks. Watch for a warm spot on the floor, the faint sound of running water when everything is off, unexplained low water pressure, or a musty smell near baseboards. Any of these alongside a high bill points toward a concealed leak that needs professional detection.",
+        ],
+        link: { text: 'Know the Warning Signs of a Slab Leak', href: '/blog/slab-leak-warning-signs-san-jacinto-homeowners' },
+      },
+      {
+        h2: 'Why You Should Not Wait',
+        paras: [
+          "Beyond the wasted water, a hidden leak does damage that compounds. Constant moisture rots subflooring, feeds mold, and undermines a foundation. What starts as an extra $40 on the bill can become a structural repair if it runs long enough. Professional leak detection uses acoustic and thermal equipment to pinpoint the source without tearing open walls or floors on a guess — so the repair stays as small and targeted as possible.",
+        ],
+        link: { text: 'See How Leak Detection Works', href: '/services/leak-detection' },
+      },
+      {
+        paras: [
+          "If the meter test confirmed water is moving with everything off, don't keep paying for it. We'll locate the leak precisely and give you a clear repair plan.",
+        ],
+        link: { text: 'Schedule Leak Detection', href: '/contact' },
+      },
+    ],
+    faqs: [
+      { q: 'How can I tell if my high water bill is from a leak?', a: 'Run the meter test: shut off all water, note the meter, wait 15–20 minutes, and check it again. If the reading moved, water is flowing somewhere — you have a leak.' },
+      { q: 'What is the most common cause of a high water bill?', a: 'A running or leaking toilet is the single most common culprit and can waste up to 200 gallons a day silently. Slab leaks and outdoor irrigation leaks are the most common hidden causes.' },
+      { q: 'Can a hidden leak really waste that much water?', a: 'Yes. Even a slow slab leak can waste 50 gallons or more per day, and a stuck toilet flapper can waste far more. Over a full billing cycle that adds up quickly.' },
+      { q: 'How do you find a leak without tearing up my home?', a: 'We use acoustic listening equipment and thermal imaging to pinpoint the leak location precisely, so any access we need to open is small and targeted rather than exploratory.' },
+      { q: 'Do you offer same-day leak detection in San Jacinto?', a: 'Yes, we offer same-day scheduling for leak detection across San Jacinto, Hemet, and the surrounding Riverside County area whenever availability allows.' },
+    ],
+    relatedServices: [
+      { label: 'Leak Detection & Repair', slug: 'leak-detection' },
+      { label: 'Slab Leak Repair', slug: 'slab-leak-repair' },
+      { label: 'Water Line Repair & Replacement', slug: 'water-line-repair' },
+    ],
+    cta: {
+      heading: 'Paying for water you never used?',
+      text: "We'll pinpoint the hidden leak fast and stop the waste — before it turns into water damage.",
+    },
+  },
+  {
+    slug: 'hard-water-effects-on-plumbing-san-jacinto',
+    title: 'What Hard Water Is Quietly Doing to Your San Jacinto Plumbing',
+    metaTitle: 'Hard Water Effects on Plumbing | San Jacinto & Riverside County',
+    metaDescription:
+      'San Jacinto has notably hard water. Here is what those minerals do to your pipes, water heater, and fixtures over time — and how to protect your home.',
+    excerpt:
+      "San Jacinto's water is hard, and those minerals work against your plumbing every day. Here is what they damage, how fast, and what actually helps.",
+    date: '2026-08-18',
+    author: 'Joseph Romero',
+    category: 'Water Quality',
+    readMins: 6,
+    heroImage: '/reliable-plumbing.webp',
+    heroAlt: 'Mineral scale buildup from hard water on plumbing fixtures in San Jacinto, CA',
+    intent: 'Informational',
+    primaryKeyword: 'hard water effects on plumbing',
+    keywords: [
+      'hard water effects on plumbing',
+      'hard water san jacinto',
+      'mineral buildup pipes',
+      'hard water water heater damage',
+      'is my water hard riverside county',
+      'do i need a water softener',
+    ],
+    sections: [
+      {
+        paras: [
+          "San Jacinto and the wider Riverside County area sit on notably hard water — water carrying a high load of dissolved calcium and magnesium. It is safe to drink, but every time it moves through your plumbing, it leaves a little mineral behind. Over years those tiny deposits add up to real damage. Here is what hard water is actually doing behind your walls, and what genuinely protects against it.",
+        ],
+        link: { text: 'See Our Water Softener Service', href: '/services/water-softener' },
+      },
+      {
+        h2: 'Where the Damage Shows Up First',
+        table: {
+          headers: ['Part of your home', 'What hard water does', 'How fast'],
+          rows: [
+            ['Water heater', 'Sediment layer forms at the tank bottom, cutting efficiency and lifespan.', 'Noticeable within a few years.'],
+            ['Pipes', 'Scale narrows the interior, reducing flow and catching debris.', 'Gradual, faster in older pipes.'],
+            ['Faucets & showerheads', 'White crust clogs the outlets and weakens the spray.', 'Visible within months.'],
+            ['Appliances (dishwasher, washer)', 'Scale coats heating elements and valves, shortening their life.', 'Over several years.'],
+            ['Fixtures & glass', 'Cloudy spotting and film that soap will not remove.', 'Immediate and ongoing.'],
+          ],
+        },
+      },
+      {
+        h2: 'The Water Heater Takes the Biggest Hit',
+        paras: [
+          "Of everything in your home, your water heater suffers most from hard water. Every heating cycle drives more minerals out of the water, and they settle as a hard sediment layer at the bottom of the tank. That layer insulates the water from the burner or element, so the unit runs longer and hotter to do the same job — which is why hard-water tanks tend to rumble, cost more to run, and fail years earlier than they should.",
+        ],
+        link: { text: 'Signs Your Water Heater Is Failing', href: '/blog/signs-your-water-heater-is-failing' },
+      },
+      {
+        h2: 'Signs Your Home Has a Hard-Water Problem',
+        list: [
+          'White, crusty buildup around faucets, showerheads, and aerators.',
+          'Spotty, cloudy glasses and dishes even straight out of the dishwasher.',
+          'Soap and shampoo that never quite lather, and a filmy feeling on skin.',
+          'Reduced water pressure at fixtures that used to run strong.',
+          'A water heater that rumbles or runs out of hot water faster than it used to.',
+          'Stiff, dingy laundry despite normal detergent.',
+        ],
+      },
+      {
+        h2: 'What Actually Helps',
+        paras: [
+          "Cleaning fixtures with vinegar removes the surface crust, but it does nothing for the scale building up inside your pipes and water heater. The only measure that addresses the root cause is treating the water before it reaches your plumbing. A whole-home water softener removes the calcium and magnesium at the point of entry, so nothing scales downstream — protecting your pipes, extending your water heater's life, and restoring proper flow to your fixtures.",
+          "Flushing your water heater annually is a strong companion habit: it clears sediment before it hardens, and paired with a softener it helps a tank reach its full lifespan instead of failing early.",
+        ],
+        link: { text: 'Is a Water Softener Worth It?', href: '/blog/is-a-water-softener-worth-it-san-jacinto' },
+      },
+      {
+        paras: [
+          "Not sure how hard your water really is or whether a softener makes sense for your home? We'll test it and give you a straight answer — no pressure to buy.",
+        ],
+        link: { text: 'Get Your Water Tested', href: '/contact' },
+      },
+    ],
+    faqs: [
+      { q: 'Is the water in San Jacinto hard?', a: 'Yes. San Jacinto and much of Riverside County have notably hard water, high in dissolved calcium and magnesium. It is safe to drink but leaves mineral deposits throughout your plumbing over time.' },
+      { q: 'Does hard water actually damage plumbing?', a: 'Yes. The dissolved minerals build up as scale inside pipes and appliances, narrowing pipes, reducing flow, and shortening the lifespan of water heaters and fixtures.' },
+      { q: 'Why does hard water hurt my water heater the most?', a: 'Heating drives minerals out of the water, and they settle as sediment at the tank bottom. That layer insulates the water from the heat source, making the unit work harder and fail years earlier.' },
+      { q: 'Will a water softener fix hard-water problems?', a: 'A whole-home softener removes the calcium and magnesium before water enters your plumbing, which stops new scale from forming and protects your pipes, water heater, and fixtures going forward.' },
+      { q: 'Can I test my own water hardness?', a: 'Home test strips give a rough reading, but a professional test is more accurate and helps size a softener correctly. We can test your water and recommend whether treatment is worthwhile for your home.' },
+    ],
+    relatedServices: [
+      { label: 'Water Softener & Filtration', slug: 'water-softener' },
+      { label: 'Water Heater Installation & Replacement', slug: 'water-heater' },
+      { label: 'Whole-Home Repiping', slug: 'repiping' },
+    ],
+    cta: {
+      heading: 'Fighting hard water?',
+      text: "We'll test your water and tell you honestly whether a softener is worth it for your home — and what it will protect.",
+    },
+  },
 ];
 
 export function getPost(slug: string): BlogPost | undefined {
