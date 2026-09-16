@@ -1,7 +1,0 @@
-User-agent: *
-Allow: /
-
-Disallow: /thank-you
-Disallow: /_next/
-
-Sitemap: https://americasplumbing.com/sitemap.xml

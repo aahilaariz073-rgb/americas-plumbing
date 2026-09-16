@@ -3,7 +3,7 @@ import Nav from '@/app/components/Nav';
 import Footer from '@/app/components/Footer';
 import PageCTA from '@/app/components/PageCTA';
 import ScrollReveal from '@/app/components/ScrollReveal';
-import { BUSINESS } from '@/app/data/business';
+import { BUSINESS, GOOGLE_REVIEW_URL } from '@/app/data/business';
 
 export const metadata: Metadata = {
   alternates: { canonical: '/reviews' },
@@ -115,21 +115,39 @@ export default function ReviewsPage() {
             {/* Google CTA */}
             <ScrollReveal style={{ textAlign: 'center', paddingTop: '64px' }}>
               <p style={{ color: '#9b9eb0', fontSize: '0.9rem', marginBottom: '20px' }}>
-                Happy with our work? Leave us a review on Google.
+                {GOOGLE_REVIEW_URL
+                  ? 'Happy with our work? Leave us a review on Google.'
+                  : 'Happy with our work? Give us a call — we would love to hear about it.'}
               </p>
-              {/* TODO: Replace with real GBP review link from Google Business Profile dashboard → "Get more reviews" → copy link */}
-              <a
-                href="https://g.page/r/REPLACE_WITH_REAL_GBP_PLACE_ID/review"
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{
-                  display: 'inline-block', background: '#C8202A', color: '#fff',
-                  fontSize: '0.875rem', fontWeight: 700, padding: '14px 32px',
-                  borderRadius: '4px', textDecoration: 'none', letterSpacing: '0.06em', textTransform: 'uppercase'
-                }}
-              >
-                Leave a Google Review
-              </a>
+              {/* Rendered only once GOOGLE_REVIEW_URL is filled in from the
+                  Google Business Profile dashboard → Ask for reviews. Shipping
+                  a placeholder link sends customers to a dead page and costs
+                  the reviews this section exists to collect. */}
+              {GOOGLE_REVIEW_URL ? (
+                <a
+                  href={GOOGLE_REVIEW_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    display: 'inline-block', background: '#C8202A', color: '#fff',
+                    fontSize: '0.875rem', fontWeight: 700, padding: '14px 32px',
+                    borderRadius: '4px', textDecoration: 'none', letterSpacing: '0.06em', textTransform: 'uppercase'
+                  }}
+                >
+                  Leave a Google Review
+                </a>
+              ) : (
+                <a
+                  href={`tel:${BUSINESS.telephone}`}
+                  style={{
+                    display: 'inline-block', background: '#C8202A', color: '#fff',
+                    fontSize: '0.875rem', fontWeight: 700, padding: '14px 32px',
+                    borderRadius: '4px', textDecoration: 'none', letterSpacing: '0.06em', textTransform: 'uppercase'
+                  }}
+                >
+                  Call {BUSINESS.telephoneDisplay}
+                </a>
+              )}
             </ScrollReveal>
           </div>
         </section>

@@ -62,9 +62,28 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     description: post.metaDescription,
     image: `${base}${post.heroImage}`,
     datePublished: post.date,
-    dateModified: post.date,
-    author: { '@type': 'Person', name: post.author },
-    publisher: { '@type': 'Organization', name: BUSINESS.name, logo: { '@type': 'ImageObject', url: BUSINESS.logo } },
+    // Only claims a revision date when the post was genuinely revised.
+    dateModified: post.updated ?? post.date,
+    inLanguage: 'en-US',
+    // Author and publisher both resolve to real, on-site entities: the author
+    // has a bio page, and the publisher is the same @id as the Plumber node on
+    // every other page, so Google consolidates them instead of treating each
+    // post's publisher as a separate organization.
+    author: {
+      '@type': 'Person',
+      name: post.author,
+      url: `${base}/about`,
+      jobTitle: 'Licensed C-36 Plumbing Contractor',
+      worksFor: { '@id': BUSINESS.id },
+    },
+    publisher: {
+      '@type': 'Organization',
+      '@id': BUSINESS.id,
+      name: BUSINESS.name,
+      url: BUSINESS.url,
+      logo: { '@type': 'ImageObject', url: BUSINESS.logo },
+    },
+    isPartOf: { '@type': 'Blog', '@id': `${base}/blog`, name: `${BUSINESS.name} Blog` },
     mainEntityOfPage: { '@type': 'WebPage', '@id': url },
     keywords: post.keywords.join(', '),
   };
@@ -108,7 +127,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
               {post.title}
             </h1>
             <div style={{ display: 'flex', alignItems: 'center', gap: '12px', color: 'rgba(255,255,255,0.55)', fontSize: '0.85rem' }}>
-              <span>By {post.author}</span><span>·</span><span>{formatDate(post.date)}</span><span>·</span><span>{post.readMins} min read</span>
+              <span>By <a href="/about" style={{ color: 'rgba(255,255,255,0.8)', textDecoration: 'underline', textUnderlineOffset: '2px' }}>{post.author}</a></span><span>·</span><span>{formatDate(post.date)}</span>{post.updated && (<><span>·</span><span>Updated {formatDate(post.updated)}</span></>)}<span>·</span><span>{post.readMins} min read</span>
             </div>
           </div>
           <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: '3px', background: 'linear-gradient(to right,#C8202A 0%,#1A52BE 50%,#C8202A 100%)' }} />

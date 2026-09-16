@@ -23,10 +23,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
 
   // Individual posts already carry a real, explicit publish date — the most
-  // accurate lastmod available, no git lookup needed.
+  // accurate lastmod available, no git lookup needed. A post that was actually
+  // revised carries an explicit `updated` date, which is the truer lastmod.
   const blogPages = publishedPostsByDate().map(p => ({
     url: `${base}/blog/${p.slug}`,
-    lastModified: new Date(p.date),
+    lastModified: new Date(p.updated ?? p.date),
   }));
 
   // Content for these lives in shared data files, so that file's real git

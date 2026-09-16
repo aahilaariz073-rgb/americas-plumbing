@@ -23,6 +23,10 @@ export interface BlogPost {
   metaDescription: string;
   excerpt: string;
   date: string;           // ISO publish date
+  // ISO date of a real, substantive content revision. Set this ONLY when the
+  // post's body actually changed — Google discounts lastmod/dateModified
+  // signals it finds inflated. Omitted means never revised since publish.
+  updated?: string;
   author: string;
   category: string;
   readMins: number;

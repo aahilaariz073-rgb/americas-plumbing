@@ -45,6 +45,23 @@ export const BUSINESS = {
   },
 } as const;
 
+// ──────────────────────────────────────────────────────────────
+// Off-site profiles that belong to this business. These become the
+// `sameAs` array in JSON-LD, which is how Google ties this website to the
+// Google Business Profile, Facebook page, Yelp listing, etc. and treats
+// them as one entity. ONLY add URLs that are verified, live, and owned by
+// America's Plumbing — an unverifiable or wrong `sameAs` is worse than an
+// empty one. Empty until the real profile URLs are supplied, and the
+// `sameAs` property is omitted entirely while it is empty.
+// ──────────────────────────────────────────────────────────────
+export const SOCIAL_PROFILES: string[] = [];
+
+// Google Business Profile "get more reviews" short link. Copy from the GBP
+// dashboard → Ask for reviews → share review form. Empty means "not
+// configured yet", and the review button is hidden rather than shipping a
+// dead link to customers.
+export const GOOGLE_REVIEW_URL: string = '';
+
 // Cities served, shown on the site and used for areaServed in schema.
 export const AREA_SERVED_CITIES: string[] = [
   'San Jacinto, CA',
@@ -85,4 +102,7 @@ export const plumberIdentity = {
   geo: BUSINESS.geo,
   hasCredential: BUSINESS.license,
   openingHoursSpecification: BUSINESS.openingHoursSpecification,
+  // Omitted entirely while no verified profile URLs exist — an empty array
+  // is a weaker signal than no property at all.
+  ...(SOCIAL_PROFILES.length ? { sameAs: SOCIAL_PROFILES } : {}),
 };
