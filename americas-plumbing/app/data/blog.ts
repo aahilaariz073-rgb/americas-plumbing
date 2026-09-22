@@ -1925,6 +1925,193 @@ export const posts: BlogPost[] = [
       text: "We'll test your water and tell you honestly whether a softener is worth it for your home — and what it will protect.",
     },
   },
+  {
+    slug: 'trenchless-sewer-repair-san-jacinto',
+    title: 'Trenchless Sewer Repair: How We Fix Your Line Without Digging Up Your Yard',
+    metaTitle: 'Trenchless Sewer Repair San Jacinto CA | No-Dig Pipe Replacement',
+    metaDescription:
+      'A damaged sewer line no longer means trenching your whole yard. See how trenchless sewer repair works, when it applies, and how it compares to traditional dig-and-replace.',
+    excerpt:
+      'A collapsed or root-damaged sewer line used to mean tearing up your entire yard. Trenchless repair fixes the same problem through one or two small access points.',
+    date: '2026-09-22',
+    author: 'Joseph Romero',
+    category: 'Sewer',
+    readMins: 6,
+    heroImage: '/before-2.jpg',
+    heroAlt: 'Sewer line access point for trenchless pipe repair in San Jacinto, CA',
+    intent: 'Commercial',
+    primaryKeyword: 'trenchless sewer repair',
+    keywords: [
+      'trenchless sewer repair',
+      'trenchless sewer repair san jacinto',
+      'no dig sewer repair',
+      'pipe lining vs pipe bursting',
+      'sewer line replacement cost riverside county',
+      'sewer repair without digging up yard',
+    ],
+    sections: [
+      {
+        paras: [
+          "For decades, a broken sewer line meant one thing: a trench running the length of your yard, driveway, or landscaping torn out to reach the pipe. Trenchless sewer repair changes that math. Through one or two small access points, we can reline or replace a damaged sewer line underground — leaving your yard, hardscape, and landscaping mostly intact.",
+        ],
+        link: { text: 'See Our Trenchless Sewer Repair Service', href: '/services/trenchless-sewer' },
+      },
+      {
+        h2: 'How Trenchless Repair Actually Works',
+        paras: [
+          "There are two main trenchless methods, and which one applies depends on your pipe's condition.",
+        ],
+        list: [
+          'Pipe lining (cured-in-place pipe): a resin-saturated liner is fed into the existing pipe through an access point, then cured in place to form a new, jointless pipe inside the old one. Best for cracks, root intrusion, and corrosion where the pipe\'s shape is still intact.',
+          'Pipe bursting: a bursting head is pulled through the old pipe, fracturing it outward while simultaneously pulling a new pipe into its place. Used when the existing line is collapsed, badly misaligned, or too damaged for lining alone.',
+        ],
+      },
+      {
+        h2: 'How We Confirm Which Repair You Actually Need',
+        paras: [
+          "We never recommend a repair method sight-unseen. Every trenchless job starts with a camera inspection to see the pipe's exact condition, material, and the location of the damage. That footage tells us whether lining is sufficient or whether bursting and full replacement is the more honest answer — and it's the same evidence we show you before you approve the work.",
+        ],
+        link: { text: 'See How Camera Inspection Works', href: '/services/camera-inspection' },
+      },
+      {
+        h2: 'Signs Your Sewer Line Is a Candidate for This',
+        list: [
+          'Recurring backups that come back within weeks of snaking, even after the line was cleared',
+          'A camera inspection showing root intrusion, cracked clay pipe, or offset joints',
+          'A soggy patch, sunken area, or unusually lush grass strip running across your yard',
+          'Gurgling drains or slow fixtures throughout the house, not just one',
+          'An older home with original clay or cast-iron sewer piping that has never been replaced',
+        ],
+      },
+      {
+        h2: 'Trenchless vs. Traditional Dig-and-Replace',
+        table: {
+          headers: ['', 'Trenchless repair', 'Traditional excavation'],
+          rows: [
+            ['Yard disruption', 'One or two small access pits', 'Open trench along the full pipe run'],
+            ['Landscaping, hardscape, driveways', 'Usually preserved', 'Often removed and rebuilt'],
+            ['Typical timeline', 'Often 1 day', 'Can run several days depending on length and access'],
+            ['Best suited for', 'Root damage, cracks, corrosion, most collapses', 'Severe bellies, line relocation, or extremely limited access for equipment'],
+          ],
+        },
+      },
+      {
+        h2: 'Is Trenchless Repair Always Possible?',
+        paras: [
+          "Not every situation qualifies. A pipe that has completely lost its slope (a 'belly'), one that needs to be rerouted to a new location, or a line with extremely tight access for our equipment may still call for traditional excavation. We'll tell you plainly if that's the case rather than forcing a trenchless fix where it won't hold up — the camera inspection is what settles it, not a guess.",
+        ],
+      },
+      {
+        paras: [
+          "If your sewer line keeps backing up or a camera inspection has flagged root intrusion or cracking, we can tell you within one visit whether trenchless repair is the right fix for your home.",
+        ],
+        link: { text: 'Schedule a Sewer Line Assessment', href: '/contact' },
+      },
+    ],
+    faqs: [
+      { q: 'Is trenchless sewer repair more expensive than traditional replacement?', a: 'It depends on the job. Trenchless repair often costs less overall once you factor in the landscaping, driveway, or hardscape that traditional excavation would need to remove and rebuild. We give you a written estimate for both approaches when either is genuinely viable.' },
+      { q: 'How long does trenchless sewer repair take?', a: 'Most residential trenchless jobs are completed in a single day, including the camera inspection, access pit digging, and lining or bursting. Full excavation repairs typically take longer.' },
+      { q: 'Will trenchless repair work on a fully collapsed pipe?', a: 'In many cases, yes — pipe bursting is specifically designed to replace a collapsed or badly damaged line by fracturing it outward as a new pipe is pulled through. A camera inspection confirms whether your specific collapse qualifies.' },
+      { q: 'Do I need a permit for trenchless sewer repair in California?', a: 'Yes, sewer line work is permitted work. We pull the required permit and schedule the inspection as part of the job.' },
+      { q: 'How do you decide between pipe lining and pipe bursting?', a: "It comes down to the pipe's current condition. If the pipe still holds its shape and just has cracks, roots, or corrosion, lining is usually sufficient. If it's collapsed, badly offset, or undersized, bursting replaces it entirely. We show you the camera footage so the choice is based on evidence, not a guess." },
+    ],
+    relatedServices: [
+      { label: 'Trenchless Sewer Repair', slug: 'trenchless-sewer' },
+      { label: 'Sewer Line Camera Inspection', slug: 'camera-inspection' },
+      { label: 'Sewer Line Repair & Replacement', slug: 'sewer-line' },
+    ],
+    cta: {
+      heading: 'Damaged sewer line? Skip the trench.',
+      text: "We'll camera-inspect the line, tell you honestly whether trenchless repair applies, and give you a written quote before any digging starts.",
+    },
+  },
+  {
+    slug: 'what-is-hydro-jetting-san-jacinto',
+    title: 'What Is Hydro Jetting — and When Does Your Drain Actually Need It?',
+    metaTitle: 'What Is Hydro Jetting? San Jacinto Drain Cleaning Guide',
+    metaDescription:
+      'Snaking keeps clearing the same clog? Hydro jetting scours the full pipe wall clean instead of punching a hole through the blockage. Here is how it works and when it is worth it.',
+    excerpt:
+      "Snaking punches a hole through a clog. Hydro jetting scours the entire pipe wall clean. Here is the real difference, and how to tell which one your drain needs.",
+    date: '2026-09-25',
+    author: 'Joseph Romero',
+    category: 'Drains',
+    readMins: 5,
+    heroImage: '/homepage12.jpg',
+    heroAlt: 'Hydro jetting equipment clearing a main sewer line in San Jacinto, CA',
+    intent: 'Commercial',
+    primaryKeyword: 'what is hydro jetting',
+    keywords: [
+      'what is hydro jetting',
+      'hydro jetting san jacinto',
+      'hydro jetting vs snaking',
+      'main line hydro jetting cost',
+      'hydro jetting for grease buildup',
+      'hydro jetting tree roots sewer line',
+    ],
+    sections: [
+      {
+        paras: [
+          "Hydro jetting uses a specialized nozzle to blast water through your pipes at pressures up to 4,000 psi, cutting through and flushing away buildup that a standard drain snake can't touch. It's the tool we reach for when a clog keeps coming back, and the reason has a lot to do with what snaking actually does — and doesn't do.",
+        ],
+        link: { text: 'See Our Hydro Jetting Service', href: '/services/hydro-jetting' },
+      },
+      {
+        h2: 'Snaking vs. Hydro Jetting: The Real Difference',
+        paras: [
+          "A drain snake (auger) works by punching or grinding a hole through whatever is blocking the pipe. That restores flow immediately, which is why it's the right tool for most everyday clogs — hair, a foreign object, a single soft blockage. But it leaves the buildup coating the rest of the pipe wall untouched. Hydro jetting instead scours the full diameter of the pipe, top to bottom, stripping grease, scale, and debris off the walls rather than just clearing a path through the middle.",
+        ],
+      },
+      {
+        h2: 'When Hydro Jetting Is the Right Call',
+        list: [
+          'The same drain clogs again within weeks of being snaked — the underlying buildup was never actually removed',
+          'Heavy grease buildup in a kitchen line, which snaking tends to push aside rather than remove',
+          'Mineral scale narrowing a pipe, common in Riverside County\'s hard-water homes',
+          'Tree root intrusion in a main sewer line — jetting cuts and flushes roots that an auger can only partially clear',
+          'Multiple drains slow or gurgling at once, suggesting a main line issue rather than one fixture',
+        ],
+      },
+      {
+        h2: 'What We Check Before Jetting',
+        paras: [
+          "Hydro jetting is powerful, and that's exactly why we don't run it blind. Older, already-fragile pipe — particularly aging clay or corroded cast iron — can be damaged by full-pressure jetting. We camera-inspect the line first to confirm the pipe material and condition, then set the pressure and nozzle appropriately, or recommend a gentler approach or trenchless repair if the pipe itself is the real problem.",
+        ],
+        link: { text: 'See How Camera Inspection Works', href: '/services/camera-inspection' },
+      },
+      {
+        h2: 'What Happens During the Job',
+        list: [
+          'Camera inspection confirms the blockage type, location, and pipe condition',
+          'A hose feeds a pressurized nozzle into the line from a cleanout or access point',
+          'The nozzle sprays water forward and backward, cutting through buildup and flushing debris toward the cleanout',
+          'A follow-up camera pass confirms the pipe wall is fully clear',
+        ],
+      },
+      {
+        paras: [
+          "If the same drain or your main line keeps backing up no matter how many times it's snaked, the buildup causing it is still there. Hydro jetting is how we actually remove it.",
+        ],
+        link: { text: 'Schedule a Drain Assessment', href: '/contact' },
+      },
+    ],
+    faqs: [
+      { q: 'Is hydro jetting safe for all pipes?', a: 'It\'s safe for most modern pipe (PVC, ABS, cast iron in reasonable condition), but old, cracked, or severely corroded pipe can be damaged by full pressure. We camera-inspect first and adjust the approach if the pipe\'s condition calls for it.' },
+      { q: 'How is hydro jetting different from snaking?', a: 'Snaking punches a path through a clog. Hydro jetting uses high-pressure water to strip buildup off the entire pipe wall, which is why it prevents the clog from simply reforming in the same spot.' },
+      { q: 'Can hydro jetting remove tree roots from a sewer line?', a: 'Yes — the pressurized water cuts through root intrusion and flushes the debris out, which is significantly more thorough than an auger alone for root-related backups.' },
+      { q: 'How often should a main line be hydro jetted?', a: 'For most homes, it is not an annual necessity — it is used when a line shows recurring buildup, grease accumulation, or root intrusion. We can recommend a schedule based on what your camera inspection shows.' },
+      { q: 'Will hydro jetting fix a collapsed or badly damaged pipe?', a: 'No — jetting cleans a pipe that still holds its shape. A collapsed or structurally failing line needs repair, often trenchless pipe lining or bursting rather than jetting.' },
+    ],
+    relatedServices: [
+      { label: 'Hydro Jetting', slug: 'hydro-jetting' },
+      { label: 'Drain Cleaning & Clog Removal', slug: 'drain-cleaning' },
+      { label: 'Sewer Line Camera Inspection', slug: 'camera-inspection' },
+    ],
+    cta: {
+      heading: 'Same drain, same clog, every few weeks?',
+      text: "We'll camera-inspect the line and hydro jet it clean — not just punch a hole through the problem again.",
+    },
+  },
 ];
 
 export function getPost(slug: string): BlogPost | undefined {
