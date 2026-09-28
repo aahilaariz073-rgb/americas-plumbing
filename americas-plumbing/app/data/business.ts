@@ -54,7 +54,11 @@ export const BUSINESS = {
 // empty one. Empty until the real profile URLs are supplied, and the
 // `sameAs` property is omitted entirely while it is empty.
 // ──────────────────────────────────────────────────────────────
-export const SOCIAL_PROFILES: string[] = [];
+export const SOCIAL_PROFILES: string[] = [
+  'https://www.facebook.com/AmericasPlumbingOC/',
+  'https://www.instagram.com/americasplumbing',
+  'https://www.youtube.com/channel/UCxIUUZiRxWDaAy-NqVGDVIQ',
+];
 
 // Google Business Profile "get more reviews" short link. Copy from the GBP
 // dashboard → Ask for reviews → share review form. Empty means "not

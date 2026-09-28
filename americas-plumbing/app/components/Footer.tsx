@@ -1,6 +1,13 @@
 'use client';
 
 import Image from 'next/image';
+import { SOCIAL_PROFILES } from '../data/business';
+
+const SOCIAL_LABELS: Record<string, string> = {
+  'facebook.com': 'Facebook',
+  'instagram.com': 'Instagram',
+  'youtube.com': 'YouTube',
+};
 
 export default function Footer() {
   return (
@@ -24,6 +31,23 @@ export default function Footer() {
             <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '0.875rem', lineHeight: 1.7, maxWidth: '280px' }}>
               Family-owned, C-36 licensed plumber based in San Jacinto, CA. Serving Southern California with honest work and fair pricing since 2000 — 25+ years strong.
             </p>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '14px', marginTop: '20px' }}>
+              {SOCIAL_PROFILES.map(url => {
+                const host = new URL(url).hostname.replace(/^www\./, '');
+                const label = SOCIAL_LABELS[host] ?? host;
+                return (
+                  <a
+                    key={url} href={url} target="_blank" rel="noopener noreferrer"
+                    aria-label={`America's Plumbing on ${label}`}
+                    style={{ color: 'rgba(255,255,255,0.55)', fontSize: '0.875rem', textDecoration: 'none', transition: 'color 0.2s' }}
+                    onMouseEnter={e => (e.currentTarget.style.color = '#fff')}
+                    onMouseLeave={e => (e.currentTarget.style.color = 'rgba(255,255,255,0.55)')}
+                  >
+                    {label}
+                  </a>
+                );
+              })}
+            </div>
           </div>
 
           {/* Services */}
