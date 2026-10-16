@@ -344,15 +344,16 @@ export const posts: BlogPost[] = [
   {
     slug: 'tankless-vs-tank-water-heater-san-jacinto',
     title: 'Tankless vs. Tank Water Heater: Which Is Right for a San Jacinto Home?',
-    metaTitle: 'Tankless vs. Tank Water Heater | San Jacinto Buyer’s Guide',
+    metaTitle: 'Tankless vs Tank Water Heater: Cost, Lifespan & Which to Pick',
     metaDescription:
-      'Tankless or traditional tank? Compare cost, lifespan, hot-water capacity, and how San Jacinto’s hard water affects each — so you choose the right water heater.',
+      'Tankless vs tank water heater compared side by side: upfront cost, lifespan, energy use, hot-water capacity, and hard-water upkeep. Plain-English guide from a licensed C-36 plumber.',
     excerpt:
       'Replacing your water heater and torn between tankless and a traditional tank? Here’s an honest, local comparison — including how our hard water affects both.',
     date: '2026-07-01',
+    updated: '2026-10-16',
     author: 'Joseph Romero',
     category: 'Water Heaters',
-    readMins: 7,
+    readMins: 8,
     heroImage: '/blog-water-heater.jpg',
     heroAlt: 'Tankless and tank water heater comparison for San Jacinto, CA homes',
     intent: 'Commercial',
@@ -363,13 +364,34 @@ export const posts: BlogPost[] = [
       'tankless water heater hard water',
       'water heater replacement san jacinto',
       'tankless water heater pros and cons',
+      'tank vs tankless water heater',
+      'tankless or tank water heater',
+      'tankless water heater vs tank water heater',
+      'water heater tankless vs tank',
     ],
+    showToc: true,
     sections: [
       {
         paras: [
+          'Short answer: choose a tank water heater for the lowest upfront cost and the biggest burst of hot water; choose tankless for endless hot water, a longer lifespan, and lower energy use. Details and the local hard-water catch are below.',
           'When it’s time to replace a water heater, the first decision is the big one: stick with a traditional tank, or switch to tankless? Both are good choices in the right home — the “best” one depends on your household, your budget, and, here in San Jacinto, your water.',
           'Here’s a straight comparison of how they differ, what each costs you over time, and the local hard-water factor most online guides leave out.',
         ],
+      },
+      {
+        h2: 'Tankless vs tank water heater at a glance',
+        table: {
+          headers: ['', 'Tank water heater', 'Tankless water heater'],
+          rows: [
+            ['Upfront cost', 'Lower', 'Higher (unit + install)'],
+            ['Typical lifespan', 'About 8–12 years', '20+ years with maintenance'],
+            ['Hot-water supply', 'Large volume, then a reheat wait', 'Endless, limited by flow rate'],
+            ['Energy use', 'Keeps water hot 24/7', 'Heats only on demand'],
+            ['Space', 'Needs floor space', 'Wall-mounted, compact'],
+            ['Hard-water upkeep', 'Periodic tank flush', 'Periodic descaling'],
+            ['Best for', 'Budget-first, high simultaneous use', 'Long-term owners, efficiency-first'],
+          ],
+        },
       },
       {
         h2: 'How they actually work',
@@ -408,6 +430,13 @@ export const posts: BlogPost[] = [
         link: { text: 'Learn about water softeners', href: '/services/water-softener' },
       },
       {
+        h2: 'Tankless vs tank: what about the cost to replace?',
+        paras: [
+          'Total cost depends on the unit size, fuel type (gas or electric), venting, and whether your home needs gas-line or electrical upgrades for a tankless conversion. We quote both options in writing before any work starts, so you can compare real numbers for your home instead of national averages.',
+        ],
+        link: { text: 'Read our water heater replacement cost guide', href: '/blog/water-heater-replacement-cost-california' },
+      },
+      {
         h2: 'So which should you pick?',
         paras: [
           'Choose a tank if you want the lowest upfront cost, have very high simultaneous hot-water demand, or aren’t planning to stay in the home long. Choose tankless if you want endless hot water, long lifespan, lower energy bills, and to reclaim the floor space — and you’re comfortable with the higher install cost.',
@@ -423,6 +452,14 @@ export const posts: BlogPost[] = [
       {
         q: 'Does hard water ruin tankless water heaters?',
         a: 'It won’t ruin one that’s maintained. Hard water causes scale on the heat exchanger, so tankless units need periodic descaling. Many local homeowners add a water softener to reduce buildup and protect the unit.',
+      },
+      {
+        q: 'What is the difference between a tank and tankless water heater?',
+        a: 'A tank heater stores and continuously heats 40–50+ gallons so hot water is ready on demand. A tankless heater heats water only as it flows through the unit, so it never runs out but is limited by flow rate. Tankless costs more upfront and typically lasts longer.',
+      },
+      {
+        q: 'How long do tankless water heaters last compared with tank heaters?',
+        a: 'Tank water heaters generally last about 8–12 years; tankless units often last 20 years or more when descaled regularly, which matters with San Jacinto’s hard water.',
       },
       {
         q: 'Can you replace a tank water heater with a tankless one?',
@@ -2110,6 +2147,101 @@ export const posts: BlogPost[] = [
     cta: {
       heading: 'Same drain, same clog, every few weeks?',
       text: "We'll camera-inspect the line and hydro jet it clean — not just punch a hole through the problem again.",
+    },
+  },
+  {
+    slug: 'pool-plumbing-repair-leaks-drains-riverside-county',
+    title: 'Pool Plumbing Repair: Leaks, Drain Lines & Supply Pipes in Riverside County',
+    metaTitle: 'Pool Plumbing Repair & Leak Detection | Riverside County',
+    metaDescription:
+      'Losing pool water or seeing wet ground near the equipment pad? Learn the signs of pool plumbing leaks, drain line problems, and when to call a licensed plumber.',
+    excerpt:
+      'Pool plumbing problems hide underground. Here are the warning signs, what causes them in Inland Empire soil, and how a licensed plumber finds and fixes the pipe.',
+    date: '2026-10-16',
+    author: 'Joseph Romero',
+    category: 'Leak Detection',
+    readMins: 6,
+    heroImage: '/blog-slab-leak.webp',
+    heroAlt: 'Plumber locating an underground leak near a Southern California home',
+    intent: 'Commercial',
+    primaryKeyword: 'pool plumbing repair',
+    keywords: [
+      'pool plumbing repair',
+      'pool plumbing service',
+      'pool leak detection',
+      'pool drain cleaning',
+      'pool line leak repair riverside county',
+    ],
+    showToc: true,
+    sections: [
+      {
+        paras: [
+          'Pool plumbing is the network of pipes that moves water between your pool, the equipment pad, and your home’s water supply. When one of those lines cracks, clogs, or loosens, the symptoms often show up as a pool that keeps losing water, wet ground in the yard, or a spike in your water bill.',
+          'This guide covers the plumbing side of pool problems — the buried lines, drain lines, and supply connections. For pump, filter, or heater equipment faults, your pool service company is the right call.',
+        ],
+      },
+      {
+        h2: 'Signs of a pool plumbing leak',
+        list: [
+          'Water level drops faster than normal evaporation, even with the cover on',
+          'Soggy or sunken ground along the pipe run between the pool and equipment pad',
+          'A higher water bill with no change in household use',
+          'Air bubbles in the pump basket or return jets',
+          'Pool auto-fill running constantly',
+        ],
+      },
+      {
+        h2: 'Why pool lines fail in the Inland Empire',
+        paras: [
+          'Shifting clay soil, tree roots, age, and original installation shortcuts all stress buried PVC. Over time, joints crack or pull apart. Water-supply lines to auto-fill and pool-area hose bibs can also leak underground, just like any other water line.',
+        ],
+        link: { text: 'See our leak detection service', href: '/services/leak-detection' },
+      },
+      {
+        h2: 'How we find the leak',
+        paras: [
+          'We use non-invasive leak detection to locate the leak before any digging, so the repair is targeted instead of tearing up your whole yard. Drain lines that back up can be camera-inspected and cleared.',
+        ],
+        link: { text: 'Drain cleaning and camera inspection', href: '/services/camera-inspection' },
+      },
+      {
+        h2: 'Repair options',
+        list: [
+          'Spot repair of a cracked or separated section of line',
+          'Replacement of a failed supply or return run',
+          'Clearing and repairing blocked drain lines',
+          'Reconnecting plumbing at the equipment pad after other work',
+        ],
+      },
+      {
+        h2: 'When to call a plumber vs. a pool company',
+        paras: [
+          'Call a plumber for buried pipes, water supply lines, drain lines, and anything that involves water or gas piping. Call a pool service company for pumps, filters, chemistry, and liners. If you are not sure which, call us — we will tell you honestly.',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'How do I know if my pool is leaking or just evaporating?',
+        a: 'A simple bucket test helps: fill a bucket to the pool’s water level, mark both levels, and compare after 24 hours. If the pool drops noticeably more than the bucket, you likely have a leak.',
+      },
+      {
+        q: 'Do you repair underground pool plumbing lines?',
+        a: 'We locate and repair leaking or damaged buried water and drain lines. Call (949) 379-0082 and we will confirm whether your issue is a plumbing-line problem we can handle.',
+      },
+      {
+        q: 'Do you service pool heaters and pumps?',
+        a: 'We focus on the plumbing — pipes, supply, and drain lines. Pump, filter, and heater equipment faults are best handled by a pool service company.',
+      },
+    ],
+    relatedServices: [
+      { label: 'Leak Detection & Repair', slug: 'leak-detection' },
+      { label: 'Camera Inspection', slug: 'camera-inspection' },
+      { label: 'Water Line Repair & Replacement', slug: 'water-line-repair' },
+    ],
+    cta: {
+      heading: 'Losing pool water or seeing wet ground?',
+      text: 'We will find the leak without tearing up your yard. Free estimates, same-day service across Riverside County.',
     },
   },
 ];
