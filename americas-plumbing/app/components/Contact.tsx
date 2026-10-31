@@ -5,6 +5,7 @@ import { useSearchParams } from 'next/navigation';
 import ScrollReveal from './ScrollReveal';
 import { reportContactConversion } from '@/app/lib/gtag';
 import { reportLead } from '@/app/lib/fbpixel';
+import { submitWeb3Form } from '@/app/lib/web3forms';
 
 const inputStyle: React.CSSProperties = {
   width: '100%', background: '#fff',
@@ -43,22 +44,15 @@ export default function Contact() {
     setError('');
     setLoading(true);
 
-    fetch('https://formsubmit.co/ajax/hello@skyliftgroup.com', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-      body: JSON.stringify({
-        name: `${data.firstName} ${data.lastName}`.trim(),
-        phone: data.phone,
-        email: data.email || 'not provided',
-        service: data.service || 'not specified',
-        message: data.message || '',
-        _subject: `New Lead: ${data.firstName} — America's Plumbing`,
-        _template: 'table',
-      }),
+    submitWeb3Form(`New Lead: ${data.firstName} — America's Plumbing`, {
+      name: `${data.firstName} ${data.lastName}`.trim(),
+      phone: data.phone,
+      email: data.email || 'not provided',
+      service: data.service || 'not specified',
+      message: data.message || '',
     })
-      .then(r => r.json())
-      .then(json => {
-        if (!json.success) { setError('Something went wrong. Please call us directly.'); setLoading(false); return; }
+      .then(ok => {
+        if (!ok) { setError('Something went wrong. Please call us directly.'); setLoading(false); return; }
         reportContactConversion();
         reportLead('contact_page', contentName);
         setSubmittedName(data.firstName);

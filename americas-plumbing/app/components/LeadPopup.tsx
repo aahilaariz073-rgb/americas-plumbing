@@ -2,6 +2,7 @@
 import { useState, useEffect, FormEvent } from 'react';
 import { reportContactConversion } from '@/app/lib/gtag';
 import { reportLead } from '@/app/lib/fbpixel';
+import { submitWeb3Form } from '@/app/lib/web3forms';
 
 const PHONE_HREF = 'tel:+19493790082';
 const STORAGE_KEY = 'ap_lead_popup_dismissed';
@@ -60,21 +61,14 @@ export default function LeadPopup() {
     setError('');
     setLoading(true);
 
-    fetch('https://formsubmit.co/ajax/hello@skyliftgroup.com', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-      body: JSON.stringify({
-        name,
-        phone,
-        email: email || 'not provided',
-        message: message || 'No message provided',
-        _subject: `New Popup Lead: ${name} — America's Plumbing`,
-        _template: 'table',
-      }),
+    submitWeb3Form(`New Popup Lead: ${name} — America's Plumbing`, {
+      name,
+      phone,
+      email: email || 'not provided',
+      message: message || 'No message provided',
     })
-      .then(r => r.json())
-      .then(json => {
-        if (!json.success) { setError('Something went wrong. Please call us directly.'); setLoading(false); return; }
+      .then(ok => {
+        if (!ok) { setError('Something went wrong. Please call us directly.'); setLoading(false); return; }
         reportContactConversion();
         reportLead('popup');
         setLoading(false);

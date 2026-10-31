@@ -2,6 +2,7 @@
 import { useState, FormEvent } from 'react';
 import { reportContactConversion } from '@/app/lib/gtag';
 import { reportLead } from '@/app/lib/fbpixel';
+import { submitWeb3Form } from '@/app/lib/web3forms';
 
 const PHONE_HREF = 'tel:+19493790082';
 
@@ -35,20 +36,13 @@ export default function ChatBot() {
     setError('');
     setLoading(true);
 
-    fetch('https://formsubmit.co/ajax/hello@skyliftgroup.com', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-      body: JSON.stringify({
-        name,
-        phone,
-        message: message || 'No message provided',
-        _subject: `New Chat Lead: ${name} — America's Plumbing`,
-        _template: 'table',
-      }),
+    submitWeb3Form(`New Chat Lead: ${name} — America's Plumbing`, {
+      name,
+      phone,
+      message: message || 'No message provided',
     })
-      .then(r => r.json())
-      .then(json => {
-        if (!json.success) { setError('Something went wrong. Please call us directly.'); setLoading(false); return; }
+      .then(ok => {
+        if (!ok) { setError('Something went wrong. Please call us directly.'); setLoading(false); return; }
         reportContactConversion();
         reportLead('chatbot');
         setLoading(false);
