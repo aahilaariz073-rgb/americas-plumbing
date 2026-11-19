@@ -2252,7 +2252,7 @@ export const posts: BlogPost[] = [
       'What really drives plumbing prices in San Jacinto, Hemet & Riverside County — job type, access, parts, timing — plus how to compare quotes and avoid surprise charges.',
     excerpt:
       'Before you call a plumber, you want to know what it’ll cost. Here’s what actually moves the price up or down — and how to spot a quote that’s going to “grow” once work starts.',
-    date: '2026-11-19',
+    date: '2026-10-21',
     author: 'Joseph Romero',
     category: 'Homeowner Guides',
     readMins: 7,
@@ -2370,7 +2370,7 @@ export const posts: BlogPost[] = [
       'Where Southern California homes hide the main water shut-off, how to turn it off safely, and what to do if it’s stuck or leaking. Find it now — before an emergency.',
     excerpt:
       'When a pipe bursts, every minute counts. Here’s exactly where to look for your home’s main water shut-off in a typical Inland Empire or South OC home — and how to use it.',
-    date: '2026-11-19',
+    date: '2026-10-27',
     author: 'Joseph Romero',
     category: 'Emergency Plumbing',
     readMins: 5,
@@ -2463,7 +2463,7 @@ export const posts: BlogPost[] = [
       'Water under your kitchen sink? Find the source fast — supply lines, drain slip nuts, the disposal, dishwasher hose, or faucet — and learn which fixes are DIY and which aren’t.',
     excerpt:
       'A wet cabinet floor under the sink is one of the most common calls we get. Here’s how to trace the drip to its source in a few minutes — and what to do about each cause.',
-    date: '2026-11-19',
+    date: '2026-11-02',
     author: 'Joseph Romero',
     category: 'Leak Detection',
     readMins: 6,
@@ -2579,7 +2579,7 @@ export const posts: BlogPost[] = [
       'Sewer or rotten-egg smell in your house? Learn the 7 most common causes — dry traps, bad wax rings, vent problems, cracked lines — and when it’s a job for a plumber.',
     excerpt:
       'A sewer smell inside your home isn’t just unpleasant — it’s a sign something in the drain system isn’t sealing. Here are the usual suspects, from easy fixes to serious ones.',
-    date: '2026-11-19',
+    date: '2026-11-06',
     author: 'Joseph Romero',
     category: 'Drains & Sewer',
     readMins: 6,
@@ -2691,7 +2691,7 @@ export const posts: BlogPost[] = [
       'Pinhole leaks in copper pipes are common in older Inland Empire homes. Learn what causes them, the warning signs, and when to repair the spot vs. repipe the house.',
     excerpt:
       'One pinhole leak is a repair. Three in two years is a pattern. Here’s why copper pipes develop pinholes, how to spot them early, and how to decide what to do next.',
-    date: '2026-11-19',
+    date: '2026-11-11',
     author: 'Joseph Romero',
     category: 'Repiping',
     readMins: 6,
@@ -2786,7 +2786,7 @@ export const posts: BlogPost[] = [
       'Repiping your home? Compare PEX vs. copper on durability, hard water resistance, freeze tolerance, install time, and cost — from a licensed Riverside County plumber.',
     excerpt:
       'Both PEX and copper make excellent water lines when installed correctly. Here’s an honest side-by-side comparison to help you choose for your home and your water.',
-    date: '2026-11-19',
+    date: '2026-11-15',
     author: 'Joseph Romero',
     category: 'Repiping',
     readMins: 7,
