@@ -2244,6 +2244,649 @@ export const posts: BlogPost[] = [
       text: 'We will find the leak without tearing up your yard. Free estimates, same-day service across Riverside County.',
     },
   },
+  {
+    slug: 'how-much-does-a-plumber-cost-riverside-county',
+    title: 'How Much Does a Plumber Cost in Riverside County? What Actually Drives the Price',
+    metaTitle: 'How Much Does a Plumber Cost in Riverside County? | Honest Guide',
+    metaDescription:
+      'What really drives plumbing prices in San Jacinto, Hemet & Riverside County — job type, access, parts, timing — plus how to compare quotes and avoid surprise charges.',
+    excerpt:
+      'Before you call a plumber, you want to know what it’ll cost. Here’s what actually moves the price up or down — and how to spot a quote that’s going to “grow” once work starts.',
+    date: '2026-11-19',
+    author: 'Joseph Romero',
+    category: 'Homeowner Guides',
+    readMins: 7,
+    heroImage: '/blog-plumber-cost.jpg',
+    heroAlt: 'Licensed plumber repairing bathroom plumbing in a Riverside County home',
+    intent: 'BOFU',
+    primaryKeyword: 'how much does a plumber cost',
+    keywords: [
+      'how much does a plumber cost riverside county',
+      'plumber cost san jacinto',
+      'plumbing service call cost',
+      'emergency plumber cost hemet',
+      'affordable plumber riverside county',
+      'upfront pricing plumber',
+    ],
+    showToc: true,
+    sections: [
+      {
+        paras: [
+          '“How much is this going to cost me?” is the first thing almost every homeowner asks — and it’s a fair question. Plumbing work isn’t something most people budget for, and nobody wants to be surprised by the bill.',
+          'Rather than throw out national “average” numbers that rarely match a real job in San Jacinto, Hemet, or Menifee, this guide explains what actually drives the price, how to compare quotes fairly, and the red flags that tell you a quote is going to grow once the work starts.',
+        ],
+      },
+      {
+        h2: 'The 6 things that actually set the price',
+        list: [
+          'The type of job — clearing a sink clog and replacing a water heater are entirely different amounts of labor, parts, and time',
+          'Access — a pipe behind open drywall is quick; the same pipe under a slab, inside a finished wall, or in a tight attic takes far longer',
+          'Parts & materials — fixture grade, water heater type (tank vs. tankless), and pipe material (PEX vs. copper) all move the number',
+          'Age & condition of the system — older galvanized or corroded lines often need extra fittings or a short section replaced to make a repair hold',
+          'Permits — water heater replacements, gas line work, and repipes typically require a permit and inspection, which protects you',
+          'Timing — true after-hours emergencies cost more to staff than a scheduled weekday visit',
+        ],
+      },
+      {
+        h2: 'Why online “average plumber cost” numbers mislead you',
+        paras: [
+          'National cost websites average together jobs from very different markets, home ages, and scopes. A “drain cleaning” number might blend a 10-minute bathroom sink clog with a main sewer line full of tree roots. The result is a figure that isn’t accurate for either.',
+          'In our area, local factors matter too. Riverside County’s hard water shortens water heater life and builds scale inside fixtures, and many 1960s–1990s homes have copper or galvanized lines that are reaching the end of their service life. Those conditions change what a “normal” repair looks like here.',
+        ],
+      },
+      {
+        h2: 'Flat-rate vs. hourly pricing',
+        paras: [
+          'Hourly pricing means you pay for time plus materials, so the final bill isn’t known until the job is finished. Flat-rate (upfront) pricing means you’re quoted a set price for the job before work begins — if it takes longer than expected, that’s on the plumber, not you.',
+          'We use upfront pricing. You’ll get the price in writing, and nothing starts until you approve it.',
+        ],
+        link: { text: 'See all of our plumbing services', href: '/services' },
+      },
+      {
+        h2: 'How to compare plumbing quotes fairly',
+        list: [
+          'Make sure each quote covers the same scope — same parts, same fixture grade, same permit status',
+          'Ask whether haul-away of the old unit or fixture is included',
+          'Ask what the warranty covers, and for how long, on both labor and parts',
+          'Confirm the plumber holds an active California C-36 license (you can look it up on the CSLB website)',
+          'Be cautious of a quote dramatically lower than the rest — it often leaves out a permit, parts, or the real fix',
+        ],
+      },
+      {
+        h2: 'Red flags that a quote will “grow”',
+        list: [
+          'A firm price given over the phone without anyone seeing the problem (for anything bigger than a simple repair)',
+          'Vague line items like “materials as needed”',
+          'Pressure to approve immediately with a “today only” discount',
+          'No written estimate or no license number on the paperwork',
+        ],
+      },
+      {
+        h2: 'Ways to keep your plumbing costs down',
+        list: [
+          'Know where your main water shut-off is — stopping a leak fast is the single biggest way to limit damage costs',
+          'Flush your water heater yearly to fight hard-water sediment',
+          'Skip chemical drain cleaners — they can damage pipes and make the eventual repair harder',
+          'Fix small drips and running toilets early, before they become water damage or a high water bill',
+          'Schedule non-urgent work during normal hours instead of waiting for it to become an emergency',
+        ],
+        link: { text: 'How to find your main water shut-off valve', href: '/blog/how-to-find-main-water-shut-off-valve' },
+      },
+    ],
+    faqs: [
+      {
+        q: 'How much does a plumber cost in Riverside County?',
+        a: 'It depends on the type of job, how accessible the pipes are, the parts involved, and whether permits are required. Rather than guessing, we give an upfront written price before any work begins, so the price you approve is the price you pay.',
+      },
+      {
+        q: 'Do emergency plumbers cost more?',
+        a: 'True after-hours emergencies generally cost more than a scheduled weekday visit because of staffing. If a problem can safely wait — for example, you can shut off the water to one fixture — scheduling it during regular hours usually saves money.',
+      },
+      {
+        q: 'Is it cheaper to repair or replace?',
+        a: 'For a newer system with one isolated problem, repair is usually the better value. For an old water heater, or pipes that keep leaking in new spots, replacement is often cheaper in the long run. A good plumber will tell you honestly which situation you’re in.',
+      },
+      {
+        q: 'How do I know a plumber is licensed in California?',
+        a: 'Ask for their C-36 license number and verify it on the California Contractors State License Board (CSLB) website. Our license number is 0784091.',
+      },
+    ],
+    relatedServices: [
+      { label: 'Emergency Plumbing', slug: 'emergency-plumbing' },
+      { label: 'Drain Cleaning & Clog Removal', slug: 'drain-cleaning' },
+      { label: 'Water Heater Installation & Replacement', slug: 'water-heater' },
+    ],
+    cta: {
+      heading: 'Want a real price — not a guess?',
+      text: 'Tell us what’s going on and we’ll give you an upfront, written price before any work begins. Free estimates across San Jacinto, Riverside County, and South OC.',
+    },
+  },
+
+  {
+    slug: 'how-to-find-main-water-shut-off-valve',
+    title: 'How to Find Your Main Water Shut-Off Valve (Before You Need It)',
+    metaTitle: 'Where Is My Main Water Shut-Off Valve? | Southern California Homes',
+    metaDescription:
+      'Where Southern California homes hide the main water shut-off, how to turn it off safely, and what to do if it’s stuck or leaking. Find it now — before an emergency.',
+    excerpt:
+      'When a pipe bursts, every minute counts. Here’s exactly where to look for your home’s main water shut-off in a typical Inland Empire or South OC home — and how to use it.',
+    date: '2026-11-19',
+    author: 'Joseph Romero',
+    category: 'Emergency Plumbing',
+    readMins: 5,
+    heroImage: '/blog-main-shutoff-valve.jpg',
+    heroAlt: 'Red-handled water shut-off valves mounted on an exterior wall',
+    intent: 'Informational',
+    primaryKeyword: 'how to find main water shut off valve',
+    keywords: [
+      'where is my main water shut off valve',
+      'how to turn off water to house',
+      'main water shut off valve location california',
+      'water shut off valve stuck',
+      'water meter shut off',
+      'emergency water shut off san jacinto',
+    ],
+    sections: [
+      {
+        paras: [
+          'If a pipe bursts or a water heater lets go, the most valuable thing you can do is stop the water — fast. A supply line can put out a lot of water every minute, and the damage adds up quickly while you search for the valve.',
+          'The good news: in most Southern California homes, the main shut-off is in one of a few predictable places. Take five minutes today to find yours, make sure it turns, and show everyone in the house where it is.',
+        ],
+      },
+      {
+        h2: 'Where to look in a Southern California home',
+        paras: [
+          'Most homes in San Jacinto, Hemet, Menifee, and across Riverside County are built on slabs without basements, so the main valve is almost always outside. Check these spots, in this order:',
+        ],
+        list: [
+          'Along the front of the house, near where the water line comes up from the ground — often close to a hose bib, typically on the side facing the street',
+          'Next to the pressure regulator (PRV) — a bell-shaped brass fitting on the incoming line; the shut-off is usually just before it',
+          'In the garage, near the water heater, in some newer homes',
+          'At the water meter box near the curb or sidewalk — this is the utility’s side and usually needs a meter key',
+        ],
+      },
+      {
+        h2: 'How to turn it off',
+        list: [
+          'Ball valve (lever handle): turn the lever a quarter turn so it sits perpendicular to the pipe — that’s off',
+          'Gate valve (round wheel handle): turn clockwise (“righty-tighty”) until it stops; don’t force it',
+          'Then open a faucet at the lowest point of the house to drain pressure from the lines',
+          'If a water heater is involved, turn off its gas or power before draining hot water lines',
+        ],
+        link: { text: 'Burst pipe? Here’s what to do in the first 5 minutes', href: '/blog/burst-pipe-what-to-do-first-5-minutes' },
+      },
+      {
+        h2: 'What if the valve is stuck or leaking?',
+        paras: [
+          'Old gate valves are notorious for seizing after years of not being used — and hard water makes it worse by building up mineral scale inside. If the handle won’t budge, don’t grab a cheater bar: forcing it can snap the stem and turn a small problem into a flood.',
+          'In a true emergency, the meter box at the curb is your backup. Otherwise, have a plumber replace a stuck or weeping gate valve with a quarter-turn ball valve. It’s a quick job that makes your home dramatically easier to protect.',
+        ],
+      },
+      {
+        h2: 'Know your fixture shut-offs too',
+        paras: [
+          'Most toilets, sinks, and appliances have their own small shut-off valves (angle stops) on the supply line. If the problem is isolated to one fixture, close that one and leave water running to the rest of the house. If an angle stop drips or won’t close, it’s worth replacing — they wear out too.',
+        ],
+        link: { text: 'Fixture installation & repair', href: '/services/fixture-installation' },
+      },
+    ],
+    faqs: [
+      {
+        q: 'Where is the main water shut-off in a California house?',
+        a: 'In most slab-built Southern California homes it’s outside, along the front wall where the water line enters, usually near a hose bib and the pressure regulator. Some newer homes put it in the garage near the water heater. The meter at the curb is the backup.',
+      },
+      {
+        q: 'Can I turn off the water at the meter myself?',
+        a: 'The meter belongs to your water utility, and its valve usually requires a meter key. Using it in an emergency is common, but your house-side shut-off is the one you should rely on — and keep in working order.',
+      },
+      {
+        q: 'My shut-off valve won’t turn. What should I do?',
+        a: 'Don’t force it — a seized valve can break off. Use the meter shut-off in an emergency, and have a plumber replace the old valve with a quarter-turn ball valve.',
+      },
+    ],
+    relatedServices: [
+      { label: 'Emergency Plumbing', slug: 'emergency-plumbing' },
+      { label: 'Water Line Repair & Replacement', slug: 'water-line-repair' },
+      { label: 'Leak Detection & Repair', slug: 'leak-detection' },
+    ],
+    cta: {
+      heading: 'Shut-off valve stuck, leaking, or missing?',
+      text: 'We replace old gate valves with reliable quarter-turn ball valves — usually the same day. And if water is already on the floor, we answer 24/7.',
+    },
+  },
+
+  {
+    slug: 'leak-under-kitchen-sink-causes-fixes',
+    title: 'Leak Under the Kitchen Sink? 6 Common Causes and How to Fix Them',
+    metaTitle: 'Leak Under Kitchen Sink? Causes & Fixes | San Jacinto Plumber',
+    metaDescription:
+      'Water under your kitchen sink? Find the source fast — supply lines, drain slip nuts, the disposal, dishwasher hose, or faucet — and learn which fixes are DIY and which aren’t.',
+    excerpt:
+      'A wet cabinet floor under the sink is one of the most common calls we get. Here’s how to trace the drip to its source in a few minutes — and what to do about each cause.',
+    date: '2026-11-19',
+    author: 'Joseph Romero',
+    category: 'Leak Detection',
+    readMins: 6,
+    heroImage: '/blog-leak-under-sink.jpg',
+    heroAlt: 'Plumber tightening a drain fitting under a kitchen sink',
+    intent: 'Informational',
+    primaryKeyword: 'leak under kitchen sink',
+    keywords: [
+      'leak under kitchen sink',
+      'water under kitchen sink cabinet',
+      'kitchen sink drain leaking',
+      'garbage disposal leaking from bottom',
+      'faucet supply line leaking',
+      'kitchen sink leak repair san jacinto',
+    ],
+    sections: [
+      {
+        paras: [
+          'Finding water under the kitchen sink is frustrating — especially because that cabinet is usually crammed with cleaning supplies and the particleboard floor swells the moment it gets wet.',
+          'The good news: kitchen sink leaks almost always come from one of a handful of places, and you can usually find the culprit in a few minutes. Here’s how.',
+        ],
+      },
+      {
+        h2: 'First: find exactly where it’s dripping',
+        list: [
+          'Empty the cabinet and wipe every pipe, hose, and fitting completely dry',
+          'Lay a dry paper towel on the cabinet floor',
+          'Run the faucet for a minute, then fill the sink and pull the plug — watch which joint gets wet first',
+          'Then run the disposal and the dishwasher separately, checking again after each',
+          'If it’s wet even when nothing is running, the leak is on the pressurized supply side',
+        ],
+      },
+      {
+        h2: 'The 6 most common causes',
+        h3: '1. Loose or worn drain slip nuts',
+        paras: [
+          'The plastic or metal nuts on the P-trap and tailpiece loosen over time. If the leak only appears when water drains, this is the most likely cause. Hand-tighten first; if it still drips, the washer inside is worn and needs replacement.',
+        ],
+      },
+      {
+        h3: '2. A failing faucet supply line',
+        paras: [
+          'The braided lines between the shut-off valves and faucet are under constant pressure. Hard water and age can corrode the crimped ends. A supply line that’s bulging, rusty, or damp should be replaced right away — when these fail, they fail fast.',
+        ],
+      },
+      {
+        h3: '3. A worn shut-off valve (angle stop)',
+        paras: [
+          'Water seeping around the valve stem or handle means the packing has worn out. These valves are cheap to replace, and a worn one may not close when you actually need it.',
+        ],
+      },
+      {
+        h3: '4. The garbage disposal',
+        paras: [
+          'Leaks at the top usually mean a loose sink flange or failed plumber’s putty. Leaks from the side point to the dishwasher or drain connection. A leak from the bottom of the unit generally means the internal seals have failed — at that point, replacement is the fix.',
+        ],
+        link: { text: 'Garbage disposal repair & replacement', href: '/services/garbage-disposal' },
+      },
+      {
+        h3: '5. The dishwasher drain hose',
+        paras: [
+          'If the leak only appears during a dishwasher cycle, check the drain hose clamp at the disposal or sink tailpiece, and look for cracks along the hose.',
+        ],
+      },
+      {
+        h3: '6. The faucet itself or the sink basket strainer',
+        paras: [
+          'Water running down from the faucet base points to worn O-rings or cartridge. A leak right under the drain opening is usually a failed basket strainer seal.',
+        ],
+      },
+      {
+        h2: 'When to call a plumber',
+        list: [
+          'The leak is coming from inside the wall behind the sink',
+          'The cabinet floor is soft, swollen, or smells musty — there may be hidden water damage',
+          'A shut-off valve won’t close or is corroded',
+          'You’ve tightened everything and it still drips',
+          'Your drain line clogs or backs up as well as leaks',
+        ],
+        link: { text: 'See our kitchen plumbing services', href: '/services/kitchen-plumbing' },
+      },
+    ],
+    faqs: [
+      {
+        q: 'Why is there water under my kitchen sink but no visible leak?',
+        a: 'Slow leaks often only show up under pressure or during draining. Dry everything, run the faucet, disposal, and dishwasher one at a time, and watch for the first wet spot. If it’s still dry everywhere, the water may be coming from inside the wall — that needs professional leak detection.',
+      },
+      {
+        q: 'Is a leaking garbage disposal worth repairing?',
+        a: 'Leaks at the top or side connections are usually simple fixes. A leak from the bottom of the unit means internal seals have failed, and replacement is typically the better value.',
+      },
+      {
+        q: 'How often should faucet supply lines be replaced?',
+        a: 'Inspect them yearly and replace any that are bulging, corroded, or damp. In hard-water areas like San Jacinto, the crimped ends can corrode sooner, so many homeowners replace them as preventive maintenance.',
+      },
+    ],
+    relatedServices: [
+      { label: 'Kitchen Plumbing Services', slug: 'kitchen-plumbing' },
+      { label: 'Garbage Disposal Services', slug: 'garbage-disposal' },
+      { label: 'Leak Detection & Repair', slug: 'leak-detection' },
+    ],
+    cta: {
+      heading: 'Can’t stop the drip under your sink?',
+      text: 'We’ll find the source and fix it right — supply lines, drains, disposals, and faucets. Same-day service across San Jacinto and Riverside County.',
+    },
+  },
+
+  {
+    slug: 'sewer-smell-in-house-causes',
+    title: 'Why Does My House Smell Like Sewer? 7 Causes and What to Do',
+    metaTitle: 'Sewer Smell in House? 7 Causes & Fixes | San Jacinto Plumber',
+    metaDescription:
+      'Sewer or rotten-egg smell in your house? Learn the 7 most common causes — dry traps, bad wax rings, vent problems, cracked lines — and when it’s a job for a plumber.',
+    excerpt:
+      'A sewer smell inside your home isn’t just unpleasant — it’s a sign something in the drain system isn’t sealing. Here are the usual suspects, from easy fixes to serious ones.',
+    date: '2026-11-19',
+    author: 'Joseph Romero',
+    category: 'Drains & Sewer',
+    readMins: 6,
+    heroImage: '/blog-sewer-smell.jpg',
+    heroAlt: 'Floor drain grate on wet concrete',
+    intent: 'Informational',
+    primaryKeyword: 'sewer smell in house',
+    keywords: [
+      'sewer smell in house',
+      'why does my bathroom smell like sewer',
+      'sewer gas smell in home',
+      'dry p-trap smell',
+      'sewer smell after rain',
+      'sewer line repair san jacinto',
+    ],
+    showToc: true,
+    sections: [
+      {
+        paras: [
+          'Every drain in your home connects to the sewer, and the only thing keeping sewer gas out of your living space is a series of water seals, wax rings, and vents. When one of those fails, you smell it.',
+          'Sewer gas contains hydrogen sulfide (the rotten-egg smell) and methane. Low levels are mostly a nuisance, but a persistent smell means something isn’t sealing and shouldn’t be ignored. Here’s how to track it down.',
+        ],
+      },
+      {
+        h2: '1. A dried-out P-trap',
+        paras: [
+          'The U-shaped trap under every sink, tub, shower, and floor drain holds water that blocks sewer gas. In a guest bathroom, laundry drain, or garage floor drain that rarely gets used — especially in our dry, hot summers — that water simply evaporates.',
+          'The fix: run water in the drain for 30 seconds. If the smell disappears, you found it. For drains you rarely use, run them once every couple of weeks.',
+        ],
+      },
+      {
+        h2: '2. A failed toilet wax ring',
+        paras: [
+          'If the smell is strongest near a toilet, or the toilet rocks when you sit on it, the wax seal at the base has likely failed. That gap lets gas — and sometimes water — escape. Replacing the wax ring requires pulling the toilet, and it’s the right time to check the flange underneath.',
+        ],
+        link: { text: 'Toilet repair & installation', href: '/services/toilet-repair' },
+      },
+      {
+        h2: '3. A blocked or damaged plumbing vent',
+        paras: [
+          'Vent pipes on your roof let sewer gas escape outdoors and keep drains flowing. If a vent is blocked by debris, a bird’s nest, or was disconnected during a remodel, gas can be pushed back through your traps. Gurgling drains alongside the smell are a classic sign.',
+        ],
+      },
+      {
+        h2: '4. Buildup in the drain itself',
+        paras: [
+          'Sometimes the smell is from the drain, not the sewer — hair, soap scum, grease, and food waste rotting in the line. Bathroom sinks and kitchen drains are the usual offenders. A professional drain cleaning removes it at the source; chemical cleaners just mask it and can damage pipes.',
+        ],
+        link: { text: 'Drain cleaning & clog removal', href: '/services/drain-cleaning' },
+      },
+      {
+        h2: '5. A loose or cracked drain connection',
+        paras: [
+          'A failed slip joint under a sink, a cracked ABS fitting, or a loose cleanout cap can all let gas escape. Check the cleanout caps in your garage or along the outside of the house — a missing or loose cap is an easy fix.',
+        ],
+      },
+      {
+        h2: '6. A cracked or root-damaged sewer line',
+        paras: [
+          'If the smell is outside near the house, in the yard, or under the slab — and especially if you also have multiple slow drains — the main sewer line may be cracked or infiltrated by roots. Older clay and cast-iron lines in many Inland Empire neighborhoods are prone to this.',
+          'A sewer camera inspection shows exactly what’s going on inside the line without guessing or digging.',
+        ],
+        link: { text: 'Sewer camera inspection', href: '/services/camera-inspection' },
+      },
+      {
+        h2: '7. A sewer backup starting',
+        paras: [
+          'Sewage odor combined with water coming up in a tub or shower when you flush means the main line is blocked. Stop using water and call a plumber right away — this gets worse fast.',
+        ],
+      },
+      {
+        h2: 'Is sewer gas dangerous?',
+        paras: [
+          'The small amounts that usually leak into homes are mostly an odor issue, though they can cause headaches or nausea with ongoing exposure. A very strong smell, or any sign of a backup, should be dealt with immediately. And if you smell rotten eggs near a gas appliance rather than a drain, treat it as a possible natural gas leak: leave the house and call your gas utility from outside.',
+        ],
+        link: { text: 'Gas line safety warning signs', href: '/blog/gas-line-safety-warning-signs-san-jacinto' },
+      },
+    ],
+    faqs: [
+      {
+        q: 'Why does my bathroom smell like sewer only sometimes?',
+        a: 'Intermittent smells usually point to a trap that dries out between uses, a partially blocked vent that only causes problems when several fixtures drain at once, or a wax ring that leaks when the toilet shifts.',
+      },
+      {
+        q: 'Can a sewer smell come from a shower drain?',
+        a: 'Yes. A dry trap, buildup of hair and soap in the drain, or a poorly sealed drain assembly can all cause it. Start by running water, then have the drain professionally cleaned if the smell returns.',
+      },
+      {
+        q: 'How do I know if it’s my sewer line?',
+        a: 'Multiple slow drains, gurgling toilets, smells outdoors or in several rooms, and soggy patches in the yard all point to the main line. A camera inspection confirms it.',
+      },
+    ],
+    relatedServices: [
+      { label: 'Sewer Line Repair & Replacement', slug: 'sewer-line' },
+      { label: 'Camera Inspection', slug: 'camera-inspection' },
+      { label: 'Drain Cleaning & Clog Removal', slug: 'drain-cleaning' },
+    ],
+    cta: {
+      heading: 'Still smelling sewer gas?',
+      text: 'We’ll trace it to the source — traps, vents, wax rings, or the main line — and fix it right. Camera inspections and same-day service across Riverside County.',
+    },
+  },
+
+  {
+    slug: 'pinhole-leaks-copper-pipes-inland-empire',
+    title: 'Pinhole Leaks in Copper Pipes: Why They Happen in the Inland Empire and What to Do',
+    metaTitle: 'Pinhole Leaks in Copper Pipes | Causes & Repair in Riverside County',
+    metaDescription:
+      'Pinhole leaks in copper pipes are common in older Inland Empire homes. Learn what causes them, the warning signs, and when to repair the spot vs. repipe the house.',
+    excerpt:
+      'One pinhole leak is a repair. Three in two years is a pattern. Here’s why copper pipes develop pinholes, how to spot them early, and how to decide what to do next.',
+    date: '2026-11-19',
+    author: 'Joseph Romero',
+    category: 'Repiping',
+    readMins: 6,
+    heroImage: '/blog-pinhole-leaks-copper.jpg',
+    heroAlt: 'Copper water supply pipes exposed inside an opened wall',
+    intent: 'Commercial',
+    primaryKeyword: 'pinhole leaks copper pipes',
+    keywords: [
+      'pinhole leaks copper pipes',
+      'pinhole leak repair riverside county',
+      'what causes pinhole leaks in copper',
+      'copper pipe corrosion hard water',
+      'repipe vs repair pinhole leaks',
+      'pinhole leak in wall signs',
+    ],
+    sections: [
+      {
+        paras: [
+          'A pinhole leak is exactly what it sounds like: a tiny hole, often smaller than the tip of a pen, that forms in the wall of a copper water pipe. Because supply lines are under constant pressure, even a pinhole can spray or drip around the clock — usually somewhere you can’t see, like inside a wall, ceiling, or under the slab.',
+          'They’re a common problem in older homes across San Jacinto, Hemet, Riverside, and the wider Inland Empire. Here’s why, and what your options are.',
+        ],
+      },
+      {
+        h2: 'What causes pinhole leaks?',
+        list: [
+          'Water chemistry — mineral content, pH, and disinfectants in the water can slowly corrode copper from the inside',
+          'Age — copper installed decades ago has simply had more time to thin out',
+          'High water velocity or pressure — fast-moving water wears pipe walls, especially at bends and fittings',
+          'Installation issues — leftover flux, debris, or burrs from original construction can start localized corrosion',
+          'Electrical grounding — improper grounding to the plumbing can contribute to corrosion in some homes',
+        ],
+      },
+      {
+        h2: 'Warning signs of a pinhole leak',
+        list: [
+          'An unexplained jump in your water bill',
+          'The water meter dial moving when all fixtures are off',
+          'Damp drywall, bubbling paint, or water stains on ceilings or walls',
+          'A musty smell or mold in a closet or cabinet',
+          'A faint hissing sound inside the wall when the house is quiet',
+          'Warm spots on the floor (a hot water line leaking under the slab)',
+        ],
+        link: { text: 'Why is my water bill so high? Hidden leak guide', href: '/blog/why-is-my-water-bill-so-high-hidden-leaks-san-jacinto' },
+      },
+      {
+        h2: 'What to do if you find one',
+        paras: [
+          'Shut off the water at the main, open a faucet to relieve pressure, and call a plumber. Pipe-repair clamps and epoxy can buy a few hours, but they’re not a permanent fix. The pipe around a pinhole is usually thin too, so a proper repair cuts out the damaged section and replaces it.',
+          'If the leak is hidden, professional leak detection pinpoints the location so only a small opening is needed — not a wall-by-wall search.',
+        ],
+        link: { text: 'Professional leak detection', href: '/services/leak-detection' },
+      },
+      {
+        h2: 'Spot repair or repipe?',
+        paras: [
+          'One isolated pinhole in an otherwise healthy system is usually a straightforward spot repair. But pinholes rarely come alone: the same water chemistry and age that caused one hole are working on the rest of the pipe.',
+          'If you’ve had two or more pinhole leaks in a few years, or they keep appearing in different rooms, it’s time to seriously consider repiping. Each spot repair means another opening in a wall or ceiling — and any leak you don’t catch quickly can cause water damage and mold.',
+        ],
+        link: { text: 'Whole-home repiping', href: '/services/repiping' },
+      },
+    ],
+    faqs: [
+      {
+        q: 'Are pinhole leaks covered by homeowners insurance?',
+        a: 'Many policies cover sudden water damage from a leak but not the pipe repair itself, and some exclude slow or long-term leaks. Check your policy, document the damage with photos, and keep plumbing invoices.',
+      },
+      {
+        q: 'Can a pinhole leak fix itself?',
+        a: 'Occasionally mineral deposits temporarily seal a tiny leak, but the pipe wall is still compromised and it will typically reopen. Have it properly repaired.',
+      },
+      {
+        q: 'How many pinhole leaks before I should repipe?',
+        a: 'There’s no hard rule, but two or more in a few years — or leaks in different parts of the house — usually means the system is failing as a whole. We’ll give you an honest assessment of repair vs. repipe.',
+      },
+    ],
+    relatedServices: [
+      { label: 'Leak Detection & Repair', slug: 'leak-detection' },
+      { label: 'Whole-Home Repiping', slug: 'repiping' },
+      { label: 'Slab Leak Repair', slug: 'slab-leak-repair' },
+    ],
+    cta: {
+      heading: 'Dealing with pinhole leaks?',
+      text: 'We’ll locate the leak, fix it right, and tell you honestly whether more repairs or a repipe makes more sense. Free estimates across San Jacinto and Riverside County.',
+    },
+  },
+
+  {
+    slug: 'pex-vs-copper-repiping-which-is-better',
+    title: 'PEX vs. Copper Repiping: Which Is Better for Your Home?',
+    metaTitle: 'PEX vs. Copper Pipes for Repiping | Pros, Cons & Hard Water',
+    metaDescription:
+      'Repiping your home? Compare PEX vs. copper on durability, hard water resistance, freeze tolerance, install time, and cost — from a licensed Riverside County plumber.',
+    excerpt:
+      'Both PEX and copper make excellent water lines when installed correctly. Here’s an honest side-by-side comparison to help you choose for your home and your water.',
+    date: '2026-11-19',
+    author: 'Joseph Romero',
+    category: 'Repiping',
+    readMins: 7,
+    heroImage: '/blog-pex-vs-copper.jpg',
+    heroAlt: 'Exposed water supply pipes in an open wall during a repipe',
+    intent: 'Commercial',
+    primaryKeyword: 'pex vs copper',
+    keywords: [
+      'pex vs copper',
+      'pex vs copper repipe',
+      'is pex better than copper',
+      'pex pipe hard water',
+      'pex repiping riverside county',
+      'copper repipe san jacinto',
+    ],
+    showToc: true,
+    sections: [
+      {
+        paras: [
+          'If you’re replacing the water lines in your house, the biggest decision is the pipe material. In Southern California, it almost always comes down to PEX (cross-linked polyethylene) or copper.',
+          'Both are approved by the California Plumbing Code and both perform well when installed correctly. The right choice depends on your home, your water, your budget, and your preferences. Here’s the honest comparison.',
+        ],
+      },
+      {
+        h2: 'Side-by-side comparison',
+        table: {
+          headers: ['Factor', 'PEX', 'Copper'],
+          rows: [
+            ['Installation', 'Flexible, fewer fittings, faster install, smaller wall openings', 'Rigid, more fittings and joints, more labor'],
+            ['Cost', 'Generally lower material and labor cost', 'Generally higher material and labor cost'],
+            ['Hard water & scale', 'Smooth interior resists scale buildup', 'Can build scale; may corrode in some water conditions'],
+            ['Pinhole leaks', 'Not prone to pinhole corrosion', 'Can develop pinholes over time depending on water chemistry'],
+            ['Freeze tolerance', 'Expands somewhat, more forgiving', 'More likely to split if frozen'],
+            ['UV / sunlight', 'Must be protected from sunlight', 'UV doesn’t affect it'],
+            ['Track record', 'Widely used in US homes for decades', 'Used in homes for generations'],
+            ['Recyclability', 'Not easily recycled', 'Fully recyclable, retains scrap value'],
+          ],
+        },
+      },
+      {
+        h2: 'The case for PEX',
+        paras: [
+          'PEX has become the most common choice for whole-home repipes, and for good reasons. It’s flexible, so it can be fished through walls and attics with fewer openings — which means less drywall repair and a faster job. Fewer fittings also mean fewer potential leak points.',
+          'For homes in Riverside County, where hard water is a constant battle, PEX’s smooth interior and resistance to corrosion are a real advantage. It doesn’t develop the pinhole leaks that plague aging copper in some areas.',
+        ],
+        link: { text: 'Pinhole leaks in copper pipes: what to know', href: '/blog/pinhole-leaks-copper-pipes-inland-empire' },
+      },
+      {
+        h2: 'The case for copper',
+        paras: [
+          'Copper is time-tested, rigid, and handles high temperatures well. It’s not affected by sunlight, isn’t vulnerable to rodents, and some homeowners simply prefer a metal system. It also holds its value as a recyclable material.',
+          'The trade-off is cost and labor: copper requires more fittings and soldered joints, more time to install, and generally larger wall openings.',
+        ],
+      },
+      {
+        h2: 'Common concerns about PEX — answered',
+        list: [
+          'Taste or odor: some homeowners notice a slight taste in new PEX that typically fades after the lines are flushed and used',
+          'Rodents: PEX can be chewed; in areas with known rodent activity, routing and protection matter',
+          'Sunlight: PEX must not be left exposed outdoors — a properly installed system keeps it inside walls and protected',
+          'Fittings: quality fittings and correct crimp or expansion technique are what make PEX last — installer skill matters',
+        ],
+      },
+      {
+        h2: 'Which do we recommend?',
+        paras: [
+          'For most Inland Empire homes repiping because of leaks, corrosion, or low pressure, PEX offers the best balance of durability, hard-water resistance, installation speed, and cost. Copper is still a great option for homeowners who prefer it or for specific parts of a system.',
+          'We install both, and we’ll walk you through the trade-offs for your specific house — never a one-size-fits-all pitch.',
+        ],
+        link: { text: 'How much does a whole-home repipe cost?', href: '/blog/whole-home-repipe-cost-riverside-county' },
+      },
+    ],
+    faqs: [
+      {
+        q: 'Is PEX better than copper?',
+        a: 'Neither is universally better. PEX is generally faster and less costly to install and resists scale and corrosion well in hard water. Copper is rigid, long-proven, and recyclable. Both last for decades when installed correctly.',
+      },
+      {
+        q: 'How long does PEX last?',
+        a: 'PEX is designed for long service life — decades — when installed correctly and protected from sunlight. Good fittings and correct installation are what matter most.',
+      },
+      {
+        q: 'Is PEX allowed in California?',
+        a: 'Yes. PEX is approved for potable water under the California Plumbing Code and is widely used in new construction and repipes throughout the state.',
+      },
+      {
+        q: 'Does PEX help with low water pressure?',
+        a: 'Replacing old, scaled-up galvanized or corroded copper lines with new pipe — PEX or copper — usually restores pressure, because the old pipe’s interior has narrowed.',
+      },
+    ],
+    relatedServices: [
+      { label: 'Whole-Home Repiping', slug: 'repiping' },
+      { label: 'Leak Detection & Repair', slug: 'leak-detection' },
+      { label: 'Water Softener & Filtration', slug: 'water-softener' },
+    ],
+    cta: {
+      heading: 'Thinking about a repipe?',
+      text: 'We’ll inspect your home, explain PEX vs. copper for your specific situation, and give you a firm, written quote. Free estimates across San Jacinto and Riverside County.',
+    },
+  },
 ];
 
 export function getPost(slug: string): BlogPost | undefined {
